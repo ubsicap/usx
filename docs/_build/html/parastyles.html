@@ -1,0 +1,1265 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;para&gt; @style Types &mdash; Unified Scripture XML 2.500 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Unified Scripture XML 2.500 documentation" href="index.html"/>
+        <link rel="next" title="&lt;char&gt; @style Types" href="charstyles.html"/>
+        <link rel="prev" title="Elements" href="elements.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Document Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">&lt;para&gt; &#64;style Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usx-parastyles-identification">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introductions">Introductions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#titles-and-headings">Titles and Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poetry">Poetry</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="charstyles.html">&lt;char&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">&lt;note&gt; Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vocabularies.html">Vocabularies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schemas</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Unified Scripture XML</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;para&gt; &#64;style Types</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/parastyles.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <style> .red {color:red} </style>
+<style> .orange {color:orange} </style>
+<style> .green {color:green} </style>
+<style> .red-bd {color:red;  font-weight: bold} </style>
+<style> .orange-bd {color:orange;  font-weight: bold} </style>
+<style> .green-bd {color:green;  font-weight: bold} </style><div class="section" id="para-style-types">
+<span id="usx-parastyles"></span><span id="index-0"></span><h1><a class="toc-backref" href="#id2">&lt;para&gt; &#64;style Types</a><a class="headerlink" href="#para-style-types" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#para-style-types" id="id2">&lt;para&gt; &#64;style Types</a><ul>
+<li><a class="reference internal" href="#usx-parastyles-identification" id="id3">Identification</a></li>
+<li><a class="reference internal" href="#introductions" id="id4">Introductions</a></li>
+<li><a class="reference internal" href="#titles-and-headings" id="id5">Titles and Headings</a></li>
+<li><a class="reference internal" href="#paragraphs" id="id6">Paragraphs</a></li>
+<li><a class="reference internal" href="#poetry" id="id7">Poetry</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="admonition note" id="usx-notes-numberedstyles">
+<p class="first admonition-title">Note</p>
+<p><strong>Numbered &lt;para&gt; &#64;style Attributes</strong></p>
+<p>Some &#64;style attributes include an optional numeric variable, which is represented in this documentation by a hash character (#). In USX the attribute number indicates:</p>
+<ul class="simple">
+<li>A portion of a complete element, or relative weighting of the &#8220;pieces&#8221; of the elements, such as mt1, mt2, mt3 which are all parts of a major title.</li>
+<li>The level of division (hierarchy).</li>
+<li>The level of indentation relative to other like elements, as in poetry (q#) or lists (li#) or outlines (io#).</li>
+</ul>
+<p class="last"><strong>style = style1</strong> — The unnumbered version of a style attribute may be used when only one level of this paragraph style exists within the project text. Numbers should always be included when more than one level of the paragraph style exists within the project text.</p>
+</div>
+<div class="section" id="usx-parastyles-identification">
+<span id="index-1"></span><span id="identification"></span><h2><a class="toc-backref" href="#id3">Identification</a><a class="headerlink" href="#usx-parastyles-identification" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ide</li>
+<li>rem</li>
+<li><a class="reference internal" href="#usx-parastyle-h"><span class="std std-ref">h</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-toc1"><span class="std std-ref">toc1</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-toc2"><span class="std std-ref">toc2</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-toc3"><span class="std std-ref">toc3</span></a></li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-h"></span><table class="docutils field-list" frame="void" id="index-2" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">h</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Running header text.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookheader"><span class="std std-ref">Book Header</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_h.jpg"><img alt="_images/usx-para-style_h.jpg" src="_images/usx-para-style_h.jpg" style="width: 300px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-toc1"></span><table class="docutils field-list" frame="void" id="index-3" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">toc1</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Long table of contents text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookheader"><span class="std std-ref">Book Header</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-toc2"></span><table class="docutils field-list" frame="void" id="index-4" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">toc2</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Short table of contents text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookheader"><span class="std std-ref">Book Header</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-toc3"></span><table class="docutils field-list" frame="void" id="index-5" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">toc3</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Book abbreviation.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookheader"><span class="std std-ref">Book Header</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>About toc1, toc2, toc3</strong></p>
+<p class="last">The <a class="reference external" href="http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html">metadata.xml</a> file within a DBL <a class="reference external" href="http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/index.html">text release bundle</a> contains a <a class="reference external" href="http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html#booknames">bookNames</a> element in which each scripture book is itemized together with child elements for its long, short and abbreviated forms. The <a class="reference external" href="http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html#booknames">bookNames</a> element is the key location where this book naming metadata is contained within the bundle. USX para elements with attributes toc1, toc2, or toc3 are strictly optional data. Their presence in a USX file is valid, but reflects a legacy form of USFM markup in which the USFM files for each book were the key location for this book naming metadata.</p>
+</div>
+</div>
+<div class="section" id="introductions">
+<span id="usx-parastyles-introductions"></span><span id="index-6"></span><h2><a class="toc-backref" href="#id4">Introductions</a><a class="headerlink" href="#introductions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#usx-parastyle-imt"><span class="std std-ref">imt#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-is"><span class="std std-ref">is#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ip"><span class="std std-ref">ip</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ipi"><span class="std std-ref">ipi</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-im"><span class="std std-ref">im</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-imi"><span class="std std-ref">imi</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ipq"><span class="std std-ref">ipq</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-imq"><span class="std std-ref">imq</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ipr"><span class="std std-ref">ipr</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-iq"><span class="std std-ref">iq</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ib"><span class="std std-ref">ib</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ili"><span class="std std-ref">ili#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-iot"><span class="std std-ref">iot</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-io"><span class="std std-ref">io#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-iex"><span class="std std-ref">iex</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-imte"><span class="std std-ref">imte#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ie"><span class="std std-ref">ie</span></a></li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-imt"></span><table class="docutils field-list" frame="void" id="index-7" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">imt#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction major title. <br />
+# denotes the title level or relative weighting. <br />
+<strong>imt = imt1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_imt.jpg"><img alt="_images/usx-para-style_imt.jpg" src="_images/usx-para-style_imt.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-is"></span><table class="docutils field-list" frame="void" id="index-8" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">is#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction section heading. <br />
+# denotes the title level or relative weighting. <br />
+<strong>is = is1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_is.jpg"><img alt="_images/usx-para-style_is.jpg" src="_images/usx-para-style_is.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ip"></span><table class="docutils field-list" frame="void" id="index-9" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">ip</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_ip.jpg"><img alt="_images/usx-para-style_ip.jpg" src="_images/usx-para-style_ip.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ipi"></span><table class="docutils field-list" frame="void" id="index-10" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">ipi</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Indented introduction paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_ipi.jpg"><img alt="_images/usx-para-style_ipi.jpg" src="_images/usx-para-style_ipi.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-im"></span><table class="docutils field-list" frame="void" id="index-11" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">im</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction flush left (margin) paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_im.jpg"><img alt="_images/usx-para-style_im.jpg" src="_images/usx-para-style_im.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-imi"></span><table class="docutils field-list" frame="void" id="index-12" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">imi</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Indented introduction flush left (margin) paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_imi.jpg"><img alt="_images/usx-para-style_imi.jpg" src="_images/usx-para-style_imi.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ipq"></span><table class="docutils field-list" frame="void" id="index-13" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">ipq</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction quote from scripture text paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_ipq.jpg"><img alt="_images/usx-para-style_ipq.jpg" src="_images/usx-para-style_ipq.jpg" style="width: 300px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-imq"></span><table class="docutils field-list" frame="void" id="index-14" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">imq</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction flush left (margin) quote from scripture text paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_imq.jpg"><img alt="_images/usx-para-style_imq.jpg" src="_images/usx-para-style_imq.jpg" style="width: 300px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ipr"></span><table class="docutils field-list" frame="void" id="index-15" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">ipr</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction right-aligned paragraph. <br />
+Typically used for the reference for a quote from the scripture text (<a class="reference internal" href="#usx-parastyle-imq"><span class="std std-ref">imq</span></a>, <a class="reference internal" href="#usx-parastyle-ipq"><span class="std std-ref">ipq</span></a>)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_ipr.jpg"><img alt="_images/usx-para-style_ipr.jpg" src="_images/usx-para-style_ipr.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-iq"></span><table class="docutils field-list" frame="void" id="index-16" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">iq#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction poetic line. <br />
+# represents the level of indent (i.e. iq1, iq2, iq3 etc.) <br />
+<strong>iq = iq1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_iq.jpg"><img alt="_images/usx-para-style_iq.jpg" src="_images/usx-para-style_iq.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ib"></span><table class="docutils field-list" frame="void" id="index-17" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ib</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction blank line. <br />
+May be used to explicitly indicate additional white space between paragraphs.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ili"></span><table class="docutils field-list" frame="void" id="index-18" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">ili#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction list item. <br />
+# represents the level of indent <br />
+<strong>ili = ili1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_ili.jpg"><img alt="_images/usx-para-style_ili.jpg" src="_images/usx-para-style_ili.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-iot"></span><table class="docutils field-list" frame="void" id="index-19" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">iot</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction outline title. (see <a class="reference internal" href="#usx-parastyle-io"><span class="std std-ref">io#</span></a> below)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-io"></span><table class="docutils field-list" frame="void" id="index-20" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">io#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction outline entry. <br />
+The outline entry typically ends with a range of references in parentheses. <br />
+References may be marked with char &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-ior"><span class="std std-ref">ior</span></a>. <br />
+# represents the outline (indent) level.
+<strong>io = io1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_io.jpg"><img alt="_images/usx-para-style_io.jpg" src="_images/usx-para-style_io.jpg" style="width: 300px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><a class="reference internal" href="charstyles.html#usx-charstyle-ior"><span class="std std-ref">ior</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">See:</th><td class="field-body"><a class="reference internal" href="charstyles.html"><span class="doc">char</span></a> &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-ior"><span class="std std-ref">ior</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-iex"></span><table class="docutils field-list" frame="void" id="index-21" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">iex</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction explanatory or bridge text (e.g. explanation of missing book in a short Old Testament). <br />
+<em>This para &#64;style is used within Chapter Text.</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><a class="reference internal" href="charstyles.html#usx-charstyle-iqt"><span class="std std-ref">iqt</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">See:</th><td class="field-body"><a class="reference internal" href="charstyles.html"><span class="doc">char</span></a> &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-iqt"><span class="std std-ref">iqt</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-imte"></span><table class="docutils field-list" frame="void" id="index-22" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">imt#</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction major title ending. <br />
+Used to mark a major title indicating the end of the introduction. <br />
+# represents a portion of the title, with the lesser emphasis (relative weighting) being on the higher numbers. <br />
+<strong>imte = imte1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ie"></span><table class="docutils field-list" frame="void" id="index-23" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ie</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction end. <br />
+Optionally included to explicitly indicate the end of the introduction material.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="titles-and-headings">
+<span id="usx-parastyles-titles-headings"></span><span id="index-24"></span><h2><a class="toc-backref" href="#id5">Titles and Headings</a><a class="headerlink" href="#titles-and-headings" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#usx-parastyle-mt"><span class="std std-ref">mt#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-mte"><span class="std std-ref">mte#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ms"><span class="std std-ref">ms#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-mr"><span class="std std-ref">mr</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-s"><span class="std std-ref">s#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-sr"><span class="std std-ref">sr</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-r"><span class="std std-ref">r</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-d"><span class="std std-ref">d</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-sp"><span class="std std-ref">sp</span></a></li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-mt"></span><table class="docutils field-list" frame="void" id="index-25" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">mt#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Main title. <br />
+Key components in the title of a biblical book. <br />
+# represents a portion of the title, with the lesser emphasis (relative weighting) being on the higher numbers. <br />
+<strong>mt = mt1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-para-style_mt.jpg"><img alt="_images/usx-para-style_mt.jpg" src="_images/usx-para-style_mt.jpg" style="width: 250px;" /></a>
+<p><br /></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_mtAlt.jpg"><img alt="_images/usx-para-style_mtAlt.jpg" src="_images/usx-para-style_mtAlt.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-mte"></span><table class="docutils field-list" frame="void" id="index-26" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">mte#</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Main title at introduction ending. <br />
+May be used in texts which repeat the main title at the end of the introduction.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ms"></span><table class="docutils field-list" frame="void" id="index-27" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">ms#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Major section heading.
+A heading added before a broader text division than what is typically considered a &#8220;section&#8221; division (see <a class="reference internal" href="#usx-parastyle-s"><span class="std std-ref">s#</span></a>). <br />
+# represents the level of division. <br />
+<strong>ms = ms1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-para-style_ms.jpg"><img alt="_images/usx-para-style_ms.jpg" src="_images/usx-para-style_ms.jpg" style="width: 250px;" /></a>
+<p><br /></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_msAlt.jpg"><img alt="_images/usx-para-style_msAlt.jpg" src="_images/usx-para-style_msAlt.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-mr"></span><table class="docutils field-list" frame="void" id="index-28" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">mr</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Major section reference range. <br />
+The text reference range listed under a major section heading.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_mr.jpg"><img alt="_images/usx-para-style_mr.jpg" src="_images/usx-para-style_mr.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-s"></span><table class="docutils field-list" frame="void" id="index-29" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">s#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Section heading. <br />
+The typical (common) section division heading. <br />
+# represents the level of division. <br />
+<strong>s = s1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<p><em>s1 example</em></p>
+<a class="reference internal image-reference" href="_images/usx-para-style_s1.jpg"><img alt="_images/usx-para-style_s1.jpg" src="_images/usx-para-style_s1.jpg" style="width: 250px;" /></a>
+<p><br /> <em>s2 example</em></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_s2.jpg"><img alt="_images/usx-para-style_s2.jpg" src="_images/usx-para-style_s2.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-sr"></span><table class="docutils field-list" frame="void" id="index-30" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">sr</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Section reference range. <br />
+The text reference range listed under a section heading. <br />
+sr is not equivalent to r which is used for marking parallel references. <br /></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">See also:</th><td class="field-body"><p class="first"><a class="reference internal" href="#usx-parastyle-mr"><span class="std std-ref">mr</span></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_sr.jpg"><img alt="_images/usx-para-style_sr.jpg" src="_images/usx-para-style_sr.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-r"></span><table class="docutils field-list" frame="void" id="index-31" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">r</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Parallel passage reference(s). <br />
+A reference to a parallel passage usually located under a section heading <a class="reference internal" href="#usx-parastyle-s"><span class="std std-ref">s#</span></a>. <br /></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">See also:</th><td class="field-body"><p class="first"><a class="reference internal" href="charstyles.html"><span class="doc">char</span></a> &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-rq"><span class="std std-ref">rq</span></a>.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_r.jpg"><img alt="_images/usx-para-style_r.jpg" src="_images/usx-para-style_r.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-d"></span><table class="docutils field-list" frame="void" id="index-32" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">d</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Descriptive title (or &#8220;Hebrew subtitle&#8221;). <br />
+Sometimes used in Psalms under the section title (e.g. &#8220;For the director of Music&#8221;).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_d.jpg"><img alt="_images/usx-para-style_d.jpg" src="_images/usx-para-style_d.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-sp"></span><table class="docutils field-list" frame="void" id="index-33" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">sp</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Speaker identification (e.g. Job and Song of Songs).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_sp.jpg"><img alt="_images/usx-para-style_sp.jpg" src="_images/usx-para-style_sp.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="paragraphs">
+<span id="usx-parastyles-paragraphs"></span><span id="index-34"></span><h2><a class="toc-backref" href="#id6">Paragraphs</a><a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#usx-parastyle-p"><span class="std std-ref">p</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-m"><span class="std std-ref">m</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-pmo"><span class="std std-ref">pmo</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-pm"><span class="std std-ref">pm</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-pmc"><span class="std std-ref">pmc</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-pmr"><span class="std std-ref">pmr</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-pi"><span class="std std-ref">pi#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-mi"><span class="std std-ref">mi</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-cls"><span class="std std-ref">cls</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-li"><span class="std std-ref">li#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-pc"><span class="std std-ref">pc</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-pr"><span class="std std-ref">pr</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-ph"><span class="std std-ref">ph#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-lit"><span class="std std-ref">lit</span></a></li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-p"></span><table class="docutils field-list" frame="void" id="index-35" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">p</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Normal paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_p.jpg"><img alt="_images/usx-para-style_p.jpg" src="_images/usx-para-style_p.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-m"></span><table class="docutils field-list" frame="void" id="index-36" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">m</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Margin paragraph. <br />
+Typically used to resume prose at the margin (without indent) after poetry or OT quotation (i.e. a continuation of the previous paragraph).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_m.jpg"><img alt="_images/usx-para-style_m.jpg" src="_images/usx-para-style_m.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-pmo"></span><table class="docutils field-list" frame="void" id="index-37" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">pmo</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Embedded text opening.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_pmo.jpg"><img alt="_images/usx-para-style_pmo.jpg" src="_images/usx-para-style_pmo.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-pm"></span><table class="docutils field-list" frame="void" id="index-38" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">pm</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Embedded text paragraph.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_pm.jpg"><img alt="_images/usx-para-style_pm.jpg" src="_images/usx-para-style_pm.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-pmc"></span><table class="docutils field-list" frame="void" id="index-39" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">pmc</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Embedded text closing.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_pmc.jpg"><img alt="_images/usx-para-style_pmc.jpg" src="_images/usx-para-style_pmc.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-pmr"></span><table class="docutils field-list" frame="void" id="index-40" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">pmr</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Embedded text refrain.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_pmr.jpg"><img alt="_images/usx-para-style_pmr.jpg" src="_images/usx-para-style_pmr.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-pi"></span><table class="docutils field-list" frame="void" id="index-41" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">pi#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Indented paragraph. <br />
+Used in some texts for discourse sections. <br />
+# represents the level of indent. <br />
+<strong>pi = pi1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">See also:</th><td class="field-body"><p class="first"><a class="reference internal" href="#usx-parastyle-pm"><span class="std std-ref">pm</span></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_pi.jpg"><img alt="_images/usx-para-style_pi.jpg" src="_images/usx-para-style_pi.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-mi"></span><table class="docutils field-list" frame="void" id="index-42" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">mi</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Indented flush left paragraph</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_mi.jpg"><img alt="_images/usx-para-style_mi.jpg" src="_images/usx-para-style_mi.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-cls"></span><table class="docutils field-list" frame="void" id="index-43" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">cls</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Closure of an epistle / letter</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_cls.jpg"><img alt="_images/usx-para-style_cls.jpg" src="_images/usx-para-style_cls.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-li"></span><table class="docutils field-list" frame="void" id="index-44" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">li#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">List item (out-dented paragraph meant to highlight the items of a list.). <br />
+# represents the level of indent <br />
+<strong>li = li1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_li.jpg"><img alt="_images/usx-para-style_li.jpg" src="_images/usx-para-style_li.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-pc"></span><table class="docutils field-list" frame="void" id="index-45" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">pc</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Centered paragraph</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_pc.jpg"><img alt="_images/usx-para-style_pc.jpg" src="_images/usx-para-style_pc.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-pr"></span><table class="docutils field-list" frame="void" id="index-46" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">pr</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Right-aligned paragraph <br /> <br />
+<a class="reference internal" href="_images/icon-warning.png"><img alt="ico_W" src="_images/icon-warning.png" style="width: 16px; height: 16px;" /></a> Use is strongly discouraged. <br />
+<a class="reference internal" href="_images/icon-check-green.png"><img alt="ico_Cg" src="_images/icon-check-green.png" style="width: 16px; height: 16px;" /></a> Recommended alternate is <a class="reference internal" href="#usx-parastyle-pmr"><span class="std std-ref">pmr</span></a> <br /></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-ph"></span><table class="docutils field-list" frame="void" id="index-47" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ph#</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Indented paragraph with hanging indent. <br />
+# represents the level of indent <br />
+<strong>ph = ph1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes) <br /> <br />
+<a class="reference internal" href="_images/icon-warning.png"><img alt="ico_W" src="_images/icon-warning.png" style="width: 16px; height: 16px;" /></a> Use is strongly discouraged. <br />
+<a class="reference internal" href="_images/icon-check-green.png"><img alt="ico_Cg" src="_images/icon-check-green.png" style="width: 16px; height: 16px;" /></a> Recommended alternate is <a class="reference internal" href="#usx-parastyle-li"><span class="std std-ref">li#</span></a> <br /></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-lit"></span><table class="docutils field-list" frame="void" id="index-48" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">lit</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Liturgical note/comment. (e.g. a guide which tells the reader/worshiper that he/she should recite a prayer or recitation etc.) <br />
+<em>In the formatting example image (below) the word Слава = &#8220;Glory&#8221;</em></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_lit.jpg"><img alt="_images/usx-para-style_lit.jpg" src="_images/usx-para-style_lit.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="poetry">
+<span id="usx-parastyles-poetry"></span><span id="index-49"></span><h2><a class="toc-backref" href="#id7">Poetry</a><a class="headerlink" href="#poetry" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#usx-parastyle-q"><span class="std std-ref">q#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-qr"><span class="std std-ref">qr</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-qc"><span class="std std-ref">qc</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-qa"><span class="std std-ref">qa</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-qm"><span class="std std-ref">qm#</span></a></li>
+<li><a class="reference internal" href="#usx-parastyle-b"><span class="std std-ref">b</span></a></li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-q"></span><table class="docutils field-list" frame="void" id="index-50" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">q#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Poetic line. <br />
+# represents the level of indent (i.e. q1, q2, q3 etc.).
+<strong>q = q1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-para-style_q1.jpg"><img alt="_images/usx-para-style_q1.jpg" src="_images/usx-para-style_q1.jpg" style="width: 250px;" /></a>
+<p><br /></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_q2.jpg"><img alt="_images/usx-para-style_q2.jpg" src="_images/usx-para-style_q2.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-qr"></span><table class="docutils field-list" frame="void" id="index-51" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">qr</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Right-aligned poetic line. <br />
+<a class="reference internal" href="_images/icon-check-green.png"><img alt="ico_Cg" src="_images/icon-check-green.png" style="width: 16px; height: 16px;" /></a> Common use: Poetic refrain</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_qr.jpg"><img alt="_images/usx-para-style_qr.jpg" src="_images/usx-para-style_qr.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-qc"></span><table class="docutils field-list" frame="void" id="index-52" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">qc</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Centered poetic line.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_qc.jpg"><img alt="_images/usx-para-style_qc.jpg" src="_images/usx-para-style_qc.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-qa"></span><table class="docutils field-list" frame="void" id="index-53" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">qa</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Acrostic heading.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_qa.jpg"><img alt="_images/usx-para-style_qa.jpg" src="_images/usx-para-style_qa.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><a class="reference internal" href="charstyles.html#usx-charstyle-qac"><span class="std std-ref">qac</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">See:</th><td class="field-body"><a class="reference internal" href="charstyles.html"><span class="doc">char</span></a> &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-qac"><span class="std std-ref">qac</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-qm"></span><table class="docutils field-list" frame="void" id="index-54" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">qm#</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Embedded text poetic line. <br />
+# represents the level of indent (i.e. qm1, qm2, etc.). <br />
+<strong>qm = qm1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_qm.jpg"><img alt="_images/usx-para-style_qm.jpg" src="_images/usx-para-style_qm.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><a class="reference internal" href="charstyles.html#usx-charstyle-qs"><span class="std std-ref">qs</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">See:</th><td class="field-body"><a class="reference internal" href="charstyles.html"><span class="doc">char</span></a> &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-qs"><span class="std std-ref">qs</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-parastyle-b"></span><table class="docutils field-list" frame="void" id="index-55" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">b</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Blank line. <br />
+May be used to explicitly indicate additional white space between paragraphs. <br /> <br />
+<a class="reference internal" href="_images/icon-warning.png"><img alt="ico_W" src="_images/icon-warning.png" style="width: 16px; height: 16px;" /></a> A para element with <strong>b</strong> style type should always be <em>empty</em>. <br />
+<strong>b</strong> should not be used before or after titles to indicate white-space.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-para-style_b.jpg"><img alt="_images/usx-para-style_b.jpg" src="_images/usx-para-style_b.jpg" style="width: 250px;" /></a>
+<p><br /></p>
+<a class="last reference internal image-reference" href="_images/usx-para-style_bAlt.jpg"><img alt="_images/usx-para-style_bAlt.jpg" src="_images/usx-para-style_bAlt.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="charstyles.html" class="btn btn-neutral float-right" title="&lt;char&gt; @style Types" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="elements.html" class="btn btn-neutral" title="Elements" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, United Bible Societies.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.500',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

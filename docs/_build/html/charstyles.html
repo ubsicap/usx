@@ -1,0 +1,695 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;char&gt; @style Types &mdash; Unified Scripture XML 2.500 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Unified Scripture XML 2.500 documentation" href="index.html"/>
+        <link rel="next" title="&lt;note&gt; Types" href="notes.html"/>
+        <link rel="prev" title="&lt;para&gt; @style Types" href="parastyles.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Document Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parastyles.html">&lt;para&gt; &#64;style Types</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">&lt;char&gt; &#64;style Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#special-text">Special Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#character-styling">Character Styling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#special-features">Special Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">&lt;note&gt; Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vocabularies.html">Vocabularies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schemas</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Unified Scripture XML</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;char&gt; &#64;style Types</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/charstyles.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <style> .red {color:red} </style>
+<style> .orange {color:orange} </style>
+<style> .green {color:green} </style>
+<style> .red-bd {color:red;  font-weight: bold} </style>
+<style> .orange-bd {color:orange;  font-weight: bold} </style>
+<style> .green-bd {color:green;  font-weight: bold} </style><div class="section" id="char-style-types">
+<span id="usx-charstyles"></span><span id="index-0"></span><h1><a class="toc-backref" href="#id1">&lt;char&gt; &#64;style Types</a><a class="headerlink" href="#char-style-types" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#char-style-types" id="id1">&lt;char&gt; &#64;style Types</a><ul>
+<li><a class="reference internal" href="#special-text" id="id2">Special Text</a></li>
+<li><a class="reference internal" href="#character-styling" id="id3">Character Styling</a></li>
+<li><a class="reference internal" href="#special-features" id="id4">Special Features</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>&#64;style types for</strong> <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> <strong>elements occurring within</strong> <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a></p>
+<p class="last">An additional list of <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style types are defined for use in the context of footnotes and cross references. These are described in this document together with the definitions for the <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> elements used for footnotes and cross references.</p>
+</div>
+<div class="section" id="special-text">
+<span id="usx-charstyles-specialtext"></span><span id="index-1"></span><h2><a class="toc-backref" href="#id2">Special Text</a><a class="headerlink" href="#special-text" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#usx-charstyle-ior"><span class="std std-ref">ior</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-iqt"><span class="std std-ref">iqt</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-add"><span class="std std-ref">add</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-bk"><span class="std std-ref">bk</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-dc"><span class="std std-ref">dc</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-k"><span class="std std-ref">k</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-nd"><span class="std std-ref">nd</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-ord"><span class="std std-ref">ord</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-pn"><span class="std std-ref">pn</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-qac"><span class="std std-ref">qac</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-qs"><span class="std std-ref">qs</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-qt"><span class="std std-ref">qt</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-rq"><span class="std std-ref">rq</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-sig"><span class="std std-ref">sig</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-sls"><span class="std std-ref">sls</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-tl"><span class="std std-ref">tl</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-wj"><span class="std std-ref">wj</span></a></li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-ior"></span><table class="docutils field-list" frame="void" id="index-2" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">ior</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Introduction outline reference range. <br />
+An <a class="reference internal" href="parastyles.html#usx-parastyle-io"><span class="std std-ref">introduction outline entry</span></a> typically ends with a range of references, sometimes within parentheses. This is an optional char style for marking these references separately.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_ior.jpg"><img alt="_images/usx-char-style_ior.jpg" src="_images/usx-char-style_ior.jpg" style="width: 300px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-iqt"></span><table class="docutils field-list" frame="void" id="index-3" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">iqt</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction quoted text. <br />
+Scripture quotations, or other quoted text, appearing in the <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-add"></span><table class="docutils field-list" frame="void" id="index-4" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">add</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Translator&#8217;s addition. <br />
+Words added by the translator for clarity – text which is not literally a part of the original language, but which was supplied to make the meaning of the original clear.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_add.jpg"><img alt="_images/usx-char-style_add.jpg" src="_images/usx-char-style_add.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-bk"></span><table class="docutils field-list" frame="void" id="index-5" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">bk</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Quoted book title.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_bk.jpg"><img alt="_images/usx-char-style_bk.jpg" src="_images/usx-char-style_bk.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-dc"></span><table class="docutils field-list" frame="void" id="index-6" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">dc</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Deuterocanonical/LXX additions or insertions in the Protocanonical text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-k"></span><table class="docutils field-list" frame="void" id="index-7" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">k</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Keyword / keyterm.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-nd"></span><table class="docutils field-list" frame="void" id="index-8" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">nd</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Name of God (name of deity).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_nd.jpg"><img alt="_images/usx-char-style_nd.jpg" src="_images/usx-char-style_nd.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-ord"></span><table class="docutils field-list" frame="void" id="index-9" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ord</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Ordinal number ending (i.e. in 1st — <code class="docutils literal"><span class="pre">1&lt;char</span> <span class="pre">style=&quot;ord&quot;&gt;st&lt;/char&gt;</span></code>).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-pn"></span><table class="docutils field-list" frame="void" id="index-10" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">pn</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Proper name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-qac"></span><table class="docutils field-list" frame="void" id="index-11" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">qac</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Used to indicate the acrostic letter within a poetic line.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_qac.jpg"><img alt="_images/usx-char-style_qac.jpg" src="_images/usx-char-style_qac.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-qs"></span><table class="docutils field-list" frame="void" id="index-12" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">qs</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Used for the expression &#8220;Selah&#8221; commonly found in Psalms and Habakkuk. <br />
+This text is frequently right aligned, and rendered on the same line as the previous poetic text, if space allows.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_qs.jpg"><img alt="_images/usx-char-style_qs.jpg" src="_images/usx-char-style_qs.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-qt"></span><table class="docutils field-list" frame="void" id="index-13" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">qt</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Quoted text. <br />
+Old Testament quotations in the New Testament, or other quotations.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_qt.jpg"><img alt="_images/usx-char-style_qt.jpg" src="_images/usx-char-style_qt.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-rq"></span><table class="docutils field-list" frame="void" id="index-14" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">rq</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Inline quotation reference(s). <br />
+A reference indicating the source text for the preceding quotation (usually an Old Testament quote). <br />
+The reference(s) are intended to be formatted within the scripture body text column, and not extracted from the text as are regular <a class="reference internal" href="notes.html#usx-note-crossreference"><span class="std std-ref">cross-references</span></a>. They are also typically separated from the main text of Scripture using a different type style and alignment.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_rq.jpg"><img alt="_images/usx-char-style_rq.jpg" src="_images/usx-char-style_rq.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-sig"></span><table class="docutils field-list" frame="void" id="index-15" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">sig</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Signature of the author of an epistle.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_sig.jpg"><img alt="_images/usx-char-style_sig.jpg" src="_images/usx-char-style_sig.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-sls"></span><table class="docutils field-list" frame="void" id="index-16" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">sls</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Passage of text based on a secondary language or alternate text source. <br />
+For example: The Nouvelle Bible Segond 2002 (NBS02) has large sections of text in EZR and DAN in italics, to represent where the original text is in Aramaic, not Hebrew.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_sls.jpg"><img alt="_images/usx-char-style_sls.jpg" src="_images/usx-char-style_sls.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-tl"></span><table class="docutils field-list" frame="void" id="index-17" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">tl</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Transliterated (or foreign) word(s).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+<a class="last reference internal image-reference" href="_images/usx-char-style_tl.jpg"><img alt="_images/usx-char-style_tl.jpg" src="_images/usx-char-style_tl.jpg" style="width: 250px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-wj"></span><table class="docutils field-list" frame="void" id="index-18" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">wj</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Words of Jesus.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="character-styling">
+<span id="usx-charstyles-characterstyles"></span><span id="index-19"></span><h2><a class="toc-backref" href="#id3">Character Styling</a><a class="headerlink" href="#character-styling" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#usx-charstyle-bd"><span class="std std-ref">bd</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-bdit"><span class="std std-ref">bdit</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-em"><span class="std std-ref">em</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-it"><span class="std std-ref">it</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-no"><span class="std std-ref">no</span></a></li>
+<li><a class="reference internal" href="#usx-charstyle-sc"><span class="std std-ref">sc</span></a></li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-bd"></span><table class="docutils field-list" frame="void" id="index-20" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">bd</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Bold text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-bdit"></span><table class="docutils field-list" frame="void" id="index-21" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">bdit</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Bold + Italic text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-em"></span><table class="docutils field-list" frame="void" id="index-22" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">em</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Emphasis text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-it"></span><table class="docutils field-list" frame="void" id="index-23" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">it</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Italic text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-no"></span><table class="docutils field-list" frame="void" id="index-24" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">no</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Normal text. <br />
+May be used when a containing paragraph element may be set in an alternate font style (e.g. italic), and a selection of text should instead be displayed in normal style.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-sc"></span><table class="docutils field-list" frame="void" id="index-25" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">sc</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Small-cap text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="special-features">
+<span id="usx-charstyles-specialfeatures"></span><span id="index-26"></span><h2><a class="toc-backref" href="#id4">Special Features</a><a class="headerlink" href="#special-features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>pro</li>
+<li>w</li>
+<li>wg</li>
+<li>wh</li>
+</ul>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-pro"></span><table class="docutils field-list" frame="void" id="index-27" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">pro</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Pronunciation information <br />
+<em>Used for CJK texts.</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-w"></span><table class="docutils field-list" frame="void" id="index-28" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">w</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Wordlist/glossary/dictionary entry. <br />
+Surround word(s) with this char style to indicate that it appears (or should appear) in a published word list/glossary.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-wg"></span><table class="docutils field-list" frame="void" id="index-29" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">wg</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Greek word list entry.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<span class="target" id="usx-charstyle-wh"></span><table class="docutils field-list" frame="void" id="index-30" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">wh</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Hebrew word list entry.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="notes.html" class="btn btn-neutral float-right" title="&lt;note&gt; Types" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="parastyles.html" class="btn btn-neutral" title="&lt;para&gt; @style Types" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, United Bible Societies.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.500',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

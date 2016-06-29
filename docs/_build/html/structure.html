@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document Structure &mdash; Unified Scripture XML 2.500 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Unified Scripture XML 2.500 documentation" href="index.html"/>
+        <link rel="next" title="Elements" href="elements.html"/>
+        <link rel="prev" title="USX Documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Document Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#book-identification">Book Identification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diagram">Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#book-header">Book Header</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#book-titles">Book Titles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#book-introduction">Book Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-end-titles">Introduction End Titles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#book-chapter-label">Book Chapter Label</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-text">Chapter Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diagrams">Diagrams</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parastyles.html">&lt;para&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="charstyles.html">&lt;char&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">&lt;note&gt; Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vocabularies.html">Vocabularies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schemas</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Unified Scripture XML</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Document Structure</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/structure.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <style> .red {color:red} </style>
+<style> .orange {color:orange} </style>
+<style> .green {color:green} </style>
+<style> .red-bd {color:red;  font-weight: bold} </style>
+<style> .orange-bd {color:orange;  font-weight: bold} </style>
+<style> .green-bd {color:green;  font-weight: bold} </style><div class="section" id="document-structure">
+<span id="usx-docstructure"></span><h1>Document Structure<a class="headerlink" href="#document-structure" title="Permalink to this headline">¶</a></h1>
+<p>A USX document consists of valid USX elements organized within the following sequence of document divisions.</p>
+<ul class="simple">
+<li><a class="reference internal" href="#usx-div-bookidentification"><span class="std std-ref">Book Identification</span></a></li>
+<li><a class="reference internal" href="#usx-div-bookheader"><span class="std std-ref">Book Header</span></a></li>
+<li><a class="reference internal" href="#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a></li>
+<li><a class="reference internal" href="#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></li>
+<li><a class="reference internal" href="#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a></li>
+<li><a class="reference internal" href="#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a></li>
+<li><a class="reference internal" href="#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="book-identification">
+<span id="usx-div-bookidentification"></span><h2>Book Identification<a class="headerlink" href="#book-identification" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>Book</strong></p>
+<div class="section" id="diagram">
+<h3>Diagram<a class="headerlink" href="#diagram" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-div_Book.png" src="_images/usx-div_Book.png" />
+<p>The <a class="reference internal" href="elements.html#usx-element-book"><span class="std std-ref">book</span></a> element for primary book identification.</p>
+</div>
+</div>
+<div class="section" id="book-header">
+<span id="usx-div-bookheader"></span><h2>Book Header<a class="headerlink" href="#book-header" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>HeaderPara</strong></p>
+<div class="section" id="id1">
+<h3>Diagram<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-div_HeaderPara.png" src="_images/usx-div_HeaderPara.png" />
+<p>An optional collection of one or more <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">para</span></a> elements for providing vernacular book name and abbreviation texts.</p>
+<ul class="simple">
+<li>Valid &#64;style types (alphabetical): <a class="reference internal" href="parastyles.html#usx-parastyle-h"><span class="std std-ref">h</span></a>, ide, rem, <a class="reference internal" href="parastyles.html#usx-parastyle-toc1"><span class="std std-ref">toc1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-toc2"><span class="std std-ref">toc2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-toc3"><span class="std std-ref">toc3</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="book-titles">
+<span id="usx-div-booktitles"></span><h2>Book Titles<a class="headerlink" href="#book-titles" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>TitlePara</strong></p>
+<div class="section" id="id2">
+<h3>Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-div_TitlePara.png" src="_images/usx-div_TitlePara.png" />
+<p>A collection of one or more <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">para</span></a> elements for book main titles.</p>
+<ul class="simple">
+<li>Valid &#64;style types (alphabetical): <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt3</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt4</span></a>, rem</li>
+<li>Optional collection of one or more child elements (may be nested): <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">note</span></a> (&#64;style f, fe, x), <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">char</span></a>, <a class="reference internal" href="elements.html#usx-element-optbreak"><span class="std std-ref">optbreak</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="book-introduction">
+<span id="usx-div-bookintroduction"></span><h2>Book Introduction<a class="headerlink" href="#book-introduction" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>IntroPara</strong></p>
+<div class="section" id="id3">
+<h3>Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-div_IntroPara.png" src="_images/usx-div_IntroPara.png" />
+<p>An optional collection of <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">para</span></a> or <a class="reference internal" href="elements.html#usx-element-table"><span class="std std-ref">table</span></a> elements for book introductions.</p>
+<ul class="simple">
+<li>Valid &#64;style types (alphabetical): <a class="reference internal" href="parastyles.html#usx-parastyle-ib"><span class="std std-ref">ib</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ie"><span class="std std-ref">ie</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-iex"><span class="std std-ref">iex</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ili"><span class="std std-ref">ili</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ili"><span class="std std-ref">ili1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ili"><span class="std std-ref">ili2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-im"><span class="std std-ref">im</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-im"><span class="std std-ref">imi</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imq"><span class="std std-ref">imq</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt3</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt4</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imte"><span class="std std-ref">imte</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imte"><span class="std std-ref">imte1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imte"><span class="std std-ref">imte2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-io"><span class="std std-ref">io</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-io"><span class="std std-ref">io1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-io"><span class="std std-ref">io2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-io"><span class="std std-ref">io3</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-io"><span class="std std-ref">io4</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-iot"><span class="std std-ref">iot</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ip"><span class="std std-ref">ip</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ipi"><span class="std std-ref">ipi</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ipq"><span class="std std-ref">ipq</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-ipr"><span class="std std-ref">ipr</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-iq"><span class="std std-ref">iq</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-iq"><span class="std std-ref">iq1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-iq"><span class="std std-ref">iq2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-iq"><span class="std std-ref">iq3</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-is"><span class="std std-ref">is</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-is"><span class="std std-ref">is1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-is"><span class="std std-ref">is2</span></a>, rem</li>
+<li>Optional collection of one or more child elements: <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">note</span></a> (&#64;style f, fe), <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">char</span></a>, <a class="reference internal" href="elements.html#usx-element-figure"><span class="std std-ref">figure</span></a>, <a class="reference internal" href="elements.html#usx-element-optbreak"><span class="std std-ref">optbreak</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-end-titles">
+<span id="usx-div-introductionendtitles"></span><h2>Introduction End Titles<a class="headerlink" href="#introduction-end-titles" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>TitleParaIntroEnd</strong></p>
+<div class="section" id="id4">
+<h3>Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-div_TitleParaIntroEnd.png" src="_images/usx-div_TitleParaIntroEnd.png" />
+<p>An optional collection of <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">para</span></a> elements for book titles occurring at the end of the book introduction.</p>
+<ul class="simple">
+<li>Valid &#64;style types (alphabetical): <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-imt"><span class="std std-ref">imt2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt1</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt2</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt3</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyle-mt"><span class="std std-ref">mt4</span></a></li>
+<li>Optional collection of one or more child elements: <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">note</span></a> (&#64;style f, fe), <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">char</span></a>, <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">figure</span></a>, <a class="reference internal" href="elements.html#usx-element-optbreak"><span class="std std-ref">optbreak</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="book-chapter-label">
+<span id="usx-div-bookchapterlabel"></span><h2>Book Chapter Label<a class="headerlink" href="#book-chapter-label" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>ChapterLabelBookWide</strong></p>
+<div class="section" id="id5">
+<h3>Diagram<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-div_ChapterLabelBookWide.png" src="_images/usx-div_ChapterLabelBookWide.png" />
+<p>An optional <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">para</span></a> element for a chapter heading text which could be applied (typically as a heading) to all chapters in the current book.</p>
+<ul class="simple">
+<li>Valid &#64;style types: cl</li>
+</ul>
+</div>
+</div>
+<div class="section" id="chapter-text">
+<span id="usx-div-chaptertext"></span><h2>Chapter Text<a class="headerlink" href="#chapter-text" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern names: <strong>Chapter</strong>, <strong>Para</strong>, <strong>Table</strong></p>
+<div class="section" id="diagrams">
+<h3>Diagrams<a class="headerlink" href="#diagrams" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-div_Chapter.png" src="_images/usx-div_Chapter.png" />
+<img alt="_images/usx-div_Para.png" src="_images/usx-div_Para.png" />
+<img alt="_images/usx-div_Table.png" src="_images/usx-div_Table.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="elements.html" class="btn btn-neutral float-right" title="Elements" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="USX Documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, United Bible Societies.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.500',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

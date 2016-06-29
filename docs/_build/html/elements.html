@@ -1,0 +1,1012 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Elements &mdash; Unified Scripture XML 2.500 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Unified Scripture XML 2.500 documentation" href="index.html"/>
+        <link rel="next" title="&lt;para&gt; @style Types" href="parastyles.html"/>
+        <link rel="prev" title="Document Structure" href="structure.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Document Structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usx">&lt;usx&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#diagram">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#book">&lt;book&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter">&lt;chapter&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#verse">&lt;verse&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samples">Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#para">&lt;para&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#table">&lt;table&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#row">&lt;row&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cell">&lt;cell&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#char">&lt;char&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#note">&lt;note&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sidebar">&lt;sidebar&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#figure">&lt;figure&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#optbreak">&lt;optbreak&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ref">&lt;ref&gt;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">Sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-details">Sample Details</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parastyles.html">&lt;para&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="charstyles.html">&lt;char&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">&lt;note&gt; Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vocabularies.html">Vocabularies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schemas</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Unified Scripture XML</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Elements</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/elements.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <style> .red {color:red} </style>
+<style> .orange {color:orange} </style>
+<style> .green {color:green} </style>
+<style> .red-bd {color:red;  font-weight: bold} </style>
+<style> .orange-bd {color:orange;  font-weight: bold} </style>
+<style> .green-bd {color:green;  font-weight: bold} </style><div class="section" id="elements">
+<span id="usx-elementindex"></span><h1><a class="toc-backref" href="#id20">Elements</a><a class="headerlink" href="#elements" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#elements" id="id20">Elements</a><ul>
+<li><a class="reference internal" href="#usx" id="id21">&lt;usx&gt;</a></li>
+<li><a class="reference internal" href="#book" id="id22">&lt;book&gt;</a></li>
+<li><a class="reference internal" href="#chapter" id="id23">&lt;chapter&gt;</a></li>
+<li><a class="reference internal" href="#verse" id="id24">&lt;verse&gt;</a></li>
+<li><a class="reference internal" href="#para" id="id25">&lt;para&gt;</a></li>
+<li><a class="reference internal" href="#table" id="id26">&lt;table&gt;</a></li>
+<li><a class="reference internal" href="#row" id="id27">&lt;row&gt;</a></li>
+<li><a class="reference internal" href="#cell" id="id28">&lt;cell&gt;</a></li>
+<li><a class="reference internal" href="#char" id="id29">&lt;char&gt;</a></li>
+<li><a class="reference internal" href="#note" id="id30">&lt;note&gt;</a></li>
+<li><a class="reference internal" href="#sidebar" id="id31">&lt;sidebar&gt;</a></li>
+<li><a class="reference internal" href="#figure" id="id32">&lt;figure&gt;</a></li>
+<li><a class="reference internal" href="#optbreak" id="id33">&lt;optbreak&gt;</a></li>
+<li><a class="reference internal" href="#ref" id="id34">&lt;ref&gt;</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="usx">
+<span id="usx-element-root"></span><span id="index-0"></span><h2><a class="toc-backref" href="#id21">&lt;usx&gt;</a><a class="headerlink" href="#usx" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">usx <span style="color:red; font-weight:bold">*</span> <br />
+<em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Root element for USX scripture file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;version:</th><td class="field-body">USX version identifier. <span style="color:red; font-weight:bold">*</span> <br />
+xsd:decimal <br />
+Only the specific USX version number for scripture data contained in the file is allowed (1.0, 2.0, 2.5 etc.).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parent:</th><td class="field-body"><strong>ROOT</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The following schema diagram displays the document structure of a USX scripture file.</p>
+<div class="section" id="diagram">
+<h3>Diagram<a class="headerlink" href="#diagram" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx_usx-document.png" src="_images/usx_usx-document.png" />
+</div>
+<div class="section" id="sample">
+<h3>Sample<a class="headerlink" href="#sample" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;usx</span> <span class="na">version=</span><span class="s">&quot;2.5&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="book">
+<span id="usx-element-book"></span><span id="index-1"></span><h2><a class="toc-backref" href="#id22">&lt;book&gt;</a><a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">book <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Brief description of scripure translation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;code:</th><td class="field-body">3-letter book code for the scripture content in the USX document. <span style="color:red; font-weight:bold">*</span> <br />
+one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">id</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookidentification"><span class="std std-ref">Book Identification</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parent:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h3>Diagram<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_book.png" src="_images/usx-element_book.png" />
+</div>
+<div class="section" id="id2">
+<h3>Sample<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;book</span> <span class="na">code=</span><span class="s">&quot;MAT&quot;</span> <span class="na">style=</span><span class="s">&quot;id&quot;</span><span class="nt">&gt;</span>English: Good News Translation 2nd Ed. 1992<span class="nt">&lt;/book&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="chapter">
+<span id="usx-element-chapter"></span><span id="index-2"></span><h2><a class="toc-backref" href="#id23">&lt;chapter&gt;</a><a class="headerlink" href="#chapter" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">chapter <span style="color:red; font-weight:bold">*</span> <br />
+<em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Initial element within each chapter text division. Marks the start of a new chapter.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">c</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;number:</th><td class="field-body">Current chapter number (sequential; according to versification definition for the scripture text). <span style="color:red; font-weight:bold">*</span> <br />
+xsd:integer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;altnumber:</th><td class="field-body">Alternate chapter number. (Used to supply the chapter number for an alternate versification scheme. This is required when the numbering for an alternate versification tradition need to be maintained within the same translation text.) <br />
+xsd:string of pattern <code class="docutils literal"><span class="pre">[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;pubnumber:</th><td class="field-body">Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parent:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id3">
+<h3>Diagram<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_chapter.png" src="_images/usx-element_chapter.png" />
+</div>
+<div class="section" id="id4">
+<h3>Sample<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Code examples for chapter and verse are provided after the definition for element <a class="reference internal" href="#usx-element-verse"><span class="std std-ref">verse</span></a> (below).</p>
+</div>
+</div>
+<div class="section" id="verse">
+<span id="usx-element-verse"></span><span id="index-3"></span><h2><a class="toc-backref" href="#id24">&lt;verse&gt;</a><a class="headerlink" href="#verse" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">verse <span style="color:red; font-weight:bold">*</span> <br />
+<em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Marks the start of a new verse.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">v</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;number:</th><td class="field-body">Current verse number (sequential; according to versification definition for the scripture text). <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string of pattern <code class="docutils literal"><span class="pre">[0-9]+\w?(‏?[\-,][0-9]+\w?)*</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;altnumber:</th><td class="field-body">Alternate verse number. (Used to supply the verse number for an alternate versification scheme. This is required when the numbering for an alternate versification tradition need to be maintained within the same translation text.) <br />
+xsd:string of pattern <code class="docutils literal"><span class="pre">[0-9]+\w?(‏?[\-,][0-9]+\w?)*</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;pubnumber:</th><td class="field-body">Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id5">
+<h3>Diagram<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_verse.png" src="_images/usx-element_verse.png" />
+</div>
+<div class="section" id="samples">
+<h3>Samples<a class="headerlink" href="#samples" title="Permalink to this headline">¶</a></h3>
+<p><strong>chapter and verse (MAT 5:1, with preceding and following context)</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span> ... Large crowds followed him from Galilee and the Ten Towns, from Jerusalem, Judea,
+  and the land on the other side of the Jordan.<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;chapter</span> <span class="na">number=</span><span class="s">&quot;5&quot;</span> <span class="na">style=</span><span class="s">&quot;c&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s&quot;</span><span class="nt">&gt;</span>The Sermon on the Mount<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>Jesus saw the crowds and went up a hill, where he sat down.
+  His disciples gathered around him, <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;2&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>and he began to teach them:<span class="nt">&lt;/para&gt;</span>
+  ...
+</pre></div>
+</div>
+<p>An additional six chapters appear interspersed in Esther in the Septuagint. There are 3 common approaches to handling the Greek additions (and many additional variations!). Although Paratext requires sequential chapter and verse numbers to be used within the translation editing environment – as defined by the project versification – in numerous places this is not the string to be published for the chapter and/or verse identifiers at these locations. Examples from Esther Greek are shown below to highlight the application of the &#64;pubnumber attribute for <a class="reference internal" href="#usx-element-chapter"><span class="std std-ref">chapter</span></a> and <a class="reference internal" href="#usx-element-verse"><span class="std std-ref">verse</span></a>.</p>
+<p>The following example of the text for Esther Greek chapter 1 is taken from the English Good News Bible text. This text follows a versification scheme for Esther Greek which may be referred to as &#8220;modern scholars&#8221; configuration. Some versions following this scheme include English Good News, French La Bible en francais courant, and German Gute Nachricht Bible.</p>
+<ul class="simple">
+<li>In the first portion of this example, you can see a chapter element with the sequential &#64;number &#8220;1&#8221; which includes a &#64;pubnumber &#8220;A&#8221;. <em>The &#8220;A&#8221; should be presented to the reader</em>.</li>
+<li>In the second portion of this example, a para element with &#64;style &#8220;cp&#8221; is found. Although a sequential chapter element is not present at this location, <em>a chapter heading or other appropriate chapter style showing &#8220;1&#8221; should be presented to the reader</em>.</li>
+<li>In the second portion of this example you can also see verse elements with sequential &#64;number &#8220;18-19&#8221;, &#8220;20&#8221;, &#8220;21&#8221;, &#8220;22&#8221;. <em>The corresponding &#64;pubnumber &#8220;1-2&#8221;, &#8220;3&#8221;, &#8220;4&#8221;, and &#8220;5&#8221; should be presented to the reader</em>.</li>
+</ul>
+<p><strong>chapter and verse (ESG 1, showing chapter, &#64;pubnumber A, and cp 1; verse 18-19 &#64;pubnumber 1-2 etc.)</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;chapter</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;c&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;A&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s&quot;</span><span class="nt">&gt;</span>Mordecai&#39;s Strange Dream<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1-3&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>Mordecai, a Jew who belonged to the tribe of Benjamin, was taken
+  into exile, along with King Jehoiachin of Judah, when King Nebuchadnezzar of Babylonia captured
+  Jerusalem...<span class="nt">&lt;/para&gt;</span>
+
+...
+
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;cp&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s&quot;</span><span class="nt">&gt;</span>Queen Vashti Defies King Xerxes<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;18-19&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;1-2&quot;</span> <span class="nt">/&gt;</span>These things happened in the time of King Xerxes,
+  who ruled 127 provinces, all the way from India to Ethiopia, from his royal throne in Susa,
+  Persia&#39;s capital city. <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;20&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;3&quot;</span> <span class="nt">/&gt;</span>In the third year of his reign,
+  the king gave a banquet for all his advisers, the representatives of the other countries, the
+  noblemen from Persia and Media, and the governors of the provinces.
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;21&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;4&quot;</span> <span class="nt">/&gt;</span>For six whole months he made a show of the riches
+  of the imperial court with magnificent and expensive celebrations.<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;22&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span>After the feast the king gave a banquet for the people
+  of other nations who were in the city...<span class="nt">&lt;/para&gt;</span>
+
+...
+</pre></div>
+</div>
+<p>The following example is taken from the English Contemporary English Version (CEV) text, which applies a different versification scheme to Esther Greek following the Vulgate. The NRSV Anglicised Edition is another example following this scheme.</p>
+<p><strong>chapter and verse (ESG 1, showing chapter 1 &#64;pubnumber 11, cp 12, and 1; verse 1-3 &#64;pubnumber 2-4, verse 4 &#64;pubnumber 5, verse 12 &#64;pubnumber 1 etc.)</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;chapter</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;c&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;11&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;ms1&quot;</span><span class="nt">&gt;</span>Addition A<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s1&quot;</span><span class="nt">&gt;</span>Mordecai&#39;s Dream<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1-3&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;2-4&quot;</span> <span class="nt">/&gt;</span>Mordecai son of Jair was a Jew from the Benjamin
+  tribe, and he lived in the city of Susa in Persia. Mordecai had been taken away from Jerusalem as
+  a prisoner, when King Nebuchadnezzar of Babylonia had captured King Jehoiachin. ...<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>In Mordecai&#39;s dream, <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;4&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;5&quot;</span> <span class="nt">/&gt;</span> there was confusion
+  and unrest all over the world. He heard crashing thunder, and the earth shook with an earthquake
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;5&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;6&quot;</span> <span class="nt">/&gt;</span> as two huge dragons went toward each other, ready
+  to fight...<span class="nt">&lt;/para&gt;</span>
+
+...
+
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;11&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;12&quot;</span> <span class="nt">/&gt;</span> Mordecai woke up, but he knew that in his dream he
+  had seen what God was planning to do. And so, Mordecai thought about his dream all day, trying to
+  understand exactly what it meant.<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;cp&quot;</span><span class="nt">&gt;</span>12<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s1&quot;</span><span class="nt">&gt;</span>Mordecai <span class="nt">&lt;optbreak</span> <span class="nt">/&gt;</span> Saves the King&#39;s Life<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;12&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>That night, Mordecai was in the palace courtyard.
+  He was resting not far from Gabatha and Tharra, the two officers who were on guard duty.
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;13&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span> Mordecai overheard them talking, and as he
+  listened carefully, he realized they were planning to murder King Artaxerxes.<span class="nt">&lt;/para&gt;</span>
+
+...
+
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;ms1&quot;</span><span class="nt">&gt;</span>End of Addition A<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;cp&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s1&quot;</span><span class="nt">&gt;</span>Queen Vashti Disobeys <span class="nt">&lt;optbreak</span> <span class="nt">/&gt;</span> King Artaxerxes<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;18-20&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;1-3&quot;</span> <span class="nt">/&gt;</span>King Artaxerxes lived in his capital city of Susa
+  and ruled 127 provinces from India to Ethiopia.<span class="nt">&lt;/para&gt;</span>
+</pre></div>
+</div>
+<p>An example from Psalms (modified French TOB) showing an alternate chapter and verse numbering scheme encoded within the text.</p>
+<p><strong>chapter and verse (PSA 42, showing chapter &#64;altnumber and verse &#64;altnumber)</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;chapter</span> <span class="na">number=</span><span class="s">&quot;42&quot;</span> <span class="na">style=</span><span class="s">&quot;c&quot;</span> <span class="na">altnumber=</span><span class="s">&quot;41&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;ms1&quot;</span><span class="nt">&gt;</span>DEUXIÈME LIVRE<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;mr&quot;</span><span class="nt">&gt;</span>(Ps 42–72)<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s1&quot;</span><span class="nt">&gt;</span>PSAUME 42<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;d&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;va&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/char&gt;</span> Du chef de chœur. Instruction des fils de Coré.<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">altnumber=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span> Comme une biche se tourne<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>vers les cours d&#39;eau,<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>ainsi mon âme se tourne<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>vers toi, mon Dieu.<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;2&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">altnumber=</span><span class="s">&quot;3&quot;</span> <span class="nt">/&gt;</span> J&#39;ai soif de Dieu,<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>du Dieu vivant:<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>Quand pourrai-je entrer<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>et paraître face à Dieu?<span class="nt">&lt;/para&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="para">
+<span id="usx-element-para"></span><span id="index-4"></span><h2><a class="toc-backref" href="#id25">&lt;para&gt;</a><a class="headerlink" href="#para" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>Para</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">para <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Paragraph content.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
+Permitted values vary for each document division. The <a class="reference internal" href="parastyles.html"><span class="doc">para &#64;style types</span></a> list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the <a class="reference internal" href="structure.html"><span class="doc">document divisions</span></a> in which each type is valid.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookheader"><span class="std std-ref">Book Header</span></a>, <a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id6">
+<h3>Diagram<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_para.png" src="_images/usx-element_para.png" />
+</div>
+<div class="section" id="id7">
+<h3>Sample<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>This is the Good News about Jesus Christ, the Son of God ...<span class="nt">&lt;/para&gt;</span>
+
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>“God said, ‘I will send my messenger ahead of you<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q2&quot;</span><span class="nt">&gt;</span>to open the way for you.’<span class="nt">&lt;/para&gt;</span>
+
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s&quot;</span><span class="nt">&gt;</span>The Sermon on the Mount<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>Jesus saw the crowds and went up a hill, where he sat down.
+  His disciples gathered around him, <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;2&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>and he began to teach them:<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s&quot;</span><span class="nt">&gt;</span>Salt and Light<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;r&quot;</span><span class="nt">&gt;</span>(Mark 9.50; Luke 14.34,35)<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;13&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>“You are like salt for the whole human race...<span class="nt">&lt;/para&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="table">
+<span id="usx-element-table"></span><span id="index-5"></span><h2><a class="toc-backref" href="#id26">&lt;table&gt;</a><a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>Table</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">table <br />
+<em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a> and <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> child elements which compose the structure of a USX <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>. Tables are composed of a vertical sequence of one or more rows. Rows are composed of a horizontal sequence of one of more cells.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id8">
+<h3>Diagram<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_table.png" src="_images/usx-element_table.png" />
+</div>
+</div>
+<div class="section" id="row">
+<span id="usx-element-row"></span><span id="index-6"></span><h2><a class="toc-backref" href="#id27">&lt;row&gt;</a><a class="headerlink" href="#row" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">row (<span style="color:red; font-weight:bold">*</span> within <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>) <br />
+<em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains a horizontal sequence of table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> elements. The horizontal position of a table cell relates to its corresponding table column.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body">Any valid <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cell">
+<span id="usx-element-cell"></span><span id="index-7"></span><h2><a class="toc-backref" href="#id28">&lt;cell&gt;</a><a class="headerlink" href="#cell" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>TableContent</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">cell (<span style="color:red; font-weight:bold">*</span> within usx-element_row) <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Table cell content. Contains the cell text and and child elements.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Cell column and alignment (legacy). <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">th#</span></code> | <code class="docutils literal"><span class="pre">thr#</span></code> | <code class="docutils literal"><span class="pre">tc#</span></code> | <code class="docutils literal"><span class="pre">tcr#</span></code> <br />
+The variable represents the table column number. <em>See &#8220;About cell &#64;style&#8221; note below.</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;align:</th><td class="field-body">Cell alignment. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">start</span></code> | <code class="docutils literal"><span class="pre">center</span></code> | <code class="docutils literal"><span class="pre">end</span></code> <br />
+Represents “left”, “center”, and “right” respectively in left-to-right direction texts, and “right”, “center”, “left” in right-to-left direction texts.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body">Any valid <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Like the &#64;style attribute applied to other USX elements, the cell &#64;style value is a reference to the source text USFM marker in Paratext, from which USX encoded text is often derived. In USFM text, the table cell markers define the column to which they belong. The variable # represents the table column number. Strictly speaking &#64;style is redundant information in USX. It is used by Paratext for round-tripping USX to USFM. In USX, the position of a <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> in its sequence defines its respective column, and the &#64;align attribute is the primary source of cell alignment information.</p>
+</div>
+<div class="section" id="id9">
+<h3>Diagram<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_cell.png" src="_images/usx-element_cell.png" />
+</div>
+<div class="section" id="id10">
+<h3>Sample<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p><strong>NUM 2:3-9</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;row</span> <span class="na">style=</span><span class="s">&quot;tr&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;th1&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Tribe <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;th2&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Leader <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;th3&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Number<span class="nt">&lt;/cell&gt;</span>
+  <span class="nt">&lt;/row&gt;</span>
+  <span class="nt">&lt;row</span> <span class="na">style=</span><span class="s">&quot;tr&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc1&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Judah <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc2&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Nahshon son of Amminadab <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tcr3&quot;</span> <span class="na">align=</span><span class="s">&quot;end&quot;</span><span class="nt">&gt;</span>74,600<span class="nt">&lt;/cell&gt;</span>
+  <span class="nt">&lt;/row&gt;</span>
+  <span class="nt">&lt;row</span> <span class="na">style=</span><span class="s">&quot;tr&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc1&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Issachar <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc2&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Nethanel son of Zuar <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tcr3&quot;</span> <span class="na">align=</span><span class="s">&quot;end&quot;</span><span class="nt">&gt;</span>54,400<span class="nt">&lt;/cell&gt;</span>
+  <span class="nt">&lt;/row&gt;</span>
+  <span class="nt">&lt;row</span> <span class="na">style=</span><span class="s">&quot;tr&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc1&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Zebulun <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc2&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>Eliab son of Helon <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tcr3&quot;</span> <span class="na">align=</span><span class="s">&quot;end&quot;</span><span class="nt">&gt;</span>57,400<span class="nt">&lt;/cell&gt;</span>
+  <span class="nt">&lt;/row&gt;</span>
+  <span class="nt">&lt;row</span> <span class="na">style=</span><span class="s">&quot;tr&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc1&quot;</span> <span class="na">align=</span><span class="s">&quot;start&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tc2&quot;</span> <span class="na">align=</span><span class="s">&quot;end&quot;</span><span class="nt">&gt;</span>Total: <span class="nt">&lt;/cell&gt;</span>
+    <span class="nt">&lt;cell</span> <span class="na">style=</span><span class="s">&quot;tcr3&quot;</span> <span class="na">align=</span><span class="s">&quot;end&quot;</span><span class="nt">&gt;</span>186,400<span class="nt">&lt;/cell&gt;</span>
+  <span class="nt">&lt;/row&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="char">
+<span id="usx-element-char"></span><span id="index-8"></span><h2><a class="toc-backref" href="#id29">&lt;char&gt;</a><a class="headerlink" href="#char" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>Char</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">char <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">An element for marking character level content types within <a class="reference internal" href="#usx-element-para"><span class="std std-ref">para</span></a>, table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">cell</span></a> and <a class="reference internal" href="#usx-element-note"><span class="std std-ref">note</span></a> elements.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
+Permitted values vary for each document division. The <a class="reference internal" href="charstyles.html"><span class="doc">char &#64;style types</span></a> list presents an itemization of style values by category and indicates the <a class="reference internal" href="structure.html"><span class="doc">document divisions</span></a> in which each type is valid.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a> <br />
+A limited subset of &#64;style types are valid within <a class="reference internal" href="#usx-element-note"><span class="std std-ref">note</span></a> (Footnote, CrossReference)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a>, <a class="reference internal" href="#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id11">
+<h3>Diagram<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_char.png" src="_images/usx-element_char.png" />
+</div>
+<div class="section" id="id12">
+<h3>Sample<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;ip&quot;</span><span class="nt">&gt;</span>The name <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;bk&quot;</span><span class="nt">&gt;</span>Genesis<span class="nt">&lt;/char&gt;</span> means “origin.”
+
+Then the <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;nd&quot;</span><span class="nt">&gt;</span>Lord<span class="nt">&lt;/char&gt;</span> God took some soil from the ground and formed a man
+
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="nt">/&gt;</span>This is the Good News about Jesus Christ, the Son of God.
+  It began as the prophet Isaiah had written:<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;qt&quot;</span><span class="nt">&gt;</span>“God said, ‘I will send my messenger ahead of you<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q2&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;qt&quot;</span><span class="nt">&gt;</span>to open the way for you.’<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="note">
+<span id="usx-element-note"></span><span id="index-9"></span><h2><a class="toc-backref" href="#id30">&lt;note&gt;</a><a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<p>The USX note element is used to contain the content for any <a class="reference internal" href="notes.html#usx-note-footnote"><span class="std std-ref">footnotes</span></a> or <a class="reference internal" href="notes.html#usx-note-crossreference"><span class="std std-ref">cross references</span></a> content. Different note <em>types</em> are distinguished by the note <strong>&#64;style</strong> attribute. The content for each note type is marked using <a class="reference internal" href="#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> with a specific subset of &#64;style types for the chosen note type. To help make things clear in this document, the markup for <a class="reference internal" href="notes.html#usx-note-footnote"><span class="std std-ref">footnotes</span></a> and <a class="reference internal" href="notes.html#usx-note-crossreference"><span class="std std-ref">cross references</span></a> are described in separate sections because they use different char &#64;style types within them.</p>
+<p><a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> <strong>See:</strong> <a class="reference internal" href="notes.html"><span class="doc">&lt;note&gt; Types</span></a></p>
+</div>
+<div class="section" id="sidebar">
+<span id="usx-element-sidebar"></span><span id="index-10"></span><h2><a class="toc-backref" href="#id31">&lt;sidebar&gt;</a><a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>Sidebar</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">sidebar <br />
+<em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">2.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> (&#64;style types <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">Titles and Headings</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-paragraphs"><span class="std std-ref">Paragraphs</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">Poetry</span></a>), <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a> and <a class="reference internal" href="#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a sidebar. Sidebars are larger sections of topical content, or information for more in-depth study. This content is associated with a general area in the scripture reference text, but not necessarily a specific verse or word.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">esb</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;category:</th><td class="field-body">Optional attribute used to tag the <a class="reference internal" href="#usx-element-sidebar"><span class="std std-ref">&lt;sidebar&gt;</span></a> as belonging to a specific category of study content (e.g. Ideas, People, Places, Objects etc.).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id13">
+<h3>Diagram<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-pattern_Sidebar.png" src="_images/usx-pattern_Sidebar.png" />
+</div>
+<div class="section" id="id14">
+<h3>Samples<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p><strong>Matthew 2</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;sidebar</span> <span class="na">style=</span><span class="s">&quot;esb&quot;</span> <span class="na">category=</span><span class="s">&quot;Ideas&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;ms&quot;</span><span class="nt">&gt;</span>Dates in B.C. and A.D.<span class="nt">&lt;/para&gt;</span>
+      <span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>The initials <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>b.c.<span class="nt">&lt;/char&gt;</span> have traditionally been
+              an abbreviation for “Before Christ.” If <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;bk&quot;</span><span class="nt">&gt;</span>Luke<span class="nt">&lt;/char&gt;</span>&#39;s dating
+              is correct, then Jesus was born at least four years before the years known as
+              <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>a.d.<span class="nt">&lt;/char&gt;</span> began. (<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>a.d.<span class="nt">&lt;/char&gt;</span> stands for the
+              Latin phrase “in the year of our Lord”). Christian dating was actually not
+              introduced until <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>a.d.<span class="nt">&lt;/char&gt;</span> 526 by a monk named Dionysius
+              Exiguus. He was given the job of creating a calendar for the feasts of the church.
+              He fixed the birth of Jesus in the Roman year 754, which was selected as the first
+              year of the Christian era beginning on January 1. Dionysius apparently misjudged
+              Herod&#39;s reign by about five years.
+      <span class="nt">&lt;/para&gt;</span>
+      <span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>The initials <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>b.c.e.<span class="nt">&lt;/char&gt;</span> (Before the Common Era)
+              and <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>c.e.<span class="nt">&lt;/char&gt;</span> (in the Common Era) are sometimes used for the
+              traditional <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>b.c.<span class="nt">&lt;/char&gt;</span> and <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;sc&quot;</span><span class="nt">&gt;</span>a.d.<span class="nt">&lt;/char&gt;</span>
+      <span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;/sidebar&gt;</span>
+</pre></div>
+</div>
+<p><strong>Galatians 3</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;sidebar</span> <span class="na">style=</span><span class="s">&quot;esb&quot;</span> <span class="na">category=</span><span class="s">&quot;People&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;ms&quot;</span><span class="nt">&gt;</span>Abraham<span class="nt">&lt;/para&gt;</span>
+      <span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>The list of the descendants of Noah&#39;s sons comes to an end
+              (<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;GEN 11:26&quot;</span><span class="nt">&gt;</span>Gen 11.26<span class="nt">&lt;/ref&gt;&lt;/char&gt;</span>) with Abram
+              (“exalted father”). He later became known as Abraham (“father of many”).
+              God told Abram (<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;GEN 12:1-3&quot;</span><span class="nt">&gt;</span>Gen 12.1-3<span class="nt">&lt;/ref&gt;&lt;/char&gt;</span>)
+              to move from his home in Ur of the Chaldees (in southern Mesopotamia) to the land
+              of Canaan. God promised that his family would become “a great nation” with a special
+              relationship to God. And all nations would be blessed because of Abraham and his wife
+              Sarah and their descendants (<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;GEN 12:1-3&quot;</span><span class="nt">&gt;</span>Gen 12.1-3<span class="nt">&lt;/ref&gt;</span>;
+              <span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;GEN 15:1-21&quot;</span><span class="nt">&gt;</span>15.1-21<span class="nt">&lt;/ref&gt;&lt;/char&gt;</span>). So Abraham went with Sarah and his
+              nephew Lot.
+              ...
+      <span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;/sidebar&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="figure">
+<span id="usx-element-figure"></span><span id="index-11"></span><h2><a class="toc-backref" href="#id32">&lt;figure&gt;</a><a class="headerlink" href="#figure" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>Figure</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">figure <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Definition for an illustration which could be formatted at or near to this location in a publication. <br />
+The element&#8217;s text content is the caption for the illustration. <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">fig</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;desc:</th><td class="field-body">Illustration description. This text is not normally rendered within a publication. <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string | <em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;file:</th><td class="field-body">Illustration filename or URI. <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string | <em>empty</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;size:</th><td class="field-body">Illustration relative size. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal"><span class="pre">col</span></code> | <code class="docutils literal"><span class="pre">span</span></code> | &lt;user defined&gt; xsd:string | <em>empty</em> <br />
+<strong>col</strong> - Illustration should be inserted inline within the space for the current text column. <br />
+<strong>span</strong> - Illustration should be inserted across (spanning) all text columns (i.e. the maximum available page or screen width).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;loc:</th><td class="field-body">Illustration location/range. <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string | <em>empty</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">&#64;copy:</th><td class="field-body">Copyright information. <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string | <em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;ref:</th><td class="field-body">Illustration reference. This text will commonly be rendered together with the illustration caption. <span style="color:red; font-weight:bold">*</span>
+xsd:string | <em>empty</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id15">
+<h3>Diagram<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_figure.png" src="_images/usx-element_figure.png" />
+</div>
+<div class="section" id="id16">
+<h3>Sample<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;figure</span> <span class="na">style=</span><span class="s">&quot;fig&quot;</span> <span class="na">desc=</span><span class="s">&quot;&quot;</span> <span class="na">file=</span><span class="s">&quot;avnt016.jpg&quot;</span> <span class="na">size=</span><span class="s">&quot;span&quot;</span> <span class="na">loc=</span><span class="s">&quot;&quot;</span> <span class="na">copy=</span><span class="s">&quot;&quot;</span> <span class="na">ref=</span><span class="s">&quot;1.18&quot;</span><span class="nt">&gt;</span>
+        At once they left their nets.<span class="nt">&lt;/figure&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="optbreak">
+<span id="usx-element-optbreak"></span><span id="index-12"></span><h2><a class="toc-backref" href="#id33">&lt;optbreak&gt;</a><a class="headerlink" href="#optbreak" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">optbreak <br />
+<em>empty</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">2.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Discretionary (optional) line break location. <br />
+Primarily used in <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">poetic</span></a> text, but could also be used for marking optional breaks for <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">titles</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">headings</span></a>, or table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> content.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id17">
+<h3>Sample<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s1&quot;</span><span class="nt">&gt;</span>Jesus Heals a Man <span class="nt">&lt;optbreak</span> <span class="nt">/&gt;</span> Who Could Not Walk<span class="nt">&lt;/para&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ref">
+<span id="usx-element-ref"></span><span id="index-13"></span><h2><a class="toc-backref" href="#id34">&lt;ref&gt;</a><a class="headerlink" href="#ref" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">ref</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">2.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Scripture reference. <br />
+When <a class="reference internal" href="#usx-element-ref"><span class="std std-ref">&lt;ref&gt;</span></a> is used with a USX encoded text, each segment of a scripture reference should be wrapped in a <a class="reference internal" href="#usx-element-ref"><span class="std std-ref">&lt;ref&gt;</span></a> element. <br />
+xsd:string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">&#64;loc:</th><td class="field-body">A parsable (machine-readable) representation of the vernacular text for the scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id18">
+<h3>Diagram<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/usx-element_ref.png" src="_images/usx-element_ref.png" />
+</div>
+<div class="section" id="id19">
+<h3>Sample<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:1-4&quot;</span><span class="nt">&gt;</span>Mt 3.1-4<span class="nt">&lt;/ref&gt;</span>,<span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:7-13&quot;</span><span class="nt">&gt;</span>7-13<span class="nt">&lt;/ref&gt;</span>
+<span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:4-4:5&quot;</span><span class="nt">&gt;</span>Mt 3.4—4.5<span class="nt">&lt;/ref&gt;</span>
+<span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;LUK 3-5&quot;</span><span class="nt">&gt;</span>Lk 3—5<span class="nt">&lt;/ref&gt;</span>
+<span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT-LUK&quot;</span><span class="nt">&gt;</span>Mt—Lk<span class="nt">&lt;/ref&gt;</span>
+<span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:4-5:6&quot;</span><span class="nt">&gt;</span>Matthew 3.4—5.6<span class="nt">&lt;/ref&gt;</span>; <span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;LUK 7&quot;</span><span class="nt">&gt;</span>Luke 7<span class="nt">&lt;/ref&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sample-details">
+<h3>Sample Details<a class="headerlink" href="#sample-details" title="Permalink to this headline">¶</a></h3>
+<p>Example:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;</span>Mt 3.4-5<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:4-3:5&quot;</span><span class="nt">&gt;</span>Mt 3.4-5<span class="nt">&lt;/ref&gt;&lt;/char&gt;</span>
+</pre></div>
+</div>
+<p><strong>Comma-delimited verses and chapters are split up as much as possible:</strong></p>
+<p>Example:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span>Mt 3.4-5,6
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:4-3:5&quot;</span><span class="nt">&gt;</span>Mt 3.4-5<span class="nt">&lt;/ref&gt;</span>,<span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:6&quot;</span><span class="nt">&gt;</span>6<span class="nt">&lt;/ref&gt;</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span>Mt 3.4-5.7
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:4-5:7&quot;</span><span class="nt">&gt;</span>Mt 3.4-5.7<span class="nt">&lt;/ref&gt;</span>
+</pre></div>
+</div>
+<p><strong>Chapter ranges are acceptable:</strong></p>
+<p>Example:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span>Mt 3-5
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3-5&quot;</span><span class="nt">&gt;</span>Mt 3-5<span class="nt">&lt;/ref&gt;</span>
+</pre></div>
+</div>
+<p><strong>Book ranges are encoded as first reference only:</strong></p>
+<p>Example:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span>Mt-Lk
+</pre></div>
+</div>
+<p>becomes:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT&quot;</span><span class="nt">&gt;</span>Mt-Lk<span class="nt">&lt;/ref&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parastyles.html" class="btn btn-neutral float-right" title="&lt;para&gt; @style Types" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structure.html" class="btn btn-neutral" title="Document Structure" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, United Bible Societies.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.500',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
