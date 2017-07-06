@@ -8,7 +8,6 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
-# Removed USXV for now. See end of document for removed code
 start = USX
 USX =
     element usx {
@@ -744,99 +743,3 @@ bookCode = (
          | "GLO" # Glossary
          | "TDX" # Topical Index
          | "NDX") # Names Index
-    
-#start = USX | USXV
-#USXV =
-#    element usxv {
-#        attribute xsi:noNamespaceSchemaLocation { text }?,
-#        
-#        ## our test data has this. Ignore. 
-#        BookForVerseStyle+
-#    }
-#BookForVerseStyle =
-#    element book {
-#        BookIdAttr,
-#        # e.g. id="GEN"
-#        attribute style { "id" },
-#        text?,
-#        # Brief description of project
-#        Heading?,
-#        Title,
-#        Intro?,
-#        Body
-#    }
-#Heading = element heading { HeaderPara+ }
-#Title = element title { TitlePara+ }
-#Intro = element intro { IntroPara* }
-#Body = element body { ChapterForVerseStyle+ }
-
-# !! I think following might be obsolete now jaa. See ParaStart and ParaEnd      
-#ParaForVerseStyle =
-#    element para {
-#        attribute style {
-#            ("no_break_verse_paragraph"
-#             | # No break verse paragraph
-#               "breaking_verse_paragraph")
-#            # Breaking verse paragraph
-#            
-#        },
-#        (Para | Footnote | CrossReference | Char | Figure | Verse | text)*
-#    }
-#ChapterForVerseStyle =
-#    element c {
-#        # Start of new chapter
-#        attribute book { bookCode },
-#        attribute chapter { xsd:integer },
-#        attribute number { xsd:integer },
-#        VerseForVerseStyle+
-#    }
-#VerseForVerseStyle =
-#    element v {
-#        attribute book { bookCode },
-#        attribute chapter { xsd:integer },
-#        attribute verse { text },
-#        attribute verseStart { xsd:integer }?,
-#        attribute verseEnd { xsd:integer }?,
-#        attribute number { text },
-#        (ParaStart
-#         | ParaEnd
-#         | Para
-#         | Footnote
-#         | CrossReference
-#         | Char
-#         | Figure
-#         | Chapter
-#         | Verse
-#         | text)*
-#    }
-#ParaStart =
-#    element paraStart {
-#        # ForVerseStyle   milestone
-#        paraStyle
-#    }
-#ParaEnd =
-#    element paraEnd {
-#        # ForVerseStyle   milestone
-#        paraStyle
-#    }
-
-# ==========
-# Known requested additions to para styles - jaa
-# psa - Set_Apart_Paragraph e.g. DEU 28:3-6; JOS 15:2-12a
-# psa_conclusion - Set_Apart_Paragraph_Conclusion e.g. EXO 6:25b
-# psa_continuation - Set_Apart_Paragraph_Continuation e.g. NUM 7:13-17, 19-23, etc. JOS 13:2-5
-# psa_introduction - Set_Apart_Paragraph_Introduction e.g. EXO 6:14
-# p_letter_closing - Letter_Closing_Paragraph; Biblica: pClosing
-# p_letter_opening - Letter_Opening_Paragraph e.g. ROM 1:1-6, 7a, 7b; Biblica pOpening
-# s_variant - Section_Head_Variant e.g. JHN 8; MRK 16 (sometimes a line above and italic)
-# s_variant_tail - Section_Tail_Variant e.g. JHN 8 (formatted with line)
-# p_variant - Paragraph_Variant e.g. JHN 8; MRK 16 (often in italic)
-# p_introduction - Paragraph_Introduction e.g. GEN 5:1, 6:9; JER 48:1a; 49:1a;	Biblica: pIntroduction; An introduction statement (paragraph) related to the following text. Usually rendered with a line space preceding and following. pm
-# p_conclusion - Paragraph_Conclusion e.g., EZK 7:27f; 23:34d; 24:14; Biblica; pConclusion; A paragraph containing a summary (or conclusion) statement related to the preceding text. Usually rendered with line space preceding and following. pm
-# qr_refrain - Refrain e.g. PSA 136:1-3 (NIV) - His love endures forever; DEU 27:16-21 (NIV) - Then all the people shall say, "Amen!" (In NIV this is Embedded_Text_Refrain)
-# qr_attribution - Attribution e.g. ACT 7:49-50 (NIV) - says the Lord (Acts 7:49, 1 Corinthians 14:21, 2 Corinthians 6:17, 18); declares the Lord (Hebrews 8:9, 2 Kings 19:33, Isaiah 14:22); More examples are found in Isaiah, Jeremiah, Ezekiel, Hosea, Amos, Obadiah, Zephaniah, and Zechariah.
-# qr_selah - Selah e.g. PSA and HAB only
-# cl1 - Citation Line1 e.g. MRK 1.1-4 (NET)
-# cl2 - Citation Line2 e.g. MRK 1.1-4 (NET)
-# abbreviation - Abbreviation (character style) e.g., JUD 1.9,14 (in footnote) a.d. or  b.c.e to display in small caps. When rendering in HTML a mouse over event may show full text of abbreviation.
-# label - Label (inline section head) e.g. EZR 10:18-24 (TEV)
