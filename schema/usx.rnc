@@ -1,8 +1,6 @@
 # usx.rnc
-# -----------------------------------------------------------------------------
 # A compact syntax Relax NG Schema for USX 2.6
 # DBL bundle version = 1.5
-# -----------------------------------------------------------------------------
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
