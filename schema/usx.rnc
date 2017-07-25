@@ -18,7 +18,7 @@ USX =
         BookHeaders*,
         BookTitles+,
         BookIntroduction*,
-        IntroductionEndTitles*,
+        BookIntroductionEndTitles*,
         BookChapterLabel?,
         Chapter,
         # Chapter is used to separate intro from scripture text.
@@ -228,12 +228,12 @@ BookIntroduction.para.style.enum = (
     | "rem" # Remark
     )
 
-IntroductionEndTitles =
+BookIntroductionEndTitles =
     element para {
-        attribute style { IntroductionEndTitles.para.style.enum },
+        attribute style { BookIntroductionEndTitles.para.style.enum },
         (Footnote | CrossReference | Char | Break | text)*
     }
-IntroductionEndTitles.para.style.enum = (
+BookIntroductionEndTitles.para.style.enum = (
       "mt" # The main title of the book (if single level)
     | "mt1" # The main title of the book (if multiple levels)
     | "mt2" # A secondary title usually occurring before the main title
