@@ -562,7 +562,7 @@ FootnoteChar =
         },
         attribute closed { xsd:boolean }?,
         # Present to allow roundtripping to USFM, not needed for publishing
-        (Char | FootnoteVerse | Reference | text)+
+        (Char | FootnoteChar | FootnoteVerse | Reference | text)+
     }
 FootnoteVerse =
     element char {
@@ -595,7 +595,7 @@ CrossReferenceChar =
         },
      attribute closed { xsd:boolean }?,
      # Present to allow roundtripping to USFM, not needed for publishing
-     (Char | Reference | text)+
+     (Char | CrossReferenceChar | Reference | text)+
     }
 Reference =
     element ref {
