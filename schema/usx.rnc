@@ -474,7 +474,7 @@ FootnoteChar =
     element char {
         attribute style { FootnoteChar.char.style.enum },
         char.closed?,
-        (Char | FootnoteVerse | Reference | text)+
+        (Char | FootnoteChar | FootnoteVerse | Reference | text)+
     }
 FootnoteChar.char.style.enum = (
       "fr" # The origin reference for the footnote
@@ -512,7 +512,7 @@ CrossReferenceChar =
     element char {
         attribute style { CrossReferenceChar.char.style.enum },
         char.closed?,
-        (Char | Reference | text)+
+        (Char | CrossReferenceChar | Reference | text)+
     }
 CrossReferenceChar.char.style.enum = (
       "xo" # The cross reference origin reference
