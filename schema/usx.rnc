@@ -264,6 +264,7 @@ Para.para.style.enum = (
     | "pi1" # Paragraph text, level 1 indent (if multiple levels), with first line indent; often used for discourse
     | "pi2" # Paragraph text, level 2 indent, with first line indent; often used for discourse
     | "pi3" # Paragraph text, level 3 indent, with first line indent; often used for discourse
+    | "po" # Letter opening
     | "pmo" # Embedded text opening
     | "pm" # Embedded text paragraph
     | "pmc" # Embedded text closing
