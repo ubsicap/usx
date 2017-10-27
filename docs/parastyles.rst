@@ -677,6 +677,26 @@ m
 
 -----
 
+.. _usx-parastyle_po:
+.. index:: para @style (po)
+
+po
+^^
+
+|badge_3.0|
+
+:@style: po
+:Added: 3.0
+:Use: Opening of an epistle / letter.
+:Valid In: :ref:`usx-div_chapter`
+
+**Formatting Sample** - Romans 1.1,7 (GNT)
+
+.. image:: images/usx-para-style_po.jpg
+	:width: 450px
+
+-----
+
 .. _usx-parastyle_cls:
 .. index:: para @style (cls)
 
