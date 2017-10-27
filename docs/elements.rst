@@ -25,13 +25,13 @@ Elements
 
 The following schema diagram displays the document structure of a USX scripture file.
 
-Diagram
-"""""""
-.. image:: images/usx_usx-document.png
+**Diagram and Text Sample**
 
-Sample
-""""""
+.. image:: images/usx-element_usx.png
+
 .. code-block:: xml
+	:name: usx-element_usx_example
+	:emphasize-lines: 1
 
     <usx version="2.5">
 
@@ -52,14 +52,13 @@ Sample
 :Valid in: :ref:`usx-div_bookIdentification`
 :Parent: :ref:`usx-element_root`
 
-Diagram
-"""""""
+**Diagram and Text Sample** - Matthew (GNT)
 
 .. image:: images/usx-element_book.png
 
-Sample
-""""""
 .. code-block:: xml
+	:name: usx-element_book_example
+	:emphasize-lines: 1
 
 	<book code="MAT" style="id">English: Good News Translation 2nd Ed. 1992</book>
 
@@ -81,16 +80,13 @@ Sample
 	xsd:string of pattern ``[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |req| |br|
 	xsd:string
-:Valid in: :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_chapter`
 :Parent: :ref:`usx-element_root`
 
-Diagram
-"""""""
+**Diagram and Text Sample**
 
 .. image:: images/usx-element_chapter.png
 
-Sample
-""""""
 Code examples for chapter and verse are provided after the definition for element :ref:`verse<usx-element_verse>` (below).
 
 .. index:: usx <verse>
@@ -111,19 +107,18 @@ Code examples for chapter and verse are provided after the definition for elemen
 	xsd:string of pattern ``[0-9]+\w?(‏?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |br|
 	xsd:string
-:Valid in: :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_row`, :ref:`usx-element_cell`
 
-Diagram
-"""""""
+**Diagram and Text Sample**
 
 .. image:: images/usx-element_verse.png
 
-Samples
-"""""""
-**chapter and verse (MAT 5:1, with preceding and following context)**
+**chapter and verse** - MAT 5:1, with preceding and following context
 
 .. code-block:: xml
+	:name: usx-element_verse_example
+	:emphasize-lines: 6-7
 
 	<para style="p"> ... Large crowds followed him from Galilee and the Ten Towns, from Jerusalem, Judea,
 	  and the land on the other side of the Jordan.</para>
@@ -142,9 +137,11 @@ The following example of the text for Esther Greek chapter 1 is taken from the E
 * In the second portion of this example, a para element with @style "cp" is found. Although a sequential chapter element is not present at this location, *a chapter heading or other appropriate chapter style showing "1" should be presented to the reader*.
 * In the second portion of this example you can also see verse elements with sequential @number "18-19", "20", "21", "22". *The corresponding @pubnumber "1-2", "3", "4", and "5" should be presented to the reader*.
 
-**chapter and verse (ESG 1, showing chapter, @pubnumber A, and cp 1; verse 18-19 @pubnumber 1-2 etc.)**
+**chapter and verse** - ESG 1, showing chapter, @pubnumber A, and cp 1; verse 18-19 @pubnumber 1-2 etc.
 
 .. code-block:: xml
+	:name: usx-element_verse_example2
+	:emphasize-lines: 1,4,13,15,18,21
 
 	<chapter number="1" style="c" pubnumber="A" />
 	<para style="s">Mordecai's Strange Dream</para>
@@ -173,9 +170,11 @@ The following example of the text for Esther Greek chapter 1 is taken from the E
 
 The following example is taken from the English Contemporary English Version (CEV) text, which applies a different versification scheme to Esther Greek following the Vulgate. The NRSV Anglicised Edition is another example following this scheme. 
 
-**chapter and verse (ESG 1, showing chapter 1 @pubnumber 11, cp 12, and 1; verse 1-3 @pubnumber 2-4, verse 4 @pubnumber 5, verse 12 @pubnumber 1 etc.)**
+**chapter and verse** - ESG 1, showing chapter 1 @pubnumber 11, cp 12, and 1; verse 1-3 @pubnumber 2-4, verse 4 @pubnumber 5, verse 12 @pubnumber 1 etc.
 
 .. code-block:: xml
+	:name: usx-element_verse_example3
+	:emphasize-lines: 1,5,8,10,15,21,23,32
 	
 	<chapter number="1" style="c" pubnumber="11" />
 	<para style="ms1">Addition A</para>
@@ -213,9 +212,11 @@ The following example is taken from the English Contemporary English Version (CE
 
 An example from Psalms (modified French TOB) showing an alternate chapter and verse numbering scheme encoded within the text.
 
-**chapter and verse (PSA 42, showing chapter @altnumber and verse @altnumber)**
+**chapter and verse** - PSA 42, showing chapter @altnumber and verse @altnumber
 
 .. code-block:: xml
+	:name: usx-element_verse_example3
+	:emphasize-lines: 1,8,13
 
 	<chapter number="42" style="c" altnumber="41" />
 	<para style="ms1">DEUXIÈME LIVRE</para>
@@ -239,7 +240,6 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 <para>
 ------
-|ico_R| Schema pattern name: **Para**
 
 :Element: para |br|
 	xsd:string
@@ -247,17 +247,16 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :Use: Paragraph content.
 :@style: Content type. |req| |br|
 	Permitted values vary for each document division. The :doc:`para @style types <parastyles>` list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the :doc:`document divisions <structure>` in which each type is valid.
-:Valid in: :ref:`usx-div_bookHeader`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_introductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_bookHeaders`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_root`
 
-Diagram
-"""""""
+**Diagram and Text Sample** - Mark 1.1; Matthew 5.1,13 (GNT)
 
 .. image:: images/usx-element_para.png
 
-Sample
-""""""
 .. code-block:: xml
+	:name: usx-element_para_example
+	:emphasize-lines: 1,8,13
 
 	<para style="p">
 	<verse number="1" style="v" />This is the Good News about Jesus Christ, the Son of God ...</para>
@@ -279,17 +278,15 @@ Sample
 
 <table>
 -------
-|ico_R| Schema pattern name: **Table**
 
 :Element: table |br|
 	*empty*
 :Added: 1.0
 :Use: Contains :ref:`usx-element_row` and :ref:`usx-element_cell` child elements which compose the structure of a USX :ref:`usx-element_table`. Tables are composed of a vertical sequence of one or more rows. Rows are composed of a horizontal sequence of one of more cells.
-:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_root`
 
-Diagram
-"""""""
+**Diagram**
 
 .. image:: images/usx-element_table.png
 
@@ -306,14 +303,17 @@ Diagram
 :Valid in: Any valid :ref:`usx-element_table`
 :Parents: :ref:`usx-element_table`
 
+**Diagram**
+
+.. image:: images/usx-element_row.png
+
 .. index:: usx <cell>
 .. _usx-element_cell:
 
 <cell>
 ------
-|Ico_R| Schema pattern name: **TableContent**
 
-:Element: cell (|req| within usx-element_row) |br|
+:Element: cell (|req| within :ref:`usx-element_row`) |br|
 	xsd:string
 :Added: 1.0
 :Use: Table cell content. Contains the cell text and and child elements.
@@ -330,17 +330,13 @@ Diagram
 
 	Like the @style attribute applied to other USX elements, the cell @style value is a reference to the source text USFM marker in Paratext, from which USX encoded text is often derived. In USFM text, the table cell markers define the column to which they belong. The variable # represents the table column number. Strictly speaking @style is redundant information in USX. It is used by Paratext for round-tripping USX to USFM. In USX, the position of a :ref:`usx-element_cell` in its sequence defines its respective column, and the @align attribute is the primary source of cell alignment information.
 
-Diagram
-"""""""
+**Diagram and Text Sample** - NUM 2:3-9
 
 .. image:: images/usx-element_cell.png
 
-Sample
-""""""
-
-**NUM 2:3-9**
-
 .. code-block:: xml
+	:name: usx-element_cell_example
+	:emphasize-lines: 3-5,8-10,13-15,18-20,23-25
 
 	<table>
 	  <row style="tr">
@@ -376,26 +372,23 @@ Sample
 <char>
 ------
 
-|ico_R| Schema pattern name: **Char**
-
 :Element: char |br|
 	xsd:string
 :Added: 1.0
 :Use: An element for marking character level content types within :ref:`para <usx-element_para>`, table :ref:`cell <usx-element_cell>` and :ref:`note <usx-element_note>` elements.
 :@style: Content type. |req| |br|
 	Permitted values vary for each document division. The :doc:`char @style types <charstyles>` list presents an itemization of style values by category and indicates the :doc:`document divisions <structure>` in which each type is valid.
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_introductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterText` |br|
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter` |br|
 	A limited subset of @style types are valid within :ref:`note <usx-element_note>` (Footnote, CrossReference)
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`, :ref:`usx-element_note`
 
-Diagram
-"""""""
+**Diagram and Text Sample** - Genesis Introduction; 2.7; Mark 1.1 (GNT)
 
 .. image:: images/usx-element_char.png
 
-Sample
-""""""
 .. code-block:: xml
+	:name: usx-element_char_example
+	:emphasize-lines: 1,3,9,11
 	
 	<para style="ip">The name <char style="bk">Genesis</char> means “origin.”
  
@@ -416,16 +409,22 @@ Sample
 <note>
 ------
 
-The USX note element is used to contain the content for any :ref:`footnotes <usx-note_footnote>` or :ref:`cross references <usx-note_crossReference>` content. Different note *types* are distinguished by the note **@style** attribute. The content for each note type is marked using :ref:`usx-element_char` with a specific subset of @style types for the chosen note type. To help make things clear in this document, the markup for :ref:`footnotes <usx-note_footnote>` and :ref:`cross references <usx-note_crossReference>` are described in separate sections because they use different char @style types within them.
+The USX note element is used to contain the content for any :ref:`footnotes <usx-note_footnote>` or :ref:`cross references <usx-note_crossReference>`. Different note **types** are distinguished by the note **@style** attribute. The inner content for notes are marked using :ref:`usx-element_char` with a specific subset of @style types for the current note type.
 
-|Ico_See| **See:** :doc:`<note> Types <notes>`
+To help make things clear in this document, the markup for :ref:`footnotes <usx-note_footnote>` and :ref:`cross references <usx-note_crossReference>` are described in separate sections because they use different :ref:`usx-element_char` @style types within them.
+
+**Diagram**
+
+.. image:: images/usx-element_notef.png
+.. image:: images/usx-element_notex.png
+
+|Ico_See| **See:** :doc:`<note> Types <notes>` for detail.
 
 .. index:: usx <sidebar>
 .. _usx-element_sidebar:
 
 <sidebar>
 ---------
-|Ico_R| Schema pattern name: **Sidebar**
 
 :Element: sidebar |br|
 	*empty*
@@ -434,19 +433,18 @@ The USX note element is used to contain the content for any :ref:`footnotes <usx
 :@style: Content type |req| |br|
 	``esb``
 :@category: Optional attribute used to tag the :ref:`usx-element_sidebar` as belonging to a specific category of study content (e.g. Ideas, People, Places, Objects etc.).
-:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_root`
 
-Diagram
-"""""""
+**Diagram and Text Sample**
 
-.. image:: images/usx-pattern_Sidebar.png
+.. image:: images/usx-element_sidebar.png
 
-Samples
-"""""""
-**Matthew 2**
+Matthew 2
 
 .. code-block:: xml
+	:name: usx-element_sidebar_example
+	:emphasize-lines: 1,18
 
 	  <sidebar style="esb" category="Ideas">
 	  	<para style="ms">Dates in B.C. and A.D.</para>
@@ -467,9 +465,11 @@ Samples
 	  	</para>
 	  </sidebar>
 
-**Galatians 3**
+Galatians 3
 
 .. code-block:: xml
+	:name: usx-element_sidebar_example2
+	:emphasize-lines: 1,15
 
 	  <sidebar style="esb" category="People">
 	  	<para style="ms">Abraham</para>
@@ -492,7 +492,6 @@ Samples
 
 <figure>
 --------
-|Ico_R| Schema pattern name: **Figure**
 
 :Element: figure |br|
 	xsd:string
@@ -516,17 +515,15 @@ Samples
 	xsd:string | *empty*
 :@ref: Illustration reference. This text will commonly be rendered together with the illustration caption. |req|
 	xsd:string | *empty*
-:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_root`
 
-Diagram
-"""""""
+**Diagram and Text Sample** - Mark 1.18 (GNT)
 
 .. image:: images/usx-element_figure.png
 
-Sample
-""""""
 .. code-block:: xml
+	:name: usx-element_figure_example
 
 	<figure style="fig" desc="" file="avnt016.jpg" size="span" loc="" copy="" ref="1.18">
 		At once they left their nets.</figure>
@@ -542,12 +539,13 @@ Sample
 :Added: 2.0
 :Use: Discretionary (optional) line break location. |br|
 	Primarily used in :ref:`poetic <usx-parastyles_poetry>` text, but could also be used for marking optional breaks for :ref:`titles <usx-parastyles_titles_headings>`, :ref:`headings <usx-parastyles_titles_headings>`, or table :ref:`usx-element_cell` content.
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_introductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`
 
-Sample
-""""""
+**Text Sample**
+
 .. code-block:: xml
+	:name: usx-element_optbreak_example
 
 	<para style="s1">Jesus Heals a Man <optbreak /> Who Could Not Walk</para>
 
@@ -562,19 +560,17 @@ Sample
 :Use: Scripture reference. |br|
 	When :ref:`usx-element_ref` is used with a USX encoded text, each segment of a scripture reference should be wrapped in a :ref:`usx-element_ref` element. |br|
 	xsd:string
-:@loc: A parsable (machine-readable) representation of the vernacular text for the scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:).
+:@loc: A parsable (machine-readable) representation of the vernacular text for the scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: 
 :Parents: 
 
-Diagram
-"""""""
+**Diagram and Text Sample**
 
 .. image:: images/usx-element_ref.png
 
-Sample
-""""""
-
 .. code-block:: xml
+	:name: usx-element_ref_example
 
 	<ref loc="MAT 3:1-4">Mt 3.1-4</ref>,<ref loc="MAT 3:7-13">7-13</ref>
 	<ref loc="MAT 3:4-4:5">Mt 3.4—4.5</ref>
@@ -582,8 +578,8 @@ Sample
 	<ref loc="MAT-LUK">Mt—Lk</ref>
 	<ref loc="MAT 3:4-5:6">Matthew 3.4—5.6</ref>; <ref loc="LUK 7">Luke 7</ref>
 
-Sample Details
-""""""""""""""
+**Sample Details**
+
 Example:
 
 .. code-block:: xml
@@ -593,6 +589,7 @@ Example:
 becomes:
 
 .. code-block:: xml
+	:name: usx-element_ref_example2
 
 	<char style="xt"><ref loc="MAT 3:4-3:5">Mt 3.4-5</ref></char>
 
@@ -607,6 +604,7 @@ Example:
 becomes:
 
 .. code-block:: xml
+	:name: usx-element_ref_example3
 
 	<ref loc="MAT 3:4-3:5">Mt 3.4-5</ref>,<ref loc="MAT 3:6">6</ref>
 
@@ -619,6 +617,7 @@ Example:
 becomes:
 
 .. code-block:: xml
+	:name: usx-element_ref_example4
 
 	<ref loc="MAT 3:4-5:7">Mt 3.4-5.7</ref>
 
@@ -633,6 +632,7 @@ Example:
 becomes:
 
 .. code-block:: xml
+	:name: usx-element_ref_example5
 
 	<ref loc="MAT 3-5">Mt 3-5</ref>
 
@@ -647,5 +647,6 @@ Example:
 becomes:
 
 .. code-block:: xml
+	:name: usx-element_ref_example6
 
 	<ref loc="MAT">Mt-Lk</ref>

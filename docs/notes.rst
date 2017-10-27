@@ -15,9 +15,8 @@
 .. index:: usx <note> (study note)
 .. _usx-note_footnote:
 
-<note> (Footnote)
------------------
-|ico_R| Schema pattern name: **Footnote**
+Footnote <note>
+---------------
 
 :Element: note |br|
 	*empty* (all content is contained within the note's child char elements)
@@ -31,17 +30,15 @@
 :Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_introductionEndTitles`, :ref:`usx-div_chapterText`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_char`, :ref:`usx-element_cell`
 
-Diagram
-"""""""
+**Diagram**
 
-.. image:: images/usx-pattern_Footnote.png
+.. image:: images/usx-element_notef.png
 
 .. index:: usx <char> (footnote)
 .. _usx-note_footnote_char:
 
-<char> (Footnote)
-^^^^^^^^^^^^^^^^^
-|ico_R| Schema pattern name: **FootnoteChar**
+Footnote <char>
+"""""""""""""""
 
 :Element: char |br|
 	xsd:string
@@ -51,15 +48,14 @@ Diagram
 	The :ref:`usx-element_char` (Footnote) @style types list (below) presents an itemization of @style values valid within :ref:`usx-element_char` elements which are children of :ref:`usx-element_note` @style="f", :ref:`usx-element_note` @style="fe", and :ref:`usx-element_note` @style="ef".
 :Valid in: :ref:`usx-note_footnote`
 
-Diagram
-"""""""
+**Diagram**
 
-.. image:: images/usx-pattern_FootnoteChar.png
+.. image:: images/usx-element_charf.png
 
 .. _usx-note_footnote_charstyles:
 
-<char> (Footnote) @style Types
-""""""""""""""""""""""""""""""
+Footnote <char> @style Types
+""""""""""""""""""""""""""""
 
 * :ref:`fr <usx-note_footnote_charstyle_fr>`
 * :ref:`ft <usx-note_footnote_charstyle_ft>`
@@ -80,7 +76,11 @@ Diagram
 	This is the chapter and verse(s) that note refers to.
 :Valid In: Any :ref:`usx-note_footnote_char`
 
+**Text and Formatting Sample** - Mark 1.1 (GNT)
+
 .. code-block:: xml
+	:name: usx-charstyle_fr_example
+	:emphasize-lines: 2
 
 	<note caller="+" style="f">
 	  <char style="fr">1.1: </char>
@@ -105,16 +105,20 @@ Diagram
 :Use: A specific keyword/term from the text for which the footnote is being provided.
 :Valid In: Any :ref:`usx-note_footnote_char`
 
-	.. image:: images/usx-notechar-style_fk.jpg
-		:width: 450px
+**Text and Formatting Sample** - Genesis 3.20 (GNT)
 
 .. code-block:: xml
+	:name: usx-charstyle_fk_example
+	:emphasize-lines: 3
 
 	<note caller="+" style="f">
 	  <char style="fr">3.20: </char>
 	  <char style="fk">Adam </char>
 	  <char style="ft">This name in Hebrew means "all human beings."</char>
-	</note>		
+	</note>	
+
+.. image:: images/usx-notechar-style_fk.jpg
+	:width: 450px
 
 -----
 
@@ -125,16 +129,20 @@ Diagram
 	Longer quotations are sometimes shortened using an ellipsis (i.e. suspension dots "...").
 :Valid In: Any :ref:`usx-note_footnote_char`
 
-	.. image:: images/usx-notechar-style_fq.jpg
-		:width: 450px
+**Text and Formatting Sample** - Mark 1.1 (GNT)
 
 .. code-block:: xml
+	:name: usx-charstyle_fq_example
+	:emphasize-lines: 4
 
 	<note caller="+" style="f">
 	  <char style="fr">1.1: </char>
 	  <char style="ft">Some manuscripts do not have </char>
 	  <char style="fq">the Son of God.</char>
 	</note>
+
+.. image:: images/usx-notechar-style_fq.jpg
+	:width: 450px
 
 -----
 
@@ -145,10 +153,11 @@ Diagram
 	Used to distinguish between a quotation of the current scripture text translation, and an alternate translation.
 :Valid In: Any :ref:`usx-note_footnote_char`
 
-	.. image:: images/usx-notechar-style_fqa.jpg
-		:width: 450px
+**Text and Formatting Sample** - Mark 1.4 (GNT)
 
 .. code-block:: xml
+	:name: usx-charstyle_fqa_example
+	:emphasize-lines: 5
 
 	<note caller="+" style="f">
 	  <char style="fr">1.4: </char>
@@ -156,6 +165,9 @@ Diagram
 	  <char style="ft">some manuscripts have </char>
 	  <char style="fqa">John the Baptist appeared in the desert, preaching.</char>
 	</note>
+
+.. image:: images/usx-notechar-style_fqa.jpg
+	:width: 450px
 
 -----
 
@@ -184,10 +196,11 @@ Diagram
 	A verse number in the the text quotation or alternative translation.
 :Valid In: Any :ref:`usx-note_footnote_char`
 
-	.. image:: images/usx-notechar-style_fv.jpg
-		:width: 500px
+**Text and Formatting Sample** - John 7.38 (GNT)
 
 .. code-block:: xml
+	:name: usx-charstyle_fv_example
+	:emphasize-lines: 5
 
 	<note caller="+" style="f">
 	  <char style="fr">7.38: </char>
@@ -196,6 +209,9 @@ Diagram
 	  <char style="fv">38</char> As the scripture says, ‘Streams of life-giving water  
 	  will pour out from within anyone who believes in me.’”
 	</note>
+
+.. image:: images/usx-notechar-style_fv.jpg
+	:width: 500px
 
 -----
 
@@ -215,9 +231,8 @@ Diagram
 .. index:: usx <note> (study cross reference)
 .. _usx-note_crossReference:
 
-<note> (CrossReference)
------------------------
-|ico_R| Schema pattern name: **CrossReference**
+Cross Reference <note>
+----------------------
 
 :Element: note |br|
 	*empty* (all content is contained within the note's child char elements)
@@ -231,17 +246,15 @@ Diagram
 :Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_introductionEndTitles`, :ref:`usx-div_chapterText`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_char`, :ref:`usx-element_cell`
 
-Diagram
-"""""""
+**Diagram**
 
-.. image:: images/usx-pattern_CrossReference.png
+.. image:: images/usx-element_notex.png
 
 .. index:: usx <char> (cross reference)
 .. _usx-note_crossReference_char:
 
-<char> (CrossReference)
-^^^^^^^^^^^^^^^^^^^^^^^
-|ico_R| Schema pattern name: **CrossReferenceChar**
+Cross Reference <char>
+""""""""""""""""""""""
 
 :Element: char |br|
 	xsd:string
@@ -251,15 +264,14 @@ Diagram
 	The :ref:`usx-element_char` (Cross Reference) @style types list (below) presents an itemization of @style values valid within :ref:`usx-element_char` elements which are children of :ref:`usx-element_note` @style="x".
 :Valid in: :ref:`usx-note_crossReference`
 
-Diagram
-"""""""
+**Diagram**
 
-.. image:: images/usx-pattern_CrossReferenceChar.png
+.. image:: images/usx-element_charx.png
 
 .. _usx-note_crossReference_charstyles:
 
-<char> (Cross Reference) @style Types
-"""""""""""""""""""""""""""""""""""""
+Cross Reference <char> @style Types
+"""""""""""""""""""""""""""""""""""
 
 * :ref:`xo <usx-note_crossReference_charstyle_xo>`
 * :ref:`xt <usx-note_crossReference_charstyle_xt>`
@@ -278,15 +290,19 @@ Diagram
 	This is the chapter and verse(s) that target (@style="xt") reference(s) are being provided for.
 :Valid In: Any :ref:`usx-note_crossReference_char`
 
-	.. image:: images/usx-notechar-style_xo.jpg
-		:width: 500px
+**Text and Formatting Sample** - Matthew 2.23 (GNT)
 
 .. code-block:: xml
+	:name: usx-charstyle_xo_example
+	:emphasize-lines: 2
 
 	<note caller="-" style="x">
 	  <char style="xo">2.23: </char>
 	  <char style="xt">Mk 1.24; Lk 2.39; Jn 1.45.</char>
 	</note>
+
+.. image:: images/usx-notechar-style_xo.jpg
+	:width: 500px
 
 -----
 
@@ -339,7 +355,11 @@ Diagram
 :Use: References (or other text) which only to be included in publications that contain the Deuterocanonical/Apocrypha books.
 :Valid In: Any :ref:`usx-note_crossReference_char`
 
+**Text and Formatting Sample** - Genesis 1.26 (GNT)
+
 .. code-block:: xml
+	:name: usx-charstyle_xdc_example
+	:emphasize-lines: 3
 
 	<note caller="-" style="x">
 	  <char style="xo">1.26: </char>
