@@ -295,11 +295,13 @@ Para.para.style.enum = (
     | "s4" # A section heading, level 4
     | "sp" # A heading, to identify the speaker (e.g. Job)
     | "sr" # A section division references range heading
+    | "lh" # List header (introductory remark)
     | "li" # A list entry, level 1 (if single level)
     | "li1" # A list entry, level 1 (if multiple levels)
     | "li2" # A list entry, level 2
     | "li3" # A list entry, level 3
     | "li4" # A list entry, level 4
+    | "lf" # List footer (introductory remark)
     | "cp" # Published chapter number
     | "cl" # Chapter label used for translations that add a word such as "Chapter"
     | "cd" # Chapter Description (Publishing option D, e.g. in Russian Bibles)
