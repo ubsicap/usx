@@ -1,12 +1,3 @@
-.. raw:: html
-
-    <style> .red {color:red} </style>
-    <style> .orange {color:orange} </style>
-    <style> .green {color:green} </style>
-    <style> .red-bd {color:red;  font-weight: bold} </style>
-    <style> .orange-bd {color:orange;  font-weight: bold} </style>
-    <style> .green-bd {color:green;  font-weight: bold} </style>
-
 .. role:: red
 .. role:: orange
 .. role:: green
@@ -49,6 +40,16 @@
 .. |ico_R| image:: /_static/images/icon-rnc.png
    :height: 16
    :width: 16
+.. |ico_Tag| image:: /_static/images/icon-tag_alt.png
+   :height: 16
+   :width: 16
 .. |ico_See| image:: /_static/images/icon-arrow_see.png
    :height: 24
    :width: 24
+
+.. |badge_3.0| raw:: html
+
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#007ec6" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg>
+
+.. badge colour green = #97CA00
+.. badge colour blue = #6ab0de

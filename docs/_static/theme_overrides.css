@@ -58,7 +58,8 @@ http://docutils.sourceforge.net/docs/ref/rst/directives.html#rubric */
 .rubric {
   font-weight: 700;
   font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
-  font-size: 125%;
+  font-size: 115%;
+  color: #808080;
 }
 
 /* toggle-able sections
@@ -90,3 +91,11 @@ Example sphinx construct:
 .toggle .header.open:after {
   content: " ▲";
 }
+
+/* Color text styles */
+.red {color: red;}
+.orange {color:orange;}
+.green {color:green;}
+.red-bd {color:red;  font-weight: bold;}
+.orange-bd {color:orange;  font-weight: bold;}
+.green-bd {color:green;  font-weight: bold;}
