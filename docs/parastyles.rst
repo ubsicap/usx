@@ -1017,12 +1017,32 @@ Habakkuk 3.1 (GNT)
 .. image:: images/usx-para-style_bAlt.jpg
 	:width: 250px
 
-.. _usx-parastyle_li:
-.. index:: para @style (li)
+.. _usx-parastyle_lh:
+.. index:: para @style (lh)
 
 -----
 
 Lists
+-----
+
+lh
+^^
+
+|badge_3.0|
+
+:@style: lh
+:Use: List header. |br|
+	Some lists include an introductory and concluding remark (:ref:`lf <usx-parastyle_lf>`). They are an integral part of the list content, but are not list items. A list does not require either or both of these elements.
+:Valid In: :ref:`usx-div_chapter`
+
+**Formatting Sample** - 1 Chronicles 27:16-22 (GNT)
+
+.. image:: images/usx-para-style_lh.jpg
+	:width: 250px
+
+.. _usx-parastyle_li:
+.. index:: para @style (li)
+
 -----
 
 li#
@@ -1037,4 +1057,24 @@ li#
 **Formatting Sample** - Numbers 7.84-88 (GNT)
 
 .. image:: images/usx-para-style_li.jpg
+	:width: 250px
+
+.. _usx-parastyle_lf:
+.. index:: para @style (lf)
+
+-----
+
+lf
+^^
+
+|badge_3.0|
+
+:@style: lf
+:Use: List footer. |br|
+	Some lists include an introductory (:ref:`lh <usx-parastyle_lh>`) and concluding remark. They are an integral part of the list content, but are not list items. A list does not require either or both of these elements.
+:Valid In: :ref:`usx-div_chapter`
+
+**Formatting Sample** - 1 Chronicles 27:16-22 (GNT)
+
+.. image:: images/usx-para-style_lf.jpg
 	:width: 250px
