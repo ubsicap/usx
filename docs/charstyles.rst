@@ -432,3 +432,18 @@ wh
 :@style: wh
 :Use: Hebrew word list entry.
 :Valid In: Any valid :ref:`usx-element_char`
+
+-----
+
+.. _usx-charstyle_wa:
+.. index:: char @style (wa)
+
+wa
+^^
+
+|badge_3.0|
+
+:@style: wa
+:Added: 3.0
+:Use: Aramaic word list entry.
+:Valid In: Any valid :ref:`usx-element_char`
