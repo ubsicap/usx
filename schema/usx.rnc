@@ -249,7 +249,6 @@ Para =
     }
 Para.para.style.enum = (
       "restore" # Comment about when text was restored
-    | "b" # Poetry text stanza break (e.g. stanza break)
     | "cls" # Closure of an Epistle
     | "iex" # Introduction explanatory or bridge text (e.g. explanation of missing book in Short Old Testament)
     | "ip" # Division or Section introductory paragraph (study Bible)
@@ -276,11 +275,13 @@ Para.para.style.enum = (
     | "q4" # Poetry text, level 4 indent
     | "qa" # Poetry text, Acrostic marker/heading
     | "qc" # Poetry text, centered
+    | "qr" # Poetry text, Right Aligned
     | "qm" # Poetry text, embedded, level 1 indent (if single level)
     | "qm1" # Poetry text, embedded, level 1 indent (if multiple levels)
     | "qm2" # Poetry text, embedded, level 2 indent
     | "qm3" # Poetry text, embedded, level 3 indent
-    | "qr" # Poetry text, Right Aligned
+    | "qd" # A Hebrew musical performance annotation, similar in content to Hebrew descriptive title.
+    | "b" # Poetry text stanza break (e.g. stanza break)
     | "d" # A Hebrew text heading, to provide description (e.g. Psalms)
     | "ms" # A major section division heading, level 1 (if single level)
     | "ms1" # A major section division heading, level 1 (if multiple levels)
