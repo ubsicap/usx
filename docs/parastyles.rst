@@ -1052,6 +1052,7 @@ lh
 |badge_3.0|
 
 :@style: lh
+:Added: 3.0
 :Use: List header. |br|
 	Some lists include an introductory and concluding remark (:ref:`lf <usx-parastyle_lf>`). They are an integral part of the list content, but are not list items. A list does not require either or both of these elements.
 :Valid In: :ref:`usx-div_chapter`
@@ -1092,6 +1093,7 @@ lf
 |badge_3.0|
 
 :@style: lf
+:Added: 3.0
 :Use: List footer. |br|
 	Some lists include an introductory (:ref:`lh <usx-parastyle_lh>`) and concluding remark. They are an integral part of the list content, but are not list items. A list does not require either or both of these elements.
 :Valid In: :ref:`usx-div_chapter`
@@ -1112,6 +1114,7 @@ lim#
 |badge_3.0|
 
 :@style: lim#
+:Added: 3.0
 :Use: Embedded list entry. |br|
 	An out-dented paragraph meant to highlight the items of an embedded list. |br|
 	# represents the level of indent |br|
