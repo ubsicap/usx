@@ -1049,7 +1049,8 @@ li#
 ^^^
 
 :@style: li#
-:Use: List item (out-dented paragraph meant to highlight the items of a list.). |br|
+:Use: List entry. |br|
+	An out-dented paragraph meant to highlight the items of a list. |br|
 	# represents the level of indent |br|
 	**li = li1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
 :Valid In: :ref:`usx-div_chapter`
@@ -1077,4 +1078,27 @@ lf
 **Formatting Sample** - 1 Chronicles 27:16-22 (GNT)
 
 .. image:: images/usx-para-style_lf.jpg
+	:width: 250px
+
+.. _usx-parastyle_lim:
+.. index:: para @style (lim#)
+
+-----
+
+lim#
+^^^^
+
+|badge_3.0|
+
+:@style: lim#
+:Use: Embedded list entry. |br|
+	An out-dented paragraph meant to highlight the items of an embedded list. |br|
+	# represents the level of indent |br|
+	**lim = lim1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes) |br|
+	|ico_See| *See also* :ref:`li <usx-parastyle_li>`
+:Valid In: :ref:`usx-div_chapter`
+
+**Formatting Sample** - Nehemiah 7.4-25 (NIV)
+
+.. image:: images/usx-para-style_lim.jpg
 	:width: 250px
