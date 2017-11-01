@@ -420,6 +420,7 @@ Char.char.style.enum = (
     | "tl" # For transliterated words
     | "wg" # A Greek Wordlist text item
     | "wh" # A Hebrew wordlist text item
+    | "wa" # An Aramaic wordlist text item
     | "wj" # For marking the words of Jesus
     | "xt" # A target reference(s)
     | "no" # A character style, use normal text
