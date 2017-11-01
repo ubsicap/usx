@@ -992,10 +992,10 @@ qm#
 .. image:: images/usx-para-style_qm.jpg
 	:width: 250px
 
+-----
+
 .. _usx-parastyle_qd:
 .. index:: para @style (qd)
-
------
 
 qd
 ^^
@@ -1038,13 +1038,13 @@ Habakkuk 3.1 (GNT)
 .. image:: images/usx-para-style_bAlt.jpg
 	:width: 250px
 
-.. _usx-parastyle_lh:
-.. index:: para @style (lh)
-
 -----
 
 Lists
 -----
+
+.. _usx-parastyle_lh:
+.. index:: para @style (lh)
 
 lh
 ^^
@@ -1062,10 +1062,10 @@ lh
 .. image:: images/usx-para-style_lh.jpg
 	:width: 250px
 
+-----
+
 .. _usx-parastyle_li:
 .. index:: para @style (li)
-
------
 
 li#
 ^^^
@@ -1082,10 +1082,10 @@ li#
 .. image:: images/usx-para-style_li.jpg
 	:width: 250px
 
+-----
+
 .. _usx-parastyle_lf:
 .. index:: para @style (lf)
-
------
 
 lf
 ^^
@@ -1103,10 +1103,10 @@ lf
 .. image:: images/usx-para-style_lf.jpg
 	:width: 250px
 
+-----
+
 .. _usx-parastyle_lim:
 .. index:: para @style (lim#)
-
------
 
 lim#
 ^^^^
