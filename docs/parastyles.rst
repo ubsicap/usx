@@ -992,6 +992,27 @@ qm#
 .. image:: images/usx-para-style_qm.jpg
 	:width: 250px
 
+.. _usx-parastyle_qd:
+.. index:: para @style (qd)
+
+-----
+
+qd
+^^
+
+|badge_3.0|
+
+:@style: qd
+:Added: 3.0
+:Use: Hebrew note. |br|
+	A Hebrew musical performance comment similar in content to many of the Hebrew Psalm titles (@style :ref:`d <usx-para-style_d>`), but placed at the end of the poetic section.
+:Valid In: :ref:`usx-div_chapter`
+
+**Formatting Sample** - Habakkuk 3:19 (NIV)
+
+.. image:: images/usx-para-style_qd.jpg
+	:width: 250px
+
 -----
 
 .. _usx-parastyle_b:
