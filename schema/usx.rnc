@@ -302,6 +302,11 @@ Para.para.style.enum = (
     | "li3" # A list entry, level 3
     | "li4" # A list entry, level 4
     | "lf" # List footer (introductory remark)
+    | "lim" # An embedded list entry, level 1 (if single level)
+    | "lim1" # An embedded list entry, level 1 (if multiple levels)
+    | "lim2" # An embedded list entry, level 2
+    | "lim3" # An embedded list entry, level 3
+    | "lim4" # An embedded list entry, level 4
     | "cp" # Published chapter number
     | "cl" # Chapter label used for translations that add a word such as "Chapter"
     | "cd" # Chapter Description (Publishing option D, e.g. in Russian Bibles)
