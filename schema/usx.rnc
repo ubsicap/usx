@@ -412,6 +412,7 @@ Char.char.style.enum = (
     | "ndx" # A subject index text item
     | "ord" # For the text portion of an ordinal number
     | "pn" # For a proper name
+    | "png" For a geographic proper name
     | "pro" # For indicating pronunciation in CJK texts
     | "qt" # For Old Testament quoted text appearing in the New Testament
     | "rq" # A cross-reference indicating the source text for the preceding quotation.
