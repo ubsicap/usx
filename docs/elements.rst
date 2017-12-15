@@ -1,13 +1,17 @@
 .. include:: /_static/inc_styles.txt
 
+.. index:: usx; elements
 .. _usx_elementIndex:
 
 Elements
 ========
 
-.. contents:: :depth: 2
+.. contents::
+	:depth: 2
 
-.. index:: usx <usx>
+-----
+
+.. index:: element; <usx>, usx; root element
 .. _usx-element_root:
 
 <usx>
@@ -22,7 +26,6 @@ Elements
 	Only the specific USX version number for scripture data contained in the file is allowed (1.0, 2.0, 2.5 etc.).
 :Parent: **ROOT**
 
-
 The following schema diagram displays the document structure of a USX scripture file.
 
 **Diagram and Text Sample**
@@ -33,9 +36,11 @@ The following schema diagram displays the document structure of a USX scripture 
 	:name: usx-element_usx_example
 	:emphasize-lines: 1
 
-    <usx version="2.5">
+	<usx version="2.5">
 
-.. index:: usx <book>
+-----
+
+.. index:: element; <book>
 .. _usx-element_book:
 
 <book>
@@ -62,7 +67,9 @@ The following schema diagram displays the document structure of a USX scripture 
 
 	<book code="MAT" style="id">English: Good News Translation 2nd Ed. 1992</book>
 
-.. index:: usx <chapter>
+-----
+
+.. index:: element; <chapter>
 .. _usx-element_chapter:
 
 <chapter>
@@ -89,7 +96,7 @@ The following schema diagram displays the document structure of a USX scripture 
 
 Code examples for chapter and verse are provided after the definition for element :ref:`verse<usx-element_verse>` (below).
 
-.. index:: usx <verse>
+.. index:: element; <verse>
 .. _usx-element_verse:
 
 <verse>
@@ -215,7 +222,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 **chapter and verse** - PSA 42, showing chapter @altnumber and verse @altnumber
 
 .. code-block:: xml
-	:name: usx-element_verse_example3
+	:name: usx-element_verse_example4
 	:emphasize-lines: 1,8,13
 
 	<chapter number="42" style="c" altnumber="41" />
@@ -235,7 +242,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	<para style="q1">Quand pourrai-je entrer</para>
 	<para style="q1">et paraître face à Dieu?</para>
 
-.. index:: usx <para>
+.. index:: element; <para>
 .. _usx-element_para:
 
 <para>
@@ -273,7 +280,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	<para style="p">
 	  <verse number="13" style="v" />“You are like salt for the whole human race...</para>
 
-.. index:: usx <table>
+.. index:: element; <table>
 .. _usx-element_table:
 
 <table>
@@ -290,7 +297,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 .. image:: images/usx-element_table.png
 
-.. index:: usx <row>
+.. index:: element; <row>
 .. _usx-element_row:
 
 <row>
@@ -307,7 +314,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 .. image:: images/usx-element_row.png
 
-.. index:: usx <cell>
+.. index:: element; <cell>
 .. _usx-element_cell:
 
 <cell>
@@ -366,7 +373,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	  </row>
 	</table>
 
-.. index:: usx <char>
+.. index:: element; <char>
 .. _usx-element_char:
 
 <char>
@@ -403,7 +410,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	  <char style="qt">to open the way for you.’</char></para>
 	...
 
-.. index:: usx <note>
+.. index:: element; <note>
 .. _usx-element_note:
 
 <note>
@@ -420,7 +427,7 @@ To help make things clear in this document, the markup for :ref:`footnotes <usx-
 
 |Ico_See| **See:** :doc:`<note> Types <notes>` for detail.
 
-.. index:: usx <sidebar>
+.. index:: element; <sidebar>, study bible; sidebar
 .. _usx-element_sidebar:
 
 <sidebar>
@@ -487,7 +494,7 @@ Galatians 3
 	  	</para>
 	  </sidebar>
 
-.. index:: usx <figure>
+.. index:: element; <figure>
 .. _usx-element_figure:
 
 <figure>
@@ -528,7 +535,7 @@ Galatians 3
 	<figure style="fig" desc="" file="avnt016.jpg" size="span" loc="" copy="" ref="1.18">
 		At once they left their nets.</figure>
 
-.. index:: usx <optbreak>
+.. index:: element; <optbreak>
 .. _usx-element_optbreak:
 
 <optbreak>
@@ -549,7 +556,7 @@ Galatians 3
 
 	<para style="s1">Jesus Heals a Man <optbreak /> Who Could Not Walk</para>
 
-.. index:: usx <ref>
+.. index:: element; <ref>
 .. _usx-element_ref:
 
 <ref>

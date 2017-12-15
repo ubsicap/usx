@@ -1,21 +1,16 @@
 .. include:: /_static/inc_styles.txt
 
-.. index:: char @style
+.. index:: attribute; char@style
 .. _usx-charstyles:
 
 <char> @style Types
 ===================
 
-.. contents::
-	:depth: 2
-
------
-
 .. note:: **@style types for** :ref:`usx-element_char` **elements occurring within** :ref:`usx-element_note`
 
 	An additional list of :ref:`usx-element_char` @style types are defined for use in the context of footnotes and cross references. These are described in this document together with the definitions for the :ref:`usx-element_note` elements used for footnotes and cross references.
 
-.. index:: usx <char> (special text)
+.. index:: element; <char> (special text)
 .. _usx-charstyles_specialText:
 
 -----
@@ -23,8 +18,8 @@
 Special Text
 ------------
 
+.. index:: char@style; add
 .. _usx-charstyle_add:
-.. index:: char @style (add)
 
 add
 ^^^
@@ -41,8 +36,8 @@ add
 
 -----
 
+.. index:: char@style; bk
 .. _usx-charstyle_bk:
-.. index:: char @style (bk)
 
 bk
 ^^
@@ -58,8 +53,8 @@ bk
 
 -----
 
+.. index:: char@style; dc
 .. _usx-charstyle_dc:
-.. index:: char @style (dc)
 
 dc
 ^^
@@ -70,8 +65,8 @@ dc
 
 -----
 
+.. index:: char@style; ior, introductions; outline reference range
 .. _usx-charstyle_ior:
-.. index:: char @style (ior)
 
 ior
 ^^^
@@ -88,8 +83,8 @@ ior
 
 -----
 
+.. index:: char@style; iqt, introductions; quoted text
 .. _usx-charstyle_iqt:
-.. index:: char @style (iqt)
 
 iqt
 ^^^
@@ -101,8 +96,8 @@ iqt
 
 -----
 
+.. index:: char@style; k
 .. _usx-charstyle_k:
-.. index:: char @style (k)
 
 k
 ^
@@ -113,8 +108,8 @@ k
 
 -----
 
+.. index:: char@style; nd
 .. _usx-charstyle_nd:
-.. index:: char @style (nd)
 
 nd
 ^^
@@ -130,8 +125,8 @@ nd
 
 -----
 
+.. index:: char@style; ord
 .. _usx-charstyle_ord:
-.. index:: char @style (ord)
 
 ord
 ^^^
@@ -142,8 +137,8 @@ ord
 
 -----
 
+.. index:: char@style; pn
 .. _usx-charstyle_pn:
-.. index:: char @style (pn)
 
 pn
 ^^
@@ -154,8 +149,8 @@ pn
 
 -----
 
+.. index:: char@style; png
 .. _usx-charstyle_png:
-.. index:: char @style (png)
 
 png
 ^^^
@@ -171,8 +166,8 @@ png
 
 -----
 
+.. index:: char@style; qac, poetry; acrostic letter
 .. _usx-charstyle_qac:
-.. index:: char @style (qac)
 
 qac
 ^^^
@@ -188,8 +183,8 @@ qac
 
 -----
 
+.. index:: char@style; qs, poetry; selah text
 .. _usx-charstyle_qs:
-.. index:: char @style (qs)
 
 qs
 ^^
@@ -206,8 +201,8 @@ qs
 
 -----
 
+.. index:: char@style; qt
 .. _usx-charstyle_qt:
-.. index:: char @style (qt)
 
 qt
 ^^
@@ -224,8 +219,8 @@ qt
 
 -----
 
+.. index:: char@style; rq
 .. _usx-charstyle_rq:
-.. index:: char @style (rq)
 
 rq
 ^^
@@ -243,8 +238,8 @@ rq
 
 -----
 
+.. index:: char@style; sig
 .. _usx-charstyle_sig:
-.. index:: char @style (sig)
 
 sig
 ^^^
@@ -260,8 +255,8 @@ sig
 
 -----
 
+.. index:: char@style; sls
 .. _usx-charstyle_sls:
-.. index:: char @style (sls)
 
 sls
 ^^^
@@ -278,8 +273,8 @@ sls
 
 -----
 
+.. index:: char@style; tl
 .. _usx-charstyle_tl:
-.. index:: char @style (tl)
 
 tl
 ^^
@@ -295,8 +290,8 @@ tl
 
 -----
 
+.. index:: char@style; wj
 .. _usx-charstyle_wj:
-.. index:: char @style (wj)
 
 wj
 ^^
@@ -305,7 +300,7 @@ wj
 :Use: Words of Jesus.
 :Valid In: Any valid :ref:`usx-element_char`
 
-.. index:: usx <char> (character styles)
+.. index:: element; <char> (character styles)
 .. _usx-charstyles_characterStyles:
 
 -----
@@ -313,8 +308,8 @@ wj
 Character Styling
 -----------------
 
+.. index:: char@style; em
 .. _usx-charstyle_em:
-.. index:: char @style (em)
 
 em
 ^^
@@ -325,8 +320,8 @@ em
 
 -----
 
+.. index:: char@style; bd
 .. _usx-charstyle_bd:
-.. index:: char @style (bd)
 
 bd
 ^^
@@ -337,8 +332,8 @@ bd
 
 -----
 
+.. index:: char@style; bdit
 .. _usx-charstyle_bdit:
-.. index:: char @style (bdit)
 
 bdit
 ^^^^
@@ -349,8 +344,8 @@ bdit
 
 -----
 
+.. index:: char@style; it
 .. _usx-charstyle_it:
-.. index:: char @style (it)
 
 it
 ^^
@@ -361,8 +356,8 @@ it
 
 -----
 
+.. index:: char@style; no
 .. _usx-charstyle_no:
-.. index:: char @style (no)
 
 no
 ^^
@@ -374,8 +369,8 @@ no
 
 -----
 
+.. index:: char@style; sc
 .. _usx-charstyle_sc:
-.. index:: char @style (sc)
 
 sc
 ^^
@@ -384,7 +379,7 @@ sc
 :Use: Small-cap text.
 :Valid In: Any valid :ref:`usx-element_char`
 
-.. index:: usx <char> (spacing and breaks)
+.. index:: element; <char> (spacing and breaks)
 .. _usx-charstyles_spacingBreaks:
 
 -----
@@ -394,7 +389,7 @@ Spacing and Breaks
 
 Discretionary (optional) line break location. See element :ref:`optbreak <usx-element_optbreak>`.
 
-.. index:: usx <char> (special features)
+.. index:: element; <char> (special features)
 .. _usx-charstyles_specialFeatures:
 
 -----
@@ -402,8 +397,8 @@ Discretionary (optional) line break location. See element :ref:`optbreak <usx-el
 Special Features
 ----------------
 
+.. index:: char@style; pro
 .. _usx-charstyle_pro:
-.. index:: char @style (pro)
 
 pro
 ^^^
@@ -415,8 +410,8 @@ pro
 
 -----
 
+.. index:: char@style; w
 .. _usx-charstyle_w:
-.. index:: char @style (w)
 
 w
 ^
@@ -428,8 +423,8 @@ w
 
 -----
 
+.. index:: char@style; wg
 .. _usx-charstyle_wg:
-.. index:: char @style (wg)
 
 wg
 ^^
@@ -440,8 +435,8 @@ wg
 
 -----
 
+.. index:: char@style; wh
 .. _usx-charstyle_wh:
-.. index:: char @style (wh)
 
 wh
 ^^
@@ -452,8 +447,8 @@ wh
 
 -----
 
+.. index:: char@style; wa
 .. _usx-charstyle_wa:
-.. index:: char @style (wa)
 
 wa
 ^^

@@ -1,15 +1,10 @@
 .. include:: /_static/inc_styles.txt
 
-.. index:: para @style
+.. index:: attribute; para@style
 .. _usx-parastyles:
 
 <para> @style Types
 ===================
-
-.. contents::
-	:depth: 2
-
------
 
 .. _usx-notes_numberedStyles:
 
@@ -25,14 +20,14 @@
 
 -----
 
-.. index:: usx <para> (identification)
+.. index:: element; <para> (identification), identification; header text
 .. _usx-parastyles_identification:
 
 Identification
 --------------
 
+.. index:: para@style; h
 .. _usx-parastyle_h:
-.. index:: para @style (h)
 
 h
 ^
@@ -48,8 +43,8 @@ h
 
 -----
 
+.. index:: para@style; toc1, identification; long table of contents text
 .. _usx-parastyle_toc1:
-.. index:: para @style (toc1)
 
 toc1
 ^^^^
@@ -60,8 +55,8 @@ toc1
 
 -----
 
+.. index:: para@style; toc2, identification; short table of contents text
 .. _usx-parastyle_toc2:
-.. index:: para @style (toc2)
 
 toc2
 ^^^^
@@ -72,8 +67,8 @@ toc2
 
 -----
 
+.. index:: para@style; toc3, identification; book abbreviation
 .. _usx-parastyle_toc3:
-.. index:: para @style (toc3)
 
 toc3
 ^^^^
@@ -88,7 +83,7 @@ toc3
 
 	The `metadata.xml <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html>`_ file within a DBL `text release bundle <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/index.html>`_ contains a `bookNames <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html#booknames>`_ element in which each scripture book is itemized together with child elements for its long, short and abbreviated forms. The `bookNames <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html#booknames>`_ element is the key location where this book naming metadata is contained within the bundle. USX para elements with attributes toc1, toc2, or toc3 are strictly optional data. Their presence in a USX file is valid, but reflects a legacy form of USFM markup in which the USFM files for each book were the key location for this book naming metadata.
 
-.. index:: usx <para> (introductions)
+.. index:: element; <para> (introductions)
 .. _usx-parastyles_introductions:
 
 -----
@@ -96,8 +91,8 @@ toc3
 Introductions
 -------------
 
+.. index:: para@style; imt, introductions; major title
 .. _usx-parastyle_imt:
-.. index:: para @style (imt)
 
 imt#
 ^^^^
@@ -115,8 +110,8 @@ imt#
 
 -----
 
+.. index:: para@style; is, introductions; section heading
 .. _usx-parastyle_is:
-.. index:: para @style (is)
 
 is#
 ^^^
@@ -134,8 +129,8 @@ is#
 
 -----
 
+.. index:: para@style; ip, introductions; paragraph
 .. _usx-parastyle_ip:
-.. index:: para @style (ip)
 
 ip
 ^^
@@ -151,8 +146,8 @@ ip
 
 -----
 
+.. index:: para@style; ipi, introductions; indented paragraph
 .. _usx-parastyle_ipi:
-.. index:: para @style (ipi)
 
 ipi
 ^^^
@@ -168,11 +163,11 @@ ipi
 
 -----
 
+.. index:: para@style; im, introductions; margin paragraph
 .. _usx-parastyle_im:
-.. index:: para @style (im)
 
 im
-^^^
+^^
 
 :@style: im
 :Use: Introduction flush left (margin) paragraph.
@@ -185,8 +180,8 @@ im
 
 -----
 
+.. index:: para@style; imi, introductions; indented margin paragraph
 .. _usx-parastyle_imi:
-.. index:: para @style (imi)
 
 imi
 ^^^
@@ -202,8 +197,8 @@ imi
 
 -----
 
+.. index:: para@style; ipq, introductions; text quote paragraph
 .. _usx-parastyle_ipq:
-.. index:: para @style (ipq)
 
 ipq
 ^^^
@@ -219,8 +214,8 @@ ipq
 
 -----
 
+.. index:: para@style; imq, introductions; margin text quote paragraph
 .. _usx-parastyle_imq:
-.. index:: para @style (imq)
 
 imq
 ^^^
@@ -236,8 +231,8 @@ imq
 
 -----
 
+.. index:: para@style; ipr, introductions; right-aligned paragraph
 .. _usx-parastyle_ipr:
-.. index:: para @style (ipr)
 
 ipr
 ^^^
@@ -254,8 +249,8 @@ ipr
 
 -----
 
+.. index:: para@style; iq, introductions; poetic line
 .. _usx-parastyle_iq:
-.. index:: para @style (iq)
 
 iq#
 ^^^
@@ -273,8 +268,8 @@ iq#
 
 -----
 
+.. index:: para@style; ib, introductions; blank line
 .. _usx-parastyle_ib:
-.. index:: para @style (ib)
 
 ib
 ^^
@@ -288,8 +283,8 @@ ib
 
 -----
 
+.. index:: para@style; ili, introductions; list item
 .. _usx-parastyle_ili:
-.. index:: para @style (ili)
 
 ili#
 ^^^^
@@ -307,8 +302,8 @@ ili#
 
 -----
 
+.. index:: para@style; iot, introductions; outline title
 .. _usx-parastyle_iot:
-.. index:: para @style (iot)
 
 iot
 ^^^
@@ -319,8 +314,8 @@ iot
 
 -----
 
+.. index:: para@style; io, introductions; outline entry
 .. _usx-parastyle_io:
-.. index:: para @style (io)
 
 io#
 ^^^
@@ -340,8 +335,8 @@ io#
 
 -----
 
+.. index:: para@style; iex, introductions; explanatory or bridge text
 .. _usx-parastyle_iex:
-.. index:: para @style (iex)
 
 iex
 ^^^
@@ -353,13 +348,13 @@ iex
 
 -----
 
+.. index:: para@style; imte, introductions; major title ending
 .. _usx-parastyle_imte:
-.. index:: para @style (imte)
 
 imte
 ^^^^
 
-:@style: imt#
+:@style: imte#
 :Use: Introduction major title ending. |br|
 	Used to mark a major title indicating the end of the introduction. |br|
 	# represents a portion of the title, with the lesser emphasis (relative weighting) being on the higher numbers. |br|
@@ -368,8 +363,8 @@ imte
 
 -----
 
+.. index:: para@style; ie, introductions; introduction end
 .. _usx-parastyle_ie:
-.. index:: para @style (ie)
 
 ie
 ^^
@@ -379,16 +374,16 @@ ie
 	Optionally included to explicitly indicate the end of the introduction material.
 :Valid In: :ref:`usx-div_bookIntroduction`
 
-.. index:: usx <para> (titles & headings)
-.. _usx-parastyles_titles_headings:
-
 -----
+
+.. index:: element; <para> (titles & headings)
+.. _usx-parastyles_titles_headings:
 
 Titles and Headings
 -------------------
 
+.. index:: para@style; mt, titles; major title
 .. _usx-parastyle_mt:
-.. index:: para @style (mt)
 
 mt#
 ^^^
@@ -412,8 +407,8 @@ Introduction to John (GNT)
 
 -----
 
+.. index:: para@style; mte, titles; major title at ending
 .. _usx-parastyle_mte:
-.. index:: para @style (mte)
 
 mte
 ^^^
@@ -425,8 +420,8 @@ mte
 
 -----
 
+.. index:: para@style; cl, chapters; chapter label
 .. _usx-parastyle_cl:
-.. index:: para @style (cl)
 
 cl
 ^^
@@ -473,8 +468,8 @@ Psalm 1 (GNT - *markup adapted* - specific chapter label)
 
 -----
 
+.. index:: para@style; cd, chapters; chapter description
 .. _usx-parastyle_cd:
-.. index:: para @style (cd)
 
 cd
 ^^
@@ -491,8 +486,8 @@ cd
 
 -----
 
+.. index:: para@style; ms, headings; major section heading
 .. _usx-parastyle_ms:
-.. index:: para @style (ms)
 
 ms#
 ^^^
@@ -516,8 +511,8 @@ Daniel 1.1 (GNT)
 
 -----
 
+.. index:: para@style; mr, headings; major section reference range
 .. _usx-parastyle_mr:
-.. index:: para @style (mr)
 
 mr
 ^^
@@ -534,8 +529,8 @@ mr
 
 -----
 
+.. index:: para@style; s, headings; section heading
 .. _usx-parastyle_s:
-.. index:: para @style (s)
 
 s#
 ^^
@@ -562,8 +557,8 @@ Proverbs 22.22,24 (GNT) |br|
 
 -----
 
+.. index:: para@style; sr, headings; section reference range
 .. _usx-parastyle_sr:
-.. index:: para @style (sr)
 
 sr
 ^^
@@ -582,8 +577,8 @@ sr
 
 -----
 
+.. index:: para@style; r, headings; parallel passage references
 .. _usx-parastyle_r:
-.. index:: para @style (r)
 
 r
 ^
@@ -601,8 +596,8 @@ r
 
 -----
 
+.. index:: para@style; d, headings; descriptive title
 .. _usx-parastyle_d:
-.. index:: para @style (d)
 
 d
 ^
@@ -619,8 +614,8 @@ d
 
 -----
 
+.. index:: para@style; sp, headings; speaker
 .. _usx-parastyle_sp:
-.. index:: para @style (sp)
 
 sp
 ^^
@@ -634,16 +629,16 @@ sp
 .. image:: images/usx-para-style_sp.jpg
 	:width: 250px
 
-.. index:: usx <para> (paragraphs)
-.. _usx-parastyles_paragraphs:
-
 -----
+
+.. index:: element; <para> (paragraphs)
+.. _usx-parastyles_paragraphs:
 
 Paragraphs
 ----------
 
+.. index:: para@style; p, paragraphs; normal
 .. _usx-parastyle_p:
-.. index:: para @style (p)
 
 p
 ^
@@ -659,8 +654,8 @@ p
 
 -----
 
+.. index:: para@style; m, paragraphs; margin
 .. _usx-parastyle_m:
-.. index:: para @style (m)
 
 m
 ^
@@ -677,8 +672,8 @@ m
 
 -----
 
+.. index:: para@style; po, paragraphs; letter opening
 .. _usx-parastyle_po:
-.. index:: para @style (po)
 
 po
 ^^
@@ -697,8 +692,8 @@ po
 
 -----
 
+.. index:: para@style; cls, paragraphs; letter closing
 .. _usx-parastyle_cls:
-.. index:: para @style (cls)
 
 cls
 ^^^
@@ -714,8 +709,8 @@ cls
 
 -----
 
+.. index:: para@style; pmo, paragraphs; embedded text opening
 .. _usx-parastyle_pmo:
-.. index:: para @style (pmo)
 
 pmo
 ^^^
@@ -731,8 +726,8 @@ pmo
 
 -----
 
+.. index:: para@style; pm, paragraphs; embedded text
 .. _usx-parastyle_pm:
-.. index:: para @style (pm)
 
 pm
 ^^
@@ -748,8 +743,8 @@ pm
 
 -----
 
+.. index:: para@style; pmc, paragraphs; embedded text closing
 .. _usx-parastyle_pmc:
-.. index:: para @style (pmc)
 
 pmc
 ^^^
@@ -765,8 +760,8 @@ pmc
 
 -----
 
+.. index:: para@style; pmr, paragraphs; embedded text refrain
 .. _usx-parastyle_pmr:
-.. index:: para @style (pmr)
 
 pmr
 ^^^
@@ -782,11 +777,11 @@ pmr
 
 -----
 
+.. index:: para@style; pi, paragraphs; indented
 .. _usx-parastyle_pi:
-.. index:: para @style (pi)
 
-pi
-^^
+pi#
+^^^
 
 :@style: pi#
 :Use: Indented paragraph. |br|
@@ -803,8 +798,8 @@ pi
 
 -----
 
+.. index:: para@style; mi, paragraphs; indented margin
 .. _usx-parastyle_mi:
-.. index:: para @style (mi)
 
 mi
 ^^
@@ -820,8 +815,8 @@ mi
 
 -----
 
+.. index:: para@style; pc, paragraphs; centered
 .. _usx-parastyle_pc:
-.. index:: para @style (pc)
 
 pc
 ^^
@@ -838,8 +833,8 @@ pc
 
 -----
 
+.. index:: para@style; pr, paragraphs; right-aligned
 .. _usx-parastyle_pr:
-.. index:: para @style (pr)
 
 pr
 ^^
@@ -852,8 +847,8 @@ pr
 
 -----
 
+.. index:: para@style; ph, paragraphs; hanging indent
 .. _usx-parastyle_ph:
-.. index:: para @style (ph)
 
 ph#
 ^^^
@@ -868,8 +863,8 @@ ph#
 
 -----
 
+.. index:: para@style; lit
 .. _usx-parastyle_lit:
-.. index:: para @style (lit)
 
 :@style: lit
 :Use: Liturgical note/comment. (e.g. a guide which tells the reader/worshiper that he/she should recite a prayer or recitation etc.) |br|
@@ -881,16 +876,16 @@ ph#
 .. image:: images/usx-para-style_lit.jpg
 	:width: 250px
 
-.. index:: usx <para> (poetry)
-.. _usx-parastyles_poetry:
-
 -----
+
+.. index:: element; <para> (poetry)
+.. _usx-parastyles_poetry:
 
 Poetry
 ------
 
+.. index:: para@style; q, poetry; poetic line
 .. _usx-parastyle_q:
-.. index:: para @style (q)
 
 q#
 ^^
@@ -913,8 +908,8 @@ q#
 
 -----
 
+.. index:: para@style; qr, poetry; right-aligned poetic line
 .. _usx-parastyle_qr:
-.. index:: para @style (qr)
 
 qr
 ^^
@@ -931,8 +926,8 @@ qr
 
 -----
 
+.. index:: para@style; qc, poetry; centered poetic line
 .. _usx-parastyle_qc:
-.. index:: para @style (qc)
 
 qc
 ^^
@@ -953,8 +948,8 @@ qc
 
 -----
 
+.. index:: para@style; qa, poetry; acrostic heading
 .. _usx-parastyle_qa:
-.. index:: para @style (qa)
 
 qa
 ^^
@@ -975,8 +970,8 @@ qa
 
 -----
 
+.. index:: para@style; qm, poetry; embedded text poetic line
 .. _usx-parastyle_qm:
-.. index:: para @style (qm)
 
 qm#
 ^^^
@@ -994,8 +989,8 @@ qm#
 
 -----
 
+.. index:: para@style; qd, poetry; Hebrew note
 .. _usx-parastyle_qd:
-.. index:: para @style (qd)
 
 qd
 ^^
@@ -1005,7 +1000,7 @@ qd
 :@style: qd
 :Added: 3.0
 :Use: Hebrew note. |br|
-	A Hebrew musical performance comment similar in content to many of the Hebrew Psalm titles (@style :ref:`d <usx-para-style_d>`), but placed at the end of the poetic section.
+	A Hebrew musical performance comment similar in content to many of the Hebrew Psalm titles (@style :ref:`d <usx-parastyle_d>`), but placed at the end of the poetic section.
 :Valid In: :ref:`usx-div_chapter`
 
 **Formatting Sample** - Habakkuk 3:19 (NIV)
@@ -1015,8 +1010,8 @@ qd
 
 -----
 
+.. index:: para@style; b, paragraphs; blank line, poetry; blank line
 .. _usx-parastyle_b:
-.. index:: para @style (b)
 
 b
 ^
@@ -1043,8 +1038,8 @@ Habakkuk 3.1 (GNT)
 Lists
 -----
 
+.. index:: para@style; lh, lists; list header
 .. _usx-parastyle_lh:
-.. index:: para @style (lh)
 
 lh
 ^^
@@ -1064,8 +1059,8 @@ lh
 
 -----
 
+.. index:: para@style; li, lists; list entry
 .. _usx-parastyle_li:
-.. index:: para @style (li)
 
 li#
 ^^^
@@ -1084,8 +1079,8 @@ li#
 
 -----
 
+.. index:: para@style; lf, lists; list footer
 .. _usx-parastyle_lf:
-.. index:: para @style (lf)
 
 lf
 ^^
@@ -1105,8 +1100,8 @@ lf
 
 -----
 
+.. index:: para@style; lim#, lists; embedded list entry
 .. _usx-parastyle_lim:
-.. index:: para @style (lim#)
 
 lim#
 ^^^^

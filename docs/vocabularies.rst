@@ -6,7 +6,7 @@
 List of Vocabularies
 ====================
 
-.. index:: usx book codes
+.. index:: usx; book codes
 .. _usx-vocab-bookCode:
 
 :bookCode:

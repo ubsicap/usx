@@ -5,7 +5,7 @@
 
 .. include:: /_static/inc_styles.txt
 
-.. index:: usx
+.. index:: USX, documentation; table of contents
 
 *****************
 USX Documentation
@@ -29,6 +29,8 @@ USX Documentation
 |ico_See| *See also* the documentation :ref:`Index <genindex>` page.
 
 -----
+
+.. index:: syntax; documentation
 
 .. note:: **Documentation Syntax Notes**
 

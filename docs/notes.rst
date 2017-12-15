@@ -1,18 +1,16 @@
 .. include:: /_static/inc_styles.txt
 
+.. index:: element; <note>
 .. _usx-note:
 
 <note> Types
 ============
 
-.. contents::
-	:depth: 2
-
------
-
-.. index:: usx <note> (footnote)
-.. index:: usx <note> (endnote)
-.. index:: usx <note> (study note)
+.. index:: element; <note> (footnote), footnote; <note> element
+.. index:: element; <note> (endnote), endnote; <note> element
+.. index:: element; <note> (study note), study note; <note> element
+.. index:: attribute; note@style (footnote), attribute; note@style (endnote), attribute; note@style (study footnote)
+.. index:: study bible; footnote
 .. _usx-note_footnote:
 
 Footnote <note>
@@ -27,14 +25,16 @@ Footnote <note>
 	*A <user defined caller> may be any single character or sequence of characters preferred as the caller for a note.*
 :@style: Content (footnote) type. |req| |br|
 	``f`` (footnote) | ``fe`` (endnote) | ``ef`` (extended / study note)
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_introductionEndTitles`, :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_char`, :ref:`usx-element_cell`
 
 **Diagram**
 
 .. image:: images/usx-element_notef.png
 
-.. index:: usx <char> (footnote)
+.. index:: element; <char> (footnote), footnote; <char> element
+.. index:: element; <char> (endnote), endnote; <char> element
+.. index:: element; <char> (study note), study note; <char> element
 .. _usx-note_footnote_char:
 
 Footnote <char>
@@ -52,24 +52,18 @@ Footnote <char>
 
 .. image:: images/usx-element_charf.png
 
+.. index:: footnote; char@style
+.. index:: attribute; char@style (footnote)
 .. _usx-note_footnote_charstyles:
 
 Footnote <char> @style Types
 """"""""""""""""""""""""""""
 
-* :ref:`fr <usx-note_footnote_charstyle_fr>`
-* :ref:`ft <usx-note_footnote_charstyle_ft>`
-* :ref:`fk <usx-note_footnote_charstyle_fk>`
-* :ref:`fq <usx-note_footnote_charstyle_fq>`
-* :ref:`fqa <usx-note_footnote_charstyle_fqa>`
-* :ref:`fl <usx-note_footnote_charstyle_fl>`
-* :ref:`fp <usx-note_footnote_charstyle_fp>`
-* :ref:`fv <usx-note_footnote_charstyle_fv>`
-* :ref:`fdc <usx-note_footnote_charstyle_fdc>`
- 
------
-
+.. index:: char@style (footnote); fr
 .. _usx-note_footnote_charstyle_fr:
+
+fr
+^^
 
 :@style: fr
 :Use: Footnote "origin" reference. |br|
@@ -90,7 +84,11 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); ft
 .. _usx-note_footnote_charstyle_ft:
+
+ft
+^^
 
 :@style: ft
 :Use: Footnote text |br|
@@ -99,7 +97,11 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); fk
 .. _usx-note_footnote_charstyle_fk:
+
+fk
+^^
 
 :@style: fk
 :Use: A specific keyword/term from the text for which the footnote is being provided.
@@ -122,7 +124,11 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); fq
 .. _usx-note_footnote_charstyle_fq:
+
+fq
+^^
 
 :@style: Footnote translation quotation.
 :Use: A quotation from the current scripture text translation for which the note is being provided. |br|
@@ -146,7 +152,11 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); fqa
 .. _usx-note_footnote_charstyle_fqa:
+
+fqa
+^^^
 
 :@style: fqa
 :Use: Footnote alternate translation. |br|
@@ -171,7 +181,11 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); fl
 .. _usx-note_footnote_charstyle_fl:
+
+fl
+^^
 
 :@style: fl
 :Use: Footnote "label" text. |br|
@@ -180,7 +194,11 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); fp
 .. _usx-note_footnote_charstyle_fp:
+
+fp
+^^
 
 :@style: fp
 :Use: Footnote additional paragraph. |br|
@@ -189,7 +207,11 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); fv
 .. _usx-note_footnote_charstyle_fv:
+
+fv
+^^
 
 :@style: fv
 :Use: Footnote verse number. |br|
@@ -215,20 +237,26 @@ Footnote <char> @style Types
 
 -----
 
+.. index:: char@style (footnote); fdc
 .. _usx-note_footnote_charstyle_fdc:
+
+fdc
+^^^
 
 :@style: fdc
 :Use: Material to be included only in publications that contain the Deuterocanonical/Apocrypha books.
 :Valid In: Any :ref:`usx-note_footnote_char`
 
------
-
 .. note::
 
 	Other :ref:`usx-element_char` :doc:`@style types <charstyles>` may be nested within any of the standard footnote :ref:`usx-element_char` :ref:`@style types <usx-note_footnote_charstyles>` shown in the list above.
 
-.. index:: usx <note> (cross reference)
-.. index:: usx <note> (study cross reference)
+-----
+
+.. index:: element; <note> (cross reference), cross reference; <note> element
+.. index:: element; <note> (study cross reference), study cross reference; <note> element
+.. index:: attribute; note@style (cross reference), attribute; note@style (study cross reference)
+.. index:: study bible; cross reference
 .. _usx-note_crossReference:
 
 Cross Reference <note>
@@ -243,14 +271,15 @@ Cross Reference <note>
 	*A <user defined caller> may be any single character or sequence of characters preferred as the caller for a note.*
 :@style: Content (cross reference) type. |req| |br|
 	``x`` (cross reference) | ``ex`` (extended / study cross reference)
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_introductionEndTitles`, :ref:`usx-div_chapterText`
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_chapter`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_char`, :ref:`usx-element_cell`
 
 **Diagram**
 
 .. image:: images/usx-element_notex.png
 
-.. index:: usx <char> (cross reference)
+.. index:: element; <char> (cross reference), cross reference; <char> element
+.. index:: element; <char> (study cross reference), study cross reference; <char> element
 .. _usx-note_crossReference_char:
 
 Cross Reference <char>
@@ -268,22 +297,18 @@ Cross Reference <char>
 
 .. image:: images/usx-element_charx.png
 
+.. index:: cross reference; char@style
+.. index:: attribute; char@style (cross reference)
 .. _usx-note_crossReference_charstyles:
 
 Cross Reference <char> @style Types
 """""""""""""""""""""""""""""""""""
 
-* :ref:`xo <usx-note_crossReference_charstyle_xo>`
-* :ref:`xt <usx-note_crossReference_charstyle_xt>`
-* :ref:`xk <usx-note_crossReference_charstyle_xk>`
-* :ref:`xq <usx-note_crossReference_charstyle_xq>`
-* :ref:`xot <usx-note_crossReference_charstyle_xot>`
-* :ref:`xnt <usx-note_crossReference_charstyle_xnt>`
-* :ref:`xdc <usx-note_crossReference_charstyle_xdc>`
-
------
-
+.. index:: char@style (cross reference); xo
 .. _usx-note_crossReference_charstyle_xo:
+
+xo
+^^
 
 :@style: xo
 :Use: Cross reference origin reference. |br|
@@ -306,7 +331,11 @@ Cross Reference <char> @style Types
 
 -----
 
+.. index:: char@style (cross reference); xt
 .. _usx-note_crossReference_charstyle_xt:
+
+xt
+^^
 
 :@style: xt
 :Use: Cross reference target reference(s). |br|
@@ -316,7 +345,11 @@ Cross Reference <char> @style Types
 
 -----
 
+.. index:: char@style (cross reference); xk
 .. _usx-note_crossReference_charstyle_xk:
+
+xk
+^^
 
 :@style: xk
 :Use: A keyword from the scripture translation text which the target reference(s) also refer to.
@@ -324,7 +357,11 @@ Cross Reference <char> @style Types
 
 -----
 
+.. index:: char@style (cross reference); xq
 .. _usx-note_crossReference_charstyle_xq:
+
+xq
+^^
 
 :@style: xq
 :Use: A quotation from the scripture text. |br|
@@ -333,7 +370,11 @@ Cross Reference <char> @style Types
 
 -----
 
+.. index:: char@style (cross reference); xot
 .. _usx-note_crossReference_charstyle_xot:
+
+xot
+^^^
 
 :@style: xot
 :Use: References (or other text) which only to be included in publications that contain the Old Testament books.
@@ -341,7 +382,11 @@ Cross Reference <char> @style Types
 
 -----
 
+.. index:: char@style (cross reference); xnt
 .. _usx-note_crossReference_charstyle_xnt:
+
+xnt
+^^^
 
 :@style: xnt
 :Use: References (or other text) which only to be included in publications that contain the New Testament books.
@@ -349,7 +394,11 @@ Cross Reference <char> @style Types
 
 -----
 
+.. index:: char@style (cross reference); xdc
 .. _usx-note_crossReference_charstyle_xdc:
+
+xdc
+^^^
 
 :@style: xdc
 :Use: References (or other text) which only to be included in publications that contain the Deuterocanonical/Apocrypha books.

@@ -1,6 +1,6 @@
 .. include:: /_static/inc_styles.txt
 
-.. index:: usx (schemas)
+.. index:: usx; schemas
 .. _usx_schemas:
 
 Schemas
