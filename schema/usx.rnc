@@ -528,6 +528,7 @@ CrossReferenceChar =
 CrossReferenceChar.char.style.enum = (
       "xo" # The cross reference origin reference
     | "xt" # The cross reference target reference(s), protocanon only
+    | "xta" # Cross reference target references added text
     | "xk" # A cross reference keyword
     | "xq" # A cross-reference quotation from the scripture text
     | "xot" # Cross-reference target reference(s), Old Testament only
