@@ -331,6 +331,55 @@ xo
 
 -----
 
+.. index:: char@style (cross reference); xop, cross reference; published origin text
+.. _usx-note_crossReference_charstyle_xop:
+
+xop
+^^^
+
+|badge_3.0|
+
+:@style: xop
+:Added: 3.0
+:Use: Published cross reference origin text. |br|
+	In some texts, the content intended to be published in the position of the cross reference origin text :ref:`xo <usx-note_crossReference_charstyle_xo>` does not follow the typical ``<chapter><separator><verse>`` pattern. An origin reference following this pattern is required for validation of the cross reference location. ``<char @style="xop">...</char>`` can be used in order to supply the content intended for publishing, similar to the use of :ref:`chapter@pubnumber <usx-element_chapter>` and :ref:`verse@pubnumber <usx-element_verse>`.
+:Valid In: Any :ref:`usx-note_crossReference_char`
+
+**Text and Formatting Sample** - Jonah 1.1-5 (Bulgarian Orthodox Bible)
+
+.. code-block:: xml
+	:name: usx-charstyle_xo_example
+	:emphasize-lines: 3,9,15,21
+
+	<note caller="-" style="x">
+		<char style="xo">1:1 </char>
+		<char style="xop">Гл 1. (1) </char> 
+		<char style="xt">4 Царств. 14:25.</char>
+	</note>
+	...
+	<note caller="-" style="x">
+		<char style="xo">1:2 </char>
+		<char style="xop">(2) </char>
+		<char style="xt">Бит. 10:11. Иона 3:3.</char>
+	</note>
+	...
+	<note caller="-" style="x">
+		<char style="xo">1:4 </char>
+		<char style="xop">(4) </char>
+		<char style="xt">Пс. 106:25.</char>
+	</note>
+	...
+	<note caller="-" style="x">
+		<char style="xo">1:5 </char>
+		<char style="xop">(5) </char>
+		<char style="xt">4 Царств. 17:29.</char>
+	</note>
+
+.. image:: images/usx-notechar-style_xop.jpg
+	:width: 500px
+
+-----
+
 .. index:: char@style (cross reference); xt, cross reference; target reference(s)
 .. _usx-note_crossReference_charstyle_xt:
 
