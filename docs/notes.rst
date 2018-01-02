@@ -59,7 +59,7 @@ Footnote <char>
 Footnote <char> @style Types
 """"""""""""""""""""""""""""
 
-.. index:: char@style (footnote); fr
+.. index:: char@style (footnote); fr, footnote; origin reference
 .. _usx-note_footnote_charstyle_fr:
 
 fr
@@ -84,7 +84,7 @@ fr
 
 -----
 
-.. index:: char@style (footnote); ft
+.. index:: char@style (footnote); ft, footnote; footnote text
 .. _usx-note_footnote_charstyle_ft:
 
 ft
@@ -97,7 +97,7 @@ ft
 
 -----
 
-.. index:: char@style (footnote); fk
+.. index:: char@style (footnote); fk, footnote; keyword
 .. _usx-note_footnote_charstyle_fk:
 
 fk
@@ -124,7 +124,7 @@ fk
 
 -----
 
-.. index:: char@style (footnote); fq
+.. index:: char@style (footnote); fq, footnote; translation quotation
 .. _usx-note_footnote_charstyle_fq:
 
 fq
@@ -152,7 +152,7 @@ fq
 
 -----
 
-.. index:: char@style (footnote); fqa
+.. index:: char@style (footnote); fqa, footnote; alternate translation
 .. _usx-note_footnote_charstyle_fqa:
 
 fqa
@@ -181,7 +181,7 @@ fqa
 
 -----
 
-.. index:: char@style (footnote); fl
+.. index:: char@style (footnote); fl, footnote; label text
 .. _usx-note_footnote_charstyle_fl:
 
 fl
@@ -194,7 +194,7 @@ fl
 
 -----
 
-.. index:: char@style (footnote); fp
+.. index:: char@style (footnote); fp, footnote; additional paragraph
 .. _usx-note_footnote_charstyle_fp:
 
 fp
@@ -207,7 +207,7 @@ fp
 
 -----
 
-.. index:: char@style (footnote); fv
+.. index:: char@style (footnote); fv, footnote; verse number
 .. _usx-note_footnote_charstyle_fv:
 
 fv
@@ -237,7 +237,7 @@ fv
 
 -----
 
-.. index:: char@style (footnote); fdc
+.. index:: char@style (footnote); fdc, footnote; deuterocanonical content
 .. _usx-note_footnote_charstyle_fdc:
 
 fdc
@@ -304,7 +304,7 @@ Cross Reference <char>
 Cross Reference <char> @style Types
 """""""""""""""""""""""""""""""""""
 
-.. index:: char@style (cross reference); xo
+.. index:: char@style (cross reference); xo, cross reference; origin reference
 .. _usx-note_crossReference_charstyle_xo:
 
 xo
@@ -331,7 +331,7 @@ xo
 
 -----
 
-.. index:: char@style (cross reference); xt
+.. index:: char@style (cross reference); xt, cross reference; target reference(s)
 .. _usx-note_crossReference_charstyle_xt:
 
 xt
@@ -345,7 +345,7 @@ xt
 
 -----
 
-.. index:: char@style (cross reference); xk
+.. index:: char@style (cross reference); xk, cross reference; keyword
 .. _usx-note_crossReference_charstyle_xk:
 
 xk
@@ -357,7 +357,7 @@ xk
 
 -----
 
-.. index:: char@style (cross reference); xq
+.. index:: char@style (cross reference); xq, cross reference; translation quotation
 .. _usx-note_crossReference_charstyle_xq:
 
 xq
@@ -370,19 +370,19 @@ xq
 
 -----
 
-.. index:: char@style (cross reference); xot
+.. index:: char@style (cross reference); xot, cross reference; old testament content
 .. _usx-note_crossReference_charstyle_xot:
 
 xot
 ^^^
 
 :@style: xot
-:Use: References (or other text) which only to be included in publications that contain the Old Testament books.
+:Use: References (or other text) which is only to be included in publications that contain the Old Testament books.
 :Valid In: Any :ref:`usx-note_crossReference_char`
 
 -----
 
-.. index:: char@style (cross reference); xnt
+.. index:: char@style (cross reference); xnt, cross reference; new testament content
 .. _usx-note_crossReference_charstyle_xnt:
 
 xnt
@@ -394,7 +394,7 @@ xnt
 
 -----
 
-.. index:: char@style (cross reference); xdc
+.. index:: char@style (cross reference); xdc, cross reference; deuterocanonical content
 .. _usx-note_crossReference_charstyle_xdc:
 
 xdc
