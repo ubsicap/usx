@@ -322,7 +322,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 :Element: cell (|req| within :ref:`usx-element_row`) |br|
 	xsd:string
-:Added: 1.0
+:Added: 1.0 (updated 3.0 - column spanning)
 :Use: Table cell content. Contains the cell text and and child elements.
 :@style: Cell column and alignment (legacy). |req| |br|
 	``th#`` | ``thr#`` | ``tc#`` | ``tcr#`` |br|
@@ -330,6 +330,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :@align: Cell alignment. |req| |br|
 	``start`` | ``center`` | ``end`` |br|
 	Represents “left”, “center”, and “right” respectively in left-to-right direction texts, and “right”, “center”, “left” in right-to-left direction texts.
+:@colspan: |badge_3.0| An integer indicating how many columns the current cell should span in a rendered view.
 :Valid in: Any valid :ref:`usx-element_row`
 :Parents: :ref:`usx-element_row`
 
@@ -343,7 +344,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 .. code-block:: xml
 	:name: usx-element_cell_example
-	:emphasize-lines: 3-5,8-10,13-15,18-20,23-25
+	:emphasize-lines: 3-5,8-10,13-15,18-20,23-24
 
 	<table>
 	  <row style="tr">
@@ -367,8 +368,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	    <cell style="tcr3" align="end">57,400</cell>
 	  </row>
 	  <row style="tr">
-	    <cell style="tc1" align="start" />
-	    <cell style="tc2" align="end">Total: </cell>
+	    <cell style="tc1" colspan="2" align="end">Total: </cell>
 	    <cell style="tcr3" align="end">186,400</cell>
 	  </row>
 	</table>
