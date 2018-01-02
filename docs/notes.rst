@@ -345,6 +345,37 @@ xt
 
 -----
 
+.. index:: char@style (cross reference); xta, cross reference; 	target reference(s) extra / added text
+.. _usx-note_crossReference_charstyle_xta:
+
+xta
+^^^
+
+|badge_3.0|
+
+:@style: xta
+:Added: 3.0
+:Use: Target reference(s) extra / added text. |br|
+	Used for marking text which should be ignored when identifying or linking to cross reference target references.
+:Valid: Any :ref:`usx-note_crossReference_char`
+
+**Text Sample** - Matthew 3.0 (GNT)
+
+.. code-block:: xml
+	:name: usx-charstyle_xta_example
+	:emphasize-lines: 3,5,7
+
+	<note caller="-" style="x">
+	  <char style="xo">3.0: </char>
+	  <char style="xta">Compare with </char>
+	  <char style="xt">Mk 1.1-8; Lk 3.1-18; </char>
+	  <char style="xta">and</char>
+	  <char style="xt">Jn 1.19-28 </char>
+	  <char style="xta">parallel passages.</char>
+	</note>
+
+-----
+
 .. index:: char@style (cross reference); xk, cross reference; keyword
 .. _usx-note_crossReference_charstyle_xk:
 
