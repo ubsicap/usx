@@ -412,7 +412,7 @@ Char.char.style.enum = (
     | "ndx" # A subject index text item
     | "ord" # For the text portion of an ordinal number
     | "pn" # For a proper name
-    | "png" For a geographic proper name
+    | "png" # For a geographic proper name
     | "pro" # For indicating pronunciation in CJK texts
     | "qt" # For Old Testament quoted text appearing in the New Testament
     | "rq" # A cross-reference indicating the source text for the preceding quotation.
@@ -527,6 +527,7 @@ CrossReferenceChar =
     }
 CrossReferenceChar.char.style.enum = (
       "xo" # The cross reference origin reference
+    | "xop" # Published cross reference origin text (origin reference that should appear in the published text)
     | "xt" # The cross reference target reference(s), protocanon only
     | "xta" # Cross reference target references added text
     | "xk" # A cross reference keyword
