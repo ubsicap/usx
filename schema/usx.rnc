@@ -336,6 +336,7 @@ TableContent =
     element cell {
         attribute style { cell.style.enum },
         attribute align { cell.align.enum },
+        attribute colspan { xsd:integer }?,
         (Footnote | CrossReference | Char | Figure | Verse | Break | text)*
     }
 cell.style.enum = (
