@@ -1121,3 +1121,10 @@ lim#
 
 .. image:: images/usx-para-style_lim.jpg
 	:width: 250px
+
+-----
+
+Structured List Entries
+^^^^^^^^^^^^^^^^^^^^^^^
+
+|ico_See| See <char> @style types for :ref:`structured lists entries <usx-charstyles_structuredLists>`.

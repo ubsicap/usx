@@ -10,10 +10,10 @@
 
 	An additional list of :ref:`usx-element_char` @style types are defined for use in the context of footnotes and cross references. These are described in this document together with the definitions for the :ref:`usx-element_note` elements used for footnotes and cross references.
 
+-----
+
 .. index:: element; <char> (special text)
 .. _usx-charstyles_specialText:
-
------
 
 Special Text
 ------------
@@ -46,7 +46,7 @@ bk
 :Use: Quoted book title.
 :Valid In: Any valid :ref:`usx-element_char`
 
-**Text and Formatting Sample** - Introduction to Mark (GNT)
+**Formatting Sample** - Introduction to Mark (GNT)
 
 .. image:: images/usx-char-style_bk.jpg
 	:width: 250px
@@ -300,10 +300,10 @@ wj
 :Use: Words of Jesus.
 :Valid In: Any valid :ref:`usx-element_char`
 
+-----
+
 .. index:: element; <char> (character styles)
 .. _usx-charstyles_characterStyles:
-
------
 
 Character Styling
 -----------------
@@ -379,20 +379,20 @@ sc
 :Use: Small-cap text.
 :Valid In: Any valid :ref:`usx-element_char`
 
+-----
+
 .. index:: element; <char> (spacing and breaks)
 .. _usx-charstyles_spacingBreaks:
-
------
 
 Spacing and Breaks
 ------------------
 
 Discretionary (optional) line break location. See element :ref:`optbreak <usx-element_optbreak>`.
 
+-----
+
 .. index:: element; <char> (special features)
 .. _usx-charstyles_specialFeatures:
-
------
 
 Special Features
 ----------------
@@ -459,3 +459,95 @@ wa
 :Added: 3.0
 :Use: Aramaic word list entry.
 :Valid In: Any valid :ref:`usx-element_char`
+
+-----
+
+.. index:: element; <char> (structured lists)
+.. _usx-charstyles_structuredLists:
+
+Structured List Entries
+-----------------------
+
+|badge_3.0|
+
+Standard USX :ref:`table <usx-element_table>` structures can be challenging to display on small page sizes, or digital device displays. Scripture content is sometimes encoded within a USX table in order to suggest a meaningful presentation, but the encoded presentation may only be rendered accurately or legibly in a larger format. The following <char> @style types can be used to create structured list entries which identify a set of related content, but do not encode a specific presentation.
+
+.. note::
+
+	Structured lists are not strictly a replacement for table markup, but may prove to be a more flexible option for some types of tabular content.
+
+<char> @style types :ref:`lik <usx-charstyle_lik>` and :ref:`liv# <usx-charstyle_liv>` mark the content of list entries (<para> @style :ref:`li# <usx-parastyle_li>`) which are essentially a key + value pair. A key may have multiple values.
+
+-----
+
+.. index:: char@style; lik
+.. _usx-charstyle_lik:
+
+lik
+^^^
+
+|badge_3.0|
+
+:@style: lik
+:Added: 3.0
+:Use: List entry "key" content.
+:Valid In: Any valid :ref:`usx-element_char` within <para> @style :ref:`li# <usx-parastyle_li>`
+
+-----
+
+.. index:: char@style; liv
+.. _usx-charstyle_liv:
+
+liv#
+^^^^
+
+|badge_3.0|
+
+:@style: liv#
+:Added: 3.0
+:Use: List entry "value" content. |br|
+	The variable # represents the sequence of the marked item in a list entry with multiple values. |br|
+	**liv = liv1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
+:Valid In: Any valid :ref:`usx-element_char` within <para> @style :ref:`li# <usx-parastyle_li>`
+
+**Text and Formatting Sample** - 1 Chronicles 27:16-22 (GNT - *markup adapted*)
+
+.. code-block:: xml
+	:name: usx-char-style_lik_liv_example
+	:emphasize-lines: 6,8,10,12,14,17,19,21,23,25,27,29,31
+
+	<para style="s1">Administration of the Tribes of Israel</para>
+	<para style="lh">
+		<verse number="16-22" style="v" />This is the list of the administrators of the 
+		tribes of Israel:</para>
+	<para style="li1">
+		<char style="lik">Reuben</char> <char style="liv1">Eliezer son of Zichri</char></para>
+	<para style="li1">
+		<char style="lik">Simeon</char> <char style="liv1">Shephatiah son of Maacah</char></para>
+	<para style="li1">
+		<char style="lik">Levi</char> <char style="liv1">Hashabiah son of Kemuel</char></para>
+	<para style="li1">
+		<char style="lik">Aaron</char> <char style="liv1">Zadok</char></para>
+	<para style="li1">
+		<char style="lik">Judah</char> <char style="liv1">Elihu, one of King David's brothers</char>
+		</para>
+	<para style="li1">
+		<char style="lik">Issachar</char> <char style="liv1">Omri son of Michael</char></para>
+	<para style="li1">
+		<char style="lik">Zebulun</char> <char style="liv1">Ishmaiah son of Obadiah</char></para>
+	<para style="li1">
+		<char style="lik">Naphtali</char> <char style="liv1">Jeremoth son of Azriel</char></para>
+	<para style="li1">
+		<char style="lik">Ephraim</char> <char style="liv1">Hoshea son of Azaziah</char></para>
+	<para style="li1">
+		<char style="lik">West Manasseh</char> <char style="liv1">Joel son of Pedaiah</char></para>
+	<para style="li1">
+		<char style="lik">East Manasseh</char> <char style="liv1">Iddo son of Zechariah</char></para>
+	<para style="li1">
+		<char style="lik">Benjamin</char> <char style="liv1">Jaasiel son of Abner</char></para>
+	<para style="li1">
+		<char style="lik">Dan</char> <char style="liv1">Azarel son of Jeroham</char></para>
+	<para style="lf">This was the list of the administrators of the tribes of Israel.</para>
+
+.. image:: images/usx-char-style_lik_liv.jpg
+	:width: 250px
