@@ -1124,6 +1124,14 @@ lim#
 
 -----
 
+litl
+^^^^
+
+:Use: List entry total |br|
+	A <char> @style type. |ico_See| *See* <char> @style :ref:`litl <usx-charstyle_litl>`
+
+-----
+
 Structured List Entries
 ^^^^^^^^^^^^^^^^^^^^^^^
 

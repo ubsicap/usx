@@ -108,6 +108,55 @@ k
 
 -----
 
+.. index:: char@style; litl
+.. _usx-charstyle_litl:
+
+litl
+^^^^
+
+|badge_3.0|
+
+:@style: litl
+:Added: 3.0
+:Use: List entry total. |br|
+	Use in “accounting” lists for denoting the total component of the text within a list item (<para> @style :ref:`li <usx-parastyle_li>`). An alternative to using :ref:`table <usx-element_table>` for the same content.
+:Valid In: Any valid :ref:`usx-element_char` within <para> @style :ref:`li# <usx-parastyle_li>`
+
+**Text and Formatting Sample** - Nehemiah 7.6-14 (GNT - *markup adapted*)
+
+.. code-block:: xml
+	:name: usx-char-style_litl_example
+	:emphasize-lines: 1
+
+	<para style="pm"><verse number="6" style="v" />These are the people of the province who came up 
+		from the captivity of the exiles whom Nebuchadnezzar king of Babylon had taken captive (they 
+		returned to Jerusalem and Judah, each to his own town, <verse number="7" style="v" />in 
+		company with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, 
+		Mispereth, Bigvai, Nehum and Baanah):</para>
+	<para style="b" />
+	<para style="pm">The list of the men of Israel:
+	<para style="b" />
+	<para style="lim1"><verse number="8" style="v" />the descendants of Parosh - 
+		<char style="litl">2,172</char></para>
+	<para style="lim1"><verse number="9" style="v" />of Shephatiah - 
+		<char style="litl">372</char></para>
+	<para style="lim1"><verse number="10" style="v" />of Arah - 
+		<char style="litl">652</char></para>
+	<para style="lim1"><verse number="11" style="v" />of Pahath-Moab (through the line of Jeshua 
+		and Joab) - <char style="litl">2,818</char></para>
+	<para style="lim1"><verse number="12" style="v" />of Elam - 
+		<char style="litl">1,254</char></para>
+	<para style="lim1"><verse number="13" style="v" />of Zattu - 
+		<char style="litl">845</char></para>
+	<para style="lim1"><verse number="14" style="v" />of Zaccai - 
+		<char style="litl">760</char></para>
+	...
+
+.. image:: images/usx-char-style_litl.jpg
+	:width: 250px
+
+-----
+
 .. index:: char@style; nd
 .. _usx-charstyle_nd:
 
@@ -514,12 +563,11 @@ liv#
 
 .. code-block:: xml
 	:name: usx-char-style_lik_liv_example
-	:emphasize-lines: 6,8,10,12,14,17,19,21,23,25,27,29,31
+	:emphasize-lines: 5,7,9,11,13,16,18,20,22,24,26,28,30
 
 	<para style="s1">Administration of the Tribes of Israel</para>
-	<para style="lh">
-		<verse number="16-22" style="v" />This is the list of the administrators of the 
-		tribes of Israel:</para>
+	<para style="lh"><verse number="16-22" style="v" />This is the list of the administrators 
+		of the tribes of Israel:</para>
 	<para style="li1">
 		<char style="lik">Reuben</char> <char style="liv1">Eliezer son of Zichri</char></para>
 	<para style="li1">
