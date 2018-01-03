@@ -462,7 +462,8 @@ ListChar = (
     }
     )
 ListChar.char.style.enum = (
-      "lik" # Structured list entry key text
+      "litl" # List entry total text
+    | "lik" # Structured list entry key text
     | "liv" # Structured list entry value 1 content (if single value)
     | "liv1" # Structured list entrt value 1 content (if multiple values)
     | "liv2" # Structured list entry value 2 content
