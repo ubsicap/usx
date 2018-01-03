@@ -21,7 +21,7 @@ USX =
         Chapter,
         # Chapter is used to separate intro from scripture text.
         # All books will have chapter including the single chapter books: OBA, PHM, 2JN, 3JN, JUD
-        (Chapter | Para | Table | Footnote | CrossReference | Sidebar)*
+        (Chapter | Para | List | Table | Footnote | CrossReference | Sidebar)*
     }
 
 BookIdentification =
@@ -323,6 +323,26 @@ Para.para.style.enum = (
     | "rem" # Remark
     )
 
+List =
+    element para {
+        attribute style { List.para.style.enum },
+        (Reference | Footnote | CrossReference | Char | ListChar | Figure | Verse | Break | text)+
+    }
+List.para.style.enum = (
+      "lh" # List header (introductory remark)
+    | "li" # A list entry, level 1 (if single level)
+    | "li1" # A list entry, level 1 (if multiple levels)
+    | "li2" # A list entry, level 2
+    | "li3" # A list entry, level 3
+    | "li4" # A list entry, level 4
+    | "lf" # List footer (introductory remark)
+    | "lim" # An embedded list entry, level 1 (if single level)
+    | "lim1" # An embedded list entry, level 1 (if multiple levels)
+    | "lim2" # An embedded list entry, level 2
+    | "lim3" # An embedded list entry, level 3
+    | "lim4" # An embedded list entry, level 4
+    )
+
 Table = 
     element table {
         element row {
@@ -432,8 +452,24 @@ Char.char.style.enum = (
     | "em" # A character style, use emphasized text style
     | "sc" # A character style, for small capitalization text
     )
-char.closed =
-    attribute closed { xsd:boolean } # Present to allow roundtripping to USFM, not needed for publishing
+
+ListChar = (
+    element char {
+        attribute style { ListChar.char.style.enum },
+        char.closed?,
+        text,
+        (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
+    }
+    )
+ListChar.char.style.enum = (
+      "lik" # Structured list entry key text
+    | "liv" # Structured list entry value 1 content (if single value)
+    | "liv1" # Structured list entrt value 1 content (if multiple values)
+    | "liv2" # Structured list entry value 2 content
+    | "liv3" # Structured list entry value 3 content
+    | "liv4" # Structured list entry value 4 content
+    | "liv5" # Structured list entry value 5 content
+    )
 
 CharWithAttrib.enum = (
       CharWithAttrib.char.style.w
@@ -447,6 +483,9 @@ CharWithAttrib.char.style.w =
         text,
         (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
     }
+
+char.closed =
+    attribute closed { xsd:boolean } # Present to allow roundtripping to USFM, not needed for publishing
 
 Chapter =
     element chapter { # Start of new chapter
@@ -542,7 +581,7 @@ Sidebar =
     element sidebar {
         attribute style { "esb" },
         (attribute category { text })*,
-        (Para | Table | Footnote | CrossReference)+
+        (Para | List | Table | Footnote | CrossReference)+
     }
 
 Figure =
