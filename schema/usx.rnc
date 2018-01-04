@@ -294,8 +294,13 @@ Para.para.style.enum = (
     | "s2" # A section heading, level 2 (e.g. Proverbs 22-24)
     | "s3" # A section heading, level 3 (e.g. Genesis "The First Day")
     | "s4" # A section heading, level 4
-    | "sp" # A heading, to identify the speaker (e.g. Job)
     | "sr" # A section division references range heading
+    | "sp" # A heading, to identify the speaker (e.g. Job)
+    | "sd" # Vertical space used to divide the text into sections, level 1 (if single level)
+    | "sd1" # Vertical space used to divide the text into sections, level 1 (if multiple levels)
+    | "sd2" # Vertical space used to divide the text into sections, level 2
+    | "sd3" # Vertical space used to divide the text into sections, level 3
+    | "sd4" # Vertical space used to divide the text into sections, level 4
     | "lh" # List header (introductory remark)
     | "li" # A list entry, level 1 (if single level)
     | "li1" # A list entry, level 1 (if multiple levels)
