@@ -60,8 +60,59 @@ dc
 ^^
 
 :@style: dc
-:Use: Deuterocanonical/LXX additions or insertions in the Protocanonical text.
+:Use: Deuterocanonical/LXX additions or insertions in the Protocanonical text. |br|
+	General purpose use of <char> @style :ref:`dc <usx-charstyle_dc>` is encouraged wherever DC-only content is being marked. Use of context-specific DC-only markup (i.e. <char> @style :ref:`fdc <usx-note_footnote_charstyle_fdc>`, or :ref:`xdc <usx-note_crossReference_charstyle_xdc>`) is discouraged.
 :Valid In: Any valid :ref:`usx-element_char`
+
+**Text Samples** - Hebrews 1.3 (Spanish DHE - footnote)
+
+.. code-block:: xml
+	:name: usx-charstyle_dc_example
+	:emphasize-lines: 6
+
+	<verse number="3" style="v" />Él es el resplandor glorioso de Dios,
+	<note caller="c" style="f">
+		<char style="fr">1.3: </char>
+		<char style="fk">Resplandor: </char>
+		<char style="ft">Cf. Jn 1.4-9,14
+		<char style="dc"> ; también Sab 7.25-26, donde algo parecido se dice de 
+		la sabiduría</char></char>
+	</note>
+
+Psalm 115.3-4 (GNT - cross references)
+
+.. code-block:: xml
+	:name: usx-charstyle_dc_example2
+	:emphasize-lines: 9
+
+	<para style="q1">
+		<verse number="3" style="v" />Our God is in heaven;
+	<para style="q2">he does whatever he wishes.</para>
+	<para style="q1">
+		<verse number="4" style="v" />
+		<note caller="-" style="x">
+			<char style="xo">115.4-8: </char>
+			<char style="xt">Ps 135.15-18; 
+			<char style="dc"> Ltj Jr 4-73;</char> Rev 9.20.</char>
+		</note>Their gods are made of silver and gold,</para>
+	<para style="q2">formed by human hands.</para>
+
+1 Corinthians 15.51-52 (GNT - cross reference)
+
+.. code-block:: xml
+	:name: usx-charstyle_dc_example3
+	:emphasize-lines: 6
+
+	<para style="p">
+		<verse number="51-52" style="v" />
+		<note caller="-" style="x">
+			<char style="xo">15.51,52: </char>
+			<char style="xt">
+			<char style="dc">2Es 6.23; </char>
+			1Th 4.15-17.
+		</note>Listen to this secret truth: we shall not all die, but when the last trumpet sounds, 
+	we shall all be changed in an instant, as quickly as the blinking of an eye. For when the trumpet 
+	sounds, the dead will be raised, never to die again, and we shall all be changed.
 
 -----
 
@@ -126,7 +177,7 @@ litl
 
 .. code-block:: xml
 	:name: usx-char-style_litl_example
-	:emphasize-lines: 1
+	:emphasize-lines: 10,12,14,16,18,20,22
 
 	<para style="pm"><verse number="6" style="v" />These are the people of the province who came up 
 		from the captivity of the exiles whom Nebuchadnezzar king of Babylon had taken captive (they 

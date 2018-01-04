@@ -244,7 +244,10 @@ fdc
 ^^^
 
 :@style: fdc
-:Use: Material to be included only in publications that contain the Deuterocanonical/Apocrypha books.
+:Deprecated: 3.0 |badge_3.0|
+:Use: Material to be included only in publications that contain the Deuterocanonical/Apocrypha books. |br|
+	**Deprecated** (use is discouraged) |br| |br|
+	|ico_Cg| *Recommended alternate:* General purpose use of <char> @style :ref:`dc <usx-charstyle_dc>` wherever DC-only content is being marked.
 :Valid In: Any :ref:`usx-note_footnote_char`
 
 .. note::
@@ -481,17 +484,8 @@ xdc
 ^^^
 
 :@style: xdc
-:Use: References (or other text) which only to be included in publications that contain the Deuterocanonical/Apocrypha books.
+:Deprecated: 3.0 |badge_3.0|
+:Use: References (or other material) to be included only in publications that contain the Deuterocanonical/Apocrypha books. |br|
+	**Deprecated** (use is discouraged) |br| |br|
+	|ico_Cg| *Recommended alternate:* General purpose use of <char> @style :ref:`dc <usx-charstyle_dc>` wherever DC-only content is being marked.
 :Valid In: Any :ref:`usx-note_crossReference_char`
-
-**Text and Formatting Sample** - Genesis 1.26 (GNT)
-
-.. code-block:: xml
-	:name: usx-charstyle_xdc_example
-	:emphasize-lines: 3
-
-	<note caller="-" style="x">
-	  <char style="xo">1.26: </char>
-	  <char style="xdc">Ws 2.23; Si 17.3,4;</char>
-	  <char style="xt">1 Co 11.7.</char>
-	</note>
