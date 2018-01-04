@@ -423,7 +423,7 @@ Char.char.style.enum = (
     | "qac" # Poetry text, Acrostic markup of the first character of a line of acrostic poetry
     | "qs" # Poetry text, Selah
     | "add" # For a translational addition to the text
-    | "addpn" # For chinese words to be dot underline & underline
+    | "addpn" # For chinese words to be dot underline & underline (DEPRECATED - used nested char@style pn)
     | "bk" # For the quoted name of a book
     | "dc" # Deuterocanonical/LXX additions or insertions in the Protocanonical text
     | "efm" # Reference to caller of previous footnote in a study Bible
