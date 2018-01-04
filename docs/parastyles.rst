@@ -33,7 +33,9 @@ h
 ^
 
 :@style: h
-:Use: Running header text.
+:Use: Running header text. |br|
+	**Deprecated** use of numbered variable syntax (use is strongly discouraged). |badge_3.0| |br|
+	The variable # in ``<para style="h#">text...</para>`` represented distinct components or levels of text required for the running header presentation (e.g. inside, outside, sub-division/section etc.).
 :Valid In: :ref:`usx-div_bookHeaders`
 
 **Formatting Sample** - Matthew
