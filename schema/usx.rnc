@@ -538,7 +538,7 @@ FootnoteChar.char.style.enum = (
     | "fl" # A footnote label text item, for marking or "labelling" the type or alternate translation being provided in the note.
     | "fp" # A Footnote additional paragraph marker
     | "fv" # A verse number within the footnote text
-    | "fdc" # Footnote text, applies to Deuterocanon only
+    | "fdc" # Footnote text, applies to Deuterocanon only (DEPRECATED - use char@style dc)
     | "xt" # A cross reference target reference(s)
     | "it" # A character style, use italic text
     | "bd" # A character style, use bold text
@@ -575,7 +575,7 @@ CrossReferenceChar.char.style.enum = (
     | "xq" # A cross-reference quotation from the scripture text
     | "xot" # Cross-reference target reference(s), Old Testament only
     | "xnt" # Cross-reference target reference(s), New Testament only
-    | "xdc" # Cross-reference target reference(s), Deuterocanon only
+    | "xdc" # Cross-reference target reference(s), Deuterocanon only (DEPRECATED - use char@style dc)
     )
 
 Sidebar =
