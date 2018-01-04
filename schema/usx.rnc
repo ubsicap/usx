@@ -157,9 +157,9 @@ BookHeaders =
 BookHeaders.para.style.enum = (
       "ide" # File encoding information
     | "h" # Running header text for a book
-    | "h1" # Running header text
-    | "h2" # Running header text, left side of page
-    | "h3" # Running header text, right side of page
+    | "h1" # Running header text (DEPRECATED)
+    | "h2" # Running header text, left side of page (DEPRECATED)
+    | "h3" # Running header text, right side of page (DEPRECATED)
     | "toc1" # Long table of contents text
     | "toc2" # Short table of contents text
     | "toc3" # Book Abbreviation
