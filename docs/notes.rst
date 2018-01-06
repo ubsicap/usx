@@ -351,7 +351,7 @@ xop
 **Text and Formatting Sample** - Jonah 1.1-5 (Bulgarian Orthodox Bible)
 
 .. code-block:: xml
-	:name: usx-charstyle_xo_example
+	:name: usx-charstyle_xop_example
 	:emphasize-lines: 3,9,15,21
 
 	<note caller="-" style="x">
