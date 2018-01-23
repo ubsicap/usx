@@ -20,6 +20,7 @@ USX Documentation
 
    Document Structure <structure>
    Elements <elements>
+   Attributes <attributes>
    <para> @style Types <parastyles>
    <char> @style Types <charstyles>
    <note> Types <notes>
@@ -31,6 +32,7 @@ USX Documentation
 -----
 
 .. index:: syntax; documentation
+.. _usx-notes_docSyntax:
 
 .. note:: **Documentation Syntax Notes**
 
