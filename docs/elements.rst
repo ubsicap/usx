@@ -385,6 +385,9 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :Use: An element for marking character level content types within :ref:`para <usx-element_para>`, table :ref:`cell <usx-element_cell>` and :ref:`note <usx-element_note>` elements.
 :@style: Content type. |req| |br|
 	Permitted values vary for each document division. The :doc:`char @style types <charstyles>` list presents an itemization of style values by category and indicates the :doc:`document divisions <structure>` in which each type is valid.
+:@lemma: Valid when used together with selected @style types. |ico_See| See: @style :ref:`w <usx-charstyle_w>`
+:@strong: Valid when used together with selected @style types. |ico_See| See: @style :ref:`w <usx-charstyle_w>`
+:@srcloc: Valid when used together with selected @style types. |ico_See| See: @style :ref:`w <usx-charstyle_w>`
 :Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter` |br|
 	A limited subset of @style types are valid within :ref:`note <usx-element_note>` (Footnote, CrossReference)
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`, :ref:`usx-element_note`

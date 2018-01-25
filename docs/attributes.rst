@@ -36,7 +36,7 @@ In the preceding example, ``<char @style="w">`` accepts an additional attribute 
 User Defined Attributes
 -----------------------
 
-Attributes may be added to <char> elements within a text beyond the defined set for the latest USX version (3.0 or later). These will not be considered strictly USX compliant, and there is no assurance that they will be supported by compliant software tools or processes. Future versions of USX may formally define additional attributes.
+User defined attributes may be added to any USX :ref:`<char> <usx-element_char>` element, even if it is not within the list of <char> @style type elements officially providing additional descriptive attributes. These will not be considered strictly USX compliant, and there is no assurance that they will be supported by compliant software tools or processes. Future versions of USX may formally define additional attributes.
 
 Any user defined attributes must begin with the prefix ``x-``.
 
@@ -45,9 +45,7 @@ Any user defined attributes must begin with the prefix ``x-``.
 	<char style="w" x-myattr="metadata">gracious</char>
 	<char style="w" lemma="grace" x-myattr="metadata">gracious</char>
 
-User defined attributes can be added to any USX :ref:`<char> <usx-element_char>` element, even if it is not within the list of @style tagged <char> elements officially providing descriptive attributes.
-
 <char> @style Types Providing Additional Attributes
 ---------------------------------------------------
 
-* :ref:`<char @style="w"> <usx-charstyle_w-attr>` (lemma, strong)
+* :ref:`<char @style="w"> <usx-charstyle_w-attr>` (lemma, strong, scrloc)

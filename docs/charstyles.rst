@@ -521,6 +521,38 @@ w
 	Surround word(s) with this char style to indicate that it appears (or should appear) in a published word list/glossary.
 :Valid In: Any valid :ref:`usx-element_char`
 
+.. _usx-charstyle_w-attr:
+.. index:: attribute; char@lemma (@style="w"), wordlist entry; attributes
+
+.. rubric:: Attributes |ico_Tag|
+
+|badge_3.0|
+
+Some additional :doc:`attributes <attributes>` for :ref:`<char> <usx-element_char>` can be used in this context.
+
+:@lemma: Citation form for the term in the glossary
+
+.. code-block:: xml
+
+    <char style="w" lemma="grace">gracious</char>
+
+:@strong: Strong’s ID in the form ``H#####`` (Hebrew) or ``G#####`` (Greek) |br| |br|
+	A strong's ID **augmentation** identifier, if required, should be separated from the strong value by a colon ``:``
+
+.. code-block:: xml
+
+	<char style="w" lemma="grace" strong="G05485">gracious</char>
+	<char style="w" strong="G05485">gracious</char>
+	<char style="w" strong="H01234,G05485">gracious</char>
+	
+	<char style="w" strong="G05485:a">gracious</char>
+
+:@srcloc: Location of the word in the source text; Example: GNT version 5 text, book 51, chapter 1, verse 2, word 1.
+
+.. code-block:: xml
+
+	<char style="w" lemma="grace" srcloc="gnt5:51.1.2.1">gracious</char>
+
 -----
 
 .. index:: char@style; wg
