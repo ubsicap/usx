@@ -486,6 +486,8 @@ CharWithAttrib.char.style.w =
         attribute style { "w" }, # A wordlist text item
         char.closed?,
         attribute lemma { xsd:string { minLength = "1"} }?, # Lemma/citation form found in glossary
+        attribute strong { xsd:string { pattern = "[HG]\d{4,5}(:[a-z])?"} }?, # Strong’s ID in the form H##### (Hebrew) or G##### (Greek)
+        attribute srcloc { xsd:string { pattern = "[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+" } }, # location of the word in the source text
         text,
         (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
     }
