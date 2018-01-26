@@ -1,15 +1,10 @@
 .. include:: /_static/inc_styles.txt
 
 .. index:: usx; elements
-.. _usx_elementIndex:
+.. _usx-elements_index:
 
 Elements
 ========
-
-.. contents::
-	:depth: 2
-
------
 
 .. index:: element; <usx>, usx; root element
 .. _usx-element_root:
@@ -388,6 +383,9 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :@lemma: Valid when used together with selected @style types. |ico_See| See: @style :ref:`w <usx-charstyle_w>`
 :@strong: Valid when used together with selected @style types. |ico_See| See: @style :ref:`w <usx-charstyle_w>`
 :@srcloc: Valid when used together with selected @style types. |ico_See| See: @style :ref:`w <usx-charstyle_w>`
+:@link-href: |ico_See| See: :doc:`Linking Attributes <linking>`
+:@link-title: |ico_See| See: :doc:`Linking Attributes <linking>`
+:@link-id: |ico_See| See: :doc:`Linking Attributes <linking>`
 :Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter` |br|
 	A limited subset of @style types are valid within :ref:`note <usx-element_note>` (Footnote, CrossReference)
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`, :ref:`usx-element_note`

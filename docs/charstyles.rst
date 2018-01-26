@@ -528,13 +528,15 @@ w
 
 |badge_3.0|
 
-Some additional :doc:`attributes <attributes>` for :ref:`<char> <usx-element_char>` can be used in this context.
+*Additional* :doc:`attributes <attributes>` for :ref:`<char> <usx-element_char>` which can be used in this context.
 
 :@lemma: Citation form for the term in the glossary
 
 .. code-block:: xml
 
     <char style="w" lemma="grace">gracious</char>
+
+.. index:: attribute; char@strong (@style="w")
 
 :@strong: Strong’s ID in the form ``H#####`` (Hebrew) or ``G#####`` (Greek) |br| |br|
 	A strong's ID **augmentation** identifier, if required, should be separated from the strong value by a colon ``:``
@@ -546,6 +548,8 @@ Some additional :doc:`attributes <attributes>` for :ref:`<char> <usx-element_cha
 	<char style="w" strong="H01234,G05485">gracious</char>
 	
 	<char style="w" strong="G05485:a">gracious</char>
+
+.. index:: attribute; char@srcloc (@style="w")
 
 :@srcloc: Location of the word in the source text; Example: GNT version 5 text, book 51, chapter 1, verse 2, word 1.
 
@@ -682,3 +686,26 @@ liv#
 
 .. image:: images/usx-char-style_lik_liv.jpg
 	:width: 250px
+
+-----
+
+.. index:: element; <char> (linking)
+.. _usx-charstyles_linking:
+
+Linking
+-------
+
+.. index:: char@style; jmp
+.. _usx-charstyle_jmp:
+
+jmp
+^^^
+
+|badge_3.0|
+
+:@style: jmp
+:Added: 3.0
+:Use: Available for associating :doc:`linking attributes <linking>` to a span of text when no other :ref:`<char> <usx-element_char>` element is already applied to the text at this location.
+:Valid In: Any valid :ref:`usx-element_char`
+
+|ico_See| See: :doc:`Linking Attributes <linking>`.
