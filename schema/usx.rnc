@@ -415,6 +415,7 @@ IntroChar.char.style.enum = (
 Char = (
     element char {
         attribute style { Char.char.style.enum },
+        char.link?,
         char.closed?,
         text,
         (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
@@ -450,6 +451,7 @@ Char.char.style.enum = (
     | "wa" # An Aramaic wordlist text item
     | "wj" # For marking the words of Jesus
     | "xt" # A target reference(s)
+    | "jmp" # For associating linking attributes to a span of text
     | "no" # A character style, use normal text
     | "it" # A character style, use italic text
     | "bd" # A character style, use bold text
@@ -461,6 +463,7 @@ Char.char.style.enum = (
 ListChar = (
     element char {
         attribute style { ListChar.char.style.enum },
+        char.link?,
         char.closed?,
         text,
         (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
@@ -484,13 +487,20 @@ CharWithAttrib.enum = (
 CharWithAttrib.char.style.w = 
     element char {
         attribute style { "w" }, # A wordlist text item
+        char.link?,
         char.closed?,
         attribute lemma { xsd:string { minLength = "1"} }?, # Lemma/citation form found in glossary
         attribute strong { xsd:string { pattern = "[HG]\d{4,5}(:[a-z])?"} }?, # Strong’s ID in the form H##### (Hebrew) or G##### (Greek)
-        attribute srcloc { xsd:string { pattern = "[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+" } }, # location of the word in the source text
+        attribute srcloc { xsd:string { pattern = "[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+" } }, # Location of the word in the source text
         text,
         (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
     }
+
+char.link =
+    attribute link-href { xsd:string 
+        { pattern = "(.*///?(.*/?)+)|(prj:[A-Za-z\-0-9]{3,8} [A-Z]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)" } }?, # The resource being linked to as a URI
+    attribute link-title { xsd:string }?, # Plain text describing the remote resource such as might be shown in a tooltip
+    attribute link-id { xsd:string { pattern = "[^\s]+" } }? # 
 
 char.closed =
     attribute closed { xsd:boolean } # Present to allow roundtripping to USFM, not needed for publishing
