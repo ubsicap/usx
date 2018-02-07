@@ -12,7 +12,8 @@ A USX document consists of valid USX elements organized within the following seq
 * :ref:`Book Introduction<usx-div_bookIntroduction>`
 * :ref:`Book Introduction End Titles<usx-div_bookIntroductionEndTitles>`
 * :ref:`Book Chapter Label<usx-div_bookChapterLabel>`
-* :ref:`Chapter<usx-div_chapter>`
+
+* :ref:`Chapter<usx-div_chapter>` or :ref:`Peripheral<usx-div_peripheral>`
 
 -----
 
@@ -106,5 +107,15 @@ An optional :ref:`para <usx-element_para>` element for a chapter heading text wh
 
 Chapter
 -------
+
+.. image:: images/usx-div_ChapterContent.png
+
+-----
+
+.. index:: document structure; peripheral
+.. _usx-div_peripheral:
+
+Peripheral
+----------
 
 .. image:: images/usx-div_ChapterContent.png

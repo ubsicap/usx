@@ -21,10 +21,11 @@ USX Documentation
    Document Structure <structure>
    Elements <elements>
    Attributes <attributes>
-   Linking <linking>
    <para> @style Types <parastyles>
    <char> @style Types <charstyles>
    <note> Types <notes>
+   Linking <linking>
+   Peripherals <peripherals>
    Vocabularies <vocabularies>
    Schemas <schema>
 

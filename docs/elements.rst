@@ -35,7 +35,7 @@ The following schema diagram displays the document structure of a USX scripture 
 
 -----
 
-.. index:: element; <book>
+.. index:: element; <book>, books
 .. _usx-element_book:
 
 <book>
@@ -45,7 +45,7 @@ The following schema diagram displays the document structure of a USX scripture 
     xsd:string
 :Added: 1.0
 :Use: Brief description of scripure translation.
-:@code: 3-letter book code for the scripture content in the USX document. |req| |br|
+:@code: 3-letter book code for the scripture or peripheral content in the USX document. |req| |br|
 	one of :ref:`bookCode <usx-vocab-bookCode>`
 :@style: Content type. |req| |br|
 	``id``
@@ -90,6 +90,8 @@ The following schema diagram displays the document structure of a USX scripture 
 .. image:: images/usx-element_chapter.png
 
 Code examples for chapter and verse are provided after the definition for element :ref:`verse<usx-element_verse>` (below).
+
+-----
 
 .. index:: element; <verse>
 .. _usx-element_verse:
@@ -237,6 +239,8 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	<para style="q1">Quand pourrai-je entrer</para>
 	<para style="q1">et paraître face à Dieu?</para>
 
+-----
+
 .. index:: element; <para>
 .. _usx-element_para:
 
@@ -274,6 +278,8 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	<para style="r">(Mark 9.50; Luke 14.34,35)</para>
 	<para style="p">
 	  <verse number="13" style="v" />“You are like salt for the whole human race...</para>
+
+-----
 
 .. index:: element; <table>
 .. _usx-element_table:
@@ -368,6 +374,8 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	  </row>
 	</table>
 
+-----
+
 .. index:: element; <char>
 .. _usx-element_char:
 
@@ -411,6 +419,8 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	  <char style="qt">to open the way for you.’</char></para>
 	...
 
+-----
+
 .. index:: element; <note>
 .. _usx-element_note:
 
@@ -426,7 +436,9 @@ To help make things clear in this document, the markup for :ref:`footnotes <usx-
 .. image:: images/usx-element_notef.png
 .. image:: images/usx-element_notex.png
 
-|Ico_See| **See:** :doc:`<note> Types <notes>` for detail.
+|Ico_See| See: :doc:`<note> Types <notes>` for detail.
+
+-----
 
 .. index:: element; <sidebar>, study bible; sidebar
 .. _usx-element_sidebar:
@@ -494,6 +506,30 @@ Galatians 3
 	  		...
 	  	</para>
 	  </sidebar>
+
+-----
+
+.. index:: element; <figure>, attribute; periph@id, attribute; periph@alt
+.. _usx-element_periph:
+
+<periph>
+--------
+
+|badge_3.0|
+
+:Element: periph |br|
+	*empty*
+:Added: 3.0
+:Use: Contains :ref:`usx-element_para` (@style types :ref:`usx-parastyles_titles_headings`, :ref:`usx-parastyles_paragraphs`, :ref:`usx-parastyles_poetry`), :ref:`usx-element_table`, :ref:`usx-element_note`, and :ref:`usx-element_char` elements to contain the content for a single peripheral content section.
+:@id: Used for identifying the specific peripheral division content found in the current file. |req| |br|
+	One of the standard :ref:`peripheral identifiers <usx-vocab-peripheralIds>` or a :ref:`user defined peripheral identifier <usx-peripherals_div-user>`. |br|
+:@alt: Provides an alternate title or identifier (possibly vernacular) for the peripheral content.
+:Valid in: :ref:`usx-div_peripheral`
+:Parents: :ref:`usx-element_root`
+
+|Ico_See| See: :doc:`Peripherals <peripherals>` for detail.
+
+-----
 
 .. index:: element; <figure>
 .. _usx-element_figure:
