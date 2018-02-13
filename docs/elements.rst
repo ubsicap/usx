@@ -509,7 +509,7 @@ Galatians 3
 
 -----
 
-.. index:: element; <figure>, attribute; periph@id, attribute; periph@alt
+.. index:: element; <periph>, attribute; periph@id, attribute; periph@alt
 .. _usx-element_periph:
 
 <periph>
