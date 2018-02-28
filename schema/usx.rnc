@@ -186,7 +186,7 @@ BookTitles.para.style.enum = (
 BookIntroduction =
     element para {
         attribute style { BookIntroduction.para.style.enum },
-        (Reference | Footnote | CrossReference | Char | IntroChar | Figure | text)*
+        (Reference | Footnote | CrossReference | Char | IntroChar | Milestone | Figure | text)*
     } | Table
 BookIntroduction.para.style.enum = (
       "imt" # Introduction major title, level 1 - (if single level)
@@ -229,7 +229,7 @@ BookIntroduction.para.style.enum = (
 BookIntroductionEndTitles =
     element para {
         attribute style { BookIntroductionEndTitles.para.style.enum },
-        (Footnote | CrossReference | Char | Break | text)*
+        (Footnote | CrossReference | Char | Milestone | Break | text)*
     }
 BookIntroductionEndTitles.para.style.enum = (
       "mt" # The main title of the book (if single level)
@@ -331,7 +331,7 @@ Para.para.style.enum = (
 List =
     element para {
         attribute style { List.para.style.enum },
-        (Reference | Footnote | CrossReference | Char | ListChar | Figure | Verse | Break | text)+
+        (Reference | Footnote | CrossReference | Char | ListChar | Milestone | Figure | Verse | Break | text)+
     }
 List.para.style.enum = (
       "lh" # List header (introductory remark)
@@ -362,7 +362,7 @@ TableContent =
         attribute style { cell.style.enum },
         attribute align { cell.align.enum },
         attribute colspan { xsd:integer }?,
-        (Footnote | CrossReference | Char | Figure | Verse | Break | text)*
+        (Footnote | CrossReference | Char | Milestone | Figure | Verse | Break | text)*
     }
 cell.style.enum = (
       "th" # A table heading, any column
@@ -405,7 +405,7 @@ IntroChar =
         attribute style { IntroChar.char.style.enum },
         char.closed?,
         text,
-        (Reference | Char | IntroChar | Footnote | Break | text)* # Nested character <char> markup
+        (Reference | Char | IntroChar | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }
 IntroChar.char.style.enum = (
       "ior" # Introduction references range for outline entry; for marking references separately
@@ -466,7 +466,7 @@ ListChar = (
         char.link?,
         char.closed?,
         text,
-        (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
+        (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }
     )
 ListChar.char.style.enum = (
@@ -493,7 +493,7 @@ CharWithAttrib.char.style.w =
         attribute strong { xsd:string { pattern = "[HG]\d{4,5}(:[a-z])?"} }?, # Strong’s ID in the form H##### (Hebrew) or G##### (Greek)
         attribute srcloc { xsd:string { pattern = "[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+" } }?, # Location of the word in the source text
         text,
-        (Reference | Char | Footnote | Break | text)* # Nested character <char> markup
+        (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }
 
 char.link =
