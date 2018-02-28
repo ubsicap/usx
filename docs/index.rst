@@ -23,6 +23,7 @@ USX Documentation
    Attributes <attributes>
    <para> @style Types <parastyles>
    <char> @style Types <charstyles>
+   <ms> @style Types <msstyles>
    <note> Types <notes>
    Linking <linking>
    Peripherals <peripherals>

@@ -421,6 +421,72 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 -----
 
+.. index:: element; <ms>
+.. _usx-element_ms:
+
+<ms>
+----
+
+|badge_3.0|
+
+:Element: ms |br|
+	*empty* |br|
+	A milestone is always an empty element and should be written using the self-closing syntax, like ``<ms/>``.
+:Added: 3.0
+:Use: For indicating a specific milestone position within the text, or the start and ending milestones for a span of text, and where the boundaries of the content being marked may cross one or more paragraph boundaries.
+:@style: Milestone type. |req| |br|
+	The :doc:`ms @style types <msstyles>` list presents an itemization of milestone styles in the current version of USX.
+:@id: A unique identifier which can be used to unambiguously locate a milestone or associate start and ending milestones. |br|
+	The ``id`` can be composed of any mixture of numbers, letters, and underscores, and should be unique throughout the scripture text for the selected milestone type.
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter`
+:Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`, :ref:`usx-element_note`
+
+**Indicating Start and End Milestones**
+
+The style attribute for a milestone marker may end with either ``-s`` or ``-e``.
+
+* ``-s`` indicates that the milestone is for marking the start of a span of text.
+* ``-e`` indicates that the milestone is an end milestone.
+
+**Standalone Milestones**
+
+Milestones do not need to occur in pairs or require the use of start ``-s`` and end ``-e`` @style attribute suffixes. The ``<ms/>`` element can also be used for a standalone milestone.
+
+Example: Note use of the 'z' namespace in this example, which would be the USX representation for a user generated USFM milestone marker ``\zms\*``)
+
+.. code-block:: xml
+
+	<ms style="zms"/>
+
+USX does not formally provide any specific standalone milestone types. This may change with future updates to USX 3.x, as use of milestones highlights specific needs.
+
+**Diagram and Text Sample** - Act 17:22-31 (GNT)
+
+.. image:: images/usx-element_para.png
+
+.. code-block:: xml
+
+    <para style="p"><verse number="22" style="v"/>Paul stood up in front of the city 
+    council and said, <ms style="qt1-s" who="Paul"/>“I see that in every way you Athenians 
+    are very religious.
+    <verse number="23" style="v"/>For as I walked through your city ...
+    ...
+    <verse number="27" style="v"/>He did this so that they would look for him, and perhaps 
+    find him as they felt around for him. Yet God is actually not far from any one of us;
+    <verse number="28" style="v"/>as someone has said,</para>
+    <para style="q1"><ms style="qt2-s" who="someone"/>‘In him we live and move and exist.’
+    <ms style="qt2-e"/>
+    <para style="b"/>
+    <para style="m">It is as some of your poets have said,</para>
+    <para style="q1"><ms style="qt2-s" who="poets"/>‘We too are his children.’
+    <ms style="qt2-e"/></para>
+    ...
+    <verse number="31" style="v"/>For he has fixed a day in which he will judge the whole 
+    world with justice by means of a man he has chosen. He has given proof of this to everyone 
+    by raising that man from death!”<ms style="qt1-e"/>
+
+-----
+
 .. index:: element; <note>
 .. _usx-element_note:
 
