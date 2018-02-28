@@ -56,3 +56,8 @@ Any user defined attributes must begin with the prefix ``x-``.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`<char @style="w"> <usx-charstyle_w-attr>` (lemma, strong, scrloc)
+
+<ms> @style Types Providing Additional Attributes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* :ref:`<ms @style="qt#"> <usx-msstyle_qt-attr>` (who)
