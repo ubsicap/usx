@@ -161,7 +161,7 @@ For books containing a peripheral :ref:`division <usx-peripherals_div>`, the :re
 User Defined Peripheral Divisions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A project may add peripheral content for a division not defined in the current USX set. The new division should be enclosed in :ref:`<periph> <usx-element_periph>` container element and with a user defined ``id`` attribute beginning with the prefix x-.
+A project may add peripheral content for a division not defined in the current USX set. The new division should be enclosed in :ref:`<periph> <usx-element_periph>` container element and with a user defined ``id`` attribute beginning with the prefix ``x-``.
 
 USX compliant publishing applications should consider the pre-defined :ref:`divisions <usx-peripherals_div>` and identifiers as a reference for content to support.
 
