@@ -7,7 +7,7 @@ namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
 start = USX
-USX =
+USX = (
     element usx {
         attribute version { xsd:string { minLength = "3" pattern = "\d+\.\d+(\.\d+)?"} },
         attribute xsi:noNamespaceSchemaLocation { text }?,
@@ -22,6 +22,17 @@ USX =
         # Chapter is used to separate intro from scripture text.
         # All books will have chapter including the single chapter books: OBA, PHM, 2JN, 3JN, JUD
         (Chapter | Para | List | Table | Footnote | CrossReference | Sidebar)*
+    }
+    | USXPeripheral
+    )
+
+USXPeripheral =
+    element usx {
+        attribute version { xsd:string { minLength = "3" pattern = "\d+\.\d+(\.\d+)?"} },
+        attribute xsi:noNamespaceSchemaLocation { text }?,
+        
+        BookIdentification,
+        PeripheralSection
     }
 
 BookIdentification =
@@ -149,6 +160,60 @@ BookIdentification.book.code.enum = (
      | "TDX" # Topical Index
      | "NDX" # Names Index
      )
+
+PeripheralSection =
+    element periph {
+        attribute id { 
+              PeripheralSection.FRT.periph.id.enum
+            | PeripheralSection.INT.periph.id.enum
+            | PeripheralSection.BAK.periph.id.enum
+            | PeripheralSection.OTH.periph.id.enum
+            | xsd:string { pattern = "x\-[\w_\-\.:]+" } },
+        attribute alt { text },
+        
+        BookHeaders*,
+        BookTitles+,
+        BookIntroduction*,
+        BookIntroductionEndTitles*,
+        Chapter?,
+        # Chapter may be used in some peripheral content sections to divide content alphabetically.
+        (Chapter | Para | List | Table | Footnote | CrossReference | Sidebar)*
+}
+PeripheralSection.FRT.periph.id.enum = (
+      "title"
+    | "halftitle"
+    | "promo"
+    | "imprimatur"
+    | "pubdata"
+    | "foreword"
+    | "preface"
+    | "contents"
+    | "alphacontents"
+    | "abbreviations"
+    )
+PeripheralSection.INT.periph.id.enum = (
+      "intbible"
+    | "intot"
+    | "intpent"
+    | "inthistory"
+    | "intpoetry"
+    | "intprophesy"
+    | "intdc"
+    | "intnt"
+    | "intgospels"
+    | "intepistles"
+    | "intletters"
+    )
+PeripheralSection.BAK.periph.id.enum = (
+      "chron"
+    | "measures"
+    | "maps"
+    | "lxxquotes"
+    )
+PeripheralSection.OTH.periph.id.enum = (
+      "cover"
+    | "spine"
+    )
 
 BookHeaders =
     element para {
@@ -319,7 +384,6 @@ Para.para.style.enum = (
     | "mte" # The main title of the book repeated at the end of the book, level 1 (if single level)
     | "mte1" # The main title of the book repeat /ed at the end of the book, level 1 (if multiple levels)
     | "mte2" # A secondary title occurring before or after the 'ending' main title
-    | "periph" # Periheral content division marker which should be followed by an additional division argument/title.
     | "p" # Front or back matter text paragraph, level 1
     | "p1" # Front or back matter text paragraph, level 1 (if multiple levels)
     | "p2" # Front or back matter text paragraph, level 2 (if multiple levels)
