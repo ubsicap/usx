@@ -545,6 +545,7 @@ ListChar.char.style.enum = (
 
 CharWithAttrib.enum = (
       CharWithAttrib.char.style.w
+    | CharWithAttrib.char.style.rb
     )
 
 CharWithAttrib.char.style.w = 
@@ -555,6 +556,16 @@ CharWithAttrib.char.style.w =
         attribute lemma { xsd:string { minLength = "1" } }?, # Lemma/citation form found in glossary
         attribute strong { xsd:string { pattern = "[HG]\d{4,5}(:[a-z])?"} }?, # Strong’s ID in the form H##### (Hebrew) or G##### (Greek)
         attribute srcloc { xsd:string { pattern = "[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+" } }?, # Location of the word in the source text
+        text,
+        (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
+    }
+
+CharWithAttrib.char.style.rb = 
+    element char {
+        attribute style { "rb" }, # Base text for ruby glosses
+        char.link?,
+        char.closed?,
+        attribute gloss { xsd:string { minLength = "1" } }?, # Ruby glosses
         text,
         (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }
