@@ -497,6 +497,105 @@ Discretionary (optional) line break location. See element :ref:`optbreak <usx-el
 Special Features
 ----------------
 
+.. index:: char@style; rb, ruby glossing
+.. _usx-charstyle_rb:
+
+rb
+^^
+
+:@style: rb
+:Use: Ruby glossing. |br|
+	Used to mark the base text being annotated with ruby characters.
+:Valid In: Any valid :ref:`usx-element_char`
+
+.. note::
+
+	**About Ruby**
+	|ico_See| *See:* https://www.w3.org/TR/ruby/
+
+	**Han characters:** Chinese, Japanese, and Korean texts have some characters that they share in common. In Japanese these are called Kanji (literally “Han characters”). There are several thousand of these characters to learn. For new readers or readers new to the Biblical texts it may be very difficult for them to recognize what Chinese or Japanese word corresponds to the Han character(s) they are seeing.
+
+	**Ruby glosses:** In order to help these readers, some Bibles are printed with glosses using small phonetic characters (e.g. Japanese uses the hiragana alphabet) placed above the more symbolic Han characters to tell the reader how to pronounce the character. These phonetic characters are generically called "ruby glosses" or "rubies". In Japanese this technique is called Furigana.
+
+.. _usx-charstyle_rb-attr:
+.. index:: attribute; char@gloss (@style="rb"), ruby glossing; attributes
+
+.. rubric:: Attributes |ico_Tag|
+
+|badge_3.0|
+
+*Additional* :doc:`attributes <attributes>` for :ref:`<char> <usx-element_char>` which can be used in this context.
+
+:@gloss: Ruby glosses |br|
+	Use a colon ``:`` to separate multiple elements for glossing each of the characters within a base text phrase.
+
+For example: If the base text being glossed is a phrase of two Han characters (B), then the ruby gloss text (gg) may contain two elements, one for glossing each of the base text characters making up the phrase.
+
+.. code-block:: xml
+
+	<char style="rb" gloss="gg:gg">BB</char>
+
+This syntax allows the decision to present glosses by phrase or by group to be made at the publication stage, rather than pre-determined during translation.
+
+Parts of a phrase gloss may be left empty. In the example phrase below the second and fourth base characters are unglossed:
+
+.. code-block:: xml
+
+	<char style="rb" gloss="g1::g3:">BBBB</char>
+
+**Text and Formatting Samples**
+
+1. One Han character with a single ruby gloss.
+
+.. code-block:: xml
+
+	<char style="rb" gloss="あい">哀</char>
+
+2. Two Han characters with a single ruby phrase gloss
+
+.. code-block:: xml
+
+	<char style="rb" gloss="はなはなし">話賄</char>
+
+3. Phrase gloss broken down into individual pieces by adding colons between ruby characters
+
+.. code-block:: xml
+
+	<char style="rb" gloss="はな:はなし">話賄</char>
+
+4. A character sequence which includes non-Han characters (hiragana), which are NOT glossed.
+
+.. code-block:: xml
+
+	<char style="rb" gloss="さだ:">定ま</char>
+
+5. An un-glossed character occurring between glossed characters in the "phrase".
+
+.. code-block:: xml
+
+	<char style="rb" gloss="かみ::こ">神の子</char>
+
+Genesis 1.1-2 (Japanes Living Bible - Biblica)
+
+.. code-block:: xml
+	:name: usx-char-style_rb_example
+
+	<para style="p"><verse number="1" style="v" />まだ<char style="rb" gloss="なに">何</char>
+		もなかった<char style="rb" gloss="とき">時</char>、<char style="rb" gloss="かみ">神</char>は
+		<char style="rb" gloss="てん">天</char>と<char style="rb" gloss="ち">地</char>を
+		<char style="rb" gloss="つく">造</char>りました。
+		<verse number="2" style="v" /><char style="rb" gloss="ち">地</char>は
+		<char style="rb" gloss="かたち">形</char>も<char style="rb" gloss="さだ">定</char>まらず、
+		<char style="rb" gloss="やみ">闇</char>に<char style="rb" gloss="つつ">包</char>まれた
+		<char style="rb" gloss="みず">水</char>の<char style="rb" gloss="うえ">上</char>を、さらに
+		<char style="rb" gloss="かみ">神</char>の<char style="rb" gloss="れい">霊</char>が
+		<char style="rb" gloss="おお">覆</char>っていました。</para>
+
+.. image:: images/usx-char-style_rb.jpg
+	:width: 300px
+
+-----
+
 .. index:: char@style; pro
 .. _usx-charstyle_pro:
 
