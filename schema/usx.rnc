@@ -503,7 +503,7 @@ Char.char.style.enum = (
     | "ord" # For the text portion of an ordinal number
     | "pn" # For a proper name
     | "png" # For a geographic proper name
-    | "pro" # For indicating pronunciation in CJK texts
+    | "pro" # For indicating pronunciation in CJK texts (DEPRECATED - used char@style rb)
     | "qt" # For Old Testament quoted text appearing in the New Testament
     | "rq" # A cross-reference indicating the source text for the preceding quotation.
     | "sig" # For the signature of the author of an Epistle
