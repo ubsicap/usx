@@ -503,7 +503,10 @@ Special Features
 rb
 ^^
 
+|badge_3.0|
+
 :@style: rb
+:Added: 3.0
 :Use: Ruby glossing. |br|
 	Used to mark the base text being annotated with ruby characters.
 :Valid In: Any valid :ref:`usx-element_char`
@@ -603,8 +606,11 @@ pro
 ^^^
 
 :@style: pro
+:Deprecated: 3.0  |badge_3.0|
 :Use: Pronunciation information |br|
-	*Used for CJK texts.*
+	*Used for CJK texts.* |br|
+	**Deprecated** (use is discouraged) |br| |br|
+	|ico_Cg| *Recommended alternate:* :ref:`char@style rb <usx-charstyle_rb>`.
 :Valid In: Any valid :ref:`usx-element_char`
 
 -----
