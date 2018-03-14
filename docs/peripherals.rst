@@ -12,7 +12,7 @@ The following strategy should be used for applying USX markup to project periphe
 
 Content should be created in separate files according to the general groupings presented in the table below. As with scripture text books, a :ref:`book <usx-element_book>` element with appropriate ``@code`` attribute is used for identifying the overall content of the peripheral file. Within each peripheral file, divisions (sub-sections) of content are denoted using the element :ref:`<periph> <usx-element_periph>` followed by an additional division title. Content is added to books and divisions by re-purposing the most appropriate existing USFM marker for the selected content.
 
-Some back matter content is large enough that it is most practical to store it within its own book file (Concordance, Glossary, Topical Index, Names Index). Content self contained within a separate book file does not require an additional identifier (only \id).
+Some back matter content is large enough that it is most practical to store it within its own book file (Concordance, Glossary, Topical Index, Names Index). Content self contained within a separate book file does not require an additional identifier (only :ref:`book <usx-element_book>` ``@code``).
 
 .. _usx-peripherals_div:
 .. _usx-vocab-peripheralIds:

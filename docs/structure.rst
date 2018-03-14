@@ -4,16 +4,85 @@
 
 Document Structure
 ==================
-A USX document consists of valid USX elements organized within the following sequence of document divisions.
 
-* :ref:`Book Identification<usx-div_bookIdentification>`
+A USX document consists of valid elements for either :ref:`Scripture <usx-type_scripture>` or :ref:`Peripheral <usx-type_peripheral>` types organized within a sequence of document divisions.
+
+.. image:: images/usx_USX.png
+
+-----
+
+.. index:: document type; scripture
+.. _usx-type_scripture:
+
+Scripture
+---------
+
+.. image:: images/usx-type_Scripture.png
+
+* :ref:`Book Identification<usx-div_bookIdentification>` |req|
 * :ref:`Book Headers<usx-div_bookHeaders>`
-* :ref:`Book Titles<usx-div_bookTitles>`
+* :ref:`Book Titles<usx-div_bookTitles>` |req| +
 * :ref:`Book Introduction<usx-div_bookIntroduction>`
 * :ref:`Book Introduction End Titles<usx-div_bookIntroductionEndTitles>`
 * :ref:`Book Chapter Label<usx-div_bookChapterLabel>`
+* :ref:`Chapter Content<usx-div_chapterContent>` |req| +
 
-* :ref:`Chapter<usx-div_chapter>` or :ref:`Peripheral<usx-div_peripheral>`
+|req| = *required* ; + = *one or more*
+
+-----
+
+.. index:: document type; peripheral
+.. _usx-type_peripheral:
+
+Peripheral
+----------
+
+|badge_3.0|
+
+A USX document containing peripheral content will be either:
+
+* a document containing content for a :ref:`single peripheral book <usx-type_peripheralBook>` (:ref:`Concordance <usx-book_CNC>`, :ref:`Glossary <usx-book_GLO>`, :ref:`Topical Index <usx-book_GLO>`, :ref:`Names Index <usx-book_TDX>`), or
+* a document containing content for a :ref:`division (sub-section) of peripheral content <usx-type_peripheralBookSection>` from a larger book (:doc:`Front Matter <peripherals/front>`, :doc:`Introductions <peripherals/intros>`, :doc:`Back Matter <peripherals/back>`, :doc:`Other <peripherals/other>`)
+
+|ico_See| *See:* :doc:`Peripherals <peripherals>` for additional information on peripheral content organization. 
+
+.. image:: images/usx-type_Peripheral.png
+
+.. index:: document type; peripheral book
+.. _usx-type_peripheralBook:
+
+Peripheral Book
+^^^^^^^^^^^^^^^
+
+.. image:: images/usx-type_PeripheralBook.png
+
+* :ref:`Book Identification <usx-div_bookIdentification>` |req|
+* :ref:`Book Headers<usx-div_bookHeaders>`
+* :ref:`Book Titles<usx-div_bookTitles>` |req| +
+* :ref:`Book Introduction<usx-div_bookIntroduction>`
+* :ref:`Book Introduction End Titles<usx-div_bookIntroductionEndTitles>`
+* :ref:`Book Chapter Label<usx-div_bookChapterLabel>`
+* :ref:`Peripheral Content<usx-div_peripheralContent>` |req| +
+
+.. index:: document type; peripheral book section
+.. _usx-type_peripheralBookSection:
+
+Peripheral Book Section
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/usx-type_PeripheralBookSection.png
+
+* :ref:`Book Identification <usx-div_bookIdentification>` |req|
+* :ref:`<periph> <usx-element_periph>` Element |req|
+
+    * :ref:`Book Headers<usx-div_bookHeaders>`
+    * :ref:`Book Titles<usx-div_bookTitles>` |req| +
+    * :ref:`Book Introduction<usx-div_bookIntroduction>`
+    * :ref:`Book Introduction End Titles<usx-div_bookIntroductionEndTitles>`
+    * :ref:`Book Chapter Label<usx-div_bookChapterLabel>`
+    * :ref:`Peripheral Content<usx-div_peripheralContent>` |req| +
+
+|req| = *required* ; + = *one or more*
 
 -----
 
@@ -103,19 +172,18 @@ An optional :ref:`para <usx-element_para>` element for a chapter heading text wh
 -----
 
 .. index:: document structure; chapter
-.. _usx-div_chapter:
+.. _usx-div_chapterContent:
 
-Chapter
--------
+Chapter Content
+---------------
 
 .. image:: images/usx-div_ChapterContent.png
 
 -----
 
-.. index:: document structure; peripheral
-.. _usx-div_peripheral:
+.. _usx-div_peripheralContent:
 
-Peripheral
-----------
+Peripheral Content
+------------------
 
-.. image:: images/usx-div_ChapterContent.png
+.. image:: images/usx-div_PeripheralContent.png

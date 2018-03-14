@@ -6,7 +6,10 @@ namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
 start = USX
-USX = (
+
+USX = ( Scripture | Peripheral )
+
+Scripture = (
     element usx {
         attribute version { xsd:string { minLength = "3" pattern = "\d+\.\d+(\.\d+)?"} },
         attribute xsi:noNamespaceSchemaLocation { text }?,
@@ -20,19 +23,46 @@ USX = (
         Chapter,
         # Chapter is used to separate intro from scripture text.
         # All books will have chapter including the single chapter books: OBA, PHM, 2JN, 3JN, JUD
-        (Chapter | Para | List | Table | Footnote | CrossReference | Sidebar)*
+        ChapterContent+
     }
-    | USXPeripheral
     )
 
-USXPeripheral =
+Peripheral = (
     element usx {
         attribute version { xsd:string { minLength = "3" pattern = "\d+\.\d+(\.\d+)?"} },
         attribute xsi:noNamespaceSchemaLocation { text }?,
-        
-        BookIdentification,
-        PeripheralSection
+
+        (PeripheralBook | PeripheralBookSection)
     }
+    )
+
+PeripheralBook = (
+    PeripheralBookIdentification,
+    BookHeaders*,
+    BookTitles+,
+    BookIntroduction*,
+    BookIntroductionEndTitles*,
+    PeripheralContent+
+    )
+
+PeripheralBookSection = (
+    PeripheralBookSectionIdentification,
+    element periph {
+        attribute id { 
+              Peripheral.FRT.periph.id.enum
+            | Peripheral.INT.periph.id.enum
+            | Peripheral.BAK.periph.id.enum
+            | Peripheral.OTH.periph.id.enum
+            | xsd:string { pattern = "x\-[\w_\-\.:]+" } },
+        attribute alt { text }?,
+        
+        BookHeaders*,
+        BookTitles+,
+        BookIntroduction*,
+        BookIntroductionEndTitles*,
+        PeripheralContent+
+    }
+    )
 
 BookIdentification =
     element book {
@@ -142,8 +172,29 @@ BookIdentification.book.code.enum = (
      | "REP" # Reproof
      | "4BA" # 4 Baruch
      | "LAO" # Laodiceans
-     # Non scripture text Id's
-     | "XXA" # Extra A, e.g. a hymnal
+     )
+
+PeripheralBookIdentification =
+    element book {
+        attribute code { PeripheralBookIdentification.book.code.enum }, # e.g. code="CNC"
+        attribute style { "id" },
+        text? # Brief description of the project (optional)
+    }
+PeripheralBookIdentification.book.code.enum = (
+       "CNC" # Concordance
+     | "GLO" # Glossary
+     | "TDX" # Topical Index
+     | "NDX" # Names Index
+     )
+
+PeripheralBookSectionIdentification =
+    element book {
+        attribute code { PeripheralBookSectionIdentification.book.code.enum }, # e.g. code="FRT"
+        attribute style { "id" },
+        text? # Brief description of the project (optional)
+    }
+PeripheralBookSectionIdentification.book.code.enum = (
+       "XXA" # Extra A, e.g. a hymnal
      | "XXB" # Extra B
      | "XXC" # Extra C
      | "XXD" # Extra D
@@ -154,31 +205,8 @@ BookIdentification.book.code.enum = (
      | "BAK" # Back Matter
      | "OTH" # Other Matter
      | "INT" # Introduction
-     | "CNC" # Concordance
-     | "GLO" # Glossary
-     | "TDX" # Topical Index
-     | "NDX" # Names Index
      )
-
-PeripheralSection =
-    element periph {
-        attribute id { 
-              PeripheralSection.FRT.periph.id.enum
-            | PeripheralSection.INT.periph.id.enum
-            | PeripheralSection.BAK.periph.id.enum
-            | PeripheralSection.OTH.periph.id.enum
-            | xsd:string { pattern = "x\-[\w_\-\.:]+" } },
-        attribute alt { text },
-        
-        BookHeaders*,
-        BookTitles+,
-        BookIntroduction*,
-        BookIntroductionEndTitles*,
-        Chapter?,
-        # Chapter may be used in some peripheral content sections to divide content alphabetically.
-        (Chapter | Para | List | Table | Footnote | CrossReference | Sidebar)*
-}
-PeripheralSection.FRT.periph.id.enum = (
+Peripheral.FRT.periph.id.enum = (
       "title"
     | "halftitle"
     | "promo"
@@ -190,7 +218,7 @@ PeripheralSection.FRT.periph.id.enum = (
     | "alphacontents"
     | "abbreviations"
     )
-PeripheralSection.INT.periph.id.enum = (
+Peripheral.INT.periph.id.enum = (
       "intbible"
     | "intot"
     | "intpent"
@@ -203,13 +231,13 @@ PeripheralSection.INT.periph.id.enum = (
     | "intepistles"
     | "intletters"
     )
-PeripheralSection.BAK.periph.id.enum = (
+Peripheral.BAK.periph.id.enum = (
       "chron"
     | "measures"
     | "maps"
     | "lxxquotes"
     )
-PeripheralSection.OTH.periph.id.enum = (
+Peripheral.OTH.periph.id.enum = (
       "cover"
     | "spine"
     )
@@ -305,6 +333,10 @@ BookIntroductionEndTitles.para.style.enum = (
     | "imt1" # Introduction major title, level 1 (if multiple levels)
     | "imt2" # Introduction major title, level 2
     )
+
+ChapterContent = (Chapter | Para | List | Table | Footnote | CrossReference | Sidebar)
+
+PeripheralContent = (Chapter | Para | List | Table | Footnote | CrossReference | Sidebar)
 
 Para =
     element para {
