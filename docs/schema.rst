@@ -6,4 +6,4 @@
 Schemas
 =======
 
-The latest USX schema in Relax NG compact format is available from: http://ubsicap.github.io/dblvalidation/source/text/1.4/usx.rnc
+The latest USX schema in Relax NG compact format is available from: https://github.com/ubsicap/usx/tree/master/schema
