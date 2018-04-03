@@ -255,6 +255,9 @@ BookHeaders.para.style.enum = (
     | "toc1" # Long table of contents text
     | "toc2" # Short table of contents text
     | "toc3" # Book Abbreviation
+    | "toca1" # Alternative language long table of contents text
+    | "toca2" # Alternative language short table of contents text
+    | "toca3" # Alternative language book Abbreviation
     | "rem" # Remark
     )
 
