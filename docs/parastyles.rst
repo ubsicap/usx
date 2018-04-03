@@ -474,7 +474,7 @@ cl
 
 :@style: cl
 :Use: The chapter "label" to be used when the chosen publishing presentation will render chapter divisions as headings (not drop cap numerals).
-:Valid In: :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
 
 .. note::
 
@@ -523,7 +523,7 @@ cd
 :@style: cd
 :Use: Chapter description. |br|
 	A brief description of chapter content (similar to :ref:`d <usx-parastyle_d>` - descriptive heading, or :ref:`iex <usx-parastyle_iex>` - introduction explanatory or bridge text).
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Genesis 1 (Russian Synodal, Protestant Version)
 
@@ -543,7 +543,7 @@ ms#
 	A heading added before a broader text division than what is typically considered a "section" division (see :ref:`s# <usx-parastyle_s>`). |br|
 	# represents the level of division. |br|
 	**ms = ms1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 1 (Book 1 division) (GNT)
 
@@ -566,7 +566,7 @@ mr
 :@style: mr
 :Use: Major section reference range. |br|
 	The text reference range listed under a major section heading.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 1 (Book 1 division) (GNT)
 
@@ -586,7 +586,7 @@ s#
 	The typical (common) section division heading. |br|
 	# represents the level of division. |br|
 	**s = s1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Proverbs 22.17 (GNT)
 
@@ -614,7 +614,7 @@ sr
 	The text reference range listed under a section heading. |br|
 	sr is not equivalent to r which is used for marking parallel references. |br|
 :See also: :ref:`mr <usx-parastyle_mr>`
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Proverbs 22.17 (GNT - *markup adapted*)
 
@@ -633,7 +633,7 @@ r
 :Use: Parallel passage reference(s). |br|
 	A reference to a parallel passage usually located under a section heading :ref:`s# <usx-parastyle_s>`. |br|
 :See also: :doc:`char <charstyles>` @style :ref:`rq <usx-charstyle_rq>`.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Matthew 3.1 (GNT)
 
@@ -651,7 +651,7 @@ d
 :@style: d
 :Use: Descriptive title (or "Hebrew subtitle"). |br|
 	Sometimes used in Psalms under the section title (e.g. "For the director of Music").
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 3.1 (NRSV)
 
@@ -668,7 +668,7 @@ sp
 
 :@style: sp
 :Use: Speaker identification (e.g. Job and Song of Songs).
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Job 3.1 (GNT)
 
@@ -692,7 +692,7 @@ sd#
 	The purpose of ``<para style="sd#">`` is distinct from <para> @style :ref:`b <usx-parastyle_b>` which primarily denotes whitespace (and in particular at poetic stanza breaks) and not hierarchy or division.
 	The variable # represents the level of division being marked. |br|
 	**sd = sd1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Text and Formatting Sample** - Matthew 13.51-54 (NIV "Books of the Bible"; chapter and verse numbers suppressed in layout; new sections begin with drop capital)
 
@@ -733,7 +733,7 @@ p
 
 :@style: p
 :Use: Normal paragraph.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Mark 1.1-4 (GNT)
 
@@ -751,7 +751,7 @@ m
 :@style: m
 :Use: Margin paragraph. |br|
 	Typically used to resume prose at the margin (without indent) after poetry or OT quotation (i.e. a continuation of the previous paragraph).
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Mark 12.37 (GNT)
 
@@ -771,7 +771,7 @@ po
 :@style: po
 :Added: 3.0
 :Use: Opening of an epistle / letter.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Romans 1.1,7 (GNT)
 
@@ -788,7 +788,7 @@ cls
 
 :@style: cls
 :Use: Closure of an epistle / letter
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Colossians 4.18 (GNT - *markup adapated*)
 
@@ -805,7 +805,7 @@ pmo
 
 :@style: pmo
 :Use: Embedded text opening.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Acts 15.24 (CEV)
 
@@ -822,7 +822,7 @@ pm
 
 :@style: pm
 :Use: Embedded text paragraph.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Acts 15.24-27,28-29 (CEV)
 
@@ -839,7 +839,7 @@ pmc
 
 :@style: pmc
 :Use: Embedded text closing.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Acts 15.28-29 (CEV)
 
@@ -856,7 +856,7 @@ pmr
 
 :@style: pmr
 :Use: Embedded text refrain.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Deuteronomy 27.15,16,17 (GNT - *markup adapted*)
 
@@ -877,7 +877,7 @@ pi#
 	# represents the level of indent. |br|
 	**pi = pi1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
 :See also: :ref:`pm <usx-parastyle_pm>`
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Matthew 13.37-39 (CEV)
 
@@ -894,7 +894,7 @@ mi
 
 :@style: mi
 :Use: Indented flush left paragraph
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Matthew 11.18-19 (CEV)
 
@@ -912,7 +912,7 @@ pc
 :@style: pc
 :Use: Centered paragraph |br| |br|
 	|ico_Cg| Recommended use: *Inscriptions* |br|
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Revelation 17.5 (CEV)
 
@@ -931,7 +931,7 @@ pr
 :Use: Right-aligned paragraph |br| |br|
 	|ico_W| Use is strongly discouraged. |br|
 	|ico_Cg| Recommended alternate is :ref:`pmr <usx-parastyle_pmr>` |br|
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 -----
 
@@ -947,7 +947,7 @@ ph#
 	**ph = ph1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes) |br| |br|
 	|ico_W| Use is strongly discouraged. |br|
 	|ico_Cg| Recommended alternate is :ref:`li# <usx-parastyle_li>` |br|
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 -----
 
@@ -957,7 +957,7 @@ ph#
 :@style: lit
 :Use: Liturgical note/comment. (e.g. a guide which tells the reader/worshiper that he/she should recite a prayer or recitation etc.) |br|
 	*In the formatting example image (below) the word Слава = "Glory"*
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 3 (Russian Synodal, Orthodox Version)
 
@@ -982,7 +982,7 @@ q#
 :Use: Poetic line. |br|
 	# represents the level of indent (i.e. \q1, \q2, \q3 etc.).
 	**q = q1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Habakkuk 3.1-2 (GNT)
 
@@ -1005,7 +1005,7 @@ qr
 :@style: qr
 :Use: Right-aligned poetic line. |br|
 	|ico_Cg| Common use: Poetic refrain
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 136.1-3 (CEV - *markup adapated*)
 
@@ -1022,7 +1022,7 @@ qc
 
 :@style: qc
 :Use: Centered poetic line.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 72.19 (GNT)
 
@@ -1044,7 +1044,7 @@ qa
 
 :@style: qa
 :Use: Acrostic heading.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 119 (NIV)
 
@@ -1068,7 +1068,7 @@ qm#
 :Use: Embedded text poetic line. |br|
 	# represents the level of indent (i.e. \qm1, \qm2, etc.). |br|
 	**qm = qm1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - 1 Chronicles 12.18 (GNT - *markup adapted*)
 
@@ -1089,7 +1089,7 @@ qd
 :Added: 3.0
 :Use: Hebrew note. |br|
 	A Hebrew musical performance comment similar in content to many of the Hebrew Psalm titles (@style :ref:`d <usx-parastyle_d>`), but placed at the end of the poetic section.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Habakkuk 3:19 (NIV)
 
@@ -1109,7 +1109,7 @@ b
 	May be used to explicitly indicate additional white space between paragraphs. |br| |br|
 	|ico_W| A para element with **b** style type should always be *empty*. |br|
 	**b** should not be used before or after titles to indicate white-space.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Psalm 3 (GNT)
 
@@ -1138,7 +1138,7 @@ lh
 :Added: 3.0
 :Use: List header. |br|
 	Some lists include an introductory and concluding remark (:ref:`lf <usx-parastyle_lf>`). They are an integral part of the list content, but are not list items. A list does not require either or both of these elements.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - 1 Chronicles 27:16-22 (GNT)
 
@@ -1158,7 +1158,7 @@ li#
 	An out-dented paragraph meant to highlight the items of a list. |br|
 	# represents the level of indent |br|
 	**li = li1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes)
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Numbers 7.84-88 (GNT)
 
@@ -1179,7 +1179,7 @@ lf
 :Added: 3.0
 :Use: List footer. |br|
 	Some lists include an introductory (:ref:`lh <usx-parastyle_lh>`) and concluding remark. They are an integral part of the list content, but are not list items. A list does not require either or both of these elements.
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - 1 Chronicles 27:16-22 (GNT)
 
@@ -1203,7 +1203,7 @@ lim#
 	# represents the level of indent |br|
 	**lim = lim1** (see :ref:`notes <usx-notes_numberedStyles>` on numbered @style attributes) |br|
 	|ico_See| *See also* :ref:`li <usx-parastyle_li>`
-:Valid In: :ref:`usx-div_chapter`
+:Valid In: :ref:`usx-div_chapterContent`
 
 **Formatting Sample** - Nehemiah 7.4-25 (NIV)
 
