@@ -98,7 +98,7 @@ toca1
 :@style: toc1
 :Added: 3.0
 :Use: Alternative language long table of contents text. |br|
-	Used to specify an alternate set of table of contents texts (for example, in a language of wider communication). Also with :ref:`toca2 <usx-parastyle_toca2>` and :ref:`toca3 <usx-parastyle_toca3>`
+	Used to specify an alternate set of table of contents texts (for example, in a language of wider communication). Also with :ref:`toca2 <usx-parastyle_toca2>` and :ref:`toca3 <usx-parastyle_toca3>`.
 :Valid In: :ref:`usx-div_bookHeaders`
 
 -----
@@ -123,6 +123,8 @@ toca2
 
 toca3
 ^^^^^
+
+|badge_3.0|
 
 :@style: toca3
 :Added: 3.0
