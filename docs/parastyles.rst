@@ -85,6 +85,50 @@ toc3
 
 	The `metadata.xml <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html>`_ file within a DBL `text release bundle <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/index.html>`_ contains a `bookNames <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html#booknames>`_ element in which each scripture book is itemized together with child elements for its long, short and abbreviated forms. The `bookNames <http://app.thedigitalbiblelibrary.org/static/docs/entryref/text/metadata.html#booknames>`_ element is the key location where this book naming metadata is contained within the bundle. USX para elements with attributes toc1, toc2, or toc3 are strictly optional data. Their presence in a USX file is valid, but reflects a legacy form of USFM markup in which the USFM files for each book were the key location for this book naming metadata.
 
+-----
+
+.. index:: para@style; toca1, identification; alternative language long table of contents text
+.. _usx-parastyle_toca1:
+
+toca1
+^^^^^
+
+|badge_3.0|
+
+:@style: toc1
+:Added: 3.0
+:Use: Alternative language long table of contents text. |br|
+	Used to specify an alternate set of table of contents texts (for example, in a language of wider communication). Also with :ref:`toca2 <usx-parastyle_toca2>` and :ref:`toca3 <usx-parastyle_toca3>`
+:Valid In: :ref:`usx-div_bookHeaders`
+
+-----
+
+.. index:: para@style; toca2, identification; alternative language short table of contents text
+.. _usx-parastyle_toca2:
+
+toca2
+^^^^^
+
+|badge_3.0|
+
+:@style: toca2
+:Added: 3.0
+:Use: Alternative language short table of contents text.
+:Valid In: :ref:`usx-div_bookHeaders`
+
+-----
+
+.. index:: para@style; toca3, identification; alternative language book abbreviation
+.. _usx-parastyle_toca3:
+
+toca3
+^^^^^
+
+:@style: toca3
+:Added: 3.0
+:Use: Alternative language book abbreviation.
+:Valid In: :ref:`usx-div_bookHeaders`
+
 .. index:: element; <para> (introductions)
 .. _usx-parastyles_introductions:
 
@@ -598,7 +642,7 @@ r
 
 -----
 
-.. index:: para@style; d, headings; descriptive title
+.. index:: para@style; d, labels; descriptive title
 .. _usx-parastyle_d:
 
 d
@@ -616,7 +660,7 @@ d
 
 -----
 
-.. index:: para@style; sp, headings; speaker
+.. index:: para@style; sp, labels; speaker
 .. _usx-parastyle_sp:
 
 sp
@@ -633,7 +677,7 @@ sp
 
 -----
 
-.. index:: para@style; sd, headings; semantic division
+.. index:: para@style; sd, labels; semantic division
 .. _usx-parastyle_sd:
 
 sd#
