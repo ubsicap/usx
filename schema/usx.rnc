@@ -557,6 +557,7 @@ Char.char.style.enum = (
     | "bdit" # A character style, use bold + italic text
     | "em" # A character style, use emphasized text style
     | "sc" # A character style, for small capitalization text
+    | "sup" # A character style, for superscript text. Typically for use in critical edition footnotes.
     )
 
 ListChar = (
