@@ -391,8 +391,7 @@ iex
 
 :@style: iex
 :Use: Introduction explanatory or bridge text (e.g. explanation of missing book in a short Old Testament). |br|
-	*This para @style is used within Chapter Text.*
-:Valid In: :ref:`usx-div_bookIntroduction`
+:Valid In: :ref:`usx-div_bookIntroduction`, :ref:`Chapter Content <usx-div_chapterContent>`
 
 -----
 
