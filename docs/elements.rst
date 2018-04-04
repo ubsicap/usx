@@ -82,7 +82,7 @@ The following schema diagram displays the document structure of a USX scripture 
 	xsd:string of pattern ``[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |req| |br|
 	xsd:string
-:Valid in: :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_chapterContent`
 :Parent: :ref:`usx-element_root`
 
 **Diagram and Text Sample**
@@ -111,7 +111,7 @@ Code examples for chapter and verse are provided after the definition for elemen
 	xsd:string of pattern ``[0-9]+\w?(‏?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |br|
 	xsd:string
-:Valid in: :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_row`, :ref:`usx-element_cell`
 
 **Diagram and Text Sample**
@@ -253,7 +253,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :Use: Paragraph content.
 :@style: Content type. |req| |br|
 	Permitted values vary for each document division. The :doc:`para @style types <parastyles>` list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the :doc:`document divisions <structure>` in which each type is valid.
-:Valid in: :ref:`usx-div_bookHeaders`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookHeaders`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
 **Diagram and Text Sample** - Mark 1.1; Matthew 5.1,13 (GNT)
@@ -291,7 +291,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	*empty*
 :Added: 1.0
 :Use: Contains :ref:`usx-element_row` and :ref:`usx-element_cell` child elements which compose the structure of a USX :ref:`usx-element_table`. Tables are composed of a vertical sequence of one or more rows. Rows are composed of a horizontal sequence of one of more cells.
-:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
 **Diagram**
@@ -394,7 +394,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :@link-href: |ico_See| See: :doc:`Linking Attributes <linking>`
 :@link-title: |ico_See| See: :doc:`Linking Attributes <linking>`
 :@link-id: |ico_See| See: :doc:`Linking Attributes <linking>`
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter` |br|
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent` |br|
 	A limited subset of @style types are valid within :ref:`note <usx-element_note>` (Footnote, CrossReference)
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`, :ref:`usx-element_note`
 
@@ -438,7 +438,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	The :doc:`ms @style types <msstyles>` list presents an itemization of milestone styles in the current version of USX.
 :@id: A unique identifier which can be used to unambiguously locate a milestone or associate start and ending milestones. |br|
 	The ``id`` can be composed of any mixture of numbers, letters, and underscores, and should be unique throughout the scripture text for the selected milestone type.
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`, :ref:`usx-element_note`
 
 **Indicating Start and End Milestones**
@@ -519,7 +519,7 @@ To help make things clear in this document, the markup for :ref:`footnotes <usx-
 :@style: Content type |req| |br|
 	``esb``
 :@category: Optional attribute used to tag the :ref:`usx-element_sidebar` as belonging to a specific category of study content (e.g. Ideas, People, Places, Objects etc.).
-:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
 **Diagram and Text Sample**
@@ -590,7 +590,7 @@ Galatians 3
 :@id: Used for identifying the specific peripheral division content found in the current file. |req| |br|
 	One of the standard :ref:`peripheral identifiers <usx-vocab-peripheralIds>` or a :ref:`user defined peripheral identifier <usx-peripherals_div-user>`. |br|
 :@alt: Provides an alternate title or identifier (possibly vernacular) for the peripheral content.
-:Valid in: :ref:`usx-div_peripheral`
+:Valid in: :ref:`usx-type_peripheral`
 :Parents: :ref:`usx-element_root`
 
 |Ico_See| See: :doc:`Peripherals <peripherals>` for detail.
@@ -625,7 +625,7 @@ Galatians 3
 	xsd:string | *empty*
 :@ref: Illustration reference. This text will commonly be rendered together with the illustration caption. |req|
 	xsd:string | *empty*
-:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
 **Diagram and Text Sample** - Mark 1.18 (GNT)
@@ -649,7 +649,7 @@ Galatians 3
 :Added: 2.0
 :Use: Discretionary (optional) line break location. |br|
 	Primarily used in :ref:`poetic <usx-parastyles_poetry>` text, but could also be used for marking optional breaks for :ref:`titles <usx-parastyles_titles_headings>`, :ref:`headings <usx-parastyles_titles_headings>`, or table :ref:`usx-element_cell` content.
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`
 
 **Text Sample**
