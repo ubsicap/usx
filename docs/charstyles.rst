@@ -481,6 +481,18 @@ sc
 
 -----
 
+.. index:: char@style; sup
+.. _usx-charstyle_sup:
+
+sup
+^^^
+
+:@style: sup
+:Use: Superscript text. Typically for use in critical edition footnotes.
+:Valid In: Any valid :ref:`usx-element_char`
+
+-----
+
 .. index:: element; <char> (spacing and breaks)
 .. _usx-charstyles_spacingBreaks:
 
