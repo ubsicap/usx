@@ -688,6 +688,7 @@ FootnoteChar.char.style.enum = (
     | "fq" # A footnote scripture quote or alternate rendering
     | "fqa" # A footnote alternate rendering for a portion of scripture text
     | "fl" # A footnote label text item, for marking or "labelling" the type or alternate translation being provided in the note.
+    | "fw" # A footnote witness list, for distinguishing a list of sigla representing witnesses in critical editions.
     | "fp" # A Footnote additional paragraph marker
     | "fv" # A verse number within the footnote text
     | "fdc" # Footnote text, applies to Deuterocanon only (DEPRECATED - use char@style dc)
