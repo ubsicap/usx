@@ -25,7 +25,7 @@ Footnote <note>
 	*A <user defined caller> may be any single character or sequence of characters preferred as the caller for a note.*
 :@style: Content (footnote) type. |req| |br|
 	``f`` (footnote) | ``fe`` (endnote) | ``ef`` (extended / study note)
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_char`, :ref:`usx-element_cell`
 
 **Diagram**
@@ -194,6 +194,26 @@ fl
 
 -----
 
+.. index:: char@style (footnote); fw, footnote; witness list
+.. _usx-note_footnote_charstyle_fw:
+
+fw
+^^
+
+|badge_3.0|
+
+:@style: fw
+:Added: 3.0
+:Use: Footnote witness list. |br|
+	For distinguishing a list of sigla representing witnesses in critical editions.
+:Valid In: Any :ref:`usx-note_footnote_char`
+
+.. note::
+
+	Apparatus entries of printed critical editions are densely packed with information. One key part is the list of witnesses supporting a specific reading. The witnesses are usually represented by sigla consisting of one character, an abbreviation, or a number. It can be very helpful to distinguish witness lists from other footnote text, which can make it simpler to introduce checking tools for these lists, and to create linking and reader helps in digital representations.
+
+-----
+
 .. index:: char@style (footnote); fp, footnote; additional paragraph
 .. _usx-note_footnote_charstyle_fp:
 
@@ -274,7 +294,7 @@ Cross Reference <note>
 	*A <user defined caller> may be any single character or sequence of characters preferred as the caller for a note.*
 :@style: Content (cross reference) type. |req| |br|
 	``x`` (cross reference) | ``ex`` (extended / study cross reference)
-:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_chapter`
+:Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_char`, :ref:`usx-element_cell`
 
 **Diagram**
