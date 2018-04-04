@@ -400,6 +400,7 @@ Para.para.style.enum = (
     | "sd2" # Semantic division location (vertical space used to divide the text into sections), level 2
     | "sd3" # Semantic division location (vertical space used to divide the text into sections), level 3
     | "sd4" # Semantic division location (vertical space used to divide the text into sections), level 4
+    | "ts" # Translator’s chunk (to identify chunks of text suitable for translating at one time)
     | "lh" # List header (introductory remark)
     | "li" # A list entry, level 1 (if single level)
     | "li1" # A list entry, level 1 (if multiple levels)
