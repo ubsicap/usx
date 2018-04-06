@@ -720,46 +720,6 @@ sd#
 
 -----
 
-.. index:: para@style; ts, labels; translator's chunk
-.. _usx-parastyle_ts:
-
-ts
-^^
-
-|badge_3.0|
-
-:@style: ts
-:Added: 3.0
-:Use: Translator's chunk marker. |br|
-	To identify chunks of text suitable for translating at one time.
-:Valid In: :ref:`usx-div_chapterContent`
-
-.. warning:: para@style ``ts`` is strictly a *non-publishable* aid to translators. It does not indicate or imply a true paragraph (or division / section heading) element in the published form of a text. If translator's chunk elements are used, it is strongly recommended to add them to the text at paragraph boundaries.
-
-**Text and Formatting Sample** - Jude 5-8 (ULB)
-
-.. code-block:: xml
-	:name: usx-para-style_ts_example
-	:emphasize-lines: 1,15
-
-	<para style="ts" />
-	<para style="p">
-		<verse number="5" style="v" />Now I wish to remind you, although you know everything, 
-		that the Lord once saved a people out of the land of Egypt, but that afterward he 
-		destroyed those who did not believe.
-		<verse number="6" style="v" />And angels who did not keep to their own principality, 
-		but left their proper dwelling place—God has kept them in everlasting chains in darkness 
-		for the judgment of the great day.
-		<verse number="7" style="v" />It is just like Sodom and Gomorrah and the cities around 
-		them, which in a similar way gave themselves over to fornication and pursued unnatural 
-		desires. They were given as examples of those who suffer the punishment of eternal fire.
-		<verse number="8" style="v" />Yet in the same way these also pollute their bodies in 
-		their dreams, and they reject authority, and they say evil things about the glorious ones.
-		</para>
-	<para style="ts" />
-
------
-
 .. index:: element; <para> (paragraphs)
 .. _usx-parastyles_paragraphs:
 

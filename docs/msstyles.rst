@@ -60,3 +60,67 @@ qt#
 		they accuse you of?”<ms style="qt1-e" eid="qt1_MAT_27:13_a"/></para>
 	<para style="p"><verse number="14" style="v"/>But Jesus refused to answer a single word, 
 		with the result that the Governor was greatly surprised.</para>
+
+-----
+
+.. index:: ms@style; ts, milestones; translator's section
+.. _usx-msstyle_ts:
+
+ts
+^^
+
+|badge_3.0|
+
+:@style: ts
+:Use: Translator's section. |br|
+    For identifying a section (chunk) of text suitable for translating at one time.
+:Valid In: Any valid :ref:`usx-element_ms`
+
+**Text Samples** - Jude 5-8, ULB - using standalone milestones
+
+.. code-block:: xml
+	:name: usx-msstyle_ts_example
+	:emphasize-lines: 1,9,17
+
+	<ms style="ts" />
+	<para style="p">
+		<verse number="5" style="v" />Now I wish to remind you, although you know everything, 
+		that the Lord once saved a people out of the land of Egypt, but that afterward he 
+		destroyed those who did not believe.
+		<verse number="6" style="v" /> And angels who did not keep to their own principality, 
+		but left their proper dwelling place—God has kept them in everlasting chains in 
+		darkness for the judgment of the great day.
+	<ms style="ts" />
+		<verse number="7" style="v" />It is just like Sodom and Gomorrah and the cities 
+		around them, which in a similar way gave themselves over to fornication and pursued 
+		unnatural desires. They were given as examples of those who suffer the punishment of 
+		eternal fire.
+		<verse number="8" style="v" />Yet in the same way these also pollute their bodies in 
+		their dreams, and they reject authority, and they say evil things about the glorious ones.
+	</para>
+	<ms style="ts" />
+
+Jude 5-8, ULB - using milestone pairs
+
+.. code-block:: xml
+	:name: usx-msstyle_ts_example-alt
+	:emphasize-lines: 1,9,10,18
+
+	<ms style="ts-s" sid="ts_JUD_5-6" />
+	<para style="p">
+		<verse number="5" style="v" />Now I wish to remind you, although you know everything, 
+		that the Lord once saved a people out of the land of Egypt, but that afterward he 
+		destroyed those who did not believe.
+		<verse number="6" style="v" /> And angels who did not keep to their own principality, 
+		but left their proper dwelling place—God has kept them in everlasting chains in 
+		darkness for the judgment of the great day.
+	<ms style="ts-e" eid="ts_JUD_5-6" />
+	<ms style="ts-s" sid="ts_JUD_7-8" />
+		<verse number="7" style="v" />It is just like Sodom and Gomorrah and the cities 
+		around them, which in a similar way gave themselves over to fornication and pursued 
+		unnatural desires. They were given as examples of those who suffer the punishment of 
+		eternal fire.
+		<verse number="8" style="v" />Yet in the same way these also pollute their bodies in 
+		their dreams, and they reject authority, and they say evil things about the glorious ones.
+	</para>
+	<ms style="ts-e" eid="ts_JUD_7-8" />

@@ -618,13 +618,15 @@ char.closed =
 Milestone = (
     element ms {
         attribute style { Milestone.ms.style.enum },
-        attribute id { xsd:string { pattern="[\w_\-\.:]+" } }?, # optional milestone id (digits, letters, underscore)
+        attribute sid { xsd:string { pattern="[\w_\-\.:]+" } }?, # optional milestone start id (digits, letters, underscore)
+        attribute eid { xsd:string { pattern="[\w_\-\.:]+" } }?, # milestone end id (digits, letters, underscore) - required with sid
         empty
     }
     | MilestoneWithAttrib.enum
     )
 Milestone.ms.style.enum = (
-      xsd:string { pattern="[Zz].+" } # Only supporting "qt#-s|e" in USX 3.0. All other styles would be user generated.
+      xsd:string { pattern="ts?(\-[se])?" }
+    | xsd:string { pattern="[Zz].+" } # Only supporting "qt#-s|e" in USX 3.0. All other styles would be user generated.
                                       # If user generated styles were created in USFM first, they would start with "z"
     )
 
@@ -633,7 +635,7 @@ MilestoneWithAttrib.enum = (
     )
 MilestoneWithAttrib.ms.style.qt = 
     element ms {
-        attribute style { xsd:string { pattern="qt[1-5]?\-[se]" } }, # Quotation speaker
+        attribute style { xsd:string { pattern="qt[1-5]?(\-[se])?" } }, # Quotation speaker
         attribute sid { xsd:string { pattern="[\w_\-\.:]+" } }?, # Milestone start id for locating start and end pairs
         attribute eid { xsd:string { pattern="[\w_\-\.:]+" } }?, # Milestone end id for locating start and end pairs
         attribute who { xsd:string { minLength = "2" } }?, # Name / identity of quote speaker
