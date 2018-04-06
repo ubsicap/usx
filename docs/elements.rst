@@ -436,10 +436,8 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :Use: For indicating a specific milestone position within the text, or the start and ending milestones for a span of text, and where the boundaries of the content being marked may cross one or more paragraph boundaries.
 :@style: Milestone type. |req| |br|
 	The :doc:`ms @style types <msstyles>` list presents an itemization of milestone styles in the current version of USX.
-:@sid: A unique identifier which can be used to unambiguously identify the starting milestone, and to clearly associate the starting milestone with the ending milestone (eid). |br|
-	The `sid` can be composed of any mixture of numbers, letters, and underscores, and should be a unique `sid` throughout the scripture text.
-:@eid: A unique identifier which can be used to unambiguously identify the ending milestone, and to clearly associate the ending milestone with the starting milestone (`sid`). |br|
-    If a `sid` attribute is used for the starting milestone in a milestone pair, the ending milestone must include `eid`.
+:@id: A unique identifier which can be used to unambiguously locate a milestone or associate start and ending milestones. |br|
+	The ``id`` can be composed of any mixture of numbers, letters, and underscores, and should be unique throughout the scripture text for the selected milestone type.
 :Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_cell`, :ref:`usx-element_note`
 
