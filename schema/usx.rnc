@@ -357,15 +357,17 @@ Para.para.style.enum = (
     | "nb" # Paragraph text, with no break from previous paragraph text (at chapter boundary)
     | "p" # Paragraph text, with first line indent
     | "pb" # Page Break used for new reader portions and children's bibles where content is controlled by the page
-    | "pc" # Paragraph text, centered (for Inscription)
+    | "pc" # Inscription (paragraph text centered)
     | "pi" # Paragraph text, level 1 indent (if single level), with first line indent; often used for discourse
     | "pi1" # Paragraph text, level 1 indent (if multiple levels), with first line indent; often used for discourse
     | "pi2" # Paragraph text, level 2 indent, with first line indent; often used for discourse
     | "pi3" # Paragraph text, level 3 indent, with first line indent; often used for discourse
     | "po" # Letter opening
+    | "pr" # Text refrain (paragraph right-aligned)
     | "pmo" # Embedded text opening
     | "pm" # Embedded text paragraph
     | "pmc" # Embedded text closing
+    | "pmr" # Embedded text refrain
     | "q" # Poetry text, level 1 indent (if single level)
     | "q1" # Poetry text, level 1 indent (if multiple levels)
     | "q2" # Poetry text, level 2 indent

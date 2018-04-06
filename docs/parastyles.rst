@@ -781,6 +781,24 @@ po
 
 -----
 
+.. index:: para@style; pr, paragraphs; right-aligned, paragraphs; text refrain
+.. _usx-parastyle_pr:
+
+pr
+^^
+
+:@style: pr
+:Use: Right-aligned paragraph. |br|
+	|ico_Cg| *Recommended use:* Text refrain. 
+:Valid In: :ref:`usx-div_chapterContent`
+
+**Formatting Sample** - Deuteronomy 27.15,16,17 (GNT - *markup adapted*)
+
+.. image:: images/usx-para-style_pr.jpg
+	:width: 250px
+
+-----
+
 .. index:: para@style; cls, paragraphs; letter closing
 .. _usx-parastyle_cls:
 
@@ -859,11 +877,6 @@ pmr
 :Use: Embedded text refrain.
 :Valid In: :ref:`usx-div_chapterContent`
 
-**Formatting Sample** - Deuteronomy 27.15,16,17 (GNT - *markup adapted*)
-
-.. image:: images/usx-para-style_pmr.jpg
-	:width: 250px
-
 -----
 
 .. index:: para@style; pi, paragraphs; indented
@@ -919,20 +932,6 @@ pc
 
 .. image:: images/usx-para-style_pc.jpg
 	:width: 250px
-
------
-
-.. index:: para@style; pr, paragraphs; right-aligned
-.. _usx-parastyle_pr:
-
-pr
-^^
-
-:@style: pr
-:Use: Right-aligned paragraph |br| |br|
-	|ico_W| Use is strongly discouraged. |br|
-	|ico_Cg| Recommended alternate is :ref:`pmr <usx-parastyle_pmr>` |br|
-:Valid In: :ref:`usx-div_chapterContent`
 
 -----
 
