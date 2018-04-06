@@ -366,7 +366,6 @@ Para.para.style.enum = (
     | "pmo" # Embedded text opening
     | "pm" # Embedded text paragraph
     | "pmc" # Embedded text closing
-    | "pmr" # Embedded text refrain (e.g. Then all the people shall say, "Amen!")
     | "q" # Poetry text, level 1 indent (if single level)
     | "q1" # Poetry text, level 1 indent (if multiple levels)
     | "q2" # Poetry text, level 2 indent
@@ -635,11 +634,12 @@ MilestoneWithAttrib.enum = (
 MilestoneWithAttrib.ms.style.qt = 
     element ms {
         attribute style { xsd:string { pattern="qt[1-5]?\-[se]" } }, # Quotation speaker
-        attribute id { xsd:string { pattern="[\w_\-\.:]+" } }?, # Milestone id for locating start and end pairs
+        attribute sid { xsd:string { pattern="[\w_\-\.:]+" } }?, # Milestone start id for locating start and end pairs
+        attribute eid { xsd:string { pattern="[\w_\-\.:]+" } }?, # Milestone end id for locating start and end pairs
         attribute who { xsd:string { minLength = "2" } }?, # Name / identity of quote speaker
         empty
     }
-    # E.g. <ms style="qt1-s" id="GEN.1.9.1" who="God"/>
+    # E.g. <ms style="qt1-s" sid="GEN.1.9.1" who="God">
 
 Chapter =
     element chapter { # Start of new chapter
