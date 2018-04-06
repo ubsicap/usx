@@ -49,14 +49,14 @@ qt#
 	:name: usx-msstyle_qt_example
 	
 	<para style="p"><verse number="11" style="v">Jesus stood before the Roman governor, 
-		who questioned him. <ms style="qt1-s" id="MAT.27.11.a" who="Pilate"/>“Are you the 
-		king of the Jews?”<ms style="qt1-e" id="MAT.27.11.a"/> he asked.</para>
-	<para style="p"><ms style="qt1-s" id="MAT.27.11.b" who="Jesus"/>“So you say,”
-		<ms style="qt1-e" id="MAT.27.11.1b"/> answered Jesus.
+		who questioned him. <ms style="qt1-s" sid="MAT.27.11.a" who="Pilate"/>“Are you the 
+		king of the Jews?”<ms style="qt1-e" eid="MAT.27.11.a"/> he asked.</para>
+	<para style="p"><ms style="qt1-s" sid="MAT.27.11.b" who="Jesus"/>“So you say,”
+		<ms style="qt1-e" eid="MAT.27.11.1b"/> answered Jesus.
 		<verse number="12" style="v"/>But he said nothing in response to the accusations of 
 		the chief priests and elders.</para>
 	<para style="p"><verse number="13" style="v"/>So Pilate said to him,
-		<ms style="qt1-s" id="MAT.27.13.a" who="Pilate"/>“Don't you hear all these things 
-		they accuse you of?”<ms style="qt1-e" id="MAT.27.13.a"/></para>
+		<ms style="qt1-s" sid="MAT.27.13.a" who="Pilate"/>“Don't you hear all these things 
+		they accuse you of?”<ms style="qt1-e" eid="MAT.27.13.a"/></para>
 	<para style="p"><verse number="14" style="v"/>But Jesus refused to answer a single word, 
 		with the result that the Governor was greatly surprised.</para>
