@@ -291,7 +291,7 @@ fdc
 ^^^
 
 :@style: fdc
-:Deprecated: 3.0 |badge_3.0|
+:Deprecated: |badge_3.0| 3.0
 :Use: Material to be included only in publications that contain the Deuterocanonical/Apocrypha books. |br|
 	**Deprecated** (use is discouraged) |br| |br|
 	|ico_Cg| *Recommended alternate:* General purpose use of <char> @style :ref:`dc <usx-charstyle_dc>` wherever DC-only content is being marked.
@@ -531,7 +531,7 @@ xdc
 ^^^
 
 :@style: xdc
-:Deprecated: 3.0 |badge_3.0|
+:Deprecated: |badge_3.0| 3.0
 :Use: References (or other material) to be included only in publications that contain the Deuterocanonical/Apocrypha books. |br|
 	**Deprecated** (use is discouraged) |br| |br|
 	|ico_Cg| *Recommended alternate:* General purpose use of <char> @style :ref:`dc <usx-charstyle_dc>` wherever DC-only content is being marked.
