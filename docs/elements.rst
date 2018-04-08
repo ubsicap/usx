@@ -429,6 +429,12 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 |badge_3.0|
 
+USX 3.0 provides the ``<ms/>`` element for indicating the start and ending milestones for a span of text, where the boundaries of the content being marked may cross the boundary of a curently open paragraph (usually a :ref:`<para> <usx-element_para>` element).
+
+An milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as *overlapping* or *concurrent* markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in `USFM <https://ubsicap.github.io/usfm/index.html>`_), the paragraph level markup forms the main structure of the document, while :ref:`chapter <usx-element_chapter>` and :ref:`verse <usx-element_verse>` markers are effectively a milestone type.
+
+Another example of an overlapping structure exists when there is a need to indicate the start and end of the quotations of the "actors" who are speaking within the text. These spans of text will commonly cross paragraph boundaries.
+
 :Element: ms |br|
 	*empty* |br|
 	A milestone is always an empty element and should be written using the self-closing syntax, like ``<ms/>``.
