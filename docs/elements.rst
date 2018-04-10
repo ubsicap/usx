@@ -29,7 +29,6 @@ The following schema diagram displays the document structure of a USX scripture 
 
 .. code-block:: xml
 	:name: usx-element_usx_example
-	:emphasize-lines: 1
 
 	<usx version="2.5">
 
@@ -58,7 +57,6 @@ The following schema diagram displays the document structure of a USX scripture 
 
 .. code-block:: xml
 	:name: usx-element_book_example
-	:emphasize-lines: 1
 
 	<book code="MAT" style="id">English: Good News Translation 2nd Ed. 1992</book>
 
@@ -69,6 +67,13 @@ The following schema diagram displays the document structure of a USX scripture 
 
 <chapter>
 ---------
+
+.. index:: syntax; chapter and verse milestones
+.. _usx-notes_cvMilestoneSyntax:
+
+.. note:: **Background on <chapter> and <verse> as 'milestones'**
+
+	A milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as *overlapping* or *concurrent* markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in `USFM <https://ubsicap.github.io/usfm/index.html>`_), the paragraph level markup forms the main structure of the document, while :ref:`chapter <usx-element_chapter>` and :ref:`verse <usx-element_verse>` elements are empty *milestones* which identify the location where the chapter or verse begins.
 
 :Element: chapter |req| |br|
     *empty*
@@ -99,6 +104,15 @@ Code examples for chapter and verse are provided after the definition for elemen
 <verse>
 -------
 
+.. note:: **Accurately identifying verse text within the scripture paragraph structure**
+
+	|badge_3.0|	USX 3.0 adds a pair of attributes to ``<verse/>`` (``sid`` and ``eid``) which are used to unambiguously identify the start and end position for a specific verse text within the scripture discourse structure. A companion attribute ``vid`` is added to :ref:`<para> <usx-element_para>` and :ref:`<cell> <usx-element_cell>` in order to re-identify the current verse when the previous :ref:`<para> <usx-element_para>` or :ref:`<cell> <usx-element_cell>` has closed prior the end of the verse text.
+
+	**IMPORTANT:** In USX 3.0 a ``<verse/>`` milestone is *required* at the **start** and at the **end** of the verse text, with corresponding ``sid`` and ``eid`` attributes. In previous versions of USX, only a ``<verse/>`` start milestone was required.
+
+	|ico_See| See: :ref:`Background on chapter and verse as milestones <usx-notes_cvMilestoneSyntax>`
+
+
 :Element: verse |req| |br|
     *empty*
 :Added: 1.0
@@ -111,27 +125,48 @@ Code examples for chapter and verse are provided after the definition for elemen
 	xsd:string of pattern ``[0-9]+\w?(‏?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |br|
 	xsd:string
+:@sid: |badge_3.0| Verse start identifier. |req| *(required at verse start milestone)* |br|
+	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
+:@eid: |badge_3.0| Verse end identifier. |req| *(required at verse end milestone)* |br|
+	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_row`, :ref:`usx-element_cell`
 
-**Diagram and Text Sample**
+**Diagram and Text Samples**
 
-.. image:: images/usx-element_verse.png
+.. image:: images/usx-element_verseStart.png
 
-**chapter and verse** - MAT 5:1, with preceding and following context
+.. image:: images/usx-element_verseEnd.png
+
+**chapter and verse** - Genesis 1:21-25
 
 .. code-block:: xml
 	:name: usx-element_verse_example
-	:emphasize-lines: 6-7
+	:emphasize-lines: 2-7,12,15,16,19,20
 
-	<para style="p"> ... Large crowds followed him from Galilee and the Ten Towns, from Jerusalem, Judea,
-	  and the land on the other side of the Jordan.</para>
-	<chapter number="5" style="c" />
-	<para style="s">The Sermon on the Mount</para>
 	<para style="p">
-	  <verse number="1" style="v" />Jesus saw the crowds and went up a hill, where he sat down.
-	  His disciples gathered around him, <verse number="2" style="v" />and he began to teach them:</para>
-	  ...
+	  <verse number="21" style="v" sid="GEN 2:21" />Then the <char style="nd">Lord</char> God 
+	  made the man fall into a deep sleep, and while he was sleeping, he took out one of the 
+	  man's ribs and closed up the flesh.<verse eid="GEN 2:21" />
+	  <verse number="22" style="v" sid="GEN 2:22" />He formed a woman out of the rib and brought 
+	  her to him.<verse eid="GEN 2:22" />
+	  <verse number="23" style="v" sid="GEN 2:23" />Then the man said,
+	</para>
+	<para style="q1" vid="GEN 2:23">“At last, here is one of my own kind—</para>
+	<para style="q1" vid="GEN 2:23">Bone taken from my bone, and flesh from my flesh.</para>
+	<para style="q1" vid="GEN 2:23">‘Woman’ is her name because she was taken out of man.”
+	  <verse eid="GEN 2:23" />
+	</para>
+	<para style="m">
+	  <verse number="24" style="v" sid="GEN 2:24" />That is why a man leaves his father and mother 
+	  and is united with his wife, and they become one.<verse eid="GEN 2:24" />
+	</para>
+	<para style="p">
+	  <verse number="25" style="v" sid="GEN 2:25" />The man and the woman were both naked, but 
+	  they were not embarrassed.<verse eid="GEN 2:25" />
+	</para>
 
 An additional six chapters appear interspersed in Esther in the Septuagint. There are 3 common approaches to handling the Greek additions (and many additional variations!). Although Paratext requires sequential chapter and verse numbers to be used within the translation editing environment – as defined by the project versification – in numerous places this is not the string to be published for the chapter and/or verse identifiers at these locations. Examples from Esther Greek are shown below to highlight the application of the @pubnumber attribute for :ref:`chapter <usx-element_chapter>` and :ref:`verse <usx-element_verse>`.
 
@@ -145,30 +180,33 @@ The following example of the text for Esther Greek chapter 1 is taken from the E
 
 .. code-block:: xml
 	:name: usx-element_verse_example2
-	:emphasize-lines: 1,4,13,15,18,21
 
 	<chapter number="1" style="c" pubnumber="A" />
 	<para style="s">Mordecai's Strange Dream</para>
 	<para style="p">
-	<verse number="1-3" style="v" />Mordecai, a Jew who belonged to the tribe of Benjamin, was taken 
-	  into exile, along with King Jehoiachin of Judah, when King Nebuchadnezzar of Babylonia captured 
-	  Jerusalem...</para>
+	<verse number="1-3" style="v" sid="ESG 1:1-3" />Mordecai, a Jew who belonged to the tribe of 
+	  Benjamin, was taken into exile, along with King Jehoiachin of Judah, when King Nebuchadnezzar 
+	  of Babylonia captured Jerusalem...<verse eid="ESG 1:1-3" /></para>
 	
 	...
 
 	<para style="cp">1</para>
 	<para style="s">Queen Vashti Defies King Xerxes</para>
 	<para style="p">
-	<verse number="18-19" style="v" pubnumber="1-2" />These things happened in the time of King Xerxes,
-	  who ruled 127 provinces, all the way from India to Ethiopia, from his royal throne in Susa, 
-	  Persia's capital city. <verse number="20" style="v" pubnumber="3" />In the third year of his reign, 
+	  <verse number="18-19" style="v" pubnumber="1-2" sid="ESG 1:18-19" />These things happened 
+	  in the time of King Xerxes, who ruled 127 provinces, all the way from India to Ethiopia, 
+	  from his royal throne in Susa, Persia's capital city.<verse eid="ESG 1:18-19" /> 
+	  <verse number="20" style="v" pubnumber="3" sid="ESG 1:20" />In the third year of his reign, 
 	  the king gave a banquet for all his advisers, the representatives of the other countries, the 
-	  noblemen from Persia and Media, and the governors of the provinces.
-	<verse number="21" style="v" pubnumber="4" />For six whole months he made a show of the riches 
-	  of the imperial court with magnificent and expensive celebrations.</para>
+	  noblemen from Persia and Media, and the governors of the provinces.<verse eid="ESG 1:20" />
+	  <verse number="21" style="v" pubnumber="4" sid="ESG 1:21" />For six whole months he made a 
+	  show of the riches of the imperial court with magnificent and expensive celebrations.
+	  <verse eid="ESG 1:21" />
+	</para>
 	<para style="p">
-	<verse number="22" style="v" pubnumber="5" />After the feast the king gave a banquet for the people 
-	  of other nations who were in the city...</para>
+	  <verse number="22" style="v" pubnumber="5" sid="1:22" />After the feast the king gave a banquet 
+	  for the people of other nations who were in the city...<verse eid="ESG 1:22" />
+	</para>
 	
 	...
 
@@ -178,32 +216,38 @@ The following example is taken from the English Contemporary English Version (CE
 
 .. code-block:: xml
 	:name: usx-element_verse_example3
-	:emphasize-lines: 1,5,8,10,15,21,23,32
 	
 	<chapter number="1" style="c" pubnumber="11" />
 	<para style="ms1">Addition A</para>
 	<para style="s1">Mordecai's Dream</para>
 	<para style="p">
-	<verse number="1-3" style="v" pubnumber="2-4" />Mordecai son of Jair was a Jew from the Benjamin 
-	  tribe, and he lived in the city of Susa in Persia. Mordecai had been taken away from Jerusalem as 
-	  a prisoner, when King Nebuchadnezzar of Babylonia had captured King Jehoiachin. ...</para>
-	<para style="p">In Mordecai's dream, <verse number="4" style="v" pubnumber="5" /> there was confusion 
-	  and unrest all over the world. He heard crashing thunder, and the earth shook with an earthquake
-	<verse number="5" style="v" pubnumber="6" /> as two huge dragons went toward each other, ready 
-	  to fight...</para>
+	  <verse number="1-3" style="v" pubnumber="2-4" sid="ESG 1:1-3" />Mordecai son of Jair was a Jew 
+	  from the Benjamin tribe, and he lived in the city of Susa in Persia. Mordecai had been taken 
+	  away from Jerusalem as a prisoner, when King Nebuchadnezzar of Babylonia had captured King 
+	  Jehoiachin. ...</para>
+	<para style="p" vid="ESG 1:1-3">In Mordecai's dream,<verse eid="ESG 1:1-3" /> 
+	  <verse number="4" style="v" pubnumber="5" sid="ESG 1:4" /> there was confusion and unrest all 
+	  over the world. He heard crashing thunder, and the earth shook with an earthquake
+	  <verse eid="ESG 1:4" /> <verse number="5" style="v" pubnumber="6" sid="ESG 1:5" />as two huge 
+	  dragons went toward each other, ready to fight<verse eid="ESG 1:5" />...
+	</para>
 
 	...
 
-	<verse number="11" style="v" pubnumber="12" /> Mordecai woke up, but he knew that in his dream he 
-	  had seen what God was planning to do. And so, Mordecai thought about his dream all day, trying to 
-	  understand exactly what it meant.</para>
+	  <verse number="11" style="v" pubnumber="12" sid="ESG 1:11" /> Mordecai woke up, but he knew 
+	  that in his dream he had seen what God was planning to do. And so, Mordecai thought about 
+	  his dream all day, trying to understand exactly what it meant.<verse eid="ESG 1:11" />
+	</para>
 	<para style="cp">12</para>
 	<para style="s1">Mordecai <optbreak /> Saves the King's Life</para>
 	<para style="p">
-	<verse number="12" style="v" pubnumber="1" />That night, Mordecai was in the palace courtyard. 
-	  He was resting not far from Gabatha and Tharra, the two officers who were on guard duty. 
-	<verse number="13" style="v" pubnumber="2" /> Mordecai overheard them talking, and as he 
-	  listened carefully, he realized they were planning to murder King Artaxerxes.</para>
+	  <verse number="12" style="v" pubnumber="1" sid="ESG 1:12" />That night, Mordecai was in the 
+	  palace courtyard. He was resting not far from Gabatha and Tharra, the two officers who were 
+	  on guard duty.<verse eid="ESG 1:12" /> 
+	  <verse number="13" style="v" pubnumber="2" sid="ESG 1:13" /> Mordecai overheard them talking, 
+	  and as he listened carefully, he realized they were planning to murder King Artaxerxes.
+	  <verse eid="ESG 1:13" />
+	</para>
 	
 	...
 
@@ -211,8 +255,10 @@ The following example is taken from the English Contemporary English Version (CE
 	<para style="cp">1</para>
 	<para style="s1">Queen Vashti Disobeys <optbreak /> King Artaxerxes</para>
 	<para style="p">
-	<verse number="18-20" style="v" pubnumber="1-3" />King Artaxerxes lived in his capital city of Susa
-	  and ruled 127 provinces from India to Ethiopia.</para>
+	  <verse number="18-20" style="v" pubnumber="1-3" sid="ESG 1:18-20" />King Artaxerxes lived 
+	  in his capital city of Susa and ruled 127 provinces from India to Ethiopia.
+	  <verse eid="ESG 1:18-20" />
+	</para>
 
 An example from Psalms (modified French TOB) showing an alternate chapter and verse numbering scheme encoded within the text.
 
@@ -220,7 +266,6 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 .. code-block:: xml
 	:name: usx-element_verse_example4
-	:emphasize-lines: 1,8,13
 
 	<chapter number="42" style="c" altnumber="41" />
 	<para style="ms1">DEUXIÈME LIVRE</para>
@@ -229,15 +274,16 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	<para style="d">
 	<char style="va">1</char> Du chef de chœur. Instruction des fils de Coré.</para>
 	<para style="q1">
-	<verse number="1" style="v" altnumber="2" /> Comme une biche se tourne</para>
-	<para style="q1">vers les cours d'eau,</para>
-	<para style="q1">ainsi mon âme se tourne</para>
-	<para style="q1">vers toi, mon Dieu.</para>
+	  <verse number="1" style="v" altnumber="2" sid="PSA 42:1" /> Comme une biche se 
+	  tourne</para>
+	<para style="q1" vid="PSA 42:1">vers les cours d'eau,</para>
+	<para style="q1" vid="PSA 42:1">ainsi mon âme se tourne</para>
+	<para style="q1" vid="PSA 42:1">vers toi, mon Dieu.<verse eid="PSA 42:1" /></para>
 	<para style="q1">
-	<verse number="2" style="v" altnumber="3" /> J'ai soif de Dieu,</para>
-	<para style="q1">du Dieu vivant:</para>
-	<para style="q1">Quand pourrai-je entrer</para>
-	<para style="q1">et paraître face à Dieu?</para>
+	<verse number="2" style="v" altnumber="3" sid="PSA 42:2" /> J'ai soif de Dieu,</para>
+	<para style="q1" vid="PSA 42:2">du Dieu vivant:</para>
+	<para style="q1" vid="PSA 42:2">Quand pourrai-je entrer</para>
+	<para style="q1" vid="PSA 42:2">et paraître face à Dieu?<verse eid="PSA 42:2" /></para>
 
 -----
 
@@ -253,31 +299,46 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :Use: Paragraph content.
 :@style: Content type. |req| |br|
 	Permitted values vary for each document division. The :doc:`para @style types <parastyles>` list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the :doc:`document divisions <structure>` in which each type is valid.
+:@vid: |badge_3.0| Verse identifier. |br|
+	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` or :ref:`cell <usx-element_cell>` closed prior the end of the current verse text. |br|
+	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: :ref:`usx-div_bookHeaders`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
-**Diagram and Text Sample** - Mark 1.1; Matthew 5.1,13 (GNT)
+**Diagram and Text Sample** - Mark 1.1; Matthew 5.1,14-16 (GNT)
 
 .. image:: images/usx-element_para.png
 
 .. code-block:: xml
 	:name: usx-element_para_example
-	:emphasize-lines: 1,8,13
-
+	
 	<para style="p">
-	<verse number="1" style="v" />This is the Good News about Jesus Christ, the Son of God ...</para>
-
-	<para style="q1">“God said, ‘I will send my messenger ahead of you</para>
-	<para style="q2">to open the way for you.’</para>
+	  <verse number="1" style="v" sid="MRK 1:1" />This is the Good News about Jesus Christ, the Son 
+	  of God.<verse eid="MRK 1:1"/> <verse number="2" style="v" sid="MRK 1:2" />It began as the prophet 
+	  Isaiah had written:</para>
+	<para style="q1" vid="MRK 1:1">“God said, ‘I will send my messenger ahead of you</para>
+	<para style="q2" vid="MRK 1:1">to open the way for you.’</para>
+	<para style="q1">
+	  <verse number="3" style="v" sid="MRK 1:3" />Someone is shouting in the desert,</para>
+	<para style="q2" vid="MRK 1:3">‘Get the road ready for the Lord;</para>
+	<para style="q2" vid="MRK 1:3">make a straight path for him to travel!’”</para>
 
 	<para style="s">The Sermon on the Mount</para>
 	<para style="p">
-	  <verse number="1" style="v" />Jesus saw the crowds and went up a hill, where he sat down.
-	  His disciples gathered around him, <verse number="2" style="v" />and he began to teach them:</para>
-	<para style="s">Salt and Light</para>
-	<para style="r">(Mark 9.50; Luke 14.34,35)</para>
-	<para style="p">
-	  <verse number="13" style="v" />“You are like salt for the whole human race...</para>
+	  <verse number="1" style="v" sid="MAT 5:1" />Jesus saw the crowds and went up a hill, where he 
+	  sat down. His disciples gathered around him, <verse number="2" style="v" sid="MAT 5:2" />and he 
+	  began to teach them:<verse eid="MAT 5:2" />
+	</para>
+	<para style="s">True Happiness</para>
+	<para style="r">(Luke 6.20-23)</para>
+	<para style="q1">
+	  <verse number="3" style="v" sid="MAT 5:3" />“Happy are those who know they are spiritually poor;
+	</para>
+	<para style="q2" vid="MAT 5:3" />the Kingdom of heaven belongs to them!<verse eid="MAT 5:3" /></para>
+	<para style="q1">
+	  <verse number="4" style="v" sid="MAT 5:4" />“Happy are those who mourn;</para>
+	<para style="q2" vid="MAT 5:4" />God will comfort them!<verse eid="MAT 5:4" /></para>
 
 -----
 
@@ -332,6 +393,10 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	``start`` | ``center`` | ``end`` |br|
 	Represents “left”, “center”, and “right” respectively in left-to-right direction texts, and “right”, “center”, “left” in right-to-left direction texts.
 :@colspan: |badge_3.0| An integer indicating how many columns the current cell should span in a rendered view.
+:@vid: |badge_3.0| Verse identifier. |br|
+	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` or :ref:`cell <usx-element_cell>` closed prior the end of the current verse text. |br|
+	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: Any valid :ref:`usx-element_row`
 :Parents: :ref:`usx-element_row`
 
@@ -431,7 +496,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 USX 3.0 provides the ``<ms/>`` element for indicating the start and ending milestones for a span of text, where the boundaries of the content being marked may cross the boundary of a curently open paragraph (usually a :ref:`<para> <usx-element_para>` element).
 
-An milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as *overlapping* or *concurrent* markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in `USFM <https://ubsicap.github.io/usfm/index.html>`_), the paragraph level markup forms the main structure of the document, while :ref:`chapter <usx-element_chapter>` and :ref:`verse <usx-element_verse>` markers are effectively a milestone type.
+An milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as *overlapping* or *concurrent* markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in `USFM <https://ubsicap.github.io/usfm/index.html>`_), the paragraph level markup forms the main structure of the document, while :ref:`chapter <usx-element_chapter>` and :ref:`verse <usx-element_verse>` markers are empty *milestones* which identify the location where the chapter or verse begins.
 
 Another example of an overlapping structure exists when there is a need to indicate the start and end of the quotations of the "actors" who are speaking within the text. These spans of text will commonly cross paragraph boundaries.
 
