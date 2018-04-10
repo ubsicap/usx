@@ -55,8 +55,8 @@ Link to other project text
     :emphasize-lines: 2
 
     The traditional translation of verse 1, as given in 
-    <char style="jmp" link-href="prj:RSV52 GEN 1:1" link-title="Revised Standard 
-    Version">RSV</char>, may be quite appropriate.
+    <char style="jmp" link-href="prj:RSV52 GEN 1:1" link-title="Revised Standard Version">RSV</char>, 
+    may be quite appropriate.
 
 Link to illustration / media
 
@@ -76,11 +76,11 @@ Assigning an identifier (anchor). *In this example the markup is a milestone, in
     <para style="q2">‘Prepare a road for the Lord;</para>
     <para style="q2">make a straight path for him to travel!’ ”</para>
     <sidebar style="esb" category="people">
-    <para style="ms"><char style="jmp" link-id="article-john_the_baptist" />John the 
-    Baptist</para>
-    <para style="p">John is sometimes called the last “Old Testament prophet” because of the 
-    warnings he  brought about God's judgment and because he announced the coming of God's 
-    “Chosen One” (Messiah).</para>
+      <para style="ms"><char style="jmp" link-id="article-john_the_baptist" />John the Baptist</para>
+      <para style="p">John is sometimes called the last “Old Testament prophet” because of the 
+        warnings he  brought about God's judgment and because he announced the coming of God's 
+        “Chosen One” (Messiah).
+      </para>
     </sidebar>
 
 Glossary entry including a link reference to an external URL
@@ -94,11 +94,12 @@ Reference to named target within the same project
 .. code-block:: xml
     :emphasize-lines: 4
 
-    <para style="p"><verse number="2-6a" style="v"/>From Abraham to King David, the 
-    following ancestors are listed: Abraham, Isaac, Jacob, Judah and his brothers; then Perez and 
-    Zerah (their mother was Tamar), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother 
-    was Rahab), Obed (his mother was <char style="jmp" link-href="#article-Ruth">Ruth</char>), 
-    Jesse, and King David.
+    <para style="p"><verse number="2-6a" style="v" sid="MAT 1:2-6a" />From Abraham to King David, 
+      the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his brothers; then Perez 
+      and Zerah (their mother was Tamar), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother 
+      was Rahab), Obed (his mother was <char style="jmp" link-href="#article-Ruth">Ruth</char>), 
+      Jesse, and King David.<verse eid="MAT 1:2-6a" />
+    </para>
 
 Nested within :ref:`footnote text <usx-note_footnote_charstyle_ft>`
 
@@ -106,8 +107,8 @@ Nested within :ref:`footnote text <usx-note_footnote_charstyle_ft>`
     :emphasize-lines: 3
 
     <note caller="-" style="ef"><char style="fr">1.2-6a: </char><char style="fq">Ruth: </char>
-    <char style="ft">A Moabite. Only outstanding women were normally included in Jewish 
-    genealogical lists. See article on <char style="jmp" link-href="#article-Ruth">Ruth</char>
+      <char style="ft">A Moabite. Only outstanding women were normally included in Jewish 
+      genealogical lists. See article on <char style="jmp" link-href="#article-Ruth">Ruth</char>
     </note>
 
 -----

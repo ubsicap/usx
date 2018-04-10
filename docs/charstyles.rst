@@ -70,7 +70,7 @@ dc
 	:name: usx-charstyle_dc_example
 	:emphasize-lines: 6
 
-	<verse number="3" style="v" />Él es el resplandor glorioso de Dios,
+	<verse number="3" style="v" sid="HEB 1:3" />Él es el resplandor glorioso de Dios,
 	<note caller="c" style="f">
 		<char style="fr">1.3: </char>
 		<char style="fk">Resplandor: </char>
@@ -83,19 +83,20 @@ Psalm 115.3-4 (GNT - cross references)
 
 .. code-block:: xml
 	:name: usx-charstyle_dc_example2
-	:emphasize-lines: 9
+	:emphasize-lines: 10
 
 	<para style="q1">
-		<verse number="3" style="v" />Our God is in heaven;
-	<para style="q2">he does whatever he wishes.</para>
+		<verse number="3" style="v" sid="PSA 115:3" />Our God is in heaven;
+	</para>
+	<para style="q2" vid="PSA 115:3">he does whatever he wishes.<verse eid="PSA 115:3" /></para>
 	<para style="q1">
-		<verse number="4" style="v" />
+		<verse number="4" style="v" sid="PSA 115:3" />
 		<note caller="-" style="x">
 			<char style="xo">115.4-8: </char>
 			<char style="xt">Ps 135.15-18; 
 			<char style="dc"> Ltj Jr 4-73;</char> Rev 9.20.</char>
 		</note>Their gods are made of silver and gold,</para>
-	<para style="q2">formed by human hands.</para>
+	<para style="q2">formed by human hands.<verse eid="PSA 115:4" /></para>
 
 1 Corinthians 15.51-52 (GNT - cross reference)
 
@@ -104,7 +105,7 @@ Psalm 115.3-4 (GNT - cross references)
 	:emphasize-lines: 6
 
 	<para style="p">
-		<verse number="51-52" style="v" />
+		<verse number="51-52" style="v" sid="1CO 15:51-52" />
 		<note caller="-" style="x">
 			<char style="xo">15.51,52: </char>
 			<char style="xt">
@@ -177,30 +178,38 @@ litl
 
 .. code-block:: xml
 	:name: usx-char-style_litl_example
-	:emphasize-lines: 10,12,14,16,18,20,22
+	:emphasize-lines: 11,14,17,20,23,26,29
 
-	<para style="pm"><verse number="6" style="v" />These are the people of the province who came up 
-		from the captivity of the exiles whom Nebuchadnezzar king of Babylon had taken captive (they 
-		returned to Jerusalem and Judah, each to his own town, <verse number="7" style="v" />in 
-		company with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, 
-		Mispereth, Bigvai, Nehum and Baanah):</para>
+	<para style="pm"><verse number="6" style="v" sid="NEH 7:6" />These are the people of the province 
+	  who came up from the captivity of the exiles whom Nebuchadnezzar king of Babylon had taken 
+	  captive (they returned to Jerusalem and Judah, each to his own town,<verse eid="NEH 7:6" /> 
+	  <verse number="7" style="v" sid="NEH 7:7" />in company with Zerubbabel, Jeshua, Nehemiah, 
+	  Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah):
+	</para>
 	<para style="b" />
-	<para style="pm">The list of the men of Israel:
+	<para style="pm" vid="NEH 7:7">The list of the men of Israel:<verse eid="NEH 7:7" />
 	<para style="b" />
-	<para style="lim1"><verse number="8" style="v" />the descendants of Parosh - 
-		<char style="litl">2,172</char></para>
-	<para style="lim1"><verse number="9" style="v" />of Shephatiah - 
-		<char style="litl">372</char></para>
-	<para style="lim1"><verse number="10" style="v" />of Arah - 
-		<char style="litl">652</char></para>
-	<para style="lim1"><verse number="11" style="v" />of Pahath-Moab (through the line of Jeshua 
-		and Joab) - <char style="litl">2,818</char></para>
-	<para style="lim1"><verse number="12" style="v" />of Elam - 
-		<char style="litl">1,254</char></para>
-	<para style="lim1"><verse number="13" style="v" />of Zattu - 
-		<char style="litl">845</char></para>
-	<para style="lim1"><verse number="14" style="v" />of Zaccai - 
-		<char style="litl">760</char></para>
+	<para style="lim1"><verse number="8" style="v" sid="NEH 7:8" />the descendants of Parosh - 
+	  <char style="litl">2,172</char><verse eid="NEH 7:8" />
+	</para>
+	<para style="lim1"><verse number="9" style="v" sid="NEH 7:9" />of Shephatiah - 
+	  <char style="litl">372</char><verse eid="NEH 7:9" />
+	</para>
+	<para style="lim1"><verse number="10" style="v" sid="NEH 7:10" />of Arah - 
+	  <char style="litl">652</char><verse eid="NEH 7:10" />
+	</para>
+	<para style="lim1"><verse number="11" style="v" sid="NEH 7:11" />of Pahath-Moab (through the 
+	  line of Jeshua and Joab) - <char style="litl">2,818</char><verse eid="NEH 7:11" />
+	</para>
+	<para style="lim1"><verse number="12" style="v" sid="NEH 7:12" />of Elam - 
+	  <char style="litl">1,254</char><verse eid="NEH 7:12" />
+	</para>
+	<para style="lim1"><verse number="13" style="v" sid="NEH 7:13" />of Zattu - 
+	  <char style="litl">845</char><verse eid="NEH 7:13" />
+	</para>
+	<para style="lim1"><verse number="14" style="v" sid="NEH 7:14" />of Zaccai - 
+	  <char style="litl">760</char><verse eid="NEH 7:14" />
+	</para>
 	...
 
 .. image:: images/usx-char-style_litl.jpg
@@ -595,16 +604,17 @@ Genesis 1.1-2 (Japanes Living Bible - Biblica)
 .. code-block:: xml
 	:name: usx-char-style_rb_example
 
-	<para style="p"><verse number="1" style="v" />まだ<char style="rb" gloss="なに">何</char>
-		もなかった<char style="rb" gloss="とき">時</char>、<char style="rb" gloss="かみ">神</char>は
-		<char style="rb" gloss="てん">天</char>と<char style="rb" gloss="ち">地</char>を
-		<char style="rb" gloss="つく">造</char>りました。
-		<verse number="2" style="v" /><char style="rb" gloss="ち">地</char>は
-		<char style="rb" gloss="かたち">形</char>も<char style="rb" gloss="さだ">定</char>まらず、
-		<char style="rb" gloss="やみ">闇</char>に<char style="rb" gloss="つつ">包</char>まれた
-		<char style="rb" gloss="みず">水</char>の<char style="rb" gloss="うえ">上</char>を、さらに
-		<char style="rb" gloss="かみ">神</char>の<char style="rb" gloss="れい">霊</char>が
-		<char style="rb" gloss="おお">覆</char>っていました。</para>
+	<para style="p">
+	  <verse number="1" style="v" sid="GEN 1:1" />まだ<char style="rb" gloss="なに">何</char>
+	  もなかった<char style="rb" gloss="とき">時</char>、<char style="rb" gloss="かみ">神</char>は
+	  <char style="rb" gloss="てん">天</char>と<char style="rb" gloss="ち">地</char>を
+	  <char style="rb" gloss="つく">造</char>りました。<verse eid="GEN 1:1" />
+	  <verse number="2" style="v" sid="GEN 1:2" /><char style="rb" gloss="ち">地</char>は
+	  <char style="rb" gloss="かたち">形</char>も<char style="rb" gloss="さだ">定</char>まらず、
+	  <char style="rb" gloss="やみ">闇</char>に<char style="rb" gloss="つつ">包</char>まれた
+	  <char style="rb" gloss="みず">水</char>の<char style="rb" gloss="うえ">上</char>を、さらに
+	  <char style="rb" gloss="かみ">神</char>の<char style="rb" gloss="れい">霊</char>が
+	  <char style="rb" gloss="おお">覆</char>っていました。<verse eid="GEN 1:2" /></para>
 
 .. image:: images/usx-char-style_rb.jpg
 	:width: 300px
@@ -770,36 +780,37 @@ liv#
 	:emphasize-lines: 5,7,9,11,13,16,18,20,22,24,26,28,30
 
 	<para style="s1">Administration of the Tribes of Israel</para>
-	<para style="lh"><verse number="16-22" style="v" />This is the list of the administrators 
-		of the tribes of Israel:</para>
+	<para style="lh"><verse number="16-22" style="v" sid="1CH 27:16-22"/>This is the list of  
+	  the administrators of the tribes of Israel:</para>
 	<para style="li1">
-		<char style="lik">Reuben</char> <char style="liv1">Eliezer son of Zichri</char></para>
+	  <char style="lik">Reuben</char> <char style="liv1">Eliezer son of Zichri</char></para>
 	<para style="li1">
-		<char style="lik">Simeon</char> <char style="liv1">Shephatiah son of Maacah</char></para>
+	  <char style="lik">Simeon</char> <char style="liv1">Shephatiah son of Maacah</char></para>
 	<para style="li1">
-		<char style="lik">Levi</char> <char style="liv1">Hashabiah son of Kemuel</char></para>
+	  <char style="lik">Levi</char> <char style="liv1">Hashabiah son of Kemuel</char></para>
 	<para style="li1">
-		<char style="lik">Aaron</char> <char style="liv1">Zadok</char></para>
+	  <char style="lik">Aaron</char> <char style="liv1">Zadok</char></para>
 	<para style="li1">
-		<char style="lik">Judah</char> <char style="liv1">Elihu, one of King David's brothers</char>
-		</para>
+	  <char style="lik">Judah</char> <char style="liv1">Elihu, one of King David's brothers</char>
+	</para>
 	<para style="li1">
-		<char style="lik">Issachar</char> <char style="liv1">Omri son of Michael</char></para>
+	  <char style="lik">Issachar</char> <char style="liv1">Omri son of Michael</char></para>
 	<para style="li1">
-		<char style="lik">Zebulun</char> <char style="liv1">Ishmaiah son of Obadiah</char></para>
+	  <char style="lik">Zebulun</char> <char style="liv1">Ishmaiah son of Obadiah</char></para>
 	<para style="li1">
-		<char style="lik">Naphtali</char> <char style="liv1">Jeremoth son of Azriel</char></para>
+	  <char style="lik">Naphtali</char> <char style="liv1">Jeremoth son of Azriel</char></para>
 	<para style="li1">
-		<char style="lik">Ephraim</char> <char style="liv1">Hoshea son of Azaziah</char></para>
+	  <char style="lik">Ephraim</char> <char style="liv1">Hoshea son of Azaziah</char></para>
 	<para style="li1">
-		<char style="lik">West Manasseh</char> <char style="liv1">Joel son of Pedaiah</char></para>
+	  <char style="lik">West Manasseh</char> <char style="liv1">Joel son of Pedaiah</char></para>
 	<para style="li1">
-		<char style="lik">East Manasseh</char> <char style="liv1">Iddo son of Zechariah</char></para>
+	  <char style="lik">East Manasseh</char> <char style="liv1">Iddo son of Zechariah</char></para>
 	<para style="li1">
-		<char style="lik">Benjamin</char> <char style="liv1">Jaasiel son of Abner</char></para>
+	  <char style="lik">Benjamin</char> <char style="liv1">Jaasiel son of Abner</char></para>
 	<para style="li1">
-		<char style="lik">Dan</char> <char style="liv1">Azarel son of Jeroham</char></para>
-	<para style="lf">This was the list of the administrators of the tribes of Israel.</para>
+	  <char style="lik">Dan</char> <char style="liv1">Azarel son of Jeroham</char></para>
+	<para style="lf">This was the list of the administrators of the tribes of Israel.
+	  <verse eid="1CH 27:16-22" /></para>
 
 .. image:: images/usx-char-style_lik_liv.jpg
 	:width: 250px

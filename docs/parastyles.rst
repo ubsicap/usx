@@ -491,8 +491,8 @@ cl
 	<chapter number="1" style="c" />
 	<para style="s">True Happiness</para>
 	<para style="q1">
-	  <verse number="1" style="v" />Happy are those</para>
-	<para style="q2">who reject the advice of evil people,</para>
+	  <verse number="1" style="v" sid="PSA 1:1" />Happy are those</para>
+	<para style="q2" vid="PSA 1:1">who reject the advice of evil people,</para>
 
 .. image:: images/usx-para-style_cl.jpg
 	:width: 250px
@@ -507,8 +507,8 @@ Psalm 1 (GNT - *markup adapted* - specific chapter label)
 	<para style="cl">Psalm One</para>
 	<para style="s">True Happiness</para>
 	<para style="q1">
-	  <verse number="1" style="v" />Happy are those</para>
-	<para style="q2">who reject the advice of evil people,</para>
+	  <verse number="1" style="v" sid="PSA 1:1" />Happy are those</para>
+	<para style="q2" vid="PSA 1:1">who reject the advice of evil people,</para>
 
 .. image:: images/usx-para-style_cl-alt.jpg
 	:width: 250px
@@ -699,21 +699,25 @@ sd#
 
 .. code-block:: xml
 	:name: usx-para-style_sd_example
-	:emphasize-lines: 8
+	:emphasize-lines: 11
 
 	<para style="m">
-		<verse number="51" style="v" />“Have you understood all these things?” Jesus asked.></para>
-	<para style="p">“Yes,” they replied.
+	  <verse number="51" style="v" sid="MAT 13:51" />“Have you understood all these things?” 
+	  Jesus asked.
+	</para>
+	<para style="p" vid="MAT 13:51">“Yes,” they replied.<verse eid="MAT 13:51" /></para>
 	<para style="p">
-		<verse number="52" style="v" />He said to them, “Therefore every teacher of the law who has 
-		been instructed about the kingdom of heaven is like the owner of a house who brings out of 
-		his storeroom new treasures as well as old.”</para>
+	  <verse number="52" style="v" sid="MAT 13:52" />He said to them, “Therefore every teacher of 
+	  the law who has been instructed about the kingdom of heaven is like the owner of a house who 
+	  brings out of his storeroom new treasures as well as old.”<verse eid="MAT 13:52" />
+	</para>
 	<para style="sd2" />
 	<para style="p">
-		<verse number="53" style="v" />When Jesus had finished these parables, he moved on from there.
-		<verse number="54" style="v" />Coming to his hometown, he began teaching the people in their 
-		synagogue, and they were amazed. “Where did this man get this wisdom and these miraculous 
-		powers?” they asked.</para>
+	  <verse number="53" style="v" sid="MAT 13:53" />When Jesus had finished these parables, he moved 
+	  on from there.<verse eid="MAT 13:53" /> <verse number="54" style="v" sid="MAT 13:54" />Coming 
+	  to his hometown, he began teaching the people in their synagogue, and they were amazed. “Where 
+	  did this man get this wisdom and these miraculous powers?” they asked.<verse eid="MAT 13:54" />
+	</para>
 
 .. image:: images/usx-para-style_sd.jpg
 	:width: 350px

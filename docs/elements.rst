@@ -327,8 +327,8 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	<para style="s">The Sermon on the Mount</para>
 	<para style="p">
 	  <verse number="1" style="v" sid="MAT 5:1" />Jesus saw the crowds and went up a hill, where he 
-	  sat down. His disciples gathered around him, <verse number="2" style="v" sid="MAT 5:2" />and he 
-	  began to teach them:<verse eid="MAT 5:2" />
+	  sat down. His disciples gathered around him,<verse eid="MAT 5:1" /> 
+	  <verse number="2" style="v" sid="MAT 5:2" />and he began to teach them:<verse eid="MAT 5:2" />
 	</para>
 	<para style="s">True Happiness</para>
 	<para style="r">(Luke 6.20-23)</para>
@@ -469,18 +469,19 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 
 .. code-block:: xml
 	:name: usx-element_char_example
-	:emphasize-lines: 1,3,9,11
+	:emphasize-lines: 1,3,10,12
 	
 	<para style="ip">The name <char style="bk">Genesis</char> means “origin.”
  
 	Then the <char style="nd">Lord</char> God took some soil from the ground and formed a man
 
 	<para style="p">
-	  <verse number="1" style="v" />This is the Good News about Jesus Christ, the Son of God.
-	  It began as the prophet Isaiah had written:</para>
-	<para style="q1">
+	  <verse number="1" style="v" sid="MRK 1:1" />This is the Good News about Jesus Christ, the Son 
+	  of God.<verse eid="MRK 1:1"/> <verse number="2" style="v" sid="MRK 1:2" />It began as the 
+	  prophet Isaiah had written:</para>
+	<para style="q1" vid="MRK 1:1">
 	  <char style="qt">“God said, ‘I will send my messenger ahead of you</char></para>
-	<para style="q2">
+	<para style="q2" vid="MRK 1:1">
 	  <char style="qt">to open the way for you.’</char></para>
 	...
 
@@ -539,24 +540,28 @@ USX does not formally provide any specific standalone milestone types. This may 
 
 .. code-block:: xml
 
-    <para style="p"><verse number="22" style="v"/>Paul stood up in front of the city 
-    council and said, <ms style="qt1-s" who="Paul"/>“I see that in every way you Athenians 
-    are very religious.
-    <verse number="23" style="v"/>For as I walked through your city ...
-    ...
-    <verse number="27" style="v"/>He did this so that they would look for him, and perhaps 
-    find him as they felt around for him. Yet God is actually not far from any one of us;
-    <verse number="28" style="v"/>as someone has said,</para>
-    <para style="q1"><ms style="qt2-s" who="someone"/>‘In him we live and move and exist.’
-    <ms style="qt2-e"/>
-    <para style="b"/>
-    <para style="m">It is as some of your poets have said,</para>
-    <para style="q1"><ms style="qt2-s" who="poets"/>‘We too are his children.’
-    <ms style="qt2-e"/></para>
-    ...
-    <verse number="31" style="v"/>For he has fixed a day in which he will judge the whole 
-    world with justice by means of a man he has chosen. He has given proof of this to everyone 
-    by raising that man from death!”<ms style="qt1-e"/>
+	<para style="p">
+	  <verse number="22" style="v" sid="ACT 17:22" />Paul stood up in front of the city council 
+	  and said, <ms style="qt1-s" who="Paul"/>“I see that in every way you Athenians are very 
+	  religious.<verse eid="ACT 17:22" />
+	  <verse number="23" style="v" sid="ACT 17:23" />For as I walked through your city ...
+	  ...
+	  <verse number="27" style="v" sid="ACT 17:27" />He did this so that they would look for him, 
+	  and perhaps find him as they felt around for him. Yet God is actually not far from any one of us;
+	  <verse eid="ACT 17:27" /> <verse number="28" style="v"/>as someone has said,</para>
+	<para style="q1" vid="ACT 17:28" /><ms style="qt2-s" who="someone" />‘In him we live and move 
+	  and exist.’<ms style="qt2-e" />
+	<para style="b" />
+	<para style="m" vid="ACT 17:28" />It is as some of your poets have said,</para>
+	<para style="q1" vid="ACT 17:28"><ms style="qt2-s" who="poets"/>‘We too are his children.’
+	  <ms style="qt2-e"/><verse eid="ACT 17:28" />
+	</para>
+	...
+	  <verse number="31" style="v" sid="ACT 17:31" />For he has fixed a day in which he will judge 
+	  the whole world with justice by means of a man he has chosen. He has given proof of this to 
+	  everyone by raising that man from death!”<ms style="qt1-e"/><verse eid="ACT 17:31" />
+	</para>
+
 
 -----
 

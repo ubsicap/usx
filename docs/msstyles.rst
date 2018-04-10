@@ -47,19 +47,25 @@ qt#
 
 .. code-block:: xml
 	:name: usx-msstyle_qt_example
+	:emphasize-lines: 3-4,6-7,12-13
 	
-	<para style="p"><verse number="11" style="v">Jesus stood before the Roman governor, 
-		who questioned him. <ms style="qt1-s" sid="qt1_MAT_27:11_a" who="Pilate"/>“Are you the 
-		king of the Jews?”<ms style="qt1-e" eid="qt1_MAT_27:11_a"/> he asked.</para>
-	<para style="p"><ms style="qt1-s" sid="qt1_MAT_27:11_b" who="Jesus"/>“So you say,”
-		<ms style="qt1-e" eid="qt1_MAT_27:11_b"/> answered Jesus.
-		<verse number="12" style="v"/>But he said nothing in response to the accusations of 
-		the chief priests and elders.</para>
-	<para style="p"><verse number="13" style="v"/>So Pilate said to him,
-		<ms style="qt1-s" sid="qt1_MAT_27:13_a" who="Pilate"/>“Don't you hear all these things 
-		they accuse you of?”<ms style="qt1-e" eid="qt1_MAT_27:13_a"/></para>
-	<para style="p"><verse number="14" style="v"/>But Jesus refused to answer a single word, 
-		with the result that the Governor was greatly surprised.</para>
+	<para style="p">
+	  <verse number="11" style="v" sid="MAT 27:11" />Jesus stood before the Roman governor, who 
+	  questioned him. <ms style="qt1-s" sid="qt1_MAT_27:11_a" who="Pilate" />“Are you the king of 
+	  the Jews?”<ms style="qt1-e" eid="qt1_MAT_27:11_a" /> he asked.
+	</para>
+	<para style="p" vid="MAT 27:11"><ms style="qt1-s" sid="qt1_MAT_27:11_b" who="Jesus" />“So you say,”
+	  <ms style="qt1-e" eid="qt1_MAT_27:11_b" /> answered Jesus.<verse eid="MAT 27:11" />
+	  <verse number="12" style="v" sid="MAT 27:12" />But he said nothing in response to the accusations 
+	  of the chief priests and elders.<verse eid="MAT 27:12" />
+	</para>
+	<para style="p"><verse number="13" style="v" sid="MAT 27:13" />So Pilate said to him,
+	  <ms style="qt1-s" sid="qt1_MAT_27:13_a" who="Pilate" />“Don't you hear all these things 
+	  they accuse you of?”<ms style="qt1-e" eid="qt1_MAT_27:13_a" /><verse eid="MAT 27:13" />
+	</para>
+	<para style="p"><verse number="14" style="v" sid="MAT 27:14" />But Jesus refused to answer a 
+	  single word, with the result that the Governor was greatly surprised.<verse eid="MAT 27:14" />
+	</para>
 
 -----
 
@@ -80,23 +86,24 @@ ts
 
 .. code-block:: xml
 	:name: usx-msstyle_ts_example
-	:emphasize-lines: 1,9,17
+	:emphasize-lines: 1,9,18
 
 	<ms style="ts" />
 	<para style="p">
-		<verse number="5" style="v" />Now I wish to remind you, although you know everything, 
-		that the Lord once saved a people out of the land of Egypt, but that afterward he 
-		destroyed those who did not believe.
-		<verse number="6" style="v" /> And angels who did not keep to their own principality, 
-		but left their proper dwelling place—God has kept them in everlasting chains in 
-		darkness for the judgment of the great day.
-	<ms style="ts" />
-		<verse number="7" style="v" />It is just like Sodom and Gomorrah and the cities 
-		around them, which in a similar way gave themselves over to fornication and pursued 
-		unnatural desires. They were given as examples of those who suffer the punishment of 
-		eternal fire.
-		<verse number="8" style="v" />Yet in the same way these also pollute their bodies in 
-		their dreams, and they reject authority, and they say evil things about the glorious ones.
+	  <verse number="5" style="v" sid="JUD 1:5" />Now I wish to remind you, although you know 
+	  everything, that the Lord once saved a people out of the land of Egypt, but that afterward 
+	  he destroyed those who did not believe.<verse eid="JUD 1:5" />
+	  <verse number="6" style="v" sid="JUD 1:6" /> And angels who did not keep to their own 
+	  principality, but left their proper dwelling place—God has kept them in everlasting chains in 
+	  darkness for the judgment of the great day.<verse eid="JUD 1:6" />
+	  <ms style="ts" />
+	  <verse number="7" style="v" sid="JUD 1:7" />It is just like Sodom and Gomorrah and the cities 
+	  around them, which in a similar way gave themselves over to fornication and pursued 
+	  unnatural desires. They were given as examples of those who suffer the punishment of 
+	  eternal fire.<verse eid="JUD 1:7" />
+	  <verse number="8" style="v" sid="GEN 1:8" />Yet in the same way these also pollute their bodies 
+	  in their dreams, and they reject authority, and they say evil things about the glorious ones.
+	  <verse eid="JUD 1:8" />
 	</para>
 	<ms style="ts" />
 
@@ -104,23 +111,24 @@ Jude 5-8, ULB - using milestone pairs
 
 .. code-block:: xml
 	:name: usx-msstyle_ts_example-alt
-	:emphasize-lines: 1,9,10,18
+	:emphasize-lines: 1,9,10,19
 
 	<ms style="ts-s" sid="ts_JUD_5-6" />
 	<para style="p">
-		<verse number="5" style="v" />Now I wish to remind you, although you know everything, 
-		that the Lord once saved a people out of the land of Egypt, but that afterward he 
-		destroyed those who did not believe.
-		<verse number="6" style="v" /> And angels who did not keep to their own principality, 
-		but left their proper dwelling place—God has kept them in everlasting chains in 
-		darkness for the judgment of the great day.
-	<ms style="ts-e" eid="ts_JUD_5-6" />
-	<ms style="ts-s" sid="ts_JUD_7-8" />
-		<verse number="7" style="v" />It is just like Sodom and Gomorrah and the cities 
-		around them, which in a similar way gave themselves over to fornication and pursued 
-		unnatural desires. They were given as examples of those who suffer the punishment of 
-		eternal fire.
-		<verse number="8" style="v" />Yet in the same way these also pollute their bodies in 
-		their dreams, and they reject authority, and they say evil things about the glorious ones.
+	  <verse number="5" style="v" sid="JUD 1:5" />Now I wish to remind you, although you know 
+	  everything, that the Lord once saved a people out of the land of Egypt, but that afterward 
+	  he destroyed those who did not believe.<verse eid="JUD 1:5" />
+	  <verse number="6" style="v" sid="JUD 1:6" /> And angels who did not keep to their own 
+	  principality, but left their proper dwelling place—God has kept them in everlasting chains 
+	  in darkness for the judgment of the great day.<verse eid="JUD 1:6" />
+	  <ms style="ts-e" eid="ts_JUD_5-6" />
+	  <ms style="ts-s" sid="ts_JUD_7-8" />
+	  <verse number="7" style="v" sid="JUD 1:7" />It is just like Sodom and Gomorrah and the 
+	  cities around them, which in a similar way gave themselves over to fornication and pursued 
+	  unnatural desires. They were given as examples of those who suffer the punishment of 
+	  eternal fire.<verse eid="JUD 1:7" />
+	  <verse number="8" style="v" sid="JUD 1:8" />Yet in the same way these also pollute their bodies 
+	  in their dreams, and they reject authority, and they say evil things about the glorious ones.
+	  <verse eid="JUD 1:8" />
 	</para>
 	<ms style="ts-e" eid="ts_JUD_7-8" />
