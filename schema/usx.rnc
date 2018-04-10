@@ -344,6 +344,7 @@ PeripheralContent = (Chapter | Para | List | Table | Footnote | CrossReference |
 Para =
     element para {
         attribute style { Para.para.style.enum },
+        attribute vid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } }?,
         (Reference | Footnote | CrossReference | Char | Milestone | Figure | Verse | Break | text)+
     }
 Para.para.style.enum = (
@@ -462,6 +463,7 @@ TableContent =
         attribute style { cell.style.enum },
         attribute align { cell.align.enum },
         attribute colspan { xsd:integer }?,
+        attribute vid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } }?,
         (Footnote | CrossReference | Char | Milestone | Figure | Verse | Break | text)*
     }
 cell.style.enum = (
@@ -662,16 +664,25 @@ BookChapterLabel =
         text
     }
 
-Verse =
+Verse = ( VerseStart | VerseEnd )
+
+VerseStart =
     element verse {
-        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,][0-9]+\w?)*" } }&
-        attribute style { "v" }&
-        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,:][0-9]+\w?)*" } }?&
-        attribute pubnumber { xsd:string { minLength = "1" } }?&
+        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,][0-9]+\w?)*" } },
+        attribute style { "v" },
+        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,:][0-9]+\w?)*" } }?,
+        attribute pubnumber { xsd:string { minLength = "1" } }?,
+        attribute sid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } },
         empty
     }
-    # E.g. <verse number="1" style="v" altnumber="2" pubnumber="B" />
-    
+    # E.g. <verse number="1" style="v" altnumber="2" pubnumber="B" sid="GEN 1:22" />
+
+VerseEnd =
+    element verse {
+        attribute eid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } },
+        empty
+    }
+
 Footnote =
     element note {
         attribute style { "f" | "fe" | "ef" },
