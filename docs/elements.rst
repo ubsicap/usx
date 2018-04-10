@@ -120,9 +120,9 @@ Code examples for chapter and verse are provided after the definition for elemen
 :@style: Content type. |req| |br|
    ``v``
 :@number: Current verse number (sequential; according to versification definition for the scripture text). |req| |br|
-	xsd:string of pattern ``[0-9]+\w?(‏?[\-,][0-9]+\w?)*``
+	xsd:string of pattern ``[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*``
 :@altnumber: Alternate verse number. (Used to supply the verse number for an alternate versification scheme. This is required when the numbering for an alternate versification tradition need to be maintained within the same translation text.) |br|
-	xsd:string of pattern ``[0-9]+\w?(‏?[\-,][0-9]+\w?)*``
+	xsd:string of pattern ``[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |br|
 	xsd:string
 :@sid: |badge_3.0| Verse start identifier. |req| *(required at verse start milestone)* |br|
