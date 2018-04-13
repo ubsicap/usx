@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  usx.rng
-  An XML syntax Relax NG Schema for USX 3.0
+  usx.rnc
+  A compact syntax Relax NG Schema for USX 3.0
 -->
 <grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
@@ -1329,7 +1329,7 @@
     <optional>
       <attribute name="link-href">
         <data type="string">
-          <param name="pattern">(.*///?(.*/?)+)|(prj:[A-Za-z\-0-9]{3,8} [A-Z]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)</param>
+          <param name="pattern">(.*///?(.*/?)+)|((prj:[A-Za-z\-0-9]{3,8} )?[A-Z1-4]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)</param>
         </data>
       </attribute>
     </optional>
@@ -1552,6 +1552,9 @@
         <ref name="FootnoteChar.char.style.enum"/>
       </attribute>
       <optional>
+        <ref name="char.link"/>
+      </optional>
+      <optional>
         <ref name="char.closed"/>
       </optional>
       <oneOrMore>
@@ -1633,6 +1636,9 @@
       <attribute name="style">
         <ref name="CrossReferenceChar.char.style.enum"/>
       </attribute>
+      <optional>
+        <ref name="char.link"/>
+      </optional>
       <optional>
         <ref name="char.closed"/>
       </optional>

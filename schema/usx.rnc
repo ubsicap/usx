@@ -612,7 +612,7 @@ CharWithAttrib.char.style.rb =
 
 char.link =
     attribute link-href { xsd:string 
-        { pattern = "(.*///?(.*/?)+)|(prj:[A-Za-z\-0-9]{3,8} [A-Z]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)" } }?, # The resource being linked to as a URI
+        { pattern = "(.*///?(.*/?)+)|((prj:[A-Za-z\-0-9]{3,8} )?[A-Z1-4]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)" } }?, # The resource being linked to as a URI
     attribute link-title { xsd:string }?, # Plain text describing the remote resource such as might be shown in a tooltip
     attribute link-id { xsd:string { pattern = "[\w_\-\.:]+" } }? # Unique identifier for this location in the text
 
@@ -693,6 +693,7 @@ Footnote =
 FootnoteChar =
     element char {
         attribute style { FootnoteChar.char.style.enum },
+        char.link?,
         char.closed?,
         (Char | FootnoteChar | FootnoteVerse | Reference | text)+
     }
@@ -732,6 +733,7 @@ CrossReference =
 CrossReferenceChar =
     element char {
         attribute style { CrossReferenceChar.char.style.enum },
+        char.link?,
         char.closed?,
         (Char | CrossReferenceChar | Reference | text)+
     }

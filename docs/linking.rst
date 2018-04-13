@@ -35,7 +35,7 @@ Attributes |ico_Tag|
 .. _usx-charstyle-attr_link-href:
 .. index:: attribute; link-href
 
-:link-href: Identifies the resource being linked to as a URI. |br| |br|
+:@link-href: Identifies the resource being linked to as a URI. |br| |br|
 	Custom USFM provided URI prefixes are: |br|
 	``prj:`` + standard scripture reference. |br|
 	Example: ``prj:RSV52 MAT 3:1-4``
@@ -47,12 +47,12 @@ Attributes |ico_Tag|
 .. _usx-charstyle-attr_link-title:
 .. index:: attribute; link-title
 
-:link-title: Plain text describing the remote resource such as might be shown in a tooltip.
+:@link-title: Plain text describing the remote resource such as might be shown in a tooltip.
 
 .. _usx-charstyle-attr_link-id:
 .. index:: attribute; link-id
 
-:link-id: A unique identifier for this content location (an anchor).
+:@link-id: A unique identifier for this content location (an anchor).
 
 The set of URI prefixes used within a ``link-href`` attribute can be extended beyond the predefined set for USX 3.0. Any user defined URI prefixes must begin with the prefix ``x-``.
 
