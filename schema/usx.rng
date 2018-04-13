@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  usx.rnc
-  A compact syntax Relax NG Schema for USX 2.6
-  DBL bundle version = 1.5
+  usx.rng
+  An XML syntax Relax NG Schema for USX 3.0
 -->
 <grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
     <ref name="USX"/>
   </start>
   <define name="USX">
+    <choice>
+      <ref name="Scripture"/>
+      <ref name="Peripheral"/>
+    </choice>
+  </define>
+  <define name="Scripture">
     <element name="usx">
       <attribute name="version">
         <data type="string">
@@ -36,20 +41,82 @@
         <ref name="BookChapterLabel"/>
       </optional>
       <ref name="Chapter"/>
-      <zeroOrMore>
+      <oneOrMore>
         <!--
           Chapter is used to separate intro from scripture text.
           All books will have chapter including the single chapter books: OBA, PHM, 2JN, 3JN, JUD
         -->
+        <ref name="ChapterContent"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="Peripheral">
+    <element name="usx">
+      <attribute name="version">
+        <data type="string">
+          <param name="minLength">3</param>
+          <param name="pattern">\d+\.\d+(\.\d+)?</param>
+        </data>
+      </attribute>
+      <optional>
+        <attribute name="xsi:noNamespaceSchemaLocation"/>
+      </optional>
+      <choice>
+        <ref name="PeripheralBook"/>
+        <ref name="PeripheralBookSection"/>
+      </choice>
+    </element>
+  </define>
+  <define name="PeripheralBook">
+    <ref name="PeripheralBookIdentification"/>
+    <zeroOrMore>
+      <ref name="BookHeaders"/>
+    </zeroOrMore>
+    <oneOrMore>
+      <ref name="BookTitles"/>
+    </oneOrMore>
+    <zeroOrMore>
+      <ref name="BookIntroduction"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="BookIntroductionEndTitles"/>
+    </zeroOrMore>
+    <oneOrMore>
+      <ref name="PeripheralContent"/>
+    </oneOrMore>
+  </define>
+  <define name="PeripheralBookSection">
+    <ref name="PeripheralBookSectionIdentification"/>
+    <element name="periph">
+      <attribute name="id">
         <choice>
-          <ref name="Chapter"/>
-          <ref name="Para"/>
-          <ref name="Table"/>
-          <ref name="Footnote"/>
-          <ref name="CrossReference"/>
-          <ref name="Sidebar"/>
+          <ref name="Peripheral.FRT.periph.id.enum"/>
+          <ref name="Peripheral.INT.periph.id.enum"/>
+          <ref name="Peripheral.BAK.periph.id.enum"/>
+          <ref name="Peripheral.OTH.periph.id.enum"/>
+          <data type="string">
+            <param name="pattern">x\-[\w_\-\.:]+</param>
+          </data>
         </choice>
+      </attribute>
+      <optional>
+        <attribute name="alt"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="BookHeaders"/>
       </zeroOrMore>
+      <oneOrMore>
+        <ref name="BookTitles"/>
+      </oneOrMore>
+      <zeroOrMore>
+        <ref name="BookIntroduction"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="BookIntroductionEndTitles"/>
+      </zeroOrMore>
+      <oneOrMore>
+        <ref name="PeripheralContent"/>
+      </oneOrMore>
     </element>
   </define>
   <define name="BookIdentification">
@@ -272,10 +339,57 @@
       <value>4BA</value>
       <!-- 4 Baruch -->
       <value>LAO</value>
-      <!--
-        Laodiceans
-        Non scripture text Id's
-      -->
+    </choice>
+    <!-- Laodiceans -->
+  </define>
+  <define name="PeripheralBookIdentification">
+    <element name="book">
+      <group>
+        <attribute name="code">
+          <ref name="PeripheralBookIdentification.book.code.enum"/>
+        </attribute>
+        <!-- e.g. code="CNC" -->
+        <attribute name="style">
+          <value>id</value>
+        </attribute>
+        <optional>
+          <text/>
+        </optional>
+      </group>
+      <!-- Brief description of the project (optional) -->
+    </element>
+  </define>
+  <define name="PeripheralBookIdentification.book.code.enum">
+    <choice>
+      <value>CNC</value>
+      <!-- Concordance -->
+      <value>GLO</value>
+      <!-- Glossary -->
+      <value>TDX</value>
+      <!-- Topical Index -->
+      <value>NDX</value>
+    </choice>
+    <!-- Names Index -->
+  </define>
+  <define name="PeripheralBookSectionIdentification">
+    <element name="book">
+      <group>
+        <attribute name="code">
+          <ref name="PeripheralBookSectionIdentification.book.code.enum"/>
+        </attribute>
+        <!-- e.g. code="FRT" -->
+        <attribute name="style">
+          <value>id</value>
+        </attribute>
+        <optional>
+          <text/>
+        </optional>
+      </group>
+      <!-- Brief description of the project (optional) -->
+    </element>
+  </define>
+  <define name="PeripheralBookSectionIdentification.book.code.enum">
+    <choice>
       <value>XXA</value>
       <!-- Extra A, e.g. a hymnal -->
       <value>XXB</value>
@@ -297,16 +411,51 @@
       <value>OTH</value>
       <!-- Other Matter -->
       <value>INT</value>
-      <!-- Introduction -->
-      <value>CNC</value>
-      <!-- Concordance -->
-      <value>GLO</value>
-      <!-- Glossary -->
-      <value>TDX</value>
-      <!-- Topical Index -->
-      <value>NDX</value>
     </choice>
-    <!-- Names Index -->
+    <!-- Introduction -->
+  </define>
+  <define name="Peripheral.FRT.periph.id.enum">
+    <choice>
+      <value>title</value>
+      <value>halftitle</value>
+      <value>promo</value>
+      <value>imprimatur</value>
+      <value>pubdata</value>
+      <value>foreword</value>
+      <value>preface</value>
+      <value>contents</value>
+      <value>alphacontents</value>
+      <value>abbreviations</value>
+    </choice>
+  </define>
+  <define name="Peripheral.INT.periph.id.enum">
+    <choice>
+      <value>intbible</value>
+      <value>intot</value>
+      <value>intpent</value>
+      <value>inthistory</value>
+      <value>intpoetry</value>
+      <value>intprophesy</value>
+      <value>intdc</value>
+      <value>intnt</value>
+      <value>intgospels</value>
+      <value>intepistles</value>
+      <value>intletters</value>
+    </choice>
+  </define>
+  <define name="Peripheral.BAK.periph.id.enum">
+    <choice>
+      <value>chron</value>
+      <value>measures</value>
+      <value>maps</value>
+      <value>lxxquotes</value>
+    </choice>
+  </define>
+  <define name="Peripheral.OTH.periph.id.enum">
+    <choice>
+      <value>cover</value>
+      <value>spine</value>
+    </choice>
   </define>
   <define name="BookHeaders">
     <element name="para">
@@ -325,17 +474,23 @@
       <value>h</value>
       <!-- Running header text for a book -->
       <value>h1</value>
-      <!-- Running header text -->
+      <!-- Running header text (DEPRECATED) -->
       <value>h2</value>
-      <!-- Running header text, left side of page -->
+      <!-- Running header text, left side of page (DEPRECATED) -->
       <value>h3</value>
-      <!-- Running header text, right side of page -->
+      <!-- Running header text, right side of page (DEPRECATED) -->
       <value>toc1</value>
       <!-- Long table of contents text -->
       <value>toc2</value>
       <!-- Short table of contents text -->
       <value>toc3</value>
       <!-- Book Abbreviation -->
+      <value>toca1</value>
+      <!-- Alternative language long table of contents text -->
+      <value>toca2</value>
+      <!-- Alternative language short table of contents text -->
+      <value>toca3</value>
+      <!-- Alternative language book Abbreviation -->
       <value>rem</value>
     </choice>
     <!-- Remark -->
@@ -390,6 +545,7 @@
             <ref name="CrossReference"/>
             <ref name="Char"/>
             <ref name="IntroChar"/>
+            <ref name="Milestone"/>
             <ref name="Figure"/>
             <text/>
           </choice>
@@ -482,6 +638,7 @@
           <ref name="Footnote"/>
           <ref name="CrossReference"/>
           <ref name="Char"/>
+          <ref name="Milestone"/>
           <ref name="Break"/>
           <text/>
         </choice>
@@ -508,17 +665,47 @@
     </choice>
     <!-- Introduction major title, level 2 -->
   </define>
+  <define name="ChapterContent">
+    <choice>
+      <ref name="Chapter"/>
+      <ref name="Para"/>
+      <ref name="List"/>
+      <ref name="Table"/>
+      <ref name="Footnote"/>
+      <ref name="CrossReference"/>
+      <ref name="Sidebar"/>
+    </choice>
+  </define>
+  <define name="PeripheralContent">
+    <choice>
+      <ref name="Chapter"/>
+      <ref name="Para"/>
+      <ref name="List"/>
+      <ref name="Table"/>
+      <ref name="Footnote"/>
+      <ref name="CrossReference"/>
+      <ref name="Sidebar"/>
+    </choice>
+  </define>
   <define name="Para">
     <element name="para">
       <attribute name="style">
         <ref name="Para.para.style.enum"/>
       </attribute>
+      <optional>
+        <attribute name="vid">
+          <data type="string">
+            <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-,:]*</param>
+          </data>
+        </attribute>
+      </optional>
       <oneOrMore>
         <choice>
           <ref name="Reference"/>
           <ref name="Footnote"/>
           <ref name="CrossReference"/>
           <ref name="Char"/>
+          <ref name="Milestone"/>
           <ref name="Figure"/>
           <ref name="Verse"/>
           <ref name="Break"/>
@@ -531,8 +718,6 @@
     <choice>
       <value>restore</value>
       <!-- Comment about when text was restored -->
-      <value>b</value>
-      <!-- Poetry text stanza break (e.g. stanza break) -->
       <value>cls</value>
       <!-- Closure of an Epistle -->
       <value>iex</value>
@@ -552,7 +737,7 @@
       <value>pb</value>
       <!-- Page Break used for new reader portions and children's bibles where content is controlled by the page -->
       <value>pc</value>
-      <!-- Paragraph text, centered (for Inscription) -->
+      <!-- Inscription (paragraph text centered) -->
       <value>pi</value>
       <!-- Paragraph text, level 1 indent (if single level), with first line indent; often used for discourse -->
       <value>pi1</value>
@@ -561,6 +746,10 @@
       <!-- Paragraph text, level 2 indent, with first line indent; often used for discourse -->
       <value>pi3</value>
       <!-- Paragraph text, level 3 indent, with first line indent; often used for discourse -->
+      <value>po</value>
+      <!-- Letter opening -->
+      <value>pr</value>
+      <!-- Text refrain (paragraph right-aligned) -->
       <value>pmo</value>
       <!-- Embedded text opening -->
       <value>pm</value>
@@ -568,7 +757,7 @@
       <value>pmc</value>
       <!-- Embedded text closing -->
       <value>pmr</value>
-      <!-- Embedded text refrain (e.g. Then all the people shall say, "Amen!") -->
+      <!-- Embedded text refrain -->
       <value>q</value>
       <!-- Poetry text, level 1 indent (if single level) -->
       <value>q1</value>
@@ -583,6 +772,8 @@
       <!-- Poetry text, Acrostic marker/heading -->
       <value>qc</value>
       <!-- Poetry text, centered -->
+      <value>qr</value>
+      <!-- Poetry text, Right Aligned -->
       <value>qm</value>
       <!-- Poetry text, embedded, level 1 indent (if single level) -->
       <value>qm1</value>
@@ -591,8 +782,10 @@
       <!-- Poetry text, embedded, level 2 indent -->
       <value>qm3</value>
       <!-- Poetry text, embedded, level 3 indent -->
-      <value>qr</value>
-      <!-- Poetry text, Right Aligned -->
+      <value>qd</value>
+      <!-- A Hebrew musical performance annotation, similar in content to Hebrew descriptive title. -->
+      <value>b</value>
+      <!-- Poetry text stanza break (e.g. stanza break) -->
       <value>d</value>
       <!-- A Hebrew text heading, to provide description (e.g. Psalms) -->
       <value>ms</value>
@@ -617,10 +810,24 @@
       <!-- A section heading, level 3 (e.g. Genesis "The First Day") -->
       <value>s4</value>
       <!-- A section heading, level 4 -->
-      <value>sp</value>
-      <!-- A heading, to identify the speaker (e.g. Job) -->
       <value>sr</value>
       <!-- A section division references range heading -->
+      <value>sp</value>
+      <!-- A heading, to identify the speaker (e.g. Job) -->
+      <value>sd</value>
+      <!-- Vertical space used to divide the text into sections, level 1 (if single level) -->
+      <value>sd1</value>
+      <!-- Semantic division location (vertical space used to divide the text into sections), level 1 (if multiple levels) -->
+      <value>sd2</value>
+      <!-- Semantic division location (vertical space used to divide the text into sections), level 2 -->
+      <value>sd3</value>
+      <!-- Semantic division location (vertical space used to divide the text into sections), level 3 -->
+      <value>sd4</value>
+      <!-- Semantic division location (vertical space used to divide the text into sections), level 4 -->
+      <value>ts</value>
+      <!-- Translator�s chunk (to identify chunks of text suitable for translating at one time) -->
+      <value>lh</value>
+      <!-- List header (introductory remark) -->
       <value>li</value>
       <!-- A list entry, level 1 (if single level) -->
       <value>li1</value>
@@ -631,6 +838,18 @@
       <!-- A list entry, level 3 -->
       <value>li4</value>
       <!-- A list entry, level 4 -->
+      <value>lf</value>
+      <!-- List footer (introductory remark) -->
+      <value>lim</value>
+      <!-- An embedded list entry, level 1 (if single level) -->
+      <value>lim1</value>
+      <!-- An embedded list entry, level 1 (if multiple levels) -->
+      <value>lim2</value>
+      <!-- An embedded list entry, level 2 -->
+      <value>lim3</value>
+      <!-- An embedded list entry, level 3 -->
+      <value>lim4</value>
+      <!-- An embedded list entry, level 4 -->
       <value>cp</value>
       <!-- Published chapter number -->
       <value>cl</value>
@@ -643,8 +862,6 @@
       <!-- The main title of the book repeat /ed at the end of the book, level 1 (if multiple levels) -->
       <value>mte2</value>
       <!-- A secondary title occurring before or after the 'ending' main title -->
-      <value>periph</value>
-      <!-- Periheral content division marker which should be followed by an additional division argument/title. -->
       <value>p</value>
       <!-- Front or back matter text paragraph, level 1 -->
       <value>p1</value>
@@ -659,8 +876,64 @@
     </choice>
     <!-- Remark -->
   </define>
+  <define name="List">
+    <element name="para">
+      <attribute name="style">
+        <ref name="List.para.style.enum"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <ref name="Reference"/>
+          <ref name="Footnote"/>
+          <ref name="CrossReference"/>
+          <ref name="Char"/>
+          <ref name="ListChar"/>
+          <ref name="Milestone"/>
+          <ref name="Figure"/>
+          <ref name="Verse"/>
+          <ref name="Break"/>
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="List.para.style.enum">
+    <choice>
+      <value>lh</value>
+      <!-- List header (introductory remark) -->
+      <value>li</value>
+      <!-- A list entry, level 1 (if single level) -->
+      <value>li1</value>
+      <!-- A list entry, level 1 (if multiple levels) -->
+      <value>li2</value>
+      <!-- A list entry, level 2 -->
+      <value>li3</value>
+      <!-- A list entry, level 3 -->
+      <value>li4</value>
+      <!-- A list entry, level 4 -->
+      <value>lf</value>
+      <!-- List footer (introductory remark) -->
+      <value>lim</value>
+      <!-- An embedded list entry, level 1 (if single level) -->
+      <value>lim1</value>
+      <!-- An embedded list entry, level 1 (if multiple levels) -->
+      <value>lim2</value>
+      <!-- An embedded list entry, level 2 -->
+      <value>lim3</value>
+      <!-- An embedded list entry, level 3 -->
+      <value>lim4</value>
+    </choice>
+    <!-- An embedded list entry, level 4 -->
+  </define>
   <define name="Table">
     <element name="table">
+      <optional>
+        <attribute name="vid">
+          <data type="string">
+            <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-,:]*</param>
+          </data>
+        </attribute>
+      </optional>
       <oneOrMore>
         <element name="row">
           <attribute name="style">
@@ -685,11 +958,17 @@
       <attribute name="align">
         <ref name="cell.align.enum"/>
       </attribute>
+      <optional>
+        <attribute name="colspan">
+          <data type="integer"/>
+        </attribute>
+      </optional>
       <zeroOrMore>
         <choice>
           <ref name="Footnote"/>
           <ref name="CrossReference"/>
           <ref name="Char"/>
+          <ref name="Milestone"/>
           <ref name="Figure"/>
           <ref name="Verse"/>
           <ref name="Break"/>
@@ -781,6 +1060,7 @@
             <ref name="Reference"/>
             <ref name="Char"/>
             <ref name="IntroChar"/>
+            <ref name="Milestone"/>
             <ref name="Footnote"/>
             <ref name="Break"/>
             <text/>
@@ -806,6 +1086,9 @@
             <ref name="Char.char.style.enum"/>
           </attribute>
           <optional>
+            <ref name="char.link"/>
+          </optional>
+          <optional>
             <ref name="char.closed"/>
           </optional>
           <text/>
@@ -813,6 +1096,7 @@
             <choice>
               <ref name="Reference"/>
               <ref name="Char"/>
+              <ref name="Milestone"/>
               <ref name="Footnote"/>
               <ref name="Break"/>
               <text/>
@@ -839,7 +1123,7 @@
       <value>add</value>
       <!-- For a translational addition to the text -->
       <value>addpn</value>
-      <!-- For chinese words to be dot underline & underline -->
+      <!-- For chinese words to be dot underline & underline (DEPRECATED - used nested char@style pn) -->
       <value>bk</value>
       <!-- For the quoted name of a book -->
       <value>dc</value>
@@ -858,8 +1142,10 @@
       <!-- For the text portion of an ordinal number -->
       <value>pn</value>
       <!-- For a proper name -->
+      <value>png</value>
+      <!-- For a geographic proper name -->
       <value>pro</value>
-      <!-- For indicating pronunciation in CJK texts -->
+      <!-- For indicating pronunciation in CJK texts (DEPRECATED - used char@style rb) -->
       <value>qt</value>
       <!-- For Old Testament quoted text appearing in the New Testament -->
       <value>rq</value>
@@ -874,10 +1160,14 @@
       <!-- A Greek Wordlist text item -->
       <value>wh</value>
       <!-- A Hebrew wordlist text item -->
+      <value>wa</value>
+      <!-- An Aramaic wordlist text item -->
       <value>wj</value>
       <!-- For marking the words of Jesus -->
       <value>xt</value>
       <!-- A target reference(s) -->
+      <value>jmp</value>
+      <!-- For associating linking attributes to a span of text -->
       <value>no</value>
       <!-- A character style, use normal text -->
       <value>it</value>
@@ -889,41 +1179,29 @@
       <value>em</value>
       <!-- A character style, use emphasized text style -->
       <value>sc</value>
+      <!-- A character style, for small capitalization text -->
+      <value>sup</value>
     </choice>
-    <!-- A character style, for small capitalization text -->
+    <!-- A character style, for superscript text. Typically for use in critical edition footnotes. -->
   </define>
-  <define name="char.closed">
-    <attribute name="closed">
-      <data type="boolean"/>
-    </attribute>
-  </define>
-  <!-- Present to allow roundtripping to USFM, not needed for publishing -->
-  <define name="CharWithAttrib.enum">
-    <ref name="CharWithAttrib.char.style.w"/>
-  </define>
-  <define name="CharWithAttrib.char.style.w">
+  <define name="ListChar">
     <element name="char">
       <group>
         <attribute name="style">
-          <value>w</value>
+          <ref name="ListChar.char.style.enum"/>
         </attribute>
         <optional>
-          <!-- A wordlist text item -->
-          <ref name="char.closed"/>
+          <ref name="char.link"/>
         </optional>
         <optional>
-          <attribute name="lemma">
-            <data type="string">
-              <param name="minLength">1</param>
-            </data>
-          </attribute>
+          <ref name="char.closed"/>
         </optional>
-        <!-- Lemma/citation form found in glossary -->
         <text/>
         <zeroOrMore>
           <choice>
             <ref name="Reference"/>
             <ref name="Char"/>
+            <ref name="Milestone"/>
             <ref name="Footnote"/>
             <ref name="Break"/>
             <text/>
@@ -933,6 +1211,230 @@
       <!-- Nested character <char> markup -->
     </element>
   </define>
+  <define name="ListChar.char.style.enum">
+    <choice>
+      <value>litl</value>
+      <!-- List entry total text -->
+      <value>lik</value>
+      <!-- Structured list entry key text -->
+      <value>liv</value>
+      <!-- Structured list entry value 1 content (if single value) -->
+      <value>liv1</value>
+      <!-- Structured list entrt value 1 content (if multiple values) -->
+      <value>liv2</value>
+      <!-- Structured list entry value 2 content -->
+      <value>liv3</value>
+      <!-- Structured list entry value 3 content -->
+      <value>liv4</value>
+      <!-- Structured list entry value 4 content -->
+      <value>liv5</value>
+    </choice>
+    <!-- Structured list entry value 5 content -->
+  </define>
+  <define name="CharWithAttrib.enum">
+    <choice>
+      <ref name="CharWithAttrib.char.style.w"/>
+      <ref name="CharWithAttrib.char.style.rb"/>
+    </choice>
+  </define>
+  <define name="CharWithAttrib.char.style.w">
+    <element name="char">
+      <group>
+        <attribute name="style">
+          <value>w</value>
+        </attribute>
+        <optional>
+          <!-- A wordlist text item -->
+          <ref name="char.link"/>
+        </optional>
+        <optional>
+          <ref name="char.closed"/>
+        </optional>
+        <optional>
+          <attribute name="lemma">
+            <data type="string">
+              <param name="minLength">1</param>
+            </data>
+          </attribute>
+        </optional>
+        <optional>
+          <!-- Lemma/citation form found in glossary -->
+          <attribute name="strong">
+            <data type="string">
+              <param name="pattern">[HG]\d{4,5}(:[a-z])?</param>
+            </data>
+          </attribute>
+        </optional>
+        <optional>
+          <!-- Strong�s ID in the form H##### (Hebrew) or G##### (Greek) -->
+          <attribute name="srcloc">
+            <data type="string">
+              <param name="pattern">[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+</param>
+            </data>
+          </attribute>
+        </optional>
+        <!-- Location of the word in the source text -->
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="Reference"/>
+            <ref name="Char"/>
+            <ref name="Milestone"/>
+            <ref name="Footnote"/>
+            <ref name="Break"/>
+            <text/>
+          </choice>
+        </zeroOrMore>
+      </group>
+      <!-- Nested character <char> markup -->
+    </element>
+  </define>
+  <define name="CharWithAttrib.char.style.rb">
+    <element name="char">
+      <group>
+        <attribute name="style">
+          <value>rb</value>
+        </attribute>
+        <optional>
+          <!-- Base text for ruby glosses -->
+          <ref name="char.link"/>
+        </optional>
+        <optional>
+          <ref name="char.closed"/>
+        </optional>
+        <optional>
+          <attribute name="gloss">
+            <data type="string">
+              <param name="minLength">1</param>
+            </data>
+          </attribute>
+        </optional>
+        <!-- Ruby glosses -->
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="Reference"/>
+            <ref name="Char"/>
+            <ref name="Milestone"/>
+            <ref name="Footnote"/>
+            <ref name="Break"/>
+            <text/>
+          </choice>
+        </zeroOrMore>
+      </group>
+      <!-- Nested character <char> markup -->
+    </element>
+  </define>
+  <define name="char.link">
+    <optional>
+      <attribute name="link-href">
+        <data type="string">
+          <param name="pattern">(.*///?(.*/?)+)|(prj:[A-Za-z\-0-9]{3,8} [A-Z]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)</param>
+        </data>
+      </attribute>
+    </optional>
+    <optional>
+      <!-- The resource being linked to as a URI -->
+      <attribute name="link-title">
+        <data type="string"/>
+      </attribute>
+    </optional>
+    <optional>
+      <!-- Plain text describing the remote resource such as might be shown in a tooltip -->
+      <attribute name="link-id">
+        <data type="string">
+          <param name="pattern">[\w_\-\.:]+</param>
+        </data>
+      </attribute>
+    </optional>
+  </define>
+  <!-- Unique identifier for this location in the text -->
+  <define name="char.closed">
+    <attribute name="closed">
+      <data type="boolean"/>
+    </attribute>
+  </define>
+  <!-- Present to allow roundtripping to USFM, not needed for publishing -->
+  <define name="Milestone">
+    <choice>
+      <element name="ms">
+        <attribute name="style">
+          <ref name="Milestone.ms.style.enum"/>
+        </attribute>
+        <optional>
+          <attribute name="sid">
+            <data type="string">
+              <param name="pattern">[\w_\-\.:]+</param>
+            </data>
+          </attribute>
+        </optional>
+        <optional>
+          <!-- optional milestone start id (digits, letters, underscore) -->
+          <attribute name="eid">
+            <data type="string">
+              <param name="pattern">[\w_\-\.:]+</param>
+            </data>
+          </attribute>
+        </optional>
+        <!-- milestone end id (digits, letters, underscore) - required with sid -->
+        <empty/>
+      </element>
+      <ref name="MilestoneWithAttrib.enum"/>
+    </choice>
+  </define>
+  <define name="Milestone.ms.style.enum">
+    <choice>
+      <data type="string">
+        <param name="pattern">ts?(\-[se])?</param>
+      </data>
+      <data type="string">
+        <param name="pattern">[Zz].+</param>
+      </data>
+    </choice>
+    <!--
+      Only supporting "qt#-s|e" in USX 3.0. All other styles would be user generated.
+      If user generated styles were created in USFM first, they would start with "z"
+    -->
+  </define>
+  <define name="MilestoneWithAttrib.enum">
+    <ref name="MilestoneWithAttrib.ms.style.qt"/>
+  </define>
+  <define name="MilestoneWithAttrib.ms.style.qt">
+    <element name="ms">
+      <attribute name="style">
+        <data type="string">
+          <param name="pattern">qt[1-5]?(\-[se])?</param>
+        </data>
+      </attribute>
+      <optional>
+        <!-- Quotation speaker -->
+        <attribute name="sid">
+          <data type="string">
+            <param name="pattern">[\w_\-\.:]+</param>
+          </data>
+        </attribute>
+      </optional>
+      <optional>
+        <!-- Milestone start id for locating start and end pairs -->
+        <attribute name="eid">
+          <data type="string">
+            <param name="pattern">[\w_\-\.:]+</param>
+          </data>
+        </attribute>
+      </optional>
+      <optional>
+        <!-- Milestone end id for locating start and end pairs -->
+        <attribute name="who">
+          <data type="string">
+            <param name="minLength">2</param>
+          </data>
+        </attribute>
+      </optional>
+      <!-- Name / identity of quote speaker -->
+      <empty/>
+    </element>
+  </define>
+  <!-- E.g. <ms style="qt1-s" sid="GEN.1.9.1" who="God"> -->
   <define name="Chapter">
     <element name="chapter">
       <interleave>
@@ -963,7 +1465,7 @@
     </element>
   </define>
   <!--
-    E.g <chapter number="1" style="c" altnumber="2" pubnumber="A" />
+    E.g. <chapter number="1" style="c" altnumber="2" pubnumber="A" />
     This schema will not support a chapter:verse string within altnumber
   -->
   <define name="BookChapterLabel">
@@ -976,37 +1478,56 @@
     </element>
   </define>
   <define name="Verse">
+    <choice>
+      <ref name="VerseStart"/>
+      <ref name="VerseEnd"/>
+    </choice>
+  </define>
+  <define name="VerseStart">
     <element name="verse">
-      <interleave>
-        <attribute name="number">
+      <attribute name="number">
+        <data type="string">
+          <param name="minLength">1</param>
+          <param name="pattern">[0-9]+\w?(‏?[\-,][0-9]+\w?)*</param>
+        </data>
+      </attribute>
+      <attribute name="style">
+        <value>v</value>
+      </attribute>
+      <optional>
+        <attribute name="altnumber">
           <data type="string">
             <param name="minLength">1</param>
-            <param name="pattern">[0-9]+\w?(‏?[\-,][0-9]+\w?)*</param>
+            <param name="pattern">[0-9]+\w?(‏?[\-,:][0-9]+\w?)*</param>
           </data>
         </attribute>
-        <attribute name="style">
-          <value>v</value>
+      </optional>
+      <optional>
+        <attribute name="pubnumber">
+          <data type="string">
+            <param name="minLength">1</param>
+          </data>
         </attribute>
-        <optional>
-          <attribute name="altnumber">
-            <data type="string">
-              <param name="minLength">1</param>
-              <param name="pattern">[0-9]+\w?(‏?[\-,:][0-9]+\w?)*</param>
-            </data>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="pubnumber">
-            <data type="string">
-              <param name="minLength">1</param>
-            </data>
-          </attribute>
-        </optional>
-        <empty/>
-      </interleave>
+      </optional>
+      <attribute name="sid">
+        <data type="string">
+          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-,:]*</param>
+        </data>
+      </attribute>
+      <empty/>
     </element>
   </define>
-  <!-- E.g. <verse number="1" style="v" altnumber="2" pubnumber="B" /> -->
+  <!-- E.g. <verse number="1" style="v" altnumber="2" pubnumber="B" sid="GEN 1:22" /> -->
+  <define name="VerseEnd">
+    <element name="verse">
+      <attribute name="eid">
+        <data type="string">
+          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-,:]*</param>
+        </data>
+      </attribute>
+      <empty/>
+    </element>
+  </define>
   <define name="Footnote">
     <element name="note">
       <attribute name="style">
@@ -1036,6 +1557,7 @@
       <oneOrMore>
         <choice>
           <ref name="Char"/>
+          <ref name="FootnoteChar"/>
           <ref name="FootnoteVerse"/>
           <ref name="Reference"/>
           <text/>
@@ -1059,12 +1581,14 @@
       <!-- A footnote alternate rendering for a portion of scripture text -->
       <value>fl</value>
       <!-- A footnote label text item, for marking or "labelling" the type or alternate translation being provided in the note. -->
+      <value>fw</value>
+      <!-- A footnote witness list, for distinguishing a list of sigla representing witnesses in critical editions. -->
       <value>fp</value>
       <!-- A Footnote additional paragraph marker -->
       <value>fv</value>
       <!-- A verse number within the footnote text -->
       <value>fdc</value>
-      <!-- Footnote text, applies to Deuterocanon only -->
+      <!-- Footnote text, applies to Deuterocanon only (DEPRECATED - use char@style dc) -->
       <value>xt</value>
       <!-- A cross reference target reference(s) -->
       <value>it</value>
@@ -1115,6 +1639,7 @@
       <oneOrMore>
         <choice>
           <ref name="Char"/>
+          <ref name="CrossReferenceChar"/>
           <ref name="Reference"/>
           <text/>
         </choice>
@@ -1125,8 +1650,12 @@
     <choice>
       <value>xo</value>
       <!-- The cross reference origin reference -->
+      <value>xop</value>
+      <!-- Published cross reference origin text (origin reference that should appear in the published text) -->
       <value>xt</value>
       <!-- The cross reference target reference(s), protocanon only -->
+      <value>xta</value>
+      <!-- Cross reference target references added text -->
       <value>xk</value>
       <!-- A cross reference keyword -->
       <value>xq</value>
@@ -1137,7 +1666,7 @@
       <!-- Cross-reference target reference(s), New Testament only -->
       <value>xdc</value>
     </choice>
-    <!-- Cross-reference target reference(s), Deuterocanon only -->
+    <!-- Cross-reference target reference(s), Deuterocanon only (DEPRECATED - use char@style dc) -->
   </define>
   <define name="Sidebar">
     <element name="sidebar">
@@ -1150,6 +1679,7 @@
       <oneOrMore>
         <choice>
           <ref name="Para"/>
+          <ref name="List"/>
           <ref name="Table"/>
           <ref name="Footnote"/>
           <ref name="CrossReference"/>
