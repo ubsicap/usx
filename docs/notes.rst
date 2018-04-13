@@ -440,7 +440,56 @@ xt
 :Use: Cross reference target reference(s). |br|
 	The list of target scripture passages being suggested as references for comparison/review with respect to the text (or concept) of the origin reference. |br|
 	A list of book name abbreviations and chapter + verse references, separated by semicolons or other book list separator character.
+:Updated: 3.0 (attributes)
 :Valid In: Any :ref:`usx-note_crossReference_char`
+
+.. _usx-note_crossReference_charstyle_xt-attr:
+.. index:: cross reference; target reference(s) attributes
+
+.. rubric:: Attributes |ico_Tag|
+
+|badge_3.0|
+
+An *additional* :ref:`link-href <usx-charstyle-attr_link-href>` :doc:`attribute <attributes>` for :ref:`<char> <usx-element_char>` can be used in this context, followiung the definitions for :doc:`linking attributes </linking>`.
+
+.. _usx-note_crossReference_charstyle_xt-attr_link-href:
+.. index:: attribute; char@link-href (@style="xt")
+
+:@link-href: Citation form for the term in the glossary
+
+:link-href: Unambiguously identifies the scripture target reference using a standard scripture reference format. *(default)* |br|
+	Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon ``:``. A string of pattern: ``[A-Z1-4]{3} ?[a-z0-9\-,:]*`` |br| |br|
+	In some scenarios a target reference is written in a format which cannot be accurately parsed and identified. Providing the ``link-href`` attribute allows greater flexibility in the use of char@style :ref:`xt <usx-note_crossReference_charstyle_xt>`. |br| |br| 
+	In this context, ``link-href`` should only target scripture references for the current text (i.e. references to other project texts or non-scripture URIs are not allowed)
+
+**Text Sample** - Genesis 2 (Russian Synodal, Protestant Version, extending the sample for para@style :ref:`cd <usx-parastyle_cd>` - chapter description)
+
+.. code-block:: xml
+	:name: usx-parastyle_cd-xt_example
+	:emphasize-lines: 2-5
+
+	<chapter number="2" style="c" />
+	<para style="cd"><char style="xt" link-href="GEN 2:1">1</char> Бог благословляет седьмой 
+	  день; <char style="xt" link-href="GEN 2:8">8</char> человек в раю Едемском; четыре реки; 
+	  дерево познания добра и зла. <char style="xt" link-href="GEN 2:18">18</char> Человек дает 
+	  названия животным. <char style="xt" link-href="GEN 2:21">21</char> Создание женщины.
+	<para style="p">
+	  <verse number="1" style="v" sid="GEN 2:1" />Так совершены небо и земля и все воинство их.
+	  <verse eid="GEN 2:1" />
+	</para>
+	<para style="p">
+	  <verse number="2" style="v" sid="GEN 2:2" />И совершил Бог к седьмому дню дела Свои, которые 
+	  Он делал, и почил в день седьмой от всех дел Своих, которые делал.<verse eid="GEN 2:2" />
+	</para>
+
+A number (7) alone marked with ``<char style="xt">7</char>`` is ambiguous, since it could refer to chapter 7 or verse 7 (in `Paratext <https://paratext.org>`_, a number alone is interpreted as a chapter reference). Extending char@style :ref:`xt <usx-note_crossReference_charstyle_xt>` with the ``link-ref`` attribute makes it possible to express the target reference unambiguously.
+
+.. code-block:: xml
+	:name: usx-parastyle_cd-xt_example-alt
+
+	<char style="xt" link-href="MAT 6:7">7</char>
+	<char style="xt" link-href="MAT 6:7">verse 7</char>
+	<char style="xt" link-href="MAT 6:7">v7</char>
 
 -----
 

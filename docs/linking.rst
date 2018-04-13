@@ -29,20 +29,29 @@ Linking attributes are combined with any other :ref:`descriptive attributes <usx
     
     Example: ``MAT 3:1-4``
 
-Attributes
-^^^^^^^^^^
+Attributes |ico_Tag|
+^^^^^^^^^^^^^^^^^^^^
 
-:link-href: Identifies the resource being linked to as a URI. |br|
+.. _usx-charstyle-attr_link-href:
+.. index:: attribute; link-href
 
-    * Custom USX provided URI prefixes are:
+:link-href: Identifies the resource being linked to as a URI. |br| |br|
+	Custom USFM provided URI prefixes are: |br|
+	``prj:`` + standard scripture reference. |br|
+	Example: ``prj:RSV52 MAT 3:1-4``
+	
+	A link reference within the same project text does not require a URI prefix. |br| |br|
+	The resource may be identified by unique id. |br|
+	Example: ``#article-Ruth`` or ``prj:GNTSB #article-Ruth``
 
-        - ``prj:`` + standard scripture reference. |br| Example: ``prj:RSV52 MAT 3:1-4``
-    
-    * A link reference within the same project text does not require a URI prefix.
-    
-    * The resource may be identified by unique id. |br| Example: ``#article-Ruth`` or ``prj:GNTSB #article-Ruth``
+.. _usx-charstyle-attr_link-title:
+.. index:: attribute; link-title
 
 :link-title: Plain text describing the remote resource such as might be shown in a tooltip.
+
+.. _usx-charstyle-attr_link-id:
+.. index:: attribute; link-id
+
 :link-id: A unique identifier for this content location (an anchor).
 
 The set of URI prefixes used within a ``link-href`` attribute can be extended beyond the predefined set for USX 3.0. Any user defined URI prefixes must begin with the prefix ``x-``.

@@ -526,7 +526,23 @@ cd
 	A brief description of chapter content (similar to :ref:`d <usx-parastyle_d>` - descriptive heading, or :ref:`iex <usx-parastyle_iex>` - introduction explanatory or bridge text).
 :Valid In: :ref:`usx-div_chapterContent`
 
-**Formatting Sample** - Genesis 1 (Russian Synodal, Protestant Version)
+**Text and Formatting Sample** - Genesis 2 (Russian Synodal, Protestant Version)
+
+.. code-block:: text
+	:name: usx-parastyle_cd-xt_example
+	:emphasize-lines: 2-3
+
+	<chapter number="2" style="c" />
+	<para style="cd">1 Бог благословляет седьмой день; 8 человек в раю Едемском; четыре реки; 
+	  дерево познания добра и зла. 18 Человек дает названия животным. 21 Создание женщины.
+	<para style="p">
+	  <verse number="1" style="v" sid="GEN 2:1" />Так совершены небо и земля и все воинство их.
+	  <verse eid="GEN 2:1" />
+	</para>
+	<para style="p">
+	  <verse number="2" style="v" sid="GEN 2:2" />И совершил Бог к седьмому дню дела Свои, которые 
+	  Он делал, и почил в день седьмой от всех дел Своих, которые делал.<verse eid="GEN 2:2" />
+	</para>
 
 .. image:: images/usx-para-style_cd.jpg
 	:width: 250px

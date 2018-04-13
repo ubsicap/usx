@@ -300,7 +300,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :@style: Content type. |req| |br|
 	Permitted values vary for each document division. The :doc:`para @style types <parastyles>` list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the :doc:`document divisions <structure>` in which each type is valid.
 :@vid: |badge_3.0| Verse identifier. |br|
-	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` or :ref:`cell <usx-element_cell>` closed prior the end of the current verse text. |br|
+	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` or :ref:`table <usx-element_table>` closed prior the end of the current verse text. |br|
 	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
 	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: :ref:`usx-div_bookHeaders`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
@@ -352,6 +352,10 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	*empty*
 :Added: 1.0
 :Use: Contains :ref:`usx-element_row` and :ref:`usx-element_cell` child elements which compose the structure of a USX :ref:`usx-element_table`. Tables are composed of a vertical sequence of one or more rows. Rows are composed of a horizontal sequence of one of more cells.
+:@vid: |badge_3.0| Verse identifier. |br|
+	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` closed prior the end of the current verse text. |br|
+	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
@@ -393,10 +397,6 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 	``start`` | ``center`` | ``end`` |br|
 	Represents “left”, “center”, and “right” respectively in left-to-right direction texts, and “right”, “center”, “left” in right-to-left direction texts.
 :@colspan: |badge_3.0| An integer indicating how many columns the current cell should span in a rendered view.
-:@vid: |badge_3.0| Verse identifier. |br|
-	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` or :ref:`cell <usx-element_cell>` closed prior the end of the current verse text. |br|
-	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
-	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: Any valid :ref:`usx-element_row`
 :Parents: :ref:`usx-element_row`
 

@@ -649,7 +649,7 @@ w
 :Valid In: Any valid :ref:`usx-element_char`
 
 .. _usx-charstyle_w-attr:
-.. index:: attribute; char@lemma (@style="w"), wordlist entry; attributes
+.. index:: wordlist entry; attributes
 
 .. rubric:: Attributes |ico_Tag|
 
@@ -657,12 +657,16 @@ w
 
 *Additional* :doc:`attributes <attributes>` for :ref:`<char> <usx-element_char>` which can be used in this context.
 
+.. _usx-charstyle_w-attr_lemma:
+.. index:: attribute; char@lemma (@style="w")
+
 :@lemma: Citation form for the term in the glossary
 
 .. code-block:: xml
 
     <char style="w" lemma="grace">gracious</char>
 
+.. _usx-charstyle_w-attr_strong:
 .. index:: attribute; char@strong (@style="w")
 
 :@strong: Strong’s ID in the form ``H#####`` (Hebrew) or ``G#####`` (Greek) |br| |br|
@@ -676,6 +680,7 @@ w
 	
 	<char style="w" strong="G05485:a">gracious</char>
 
+.. _usx-charstyle_w-attr_srcloc:
 .. index:: attribute; char@srcloc (@style="w")
 
 :@srcloc: Location of the word in the source text; Example: GNT version 5 text, book 51, chapter 1, verse 2, word 1.
