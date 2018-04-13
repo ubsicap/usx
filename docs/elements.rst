@@ -106,7 +106,7 @@ Code examples for chapter and verse are provided after the definition for elemen
 
 .. note:: **Accurately identifying verse text within the scripture paragraph structure**
 
-	|badge_3.0|	USX 3.0 adds a pair of attributes to ``<verse/>`` (``sid`` and ``eid``) which are used to unambiguously identify the start and end position for a specific verse text within the scripture discourse structure. A companion attribute ``vid`` is added to :ref:`<para> <usx-element_para>` and :ref:`<cell> <usx-element_cell>` in order to re-identify the current verse when the previous :ref:`<para> <usx-element_para>` or :ref:`<cell> <usx-element_cell>` has closed prior the end of the verse text.
+	|badge_3.0|	USX 3.0 adds a pair of attributes to ``<verse/>`` (``sid`` and ``eid``) which are used to unambiguously identify the start and end position for a specific verse text within the scripture discourse structure. A companion attribute ``vid`` is added to :ref:`<para> <usx-element_para>` and :ref:`<table> <usx-element_table>` in order to re-identify the current verse when the previous :ref:`<para> <usx-element_para>` or :ref:`<table> <usx-element_table>` has closed prior the end of the verse text.
 
 	**IMPORTANT:** In USX 3.0 a ``<verse/>`` milestone is *required* at the **start** and at the **end** of the verse text, with corresponding ``sid`` and ``eid`` attributes. In previous versions of USX, only a ``<verse/>`` start milestone was required.
 
@@ -300,7 +300,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :@style: Content type. |req| |br|
 	Permitted values vary for each document division. The :doc:`para @style types <parastyles>` list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the :doc:`document divisions <structure>` in which each type is valid.
 :@vid: |badge_3.0| Verse identifier. |br|
-	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` or :ref:`table <usx-element_table>` closed prior the end of the current verse text. |br|
+	Required to re-identify the current verse whenever the previous :ref:`para <usx-element_para>` or :ref:`table <usx-element_table>` closed prior the end of the current verse text. |br|
 	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
 	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
 :Valid in: :ref:`usx-div_bookHeaders`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
