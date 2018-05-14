@@ -390,8 +390,20 @@ iex
 ^^^
 
 :@style: iex
-:Use: Introduction explanatory or bridge text (e.g. explanation of missing book in a short Old Testament). |br|
+:Use: Introduction explanatory or bridge text (e.g. explanation of missing book in a short Old Testament). |br| |br|
+	|ico_Cg| *Recommended use* is is for an explanation of missing book or section in a short Old Testament, or for attribution sentences found at the end of the 14 Pauline Epistles (most often found in hand written texts to identify the author, place of composition but does occur in some printed works).
 :Valid In: :ref:`usx-div_bookIntroduction`, :ref:`Chapter Content <usx-div_chapterContent>`
+
+**Text Sample** - After Romans 16 (KJV54 - BFBS)
+
+.. code-block:: xml
+	:name: usx-para-style_iex_example
+	:emphasize-lines: 3-4
+
+	<verse number="27" style="v" sid="ROM 16:27" /> to God only wise, <char style="add">be</char> 
+	glory through Jesus Christ for ever. Amen.<verse eid="ROM 16:27" />
+	<para style="iex">Written to the Romans from Corinthus, and sent by Phebe servant of the church 
+	at Cenchrea.</para>
 
 -----
 
