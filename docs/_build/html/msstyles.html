@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;ms&gt; @style Types &mdash; Unified Scripture XML 3.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Unified Scripture XML 3.0.0 documentation" href="index.html"/>
+        <link rel="next" title="&lt;note&gt; Types" href="notes.html"/>
+        <link rel="prev" title="&lt;char&gt; @style Types" href="charstyles.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about/index.html">About USX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Document Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attributes.html">Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parastyles.html">&lt;para&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="charstyles.html">&lt;char&gt; &#64;style Types</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">&lt;ms&gt; &#64;style Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#qt">qt#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ts">ts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">&lt;note&gt; Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linking.html">Linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peripherals.html">Peripherals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vocabularies.html">Vocabularies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schemas</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Unified Scripture XML</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;ms&gt; &#64;style Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/msstyles.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ms-style-types">
+<span id="usx-msstyles"></span><span id="index-0"></span><h1>&lt;ms&gt; &#64;style Types<a class="headerlink" href="#ms-style-types" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note" id="usx-notes-numberedstyles-ms">
+<p class="first admonition-title">Note</p>
+<p><strong>Numbered &lt;ms&gt; &#64;style Attributes</strong></p>
+<p>As with USX <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> elements which include a numeric variable in the &#64;style attribute, a number may be added to a milestone &#64;style attribute to indicate a relative weighting or level.</p>
+<p class="last"><strong>style = style1</strong> — The unnumbered version of a style attribute may be used when only one level of this milestone style exists within the project text. Numbers should always be included when more than one level of the milestone style exists within the project text.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="qt">
+<span id="usx-msstyle-qt"></span><span id="index-1"></span><h2>qt#<a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">qt#</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Quotation speaker. <br />
+# denotes the level of nesting of the quotation being marked (i.e. a quote within a quote). <br />
+<strong>qt = qt1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles-ms"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="usx-msstyle-qt-attr"></span><p class="rubric" id="index-2">Attributes <a class="reference internal" href="_images/icon-tag_alt.png"><img alt="ico_Tag" src="_images/icon-tag_alt.png" style="width: 16px; height: 16px;" /></a></p>
+<p><em>Additional</em> <a class="reference internal" href="attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a> which can be used in this context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;who:</th><td class="field-body">The speaker of the current quotation.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-s&quot;</span> <span class="na">who=</span><span class="s">&quot;Paul&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p><strong>Text Samples</strong> - Matthew 27.11-14 (GNT)</p>
+<div class="highlight-xml notranslate" id="usx-msstyle-qt-example"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;11&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;MAT 27:11&quot;</span> <span class="nt">/&gt;</span>Jesus stood before the Roman governor, who
+<span class="hll">  questioned him. <span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-s&quot;</span> <span class="na">sid=</span><span class="s">&quot;qt1 MAT 27:11a&quot;</span> <span class="na">who=</span><span class="s">&quot;Pilate&quot;</span> <span class="nt">/&gt;</span>“Are you the king of
+</span><span class="hll">  the Jews?”<span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-e&quot;</span> <span class="na">eid=</span><span class="s">&quot;qt1 MAT 27:11a&quot;</span> <span class="nt">/&gt;</span> he asked.
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="hll"><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span> <span class="na">vid=</span><span class="s">&quot;MAT 27:11&quot;</span><span class="nt">&gt;&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-s&quot;</span> <span class="na">sid=</span><span class="s">&quot;qt1 MAT 27:11b&quot;</span> <span class="na">who=</span><span class="s">&quot;Jesus&quot;</span> <span class="nt">/&gt;</span>“So you say,”
+</span><span class="hll">  <span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-e&quot;</span> <span class="na">eid=</span><span class="s">&quot;qt1 MAT 27:11b&quot;</span> <span class="nt">/&gt;</span> answered Jesus.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;MAT 27:11&quot;</span> <span class="nt">/&gt;</span>
+</span>  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;12&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;MAT 27:12&quot;</span> <span class="nt">/&gt;</span>But he said nothing in response to the accusations
+  of the chief priests and elders.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;MAT 27:12&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;13&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;MAT 27:13&quot;</span> <span class="nt">/&gt;</span>So Pilate said to him,
+<span class="hll">  <span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-s&quot;</span> <span class="na">sid=</span><span class="s">&quot;qt1 MAT 27:13a&quot;</span> <span class="na">who=</span><span class="s">&quot;Pilate&quot;</span> <span class="nt">/&gt;</span>“Don&#39;t you hear all these things
+</span><span class="hll">  they accuse you of?”<span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-e&quot;</span> <span class="na">eid=</span><span class="s">&quot;qt1 MAT 27:13a&quot;</span> <span class="nt">/&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;MAT 27:13&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;14&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;MAT 27:14&quot;</span> <span class="nt">/&gt;</span>But Jesus refused to answer a
+  single word, with the result that the Governor was greatly surprised.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;MAT 27:14&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/para&gt;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="ts">
+<span id="usx-msstyle-ts"></span><span id="index-3"></span><h2>ts<a class="headerlink" href="#ts" title="Permalink to this headline">¶</a></h2>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ts</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Translator’s section. <br />
+For identifying a section (chunk) of text suitable for translating at one time.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Text Samples</strong> - Jude 5-8, ULB - using standalone milestones</p>
+<div class="highlight-xml notranslate" id="usx-msstyle-ts-example"><div class="highlight"><pre><span></span><span class="hll"><span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;5&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;JUD 1:5&quot;</span> <span class="nt">/&gt;</span>Now I wish to remind you, although you know
+  everything, that the Lord once saved a people out of the land of Egypt, but that afterward
+  he destroyed those who did not believe.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:5&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;6&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;JUD 1:6&quot;</span> <span class="nt">/&gt;</span> And angels who did not keep to their own
+  principality, but left their proper dwelling place—God has kept them in everlasting chains in
+  darkness for the judgment of the great day.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:6&quot;</span> <span class="nt">/&gt;</span>
+<span class="hll">  <span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts&quot;</span> <span class="nt">/&gt;</span>
+</span>  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;7&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;JUD 1:7&quot;</span> <span class="nt">/&gt;</span>It is just like Sodom and Gomorrah and the cities
+  around them, which in a similar way gave themselves over to fornication and pursued
+  unnatural desires. They were given as examples of those who suffer the punishment of
+  eternal fire.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:7&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;8&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;GEN 1:8&quot;</span> <span class="nt">/&gt;</span>Yet in the same way these also pollute their bodies
+  in their dreams, and they reject authority, and they say evil things about the glorious ones.
+  <span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:8&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/para&gt;</span>
+<span class="hll"><span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts&quot;</span> <span class="nt">/&gt;</span>
+</span></pre></div>
+</div>
+<p>Jude 5-8, ULB - using milestone pairs</p>
+<div class="highlight-xml notranslate" id="usx-msstyle-ts-example-alt"><div class="highlight"><pre><span></span><span class="hll"><span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts-s&quot;</span> <span class="na">sid=</span><span class="s">&quot;ts JUD 1:5-6&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;5&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;JUD 1:5&quot;</span> <span class="nt">/&gt;</span>Now I wish to remind you, although you know
+  everything, that the Lord once saved a people out of the land of Egypt, but that afterward
+  he destroyed those who did not believe.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:5&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;6&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;JUD 1:6&quot;</span> <span class="nt">/&gt;</span> And angels who did not keep to their own
+  principality, but left their proper dwelling place—God has kept them in everlasting chains
+  in darkness for the judgment of the great day.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:6&quot;</span> <span class="nt">/&gt;</span>
+<span class="hll">  <span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts-e&quot;</span> <span class="na">eid=</span><span class="s">&quot;ts JUD 1:5-6&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">  <span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts-s&quot;</span> <span class="na">sid=</span><span class="s">&quot;ts JUD 1:7-8&quot;</span> <span class="nt">/&gt;</span>
+</span>  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;7&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;JUD 1:7&quot;</span> <span class="nt">/&gt;</span>It is just like Sodom and Gomorrah and the
+  cities around them, which in a similar way gave themselves over to fornication and pursued
+  unnatural desires. They were given as examples of those who suffer the punishment of
+  eternal fire.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:7&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;8&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;JUD 1:8&quot;</span> <span class="nt">/&gt;</span>Yet in the same way these also pollute their bodies
+  in their dreams, and they reject authority, and they say evil things about the glorious ones.
+  <span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;JUD 1:8&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/para&gt;</span>
+<span class="hll"><span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts-e&quot;</span> <span class="na">eid=</span><span class="s">&quot;ts JUD 1:7-8&quot;</span> <span class="nt">/&gt;</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="notes.html" class="btn btn-neutral float-right" title="&lt;note&gt; Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="charstyles.html" class="btn btn-neutral" title="&lt;char&gt; @style Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, United Bible Societies.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'3.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
