@@ -1,0 +1,1214 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;char&gt; @style Types &mdash; Unified Scripture XML 3.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Unified Scripture XML 3.0.0 documentation" href="index.html"/>
+        <link rel="next" title="&lt;ms&gt; @style Types" href="msstyles.html"/>
+        <link rel="prev" title="&lt;para&gt; @style Types" href="parastyles.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about/index.html">About USX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Document Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attributes.html">Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parastyles.html">&lt;para&gt; &#64;style Types</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">&lt;char&gt; &#64;style Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#special-text">Special Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add">add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bk">bk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dc">dc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ior">ior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iqt">iqt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#k">k</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#litl">litl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nd">nd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ord">ord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pn">pn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#png">png</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qac">qac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qs">qs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qt">qt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rq">rq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sig">sig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sls">sls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tl">tl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wj">wj</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#character-styling">Character Styling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#em">em</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bd">bd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bdit">bdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#it">it</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no">no</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sc">sc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sup">sup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#spacing-and-breaks">Spacing and Breaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#special-features">Special Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rb">rb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pro">pro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#w">w</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wg">wg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wh">wh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wa">wa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#structured-list-entries">Structured List Entries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lik">lik</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#liv">liv#</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linking">Linking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jmp">jmp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msstyles.html">&lt;ms&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">&lt;note&gt; Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linking.html">Linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peripherals.html">Peripherals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vocabularies.html">Vocabularies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schemas</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Unified Scripture XML</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;char&gt; &#64;style Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/charstyles.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="char-style-types">
+<span id="usx-charstyles"></span><span id="index-0"></span><h1>&lt;char&gt; &#64;style Types<a class="headerlink" href="#char-style-types" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>&#64;style types for</strong> <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> <strong>elements occurring within</strong> <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a></p>
+<p class="last">An additional list of <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style types are defined for use in the context of footnotes and cross references. These are described in this document together with the definitions for the <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> elements used for footnotes and cross references.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="special-text">
+<span id="usx-charstyles-specialtext"></span><span id="index-1"></span><h2>Special Text<a class="headerlink" href="#special-text" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add">
+<span id="usx-charstyle-add"></span><span id="index-2"></span><h3>add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">add</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Translator’s addition. <br />
+Words added by the translator for clarity – text which is not literally a part of the original language, but which was supplied to make the meaning of the original clear.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Genesis 5.29 (Russian Synodal, Protestant Version)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_add.jpg"><img alt="_images/usx-char-style_add.jpg" src="_images/usx-char-style_add.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="bk">
+<span id="usx-charstyle-bk"></span><span id="index-3"></span><h3>bk<a class="headerlink" href="#bk" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">bk</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Quoted book title.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Introduction to Mark (GNT)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_bk.jpg"><img alt="_images/usx-char-style_bk.jpg" src="_images/usx-char-style_bk.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="dc">
+<span id="usx-charstyle-dc"></span><span id="index-4"></span><h3>dc<a class="headerlink" href="#dc" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">dc</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Deuterocanonical/LXX additions or insertions in the Protocanonical text. <br />
+General purpose use of &lt;char&gt; &#64;style <a class="reference internal" href="#usx-charstyle-dc"><span class="std std-ref">dc</span></a> is encouraged wherever DC-only content is being marked. Use of context-specific DC-only markup (i.e. &lt;char&gt; &#64;style <a class="reference internal" href="notes.html#usx-note-footnote-charstyle-fdc"><span class="std std-ref">fdc</span></a>, or <a class="reference internal" href="notes.html#usx-note-crossreference-charstyle-xdc"><span class="std std-ref">xdc</span></a>) is discouraged.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Text Samples</strong> - Hebrews 1.3 (Spanish DHE - footnote)</p>
+<div class="highlight-xml notranslate" id="usx-charstyle-dc-example"><div class="highlight"><pre><span></span><span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;3&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;HEB 1:3&quot;</span> <span class="nt">/&gt;</span>Él es el resplandor glorioso de Dios,
+<span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;c&quot;</span> <span class="na">style=</span><span class="s">&quot;f&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fr&quot;</span><span class="nt">&gt;</span>1.3: <span class="nt">&lt;/char&gt;</span>
+        <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fk&quot;</span><span class="nt">&gt;</span>Resplandor: <span class="nt">&lt;/char&gt;</span>
+        <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;ft&quot;</span><span class="nt">&gt;</span>Cf. Jn 1.4-9,14
+<span class="hll">        <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;dc&quot;</span><span class="nt">&gt;</span> ; también Sab 7.25-26, donde algo parecido se dice de
+</span>        la sabiduría<span class="nt">&lt;/char&gt;&lt;/char&gt;</span>
+<span class="nt">&lt;/note&gt;</span>
+</pre></div>
+</div>
+<p>Psalm 115.3-4 (GNT - cross references)</p>
+<div class="highlight-xml notranslate" id="usx-charstyle-dc-example2"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;3&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;PSA 115:3&quot;</span> <span class="nt">/&gt;</span>Our God is in heaven;
+<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q2&quot;</span> <span class="na">vid=</span><span class="s">&quot;PSA 115:3&quot;</span><span class="nt">&gt;</span>he does whatever he wishes.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;PSA 115:3&quot;</span> <span class="nt">/&gt;&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q1&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;4&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;PSA 115:3&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;-&quot;</span> <span class="na">style=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xo&quot;</span><span class="nt">&gt;</span>115.4-8: <span class="nt">&lt;/char&gt;</span>
+                <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;</span>Ps 135.15-18;
+<span class="hll">                <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;dc&quot;</span><span class="nt">&gt;</span> Ltj Jr 4-73;<span class="nt">&lt;/char&gt;</span> Rev 9.20.<span class="nt">&lt;/char&gt;</span>
+</span>        <span class="nt">&lt;/note&gt;</span>Their gods are made of silver and gold,<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;q2&quot;</span><span class="nt">&gt;</span>formed by human hands.<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;PSA 115:4&quot;</span> <span class="nt">/&gt;&lt;/para&gt;</span>
+</pre></div>
+</div>
+<p>1 Corinthians 15.51-52 (GNT - cross reference)</p>
+<div class="highlight-xml notranslate" id="usx-charstyle-dc-example3"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;51-52&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;1CO 15:51-52&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;-&quot;</span> <span class="na">style=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xo&quot;</span><span class="nt">&gt;</span>15.51,52: <span class="nt">&lt;/char&gt;</span>
+                <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;</span>
+<span class="hll">                <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;dc&quot;</span><span class="nt">&gt;</span>2Es 6.23; <span class="nt">&lt;/char&gt;</span>
+</span>                1Th 4.15-17.
+        <span class="nt">&lt;/note&gt;</span>Listen to this secret truth: we shall not all die, but when the last trumpet sounds,
+we shall all be changed in an instant, as quickly as the blinking of an eye. For when the trumpet
+sounds, the dead will be raised, never to die again, and we shall all be changed.
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="ior">
+<span id="usx-charstyle-ior"></span><span id="index-5"></span><h3>ior<a class="headerlink" href="#ior" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ior</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction outline reference range. <br />
+An <a class="reference internal" href="parastyles.html#usx-parastyle-io"><span class="std std-ref">introduction outline entry</span></a> typically ends with a range of references, sometimes within parentheses. This is an optional char style for marking these references separately.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Introduction to Mark (CEV)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_ior.jpg"><img alt="_images/usx-char-style_ior.jpg" src="_images/usx-char-style_ior.jpg" style="width: 300px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="iqt">
+<span id="usx-charstyle-iqt"></span><span id="index-6"></span><h3>iqt<a class="headerlink" href="#iqt" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">iqt</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Introduction quoted text. <br />
+Scripture quotations, or other quoted text, appearing in the <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="k">
+<span id="usx-charstyle-k"></span><span id="index-7"></span><h3>k<a class="headerlink" href="#k" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">k</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Keyword / keyterm.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="litl">
+<span id="usx-charstyle-litl"></span><span id="index-8"></span><h3>litl<a class="headerlink" href="#litl" title="Permalink to this headline">¶</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">litl</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">List entry total. <br />
+Use in “accounting” lists for denoting the total component of the text within a list item (&lt;para&gt; &#64;style <a class="reference internal" href="parastyles.html#usx-parastyle-li"><span class="std std-ref">li</span></a>). An alternative to using <a class="reference internal" href="elements.html#usx-element-table"><span class="std std-ref">table</span></a> for the same content.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> within &lt;para&gt; &#64;style <a class="reference internal" href="parastyles.html#usx-parastyle-li"><span class="std std-ref">li#</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Text and Formatting Sample</strong> - Nehemiah 7.6-14 (GNT - <em>markup adapted</em>)</p>
+<div class="highlight-xml notranslate" id="usx-char-style-litl-example"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;pm&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;6&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:6&quot;</span> <span class="nt">/&gt;</span>These are the people of the province
+  who came up from the captivity of the exiles whom Nebuchadnezzar king of Babylon had taken
+  captive (they returned to Jerusalem and Judah, each to his own town,<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:6&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;7&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:7&quot;</span> <span class="nt">/&gt;</span>in company with Zerubbabel, Jeshua, Nehemiah,
+  Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah):
+<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;b&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;pm&quot;</span> <span class="na">vid=</span><span class="s">&quot;NEH 7:7&quot;</span><span class="nt">&gt;</span>The list of the men of Israel:<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:7&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;b&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lim1&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;8&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:8&quot;</span> <span class="nt">/&gt;</span>the descendants of Parosh -
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;litl&quot;</span><span class="nt">&gt;</span>2,172<span class="nt">&lt;/char&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:8&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lim1&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;9&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:9&quot;</span> <span class="nt">/&gt;</span>of Shephatiah -
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;litl&quot;</span><span class="nt">&gt;</span>372<span class="nt">&lt;/char&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:9&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lim1&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;10&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:10&quot;</span> <span class="nt">/&gt;</span>of Arah -
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;litl&quot;</span><span class="nt">&gt;</span>652<span class="nt">&lt;/char&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:10&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lim1&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;11&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:11&quot;</span> <span class="nt">/&gt;</span>of Pahath-Moab (through the
+<span class="hll">  line of Jeshua and Joab) - <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;litl&quot;</span><span class="nt">&gt;</span>2,818<span class="nt">&lt;/char&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:11&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lim1&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;12&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:12&quot;</span> <span class="nt">/&gt;</span>of Elam -
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;litl&quot;</span><span class="nt">&gt;</span>1,254<span class="nt">&lt;/char&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:12&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lim1&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;13&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:13&quot;</span> <span class="nt">/&gt;</span>of Zattu -
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;litl&quot;</span><span class="nt">&gt;</span>845<span class="nt">&lt;/char&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:13&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lim1&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;14&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;NEH 7:14&quot;</span> <span class="nt">/&gt;</span>of Zaccai -
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;litl&quot;</span><span class="nt">&gt;</span>760<span class="nt">&lt;/char&gt;&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;NEH 7:14&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+...
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/usx-char-style_litl.jpg"><img alt="_images/usx-char-style_litl.jpg" src="_images/usx-char-style_litl.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="nd">
+<span id="usx-charstyle-nd"></span><span id="index-9"></span><h3>nd<a class="headerlink" href="#nd" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">nd</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Name of God (name of deity).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Exodus 3.15 (GNT)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_nd.jpg"><img alt="_images/usx-char-style_nd.jpg" src="_images/usx-char-style_nd.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="ord">
+<span id="usx-charstyle-ord"></span><span id="index-10"></span><h3>ord<a class="headerlink" href="#ord" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ord</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Ordinal number ending (i.e. in 1st — <code class="docutils literal notranslate"><span class="pre">1&lt;char</span> <span class="pre">style=&quot;ord&quot;&gt;st&lt;/char&gt;</span></code>).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="pn">
+<span id="usx-charstyle-pn"></span><span id="index-11"></span><h3>pn<a class="headerlink" href="#pn" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">pn</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Proper name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="png">
+<span id="usx-charstyle-png"></span><span id="index-12"></span><h3>png<a class="headerlink" href="#png" title="Permalink to this headline">¶</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">png</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Geographic proper name. <br />
+Particularly in China, there are various groups which have the practice of distinguishing visually between proper names of people and proper names of geographic places in published texts. Published materials may use a single underline to present proper names of people, and double underline to present proper names of geographic places. Alternatively, dotted underlines have been used for geographic proper names. <br /> <br />
+Special presentation for names can assist readers to know what the text means, especially readers who may struggle with reading skills and may be overloaded by the transliterated names.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="qac">
+<span id="usx-charstyle-qac"></span><span id="index-13"></span><h3>qac<a class="headerlink" href="#qac" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">qac</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Used to indicate the acrostic letter within a poetic line.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Lamentations 1.1,2 (Spanish TLA)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_qac.jpg"><img alt="_images/usx-char-style_qac.jpg" src="_images/usx-char-style_qac.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="qs">
+<span id="usx-charstyle-qs"></span><span id="index-14"></span><h3>qs<a class="headerlink" href="#qs" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">qs</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Used for the expression “Selah” commonly found in Psalms and Habakkuk. <br />
+This text is frequently right aligned, and rendered on the same line as the previous poetic text, if space allows.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Psalm 3.2 (NRSV)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_qs.jpg"><img alt="_images/usx-char-style_qs.jpg" src="_images/usx-char-style_qs.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="qt">
+<span id="usx-charstyle-qt"></span><span id="index-15"></span><h3>qt<a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">qt</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Quoted text. <br />
+Old Testament quotations in the New Testament, or other quotations.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Mark 1.2-3 (GNT)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_qt.jpg"><img alt="_images/usx-char-style_qt.jpg" src="_images/usx-char-style_qt.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="rq">
+<span id="usx-charstyle-rq"></span><span id="index-16"></span><h3>rq<a class="headerlink" href="#rq" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">rq</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Inline quotation reference(s). <br />
+A reference indicating the source text for the preceding quotation (usually an Old Testament quote). <br />
+The reference(s) are intended to be formatted within the scripture body text column, and not extracted from the text as are regular <a class="reference internal" href="notes.html#usx-note-crossreference"><span class="std std-ref">cross-references</span></a>. They are also typically separated from the main text of Scripture using a different type style and alignment.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Hebrews 1.5 (GNT)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_rq.jpg"><img alt="_images/usx-char-style_rq.jpg" src="_images/usx-char-style_rq.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="sig">
+<span id="usx-charstyle-sig"></span><span id="index-17"></span><h3>sig<a class="headerlink" href="#sig" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">sig</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Signature of the author of an epistle.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Colossians 4.18 (GNT)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_sig.jpg"><img alt="_images/usx-char-style_sig.jpg" src="_images/usx-char-style_sig.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="sls">
+<span id="usx-charstyle-sls"></span><span id="index-18"></span><h3>sls<a class="headerlink" href="#sls" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">sls</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Passage of text based on a secondary language or alternate text source. <br />
+For example: The Nouvelle Bible Segond 2002 (NBS02) has large sections of text in EZR and DAN in italics, to represent where the original text is in Aramaic, not Hebrew.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Ezra 4.8—6.18 (NBS - French, Nouvelle Bible Segond)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_sls.jpg"><img alt="_images/usx-char-style_sls.jpg" src="_images/usx-char-style_sls.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="tl">
+<span id="usx-charstyle-tl"></span><span id="index-19"></span><h3>tl<a class="headerlink" href="#tl" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">tl</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Transliterated (or foreign) word(s).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Formatting Sample</strong> - Matthew 27.46 (GNT)</p>
+<a class="reference internal image-reference" href="_images/usx-char-style_tl.jpg"><img alt="_images/usx-char-style_tl.jpg" src="_images/usx-char-style_tl.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="wj">
+<span id="usx-charstyle-wj"></span><span id="index-20"></span><h3>wj<a class="headerlink" href="#wj" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">wj</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Words of Jesus.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="character-styling">
+<span id="usx-charstyles-characterstyles"></span><span id="index-21"></span><h2>Character Styling<a class="headerlink" href="#character-styling" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="em">
+<span id="usx-charstyle-em"></span><span id="index-22"></span><h3>em<a class="headerlink" href="#em" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">em</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Emphasis text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="bd">
+<span id="usx-charstyle-bd"></span><span id="index-23"></span><h3>bd<a class="headerlink" href="#bd" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">bd</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Bold text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="bdit">
+<span id="usx-charstyle-bdit"></span><span id="index-24"></span><h3>bdit<a class="headerlink" href="#bdit" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">bdit</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Bold + Italic text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="it">
+<span id="usx-charstyle-it"></span><span id="index-25"></span><h3>it<a class="headerlink" href="#it" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">it</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Italic text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="no">
+<span id="usx-charstyle-no"></span><span id="index-26"></span><h3>no<a class="headerlink" href="#no" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">no</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Normal text. <br />
+May be used when a containing paragraph element may be set in an alternate font style (e.g. italic), and a selection of text should instead be displayed in normal style.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="sc">
+<span id="usx-charstyle-sc"></span><span id="index-27"></span><h3>sc<a class="headerlink" href="#sc" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">sc</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Small-cap text.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="sup">
+<span id="usx-charstyle-sup"></span><span id="index-28"></span><h3>sup<a class="headerlink" href="#sup" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">sup</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Superscript text. Typically for use in critical edition footnotes.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="spacing-and-breaks">
+<span id="usx-charstyles-spacingbreaks"></span><span id="index-29"></span><h2>Spacing and Breaks<a class="headerlink" href="#spacing-and-breaks" title="Permalink to this headline">¶</a></h2>
+<p>Discretionary (optional) line break location. See element <a class="reference internal" href="elements.html#usx-element-optbreak"><span class="std std-ref">optbreak</span></a>.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="special-features">
+<span id="usx-charstyles-specialfeatures"></span><span id="index-30"></span><h2>Special Features<a class="headerlink" href="#special-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rb">
+<span id="usx-charstyle-rb"></span><span id="index-31"></span><h3>rb<a class="headerlink" href="#rb" title="Permalink to this headline">¶</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">rb</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Ruby glossing. <br />
+Used to mark the base text being annotated with ruby characters.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>About Ruby</strong>
+<a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> <em>See:</em> <a class="reference external" href="https://www.w3.org/TR/ruby/">https://www.w3.org/TR/ruby/</a></p>
+<p><strong>Han characters:</strong> Chinese, Japanese, and Korean texts have some characters that they share in common. In Japanese these are called Kanji (literally “Han characters”). There are several thousand of these characters to learn. For new readers or readers new to the Biblical texts it may be very difficult for them to recognize what Chinese or Japanese word corresponds to the Han character(s) they are seeing.</p>
+<p class="last"><strong>Ruby glosses:</strong> In order to help these readers, some Bibles are printed with glosses using small phonetic characters (e.g. Japanese uses the hiragana alphabet) placed above the more symbolic Han characters to tell the reader how to pronounce the character. These phonetic characters are generically called “ruby glosses” or “rubies”. In Japanese this technique is called Furigana.</p>
+</div>
+<span class="target" id="usx-charstyle-rb-attr"></span><p class="rubric" id="index-32">Attributes <a class="reference internal" href="_images/icon-tag_alt.png"><img alt="ico_Tag" src="_images/icon-tag_alt.png" style="width: 16px; height: 16px;" /></a></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<p><em>Additional</em> <a class="reference internal" href="attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> which can be used in this context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;gloss:</th><td class="field-body">Ruby glosses <br />
+Use a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> to separate multiple elements for glossing each of the characters within a base text phrase.</td>
+</tr>
+</tbody>
+</table>
+<p>For example: If the base text being glossed is a phrase of two Han characters (B), then the ruby gloss text (gg) may contain two elements, one for glossing each of the base text characters making up the phrase.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;gg:gg&quot;</span><span class="nt">&gt;</span>BB<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<p>This syntax allows the decision to present glosses by phrase or by group to be made at the publication stage, rather than pre-determined during translation.</p>
+<p>Parts of a phrase gloss may be left empty. In the example phrase below the second and fourth base characters are unglossed:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;g1::g3:&quot;</span><span class="nt">&gt;</span>BBBB<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<p><strong>Text and Formatting Samples</strong></p>
+<ol class="arabic simple">
+<li>One Han character with a single ruby gloss.</li>
+</ol>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;あい&quot;</span><span class="nt">&gt;</span>哀<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Two Han characters with a single ruby phrase gloss</li>
+</ol>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;はなはなし&quot;</span><span class="nt">&gt;</span>話賄<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Phrase gloss broken down into individual pieces by adding colons between ruby characters</li>
+</ol>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;はな:はなし&quot;</span><span class="nt">&gt;</span>話賄<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>A character sequence which includes non-Han characters (hiragana), which are NOT glossed.</li>
+</ol>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;さだ:&quot;</span><span class="nt">&gt;</span>定ま<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>An un-glossed character occurring between glossed characters in the “phrase”.</li>
+</ol>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;かみ::こ&quot;</span><span class="nt">&gt;</span>神の子<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<p>Genesis 1.1-2 (Japanes Living Bible - Biblica)</p>
+<div class="highlight-xml notranslate" id="usx-char-style-rb-example"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;GEN 1:1&quot;</span> <span class="nt">/&gt;</span>まだ<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;なに&quot;</span><span class="nt">&gt;</span>何<span class="nt">&lt;/char&gt;</span>
+  もなかった<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;とき&quot;</span><span class="nt">&gt;</span>時<span class="nt">&lt;/char&gt;</span>、<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;かみ&quot;</span><span class="nt">&gt;</span>神<span class="nt">&lt;/char&gt;</span>は
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;てん&quot;</span><span class="nt">&gt;</span>天<span class="nt">&lt;/char&gt;</span>と<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;ち&quot;</span><span class="nt">&gt;</span>地<span class="nt">&lt;/char&gt;</span>を
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;つく&quot;</span><span class="nt">&gt;</span>造<span class="nt">&lt;/char&gt;</span>りました。<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;GEN 1:1&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;verse</span> <span class="na">number=</span><span class="s">&quot;2&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;GEN 1:2&quot;</span> <span class="nt">/&gt;&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;ち&quot;</span><span class="nt">&gt;</span>地<span class="nt">&lt;/char&gt;</span>は
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;かたち&quot;</span><span class="nt">&gt;</span>形<span class="nt">&lt;/char&gt;</span>も<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;さだ&quot;</span><span class="nt">&gt;</span>定<span class="nt">&lt;/char&gt;</span>まらず、
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;やみ&quot;</span><span class="nt">&gt;</span>闇<span class="nt">&lt;/char&gt;</span>に<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;つつ&quot;</span><span class="nt">&gt;</span>包<span class="nt">&lt;/char&gt;</span>まれた
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;みず&quot;</span><span class="nt">&gt;</span>水<span class="nt">&lt;/char&gt;</span>の<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;うえ&quot;</span><span class="nt">&gt;</span>上<span class="nt">&lt;/char&gt;</span>を、さらに
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;かみ&quot;</span><span class="nt">&gt;</span>神<span class="nt">&lt;/char&gt;</span>の<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;れい&quot;</span><span class="nt">&gt;</span>霊<span class="nt">&lt;/char&gt;</span>が
+  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;rb&quot;</span> <span class="na">gloss=</span><span class="s">&quot;おお&quot;</span><span class="nt">&gt;</span>覆<span class="nt">&lt;/char&gt;</span>っていました。<span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;GEN 1:2&quot;</span> <span class="nt">/&gt;&lt;/para&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/usx-char-style_rb.jpg"><img alt="_images/usx-char-style_rb.jpg" src="_images/usx-char-style_rb.jpg" style="width: 300px;" /></a>
+<hr class="docutils" />
+</div>
+<div class="section" id="pro">
+<span id="usx-charstyle-pro"></span><span id="index-33"></span><h3>pro<a class="headerlink" href="#pro" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">pro</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Deprecated:</th><td class="field-body">3.0  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Pronunciation information <br />
+<em>Used for CJK texts.</em> <br />
+<strong>Deprecated</strong> (use is discouraged) <br /> <br />
+<a class="reference internal" href="_images/icon-check-green.png"><img alt="ico_Cg" src="_images/icon-check-green.png" style="width: 16px; height: 16px;" /></a> <em>Recommended alternate:</em> <a class="reference internal" href="#usx-charstyle-rb"><span class="std std-ref">char&#64;style rb</span></a>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="w">
+<span id="usx-charstyle-w"></span><span id="index-34"></span><h3>w<a class="headerlink" href="#w" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">w</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Wordlist/glossary/dictionary entry. <br />
+Surround word(s) with this char style to indicate that it appears (or should appear) in a published word list/glossary.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="usx-charstyle-w-attr"></span><p class="rubric" id="index-35">Attributes <a class="reference internal" href="_images/icon-tag_alt.png"><img alt="ico_Tag" src="_images/icon-tag_alt.png" style="width: 16px; height: 16px;" /></a></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<p><em>Additional</em> <a class="reference internal" href="attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> which can be used in this context.</p>
+<span class="target" id="usx-charstyle-w-attr-lemma"></span><table class="docutils field-list" frame="void" id="index-36" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;lemma:</th><td class="field-body">Citation form for the term in the glossary</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">lemma=</span><span class="s">&quot;grace&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<span class="target" id="usx-charstyle-w-attr-strong"></span><table class="docutils field-list" frame="void" id="index-37" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;strong:</th><td class="field-body">Strong’s ID in the form <code class="docutils literal notranslate"><span class="pre">H#####</span></code> (Hebrew) or <code class="docutils literal notranslate"><span class="pre">G#####</span></code> (Greek) <br /> <br />
+A strong’s ID <strong>augmentation</strong> identifier, if required, should be separated from the strong value by a colon <code class="docutils literal notranslate"><span class="pre">:</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">lemma=</span><span class="s">&quot;grace&quot;</span> <span class="na">strong=</span><span class="s">&quot;G05485&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">strong=</span><span class="s">&quot;G05485&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">strong=</span><span class="s">&quot;H01234,G05485&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+
+<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">strong=</span><span class="s">&quot;G05485:a&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<span class="target" id="usx-charstyle-w-attr-srcloc"></span><table class="docutils field-list" frame="void" id="index-38" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;srcloc:</th><td class="field-body">Location of the word in the source text; Example: GNT version 5 text, book 51, chapter 1, verse 2, word 1.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">lemma=</span><span class="s">&quot;grace&quot;</span> <span class="na">srcloc=</span><span class="s">&quot;gnt5:51.1.2.1&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="wg">
+<span id="usx-charstyle-wg"></span><span id="index-39"></span><h3>wg<a class="headerlink" href="#wg" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">wg</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Greek word list entry.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="wh">
+<span id="usx-charstyle-wh"></span><span id="index-40"></span><h3>wh<a class="headerlink" href="#wh" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">wh</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Hebrew word list entry.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="wa">
+<span id="usx-charstyle-wa"></span><span id="index-41"></span><h3>wa<a class="headerlink" href="#wa" title="Permalink to this headline">¶</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">wa</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Aramaic word list entry.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="structured-list-entries">
+<span id="usx-charstyles-structuredlists"></span><span id="index-42"></span><h2>Structured List Entries<a class="headerlink" href="#structured-list-entries" title="Permalink to this headline">¶</a></h2>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<p>Standard USX <a class="reference internal" href="elements.html#usx-element-table"><span class="std std-ref">table</span></a> structures can be challenging to display on small page sizes, or digital device displays. Scripture content is sometimes encoded within a USX table in order to suggest a meaningful presentation, but the encoded presentation may only be rendered accurately or legibly in a larger format. The following &lt;char&gt; &#64;style types can be used to create structured list entries which identify a set of related content, but do not encode a specific presentation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Structured lists are not strictly a replacement for table markup, but may prove to be a more flexible option for some types of tabular content.</p>
+</div>
+<p>&lt;char&gt; &#64;style types <a class="reference internal" href="#usx-charstyle-lik"><span class="std std-ref">lik</span></a> and <a class="reference internal" href="#usx-charstyle-liv"><span class="std std-ref">liv#</span></a> mark the content of list entries (&lt;para&gt; &#64;style <a class="reference internal" href="parastyles.html#usx-parastyle-li"><span class="std std-ref">li#</span></a>) which are essentially a key + value pair. A key may have multiple values.</p>
+<hr class="docutils" />
+<div class="section" id="lik">
+<span id="usx-charstyle-lik"></span><span id="index-43"></span><h3>lik<a class="headerlink" href="#lik" title="Permalink to this headline">¶</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">lik</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">List entry “key” content.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> within &lt;para&gt; &#64;style <a class="reference internal" href="parastyles.html#usx-parastyle-li"><span class="std std-ref">li#</span></a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="liv">
+<span id="usx-charstyle-liv"></span><span id="index-44"></span><h3>liv#<a class="headerlink" href="#liv" title="Permalink to this headline">¶</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">liv#</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">List entry “value” content. <br />
+The variable # represents the sequence of the marked item in a list entry with multiple values. <br />
+<strong>liv = liv1</strong> (see <a class="reference internal" href="parastyles.html#usx-notes-numberedstyles"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> within &lt;para&gt; &#64;style <a class="reference internal" href="parastyles.html#usx-parastyle-li"><span class="std std-ref">li#</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Text and Formatting Sample</strong> - 1 Chronicles 27:16-22 (GNT - <em>markup adapted</em>)</p>
+<div class="highlight-xml notranslate" id="usx-char-style-lik-liv-example"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s1&quot;</span><span class="nt">&gt;</span>Administration of the Tribes of Israel<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lh&quot;</span><span class="nt">&gt;&lt;verse</span> <span class="na">number=</span><span class="s">&quot;16-22&quot;</span> <span class="na">style=</span><span class="s">&quot;v&quot;</span> <span class="na">sid=</span><span class="s">&quot;1CH 27:16-22&quot;</span><span class="nt">/&gt;</span>This is the list of
+  the administrators of the tribes of Israel:<span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Reuben<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Eliezer son of Zichri<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Simeon<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Shephatiah son of Maacah<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Levi<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Hashabiah son of Kemuel<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Aaron<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Zadok<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Judah<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Elihu, one of King David&#39;s brothers<span class="nt">&lt;/char&gt;</span>
+</span><span class="nt">&lt;/para&gt;</span>
+<span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Issachar<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Omri son of Michael<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Zebulun<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Ishmaiah son of Obadiah<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Naphtali<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Jeremoth son of Azriel<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Ephraim<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Hoshea son of Azaziah<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>West Manasseh<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Joel son of Pedaiah<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>East Manasseh<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Iddo son of Zechariah<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Benjamin<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Jaasiel son of Abner<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;li1&quot;</span><span class="nt">&gt;</span>
+<span class="hll">  <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;lik&quot;</span><span class="nt">&gt;</span>Dan<span class="nt">&lt;/char&gt;</span> <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;liv1&quot;</span><span class="nt">&gt;</span>Azarel son of Jeroham<span class="nt">&lt;/char&gt;&lt;/para&gt;</span>
+</span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;lf&quot;</span><span class="nt">&gt;</span>This was the list of the administrators of the tribes of Israel.
+  <span class="nt">&lt;verse</span> <span class="na">eid=</span><span class="s">&quot;1CH 27:16-22&quot;</span> <span class="nt">/&gt;&lt;/para&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/usx-char-style_lik_liv.jpg"><img alt="_images/usx-char-style_lik_liv.jpg" src="_images/usx-char-style_lik_liv.jpg" style="width: 250px;" /></a>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="linking">
+<span id="usx-charstyles-linking"></span><span id="index-45"></span><h2>Linking<a class="headerlink" href="#linking" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="jmp">
+<span id="usx-charstyle-jmp"></span><span id="index-46"></span><h3>jmp<a class="headerlink" href="#jmp" title="Permalink to this headline">¶</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">jmp</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Available for associating <a class="reference internal" href="linking.html"><span class="doc">linking attributes</span></a> to a span of text when no other <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> element is already applied to the text at this location.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="linking.html"><span class="doc">Linking Attributes</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="msstyles.html" class="btn btn-neutral float-right" title="&lt;ms&gt; @style Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="parastyles.html" class="btn btn-neutral" title="&lt;para&gt; @style Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, United Bible Societies.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: v3.0.0
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../v2.5/charstyles.html">v2.5</a></dd>
+            <dd><a href="charstyles.html">v3.0.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../master/charstyles.html">master</a></dd>
+            <dd><a href="../usx2.5/charstyles.html">usx2.5</a></dd>
+            <dd><a href="../usx3.0/charstyles.html">usx3.0</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'3.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
