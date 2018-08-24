@@ -599,7 +599,7 @@ Parts of a phrase gloss may be left empty. In the example phrase below the secon
 
 	<char style="rb" gloss="かみ::こ">神の子</char>
 
-Genesis 1.1-2 (Japanes Living Bible - Biblica)
+Genesis 1.1-2 (Japanese Contemporary Bible - Biblica)
 
 .. code-block:: xml
 	:name: usx-char-style_rb_example
