@@ -687,6 +687,7 @@ Footnote =
     element note {
         attribute style { "f" | "fe" | "ef" },
         attribute caller { text },
+        (attribute category { text })?,
         (FootnoteChar | text )+
     }
 
@@ -752,7 +753,7 @@ CrossReferenceChar.char.style.enum = (
 Sidebar =
     element sidebar {
         attribute style { "esb" },
-        (attribute category { text })*,
+        (attribute category { text })?,
         (Para | List | Table | Footnote | CrossReference)+
     }
 
