@@ -752,6 +752,9 @@
         </choice>
       </attribute>
       <attribute name="caller"/>
+      <optional>
+        <attribute name="category"/>
+      </optional>
       <oneOrMore>
         <choice>
           <ref name="FootnoteChar"/>
@@ -893,9 +896,9 @@
       <attribute name="style">
         <value>esb</value>
       </attribute>
-      <zeroOrMore>
+      <optional>
         <attribute name="category"/>
-      </zeroOrMore>
+      </optional>
       <oneOrMore>
         <choice>
           <ref name="Para"/>

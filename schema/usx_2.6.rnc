@@ -522,6 +522,7 @@ Footnote =
     element note {
         attribute style { "f" | "fe" | "ef" },
         attribute caller { text },
+        (attribute category { text })?,
         (FootnoteChar | text )+
     }
 FootnoteChar =
@@ -605,7 +606,7 @@ Reference =
 Sidebar =
     element sidebar {
         attribute style { "esb" },
-        (attribute category { text })*,
+        (attribute category { text })?,
         (Para | Table | Footnote | CrossReference)+
     }
 Figure =
