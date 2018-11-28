@@ -500,7 +500,7 @@ cl
 	:emphasize-lines: 1
 
 	<para style="cl">Psalm</para>
-	<chapter number="1" style="c" />
+	<chapter number="1" style="c" sid="PSA 1" />
 	<para style="s">True Happiness</para>
 	<para style="q1">
 	  <verse number="1" style="v" sid="PSA 1:1" />Happy are those</para>
@@ -515,7 +515,7 @@ Psalm 1 (GNT - *markup adapted* - specific chapter label)
 	:name: usx-para-style_cl_example-alt
 	:emphasize-lines: 2
 
-	<chapter number="1" style="c" />
+	<chapter number="1" style="c" sid="PSA 1"/>
 	<para style="cl">Psalm One</para>
 	<para style="s">True Happiness</para>
 	<para style="q1">
@@ -544,7 +544,7 @@ cd
 	:name: usx-parastyle_cd-xt_example
 	:emphasize-lines: 2-3
 
-	<chapter number="2" style="c" />
+	<chapter number="2" style="c" sid="GEN 2"/>
 	<para style="cd">1 Бог благословляет седьмой день; 8 человек в раю Едемском; четыре реки; 
 	  дерево познания добра и зла. 18 Человек дает названия животным. 21 Создание женщины.
 	<para style="p">

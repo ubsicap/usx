@@ -75,6 +75,14 @@ The following schema diagram displays the document structure of a USX scripture 
 
 	A milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as *overlapping* or *concurrent* markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in `USFM <https://ubsicap.github.io/usfm/index.html>`_), the paragraph level markup forms the main structure of the document, while :ref:`chapter <usx-element_chapter>` and :ref:`verse <usx-element_verse>` elements are empty *milestones* which identify the location where the chapter or verse begins.
 
+.. note:: **Accurately identifying chapter text within the scripture paragraph structure**
+
+	|badge_3.1|	USX 3.1 adds a pair of attributes to ``<chapter/>`` (``sid`` and ``eid``) which are used to unambiguously identify the start and end position for a specific chapter text within the scripture discourse structure.
+
+	**IMPORTANT:** In USX 3.1 a ``<chapter/>`` milestone is *required* at the **start** and at the **end** of the verse text, with corresponding ``sid`` and ``eid`` attributes. In previous versions of USX, only a ``<chapter/>`` start milestone was required.
+
+	|ico_See| See: :ref:`Background on chapter and verse as milestones <usx-notes_cvMilestoneSyntax>`
+
 :Element: chapter |req| |br|
     *empty*
 :Added: 1.0
@@ -87,12 +95,20 @@ The following schema diagram displays the document structure of a USX scripture 
 	xsd:string of pattern ``[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |req| |br|
 	xsd:string
+:@sid: |badge_3.1| Chapter start identifier. |req| *(required at chapter start milestone)* |br|
+	A standard book + chapter scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[0-9]+``
+:@eid: |badge_3.1| Chapter end identifier. |req| *(required at chapter end milestone)* |br|
+	A standard book + chapter scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. |br|
+	xsd:string of pattern ``[A-Z1-4]{3} ?[0-9]+``
 :Valid in: :ref:`usx-div_chapterContent`
 :Parent: :ref:`usx-element_root`
 
 **Diagram and Text Sample**
 
-.. image:: images/usx-element_chapter.png
+.. image:: images/usx-element_chapterStart.png
+
+.. image:: images/usx-element_chapterEnd.png
 
 Code examples for chapter and verse are provided after the definition for element :ref:`verse<usx-element_verse>` (below).
 
@@ -144,8 +160,11 @@ Code examples for chapter and verse are provided after the definition for elemen
 
 .. code-block:: xml
 	:name: usx-element_verse_example
-	:emphasize-lines: 2-7,12,15,16,19,20
+	:emphasize-lines: 1,5-10,15,18-19,22-23,26-27
 
+	<chapter number="1" style="c" sid="GEN 1" />
+	<para style="s">The Story of Creation</para>
+	...
 	<para style="p">
 	  <verse number="21" style="v" sid="GEN 2:21" />Then the <char style="nd">Lord</char> God 
 	  made the man fall into a deep sleep, and while he was sleeping, he took out one of the 
@@ -167,6 +186,9 @@ Code examples for chapter and verse are provided after the definition for elemen
 	  <verse number="25" style="v" sid="GEN 2:25" />The man and the woman were both naked, but 
 	  they were not embarrassed.<verse eid="GEN 2:25" />
 	</para>
+	...
+	<chapter eid="GEN 1" />
+	<chapter number="2" style="c" sid="GEN 2" />
 
 An additional six chapters appear interspersed in Esther in the Septuagint. There are 3 common approaches to handling the Greek additions (and many additional variations!). Although Paratext requires sequential chapter and verse numbers to be used within the translation editing environment – as defined by the project versification – in numerous places this is not the string to be published for the chapter and/or verse identifiers at these locations. Examples from Esther Greek are shown below to highlight the application of the @pubnumber attribute for :ref:`chapter <usx-element_chapter>` and :ref:`verse <usx-element_verse>`.
 
@@ -181,7 +203,7 @@ The following example of the text for Esther Greek chapter 1 is taken from the E
 .. code-block:: xml
 	:name: usx-element_verse_example2
 
-	<chapter number="1" style="c" pubnumber="A" />
+	<chapter number="1" style="c" pubnumber="A" sid="ESG 1" />
 	<para style="s">Mordecai's Strange Dream</para>
 	<para style="p">
 	<verse number="1-3" style="v" sid="ESG 1:1-3" />Mordecai, a Jew who belonged to the tribe of 
@@ -217,7 +239,7 @@ The following example is taken from the English Contemporary English Version (CE
 .. code-block:: xml
 	:name: usx-element_verse_example3
 	
-	<chapter number="1" style="c" pubnumber="11" />
+	<chapter number="1" style="c" pubnumber="11" sid="ESG 1"/>
 	<para style="ms1">Addition A</para>
 	<para style="s1">Mordecai's Dream</para>
 	<para style="p">
@@ -267,7 +289,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 .. code-block:: xml
 	:name: usx-element_verse_example4
 
-	<chapter number="42" style="c" altnumber="41" />
+	<chapter number="42" style="c" altnumber="41" sid="PSA 42"/>
 	<para style="ms1">DEUXIÈME LIVRE</para>
 	<para style="mr">(Ps 42–72)</para>
 	<para style="s1">PSAUME 42</para>
