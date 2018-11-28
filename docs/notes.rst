@@ -25,6 +25,7 @@ Footnote <note>
 	*A <user defined caller> may be any single character or sequence of characters preferred as the caller for a note.*
 :@style: Content (footnote) type. |req| |br|
 	``f`` (footnote) | ``fe`` (endnote) | ``ef`` (extended / study note)
+:@category: Optional attribute used to tag the :ref:`usx-note_footnote` as belonging to a specific category of study content (e.g. Ideas, People, Places, Objects etc.). The @category attribute is normally only applied to :ref:`usx-element_note` @style="ef". 
 :Valid in: :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_char`, :ref:`usx-element_cell`
 
