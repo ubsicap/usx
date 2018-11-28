@@ -647,16 +647,25 @@ MilestoneWithAttrib.ms.style.qt =
     }
     # E.g. <ms style="qt1-s" sid="GEN.1.9.1" who="God">
 
-Chapter =
+Chapter = ( ChapterStart | ChapterEnd )
+
+ChapterStart =
     element chapter { # Start of new chapter
         attribute number { xsd:integer }&
         attribute style { "c" }&
+        attribute sid { xsd:string { minLength = "1" pattern = "[A-Z1-4]{3} ?[0-9]+" } }&
         attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,][0-9]+\w?)*" } }?&
         attribute pubnumber { xsd:string { minLength = "1" } }?&
         empty
     }
     # E.g. <chapter number="1" style="c" altnumber="2" pubnumber="A" />
     # This schema will not support a chapter:verse string within altnumber
+
+ChapterEnd =
+    element chapter { # End of chapter
+        attribute eid { xsd:string { minLength = "1" pattern = "[A-Z1-4]{3} ?[0-9]+" } },
+        empty
+    }
     
 BookChapterLabel =
     element para { 

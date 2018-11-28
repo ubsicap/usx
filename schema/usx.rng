@@ -1436,6 +1436,12 @@
   </define>
   <!-- E.g. <ms style="qt1-s" sid="GEN.1.9.1" who="God"> -->
   <define name="Chapter">
+    <choice>
+      <ref name="ChapterStart"/>
+      <ref name="ChapterEnd"/>
+    </choice>
+  </define>
+  <define name="ChapterStart">
     <element name="chapter">
       <interleave>
         <!-- Start of new chapter -->
@@ -1444,6 +1450,12 @@
         </attribute>
         <attribute name="style">
           <value>c</value>
+        </attribute>
+        <attribute name="sid">
+          <data type="string">
+            <param name="minLength">1</param>
+            <param name="pattern">[A-Z1-4]{3} ?[0-9]+</param>
+          </data>
         </attribute>
         <optional>
           <attribute name="altnumber">
@@ -1468,6 +1480,18 @@
     E.g. <chapter number="1" style="c" altnumber="2" pubnumber="A" />
     This schema will not support a chapter:verse string within altnumber
   -->
+  <define name="ChapterEnd">
+    <element name="chapter">
+      <!-- End of chapter -->
+      <attribute name="eid">
+        <data type="string">
+          <param name="minLength">1</param>
+          <param name="pattern">[A-Z1-4]{3} ?[0-9]+</param>
+        </data>
+      </attribute>
+      <empty/>
+    </element>
+  </define>
   <define name="BookChapterLabel">
     <element name="para">
       <attribute name="style">
