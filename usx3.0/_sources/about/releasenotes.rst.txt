@@ -49,6 +49,10 @@ USX 3.0 additions or revisions are highlighted throughout this documentation usi
 
 **Element / Attribute Revisions**
 
+* Require a :ref:`<chapter> <usx-element_chapter>` milestone at start and end of chapter text.
+
+    * Chapter start ``sid`` and end ``eid`` identifier :doc:`attributes </attributes>` for :ref:`<chapter> <usx-element_chapter>`.
+
 * Require a :ref:`<verse> <usx-element_verse>` milestone at start and end of verse text.
 
     * Verse start ``sid`` and end ``eid`` identifier :doc:`attributes </attributes>` for :ref:`<verse> <usx-element_verse>`.

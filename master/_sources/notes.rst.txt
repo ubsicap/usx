@@ -469,7 +469,7 @@ An *additional* :ref:`link-href <usx-charstyle-attr_link-href>` :doc:`attribute 
 	:name: usx-parastyle_cd-xt_example
 	:emphasize-lines: 2-5
 
-	<chapter number="2" style="c" />
+	<chapter number="2" style="c" sid="GEN 2" />
 	<para style="cd"><char style="xt" link-href="GEN 2:1">1</char> Бог благословляет седьмой 
 	  день; <char style="xt" link-href="GEN 2:8">8</char> человек в раю Едемском; четыре реки; 
 	  дерево познания добра и зла. <char style="xt" link-href="GEN 2:18">18</char> Человек дает 
