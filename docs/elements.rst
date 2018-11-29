@@ -77,9 +77,9 @@ The following schema diagram displays the document structure of a USX scripture 
 
 .. note:: **Accurately identifying chapter text within the scripture paragraph structure**
 
-	|badge_3.1|	USX 3.1 adds a pair of attributes to ``<chapter/>`` (``sid`` and ``eid``) which are used to unambiguously identify the start and end position for a specific chapter text within the scripture discourse structure.
+	|badge_3.0|	USX 3.0 adds a pair of attributes to ``<chapter/>`` (``sid`` and ``eid``) which are used to unambiguously identify the start and end position for a specific chapter text within the scripture discourse structure.
 
-	**IMPORTANT:** In USX 3.1 a ``<chapter/>`` milestone is *required* at the **start** and at the **end** of the verse text, with corresponding ``sid`` and ``eid`` attributes. In previous versions of USX, only a ``<chapter/>`` start milestone was required.
+	**IMPORTANT:** In USX 3.0 a ``<chapter/>`` milestone is *required* at the **start** and at the **end** of the verse text, with corresponding ``sid`` and ``eid`` attributes. In previous versions of USX, only a ``<chapter/>`` start milestone was required.
 
 	|ico_See| See: :ref:`Background on chapter and verse as milestones <usx-notes_cvMilestoneSyntax>`
 
@@ -95,10 +95,10 @@ The following schema diagram displays the document structure of a USX scripture 
 	xsd:string of pattern ``[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*``
 :@pubnumber: Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) |req| |br|
 	xsd:string
-:@sid: |badge_3.1| Chapter start identifier. |req| *(required at chapter start milestone)* |br|
+:@sid: |badge_3.0| Chapter start identifier. |req| *(required at chapter start milestone)* |br|
 	A standard book + chapter scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. |br|
 	xsd:string of pattern ``[A-Z1-4]{3} ?[0-9]+``
-:@eid: |badge_3.1| Chapter end identifier. |req| *(required at chapter end milestone)* |br|
+:@eid: |badge_3.0| Chapter end identifier. |req| *(required at chapter end milestone)* |br|
 	A standard book + chapter scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. |br|
 	xsd:string of pattern ``[A-Z1-4]{3} ?[0-9]+``
 :Valid in: :ref:`usx-div_chapterContent`
