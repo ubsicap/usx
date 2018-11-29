@@ -5,12 +5,12 @@
 
 **Fixed bugs:**
 
-- Add @category attribute to documentation for note@style ef [#36] (https://github.com/ubsicap/usx/issues/36)
+- Add @category attribute to documentation for note@style ef [#36](https://github.com/ubsicap/usx/issues/36)
 - Correct regex for @number attributes in documentation [\#29](https://github.com/ubsicap/usx/issues/29)
 
 **Closed issues:**
 
-- Current chapter identification attributes (add chapter@sid,eid) [#37] (https://github.com/ubsicap/usx/issues/37)
+- Current chapter identification attributes (add chapter@sid,eid) [#37](https://github.com/ubsicap/usx/issues/37)
 - Document use of link-href attribute for char@style xt [\#35](https://github.com/ubsicap/usx/issues/35)
 - Current verse identification attributes \(add verse@sid,eid; add para@vid; add cell@vid\) [\#34](https://github.com/ubsicap/usx/issues/34)
 - Text refrain \(restore para@style pr\) [\#33](https://github.com/ubsicap/usx/issues/33)
