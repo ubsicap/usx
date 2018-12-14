@@ -60,6 +60,7 @@ USX 3.0 additions or revisions are highlighted throughout this documentation usi
 * Require a verse identifier ``vid`` :doc:`attribute </attributes>` for :ref:`<para> <usx-element_para>` to re-identify the current verse whenever the previous :ref:`para <usx-element_para>` or :ref:`table <usx-element_table>` closed prior the end of the current verse text.
 * Support citation form for wordlist / glossary text (update :ref:`<char> <usx-element_char>` @style :ref:`lik <usx-charstyle_w>`).
 * Support for explicit :ref:`table <usx-element_table>` :ref:`cell <usx-element_cell>` column spanning (add attribute ``colspan`` to :ref:`cell <usx-element_cell>`).
+* Change :ref:`<figure> <usx-element_figure>` :doc:`attribute </attributes>` ``desc`` to ``alt`` to align with companion USFM 3.0 updates to `\\fig ...\\fig* <https://ubsicap.github.io/usfm/master/characters/index.html#fig-fig>`_. 
 * *Deprecated* cross reference and footnote DC content :ref:`<char> <usx-element_char>` @style types: :ref:`xdc <usx-note_crossReference_charstyle_xdc>` and :ref:`fdc <usx-note_footnote_charstyle_fdc>`
 * *Deprecated* numbered running header :ref:`<para> <usx-element_para>` @style types: :ref:`h# <usx-parastyle_h>`
 * *Deprecated* pronunciation info <char> @style pro in favour of ruby glosses :ref:`<char> <usx-element_char>` @style :ref:`rb <usx-charstyle_rb>`.

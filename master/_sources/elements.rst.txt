@@ -711,20 +711,20 @@ Galatians 3
 	xsd:string
 :@style: Content type. |req| |br|
 	``fig``
-:@desc: Illustration description. This text is not normally rendered within a publication. |req| |br|
-	xsd:string | *empty*
+:@alt: Illustration description. This text is not normally rendered within a publication. |br|
+	xsd:string
 :@file: Illustration filename or URI. |req| |br|
 	xsd:string | *empty*
 :@size: Illustration relative size. |req| |br|
 	``col`` | ``span`` | <user defined> xsd:string | *empty* |br|
 	**col** - Illustration should be inserted inline within the space for the current text column. |br|
 	**span** - Illustration should be inserted across (spanning) all text columns (i.e. the maximum available page or screen width).
-:@loc: Illustration location/range. |req| |br|
-	xsd:string | *empty*
-:@copy: Copyright information. |req| |br|
-	xsd:string | *empty*
+:@loc: Illustration location/range. |br|
+	xsd:string
+:@copy: Copyright information. |br|
+	xsd:string
 :@ref: Illustration reference. This text will commonly be rendered together with the illustration caption. |req|
-	xsd:string | *empty*
+	xsd:string
 :Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
@@ -735,7 +735,7 @@ Galatians 3
 .. code-block:: xml
 	:name: usx-element_figure_example
 
-	<figure style="fig" desc="" file="avnt016.jpg" size="span" loc="" copy="" ref="1.18">
+	<figure style="fig" alt="" file="avnt016.jpg" size="span" loc="" copy="" ref="1.18">
 		At once they left their nets.</figure>
 
 .. index:: element; <optbreak>
