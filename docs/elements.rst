@@ -735,7 +735,7 @@ Galatians 3
 .. code-block:: xml
 	:name: usx-element_figure_example
 
-	<figure style="fig" alt="" file="avnt016.jpg" size="span" loc="" copy="" ref="1.18">
+	<figure style="fig" file="avnt016.jpg" size="span" ref="1.18">
 		At once they left their nets.</figure>
 
 .. index:: element; <optbreak>
