@@ -711,7 +711,7 @@ Galatians 3
 	xsd:string
 :@style: Content type. |req| |br|
 	``fig``
-:@desc: Illustration description. This text is not normally rendered within a publication. |req| |br|
+:@alt: Illustration description. This text is not normally rendered within a publication. |br|
 	xsd:string | *empty*
 :@file: Illustration filename or URI. |req| |br|
 	xsd:string | *empty*
@@ -719,9 +719,9 @@ Galatians 3
 	``col`` | ``span`` | <user defined> xsd:string | *empty* |br|
 	**col** - Illustration should be inserted inline within the space for the current text column. |br|
 	**span** - Illustration should be inserted across (spanning) all text columns (i.e. the maximum available page or screen width).
-:@loc: Illustration location/range. |req| |br|
+:@loc: Illustration location/range. |br|
 	xsd:string | *empty*
-:@copy: Copyright information. |req| |br|
+:@copy: Copyright information. |br|
 	xsd:string | *empty*
 :@ref: Illustration reference. This text will commonly be rendered together with the illustration caption. |req|
 	xsd:string | *empty*
