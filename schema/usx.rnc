@@ -775,7 +775,7 @@ Figure =
         attribute size { text },
         attribute loc { text }?,
         attribute copy { text }?,
-        attribute ref { text }?,
+        attribute ref { text },
         text? # Caption
     }
 
