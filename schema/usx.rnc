@@ -769,12 +769,12 @@ Sidebar =
 Figure =
     element figure {
         attribute style { text },
-        attribute desc { text },
+        attribute alt { text }?,
         attribute file { text },
         attribute size { text },
-        attribute loc { text },
-        attribute copy { text },
-        attribute ref { text },
+        attribute loc { text }?,
+        attribute copy { text }?,
+        attribute ref { text }?,
         text? # Caption
     }
 
