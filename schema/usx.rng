@@ -492,8 +492,10 @@
       <value>toca3</value>
       <!-- Alternative language book Abbreviation -->
       <value>rem</value>
+      <!-- Remark -->
+      <value>usfm</value>
     </choice>
-    <!-- Remark -->
+    <!-- USFM markup version information (may occur if USX was generated from USFM) -->
   </define>
   <define name="BookTitles">
     <element name="para">
@@ -1724,11 +1726,17 @@
     <element name="figure">
       <group>
         <attribute name="style"/>
-        <attribute name="desc"/>
+        <optional>
+          <attribute name="alt"/>
+        </optional>
         <attribute name="file"/>
         <attribute name="size"/>
-        <attribute name="loc"/>
-        <attribute name="copy"/>
+        <optional>
+          <attribute name="loc"/>
+        </optional>
+        <optional>
+          <attribute name="copy"/>
+        </optional>
         <attribute name="ref"/>
         <optional>
           <text/>
