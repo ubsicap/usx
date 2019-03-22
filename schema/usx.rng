@@ -63,7 +63,7 @@
       </optional>
       <choice>
         <ref name="PeripheralBook"/>
-        <ref name="PeripheralBookSection"/>
+        <ref name="PeripheralDividedBook"/>
       </choice>
     </element>
   </define>
@@ -85,39 +85,12 @@
       <ref name="PeripheralContent"/>
     </oneOrMore>
   </define>
-  <define name="PeripheralBookSection">
-    <ref name="PeripheralBookSectionIdentification"/>
-    <element name="periph">
-      <attribute name="id">
-        <choice>
-          <ref name="Peripheral.FRT.periph.id.enum"/>
-          <ref name="Peripheral.INT.periph.id.enum"/>
-          <ref name="Peripheral.BAK.periph.id.enum"/>
-          <ref name="Peripheral.OTH.periph.id.enum"/>
-          <data type="string">
-            <param name="pattern">x\-[\w_\-\.:]+</param>
-          </data>
-        </choice>
-      </attribute>
-      <optional>
-        <attribute name="alt"/>
-      </optional>
-      <zeroOrMore>
-        <ref name="BookHeaders"/>
-      </zeroOrMore>
-      <oneOrMore>
-        <ref name="BookTitles"/>
-      </oneOrMore>
-      <zeroOrMore>
-        <ref name="BookIntroduction"/>
-      </zeroOrMore>
-      <zeroOrMore>
-        <ref name="BookIntroductionEndTitles"/>
-      </zeroOrMore>
-      <oneOrMore>
-        <ref name="PeripheralContent"/>
-      </oneOrMore>
-    </element>
+  <define name="PeripheralDividedBook">
+    <ref name="PeripheralDividedBookIdentification"/>
+    <choice>
+      <ref name="PeripheralDivision"/>
+      <ref name="PeripheralOther"/>
+    </choice>
   </define>
   <define name="BookIdentification">
     <element name="book">
@@ -371,11 +344,11 @@
     </choice>
     <!-- Names Index -->
   </define>
-  <define name="PeripheralBookSectionIdentification">
+  <define name="PeripheralDividedBookIdentification">
     <element name="book">
       <group>
         <attribute name="code">
-          <ref name="PeripheralBookSectionIdentification.book.code.enum"/>
+          <ref name="PeripheralDividedBookIdentification.book.code.enum"/>
         </attribute>
         <!-- e.g. code="FRT" -->
         <attribute name="style">
@@ -388,7 +361,7 @@
       <!-- Brief description of the project (optional) -->
     </element>
   </define>
-  <define name="PeripheralBookSectionIdentification.book.code.enum">
+  <define name="PeripheralDividedBookIdentification.book.code.enum">
     <choice>
       <value>XXA</value>
       <!-- Extra A, e.g. a hymnal -->
@@ -413,6 +386,39 @@
       <value>INT</value>
     </choice>
     <!-- Introduction -->
+  </define>
+  <define name="PeripheralDivision">
+    <element name="periph">
+      <attribute name="id">
+        <choice>
+          <ref name="Peripheral.FRT.periph.id.enum"/>
+          <ref name="Peripheral.INT.periph.id.enum"/>
+          <ref name="Peripheral.BAK.periph.id.enum"/>
+          <ref name="Peripheral.OTH.periph.id.enum"/>
+          <data type="string">
+            <param name="pattern">x\-[\w_\-\.:]+</param>
+          </data>
+        </choice>
+      </attribute>
+      <optional>
+        <attribute name="alt"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="BookHeaders"/>
+      </zeroOrMore>
+      <oneOrMore>
+        <ref name="BookTitles"/>
+      </oneOrMore>
+      <zeroOrMore>
+        <ref name="BookIntroduction"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="BookIntroductionEndTitles"/>
+      </zeroOrMore>
+      <oneOrMore>
+        <ref name="PeripheralContent"/>
+      </oneOrMore>
+    </element>
   </define>
   <define name="Peripheral.FRT.periph.id.enum">
     <choice>
@@ -456,6 +462,23 @@
       <value>cover</value>
       <value>spine</value>
     </choice>
+  </define>
+  <define name="PeripheralOther">
+    <zeroOrMore>
+      <ref name="BookHeaders"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="BookTitles"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="BookIntroduction"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="BookIntroductionEndTitles"/>
+    </zeroOrMore>
+    <zeroOrMore>
+      <ref name="PeripheralContent"/>
+    </zeroOrMore>
   </define>
   <define name="BookHeaders">
     <element name="para">

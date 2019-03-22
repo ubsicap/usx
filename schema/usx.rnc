@@ -32,7 +32,7 @@ Peripheral = (
         attribute version { xsd:string { minLength = "3" pattern = "\d+\.\d+(\.\d+)?"} },
         attribute xsi:noNamespaceSchemaLocation { text }?,
 
-        (PeripheralBook | PeripheralBookSection)
+        (PeripheralBook | PeripheralDividedBook)
     }
     )
 
@@ -45,23 +45,11 @@ PeripheralBook = (
     PeripheralContent+
     )
 
-PeripheralBookSection = (
-    PeripheralBookSectionIdentification,
-    element periph {
-        attribute id { 
-              Peripheral.FRT.periph.id.enum
-            | Peripheral.INT.periph.id.enum
-            | Peripheral.BAK.periph.id.enum
-            | Peripheral.OTH.periph.id.enum
-            | xsd:string { pattern = "x\-[\w_\-\.:]+" } },
-        attribute alt { text }?,
-        
-        BookHeaders*,
-        BookTitles+,
-        BookIntroduction*,
-        BookIntroductionEndTitles*,
-        PeripheralContent+
-    }
+PeripheralDividedBook = (
+    PeripheralDividedBookIdentification,
+    
+    (PeripheralDivision | PeripheralOther)
+    
     )
 
 BookIdentification =
@@ -187,13 +175,13 @@ PeripheralBookIdentification.book.code.enum = (
      | "NDX" # Names Index
      )
 
-PeripheralBookSectionIdentification =
+PeripheralDividedBookIdentification =
     element book {
-        attribute code { PeripheralBookSectionIdentification.book.code.enum }, # e.g. code="FRT"
+        attribute code { PeripheralDividedBookIdentification.book.code.enum }, # e.g. code="FRT"
         attribute style { "id" },
         text? # Brief description of the project (optional)
     }
-PeripheralBookSectionIdentification.book.code.enum = (
+PeripheralDividedBookIdentification.book.code.enum = (
        "XXA" # Extra A, e.g. a hymnal
      | "XXB" # Extra B
      | "XXC" # Extra C
@@ -206,6 +194,22 @@ PeripheralBookSectionIdentification.book.code.enum = (
      | "OTH" # Other Matter
      | "INT" # Introduction
      )
+
+PeripheralDivision =
+    element periph {
+        attribute id { 
+              Peripheral.FRT.periph.id.enum
+            | Peripheral.INT.periph.id.enum
+            | Peripheral.BAK.periph.id.enum
+            | Peripheral.OTH.periph.id.enum
+            | xsd:string { pattern = "x\-[\w_\-\.:]+" } },
+        attribute alt { text }?,
+        BookHeaders*,
+        BookTitles+,
+        BookIntroduction*,
+        BookIntroductionEndTitles*,
+        PeripheralContent+
+    }
 Peripheral.FRT.periph.id.enum = (
       "title"
     | "halftitle"
@@ -240,6 +244,14 @@ Peripheral.BAK.periph.id.enum = (
 Peripheral.OTH.periph.id.enum = (
       "cover"
     | "spine"
+    )
+
+PeripheralOther = (
+    BookHeaders*,
+    BookTitles*,
+    BookIntroduction*,
+    BookIntroductionEndTitles*,
+    PeripheralContent*
     )
 
 BookHeaders =
