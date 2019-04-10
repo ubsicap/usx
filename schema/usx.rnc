@@ -208,7 +208,7 @@ PeripheralDivision =
         BookTitles+,
         BookIntroduction*,
         BookIntroductionEndTitles*,
-        PeripheralContent+
+        PeripheralContent*
     }
 Peripheral.FRT.periph.id.enum = (
       "title"

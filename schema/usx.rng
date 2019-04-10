@@ -415,9 +415,9 @@
       <zeroOrMore>
         <ref name="BookIntroductionEndTitles"/>
       </zeroOrMore>
-      <oneOrMore>
+      <zeroOrMore>
         <ref name="PeripheralContent"/>
-      </oneOrMore>
+      </zeroOrMore>
     </element>
   </define>
   <define name="Peripheral.FRT.periph.id.enum">
