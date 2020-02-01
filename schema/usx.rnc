@@ -1,5 +1,5 @@
 # usx.rnc
-# A compact syntax Relax NG Schema for USX 3.0
+# A compact syntax Relax NG Schema for USX 3.0.1
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
@@ -784,10 +784,10 @@ Figure =
         attribute style { text },
         attribute alt { text }?,
         attribute file { text },
-        attribute size { text },
+        attribute size { text }?,
         attribute loc { text }?,
         attribute copy { text }?,
-        attribute ref { text },
+        attribute ref { text }?,
         text? # Caption
     }
 
