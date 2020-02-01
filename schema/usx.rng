@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   usx.rnc
-  A compact syntax Relax NG Schema for USX 3.0
+  A compact syntax Relax NG Schema for USX 3.0.1
 -->
 <grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
@@ -1753,14 +1753,18 @@
           <attribute name="alt"/>
         </optional>
         <attribute name="file"/>
-        <attribute name="size"/>
+        <optional>
+          <attribute name="size"/>
+        </optional>
         <optional>
           <attribute name="loc"/>
         </optional>
         <optional>
           <attribute name="copy"/>
         </optional>
-        <attribute name="ref"/>
+        <optional>
+          <attribute name="ref"/>
+        </optional>
         <optional>
           <text/>
         </optional>
