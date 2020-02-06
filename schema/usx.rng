@@ -1286,7 +1286,7 @@
           <!-- Lemma/citation form found in glossary -->
           <attribute name="strong">
             <data type="string">
-              <param name="pattern">[HG]\d{4,5}(:[a-z])?</param>
+              <param name="pattern">([HG]\d{4,5}(:[a-z])?,?)+</param>
             </data>
           </attribute>
         </optional>
