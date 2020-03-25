@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   usx.rnc
-  A compact syntax Relax NG Schema for USX 3.0.1
+  A compact syntax Relax NG Schema for USX 3.0.2
 -->
 <grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
@@ -396,7 +396,7 @@
           <ref name="Peripheral.BAK.periph.id.enum"/>
           <ref name="Peripheral.OTH.periph.id.enum"/>
           <data type="string">
-            <param name="pattern">x\-[\w_\-\.:]+</param>
+            <param name="pattern">x\-[\p{L}_\-\.:]+</param>
           </data>
         </choice>
       </attribute>
@@ -1368,7 +1368,7 @@
       <!-- Plain text describing the remote resource such as might be shown in a tooltip -->
       <attribute name="link-id">
         <data type="string">
-          <param name="pattern">[\w_\-\.:]+</param>
+          <param name="pattern">[\p{L}_\-\.:]+</param>
         </data>
       </attribute>
     </optional>
@@ -1389,7 +1389,7 @@
         <optional>
           <attribute name="sid">
             <data type="string">
-              <param name="pattern">[\w_\-\.:]+</param>
+              <param name="pattern">[\p{L}_\-\.:]+</param>
             </data>
           </attribute>
         </optional>
@@ -1397,7 +1397,7 @@
           <!-- optional milestone start id (digits, letters, underscore) -->
           <attribute name="eid">
             <data type="string">
-              <param name="pattern">[\w_\-\.:]+</param>
+              <param name="pattern">[\p{L}_\-\.:]+</param>
             </data>
           </attribute>
         </optional>
@@ -1435,7 +1435,7 @@
         <!-- Quotation speaker -->
         <attribute name="sid">
           <data type="string">
-            <param name="pattern">[\w_\-\.:]+</param>
+            <param name="pattern">[\p{L}_\-\.:]+</param>
           </data>
         </attribute>
       </optional>
@@ -1443,7 +1443,7 @@
         <!-- Milestone start id for locating start and end pairs -->
         <attribute name="eid">
           <data type="string">
-            <param name="pattern">[\w_\-\.:]+</param>
+            <param name="pattern">[\p{L}_\-\.:]+</param>
           </data>
         </attribute>
       </optional>
@@ -1486,7 +1486,7 @@
           <attribute name="altnumber">
             <data type="string">
               <param name="minLength">1</param>
-              <param name="pattern">[0-9]+\w?(‏?[\-,][0-9]+\w?)*</param>
+              <param name="pattern">[0-9]+\p{L}?(‏?[\-,][0-9]+\p{L}?)*</param>
             </data>
           </attribute>
         </optional>
@@ -1537,7 +1537,7 @@
       <attribute name="number">
         <data type="string">
           <param name="minLength">1</param>
-          <param name="pattern">[0-9]+\w?(‏?[\-,][0-9]+\w?)*</param>
+          <param name="pattern">[0-9]+\p{L}?(‏?[\-,][0-9]+\p{L}?)*</param>
         </data>
       </attribute>
       <attribute name="style">
@@ -1547,7 +1547,7 @@
         <attribute name="altnumber">
           <data type="string">
             <param name="minLength">1</param>
-            <param name="pattern">[0-9]+\w?(‏?[\-,:][0-9]+\w?)*</param>
+            <param name="pattern">[0-9]+\p{L}?(‏?[\-,:][0-9]+\p{L}?)*</param>
           </data>
         </attribute>
       </optional>

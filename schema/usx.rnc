@@ -1,5 +1,5 @@
 # usx.rnc
-# A compact syntax Relax NG Schema for USX 3.0.1
+# A compact syntax Relax NG Schema for USX 3.0.2
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
@@ -202,7 +202,7 @@ PeripheralDivision =
             | Peripheral.INT.periph.id.enum
             | Peripheral.BAK.periph.id.enum
             | Peripheral.OTH.periph.id.enum
-            | xsd:string { pattern = "x\-[\w_\-\.:]+" } },
+            | xsd:string { pattern = "x\-[\p{L}_\-\.:]+" } },
         attribute alt { text }?,
         BookHeaders*,
         BookTitles+,
@@ -627,7 +627,7 @@ char.link =
     attribute link-href { xsd:string 
         { pattern = "(.*///?(.*/?)+)|((prj:[A-Za-z\-0-9]{3,8} )?[A-Z1-4]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)" } }?, # The resource being linked to as a URI
     attribute link-title { xsd:string }?, # Plain text describing the remote resource such as might be shown in a tooltip
-    attribute link-id { xsd:string { pattern = "[\w_\-\.:]+" } }? # Unique identifier for this location in the text
+    attribute link-id { xsd:string { pattern = "[\p{L}_\-\.:]+" } }? # Unique identifier for this location in the text
 
 char.closed =
     attribute closed { xsd:boolean } # Present to allow roundtripping to USFM, not needed for publishing
@@ -635,8 +635,8 @@ char.closed =
 Milestone = (
     element ms {
         attribute style { Milestone.ms.style.enum },
-        attribute sid { xsd:string { pattern="[\w_\-\.:]+" } }?, # optional milestone start id (digits, letters, underscore)
-        attribute eid { xsd:string { pattern="[\w_\-\.:]+" } }?, # milestone end id (digits, letters, underscore) - required with sid
+        attribute sid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # optional milestone start id (digits, letters, underscore)
+        attribute eid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # milestone end id (digits, letters, underscore) - required with sid
         empty
     }
     | MilestoneWithAttrib.enum
@@ -653,8 +653,8 @@ MilestoneWithAttrib.enum = (
 MilestoneWithAttrib.ms.style.qt = 
     element ms {
         attribute style { xsd:string { pattern="qt[1-5]?(\-[se])?" } }, # Quotation speaker
-        attribute sid { xsd:string { pattern="[\w_\-\.:]+" } }?, # Milestone start id for locating start and end pairs
-        attribute eid { xsd:string { pattern="[\w_\-\.:]+" } }?, # Milestone end id for locating start and end pairs
+        attribute sid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # Milestone start id for locating start and end pairs
+        attribute eid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # Milestone end id for locating start and end pairs
         attribute who { xsd:string { minLength = "2" } }?, # Name / identity of quote speaker
         empty
     }
@@ -667,7 +667,7 @@ ChapterStart =
         attribute number { xsd:integer }&
         attribute style { "c" }&
         attribute sid { xsd:string { minLength = "1" pattern = "[A-Z1-4]{3} ?[0-9]+" } }&
-        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,][0-9]+\w?)*" } }?&
+        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\p{L}?(\x{200F}?[\-,][0-9]+\p{L}?)*" } }?&
         attribute pubnumber { xsd:string { minLength = "1" } }?&
         empty
     }
@@ -690,9 +690,9 @@ Verse = ( VerseStart | VerseEnd )
 
 VerseStart =
     element verse {
-        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,][0-9]+\w?)*" } },
+        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+\p{L}?(\x{200F}?[\-,][0-9]+\p{L}?)*" } },
         attribute style { "v" },
-        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\w?(\x{200F}?[\-,:][0-9]+\w?)*" } }?,
+        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\p{L}?(\x{200F}?[\-,:][0-9]+\p{L}?)*" } }?,
         attribute pubnumber { xsd:string { minLength = "1" } }?,
         attribute sid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } },
         empty
