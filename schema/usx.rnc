@@ -1,5 +1,5 @@
 # usx.rnc
-# A compact syntax Relax NG Schema for USX 3.0.2
+# A compact syntax Relax NG Schema for USX 3.0.3
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
@@ -357,7 +357,7 @@ PeripheralContent = (Chapter | Para | List | Table | Footnote | CrossReference |
 Para =
     element para {
         attribute style { Para.para.style.enum },
-        attribute vid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } }?,
+        attribute vid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } }?,
         (Reference | Footnote | CrossReference | Char | Milestone | Figure | Verse | Break | text)+
     }
 Para.para.style.enum = (
@@ -415,7 +415,7 @@ Para.para.style.enum = (
     | "sd2" # Semantic division location (vertical space used to divide the text into sections), level 2
     | "sd3" # Semantic division location (vertical space used to divide the text into sections), level 3
     | "sd4" # Semantic division location (vertical space used to divide the text into sections), level 4
-    | "ts" # Translator’s chunk (to identify chunks of text suitable for translating at one time)
+    | "ts" # Translatorï¿½s chunk (to identify chunks of text suitable for translating at one time)
     | "lh" # List header (introductory remark)
     | "li" # A list entry, level 1 (if single level)
     | "li1" # A list entry, level 1 (if multiple levels)
@@ -464,7 +464,7 @@ List.para.style.enum = (
 
 Table = 
     element table {
-        attribute vid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } }?,
+        attribute vid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } }?,
         element row {
             attribute style {
                 ("tr") # Table row
@@ -607,7 +607,7 @@ CharWithAttrib.char.style.w =
         char.link?,
         char.closed?,
         attribute lemma { xsd:string { minLength = "1" } }?, # Lemma/citation form found in glossary
-        attribute strong { xsd:string { pattern = "([HG]\d{4,5}(:[a-z])?,?)+"} }?, # Strong’s ID in the form H##### (Hebrew) or G##### (Greek)
+        attribute strong { xsd:string { pattern = "([HG]\d{4,5}(:[a-z])?,?)+"} }?, # Strongï¿½s ID in the form H##### (Hebrew) or G##### (Greek)
         attribute srcloc { xsd:string { pattern = "[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+" } }?, # Location of the word in the source text
         text,
         (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
@@ -694,14 +694,14 @@ VerseStart =
         attribute style { "v" },
         attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\p{L}?(\x{200F}?[\-,:][0-9]+\p{L}?)*" } }?,
         attribute pubnumber { xsd:string { minLength = "1" } }?,
-        attribute sid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } },
+        attribute sid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } },
         empty
     }
     # E.g. <verse number="1" style="v" altnumber="2" pubnumber="B" sid="GEN 1:22" />
 
 VerseEnd =
     element verse {
-        attribute eid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } },
+        attribute eid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } },
         empty
     }
 
@@ -793,7 +793,7 @@ Figure =
 
 Reference =
     element ref {
-        attribute loc { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-,:]*" } },
+        attribute loc { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } },
         text?
     }
 
