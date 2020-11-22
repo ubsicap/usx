@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Attributes &mdash; Unified Scripture XML 3.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;para&gt; @style Types" href="parastyles.html" />
+    <link rel="prev" title="Elements" href="elements.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about/index.html">About USX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Document Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Attributes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#word-level-descriptive-attributes">Word Level Descriptive Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-attribute">Default Attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-defined-attributes">User Defined Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#char-style-types-providing-additional-attributes">&lt;char&gt; &#64;style Types Providing Additional Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ms-style-types-providing-additional-attributes">&lt;ms&gt; &#64;style Types Providing Additional Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parastyles.html">&lt;para&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="charstyles.html">&lt;char&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msstyles.html">&lt;ms&gt; &#64;style Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes.html">&lt;note&gt; Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linking.html">Linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peripherals.html">Peripherals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vocabularies.html">Vocabularies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schemas</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Unified Scripture XML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Attributes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/attributes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="attributes">
+<span id="usx-attributes-syntax"></span><span id="usx-attributes-index"></span><span id="index-0"></span><h1>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h1>
+<p>Attributes are a standard aspect of XML syntax and can be applied to any element. An element can have multiple unique attributes. Attributes define additional properties of elements. They are a means of extending the meta information contained within in a USX text.</p>
+<p>Attributes are listed as pairs of <strong>name</strong> and corresponding <strong>value</strong> using the syntax: <code class="docutils literal notranslate"><span class="pre">attribute=&quot;value&quot;</span></code>. The attribute name is a single ASCII string. The value is wrapped in quotes.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">lemma=</span><span class="s">&quot;grace&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<p>Nearly all USX elements contain a required <strong>&#64;style</strong> attribute. For <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> and <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements, the &#64;style attribute defines the type of <a class="reference internal" href="parastyles.html"><span class="doc">paragraph</span></a> or <a class="reference internal" href="charstyles.html"><span class="doc">character</span></a> element being marked. The &#64;style attribute in USX is also (intentionally) closely associated to <a class="reference external" href="http://ubsicap.github.io/usfm/index.html">USFM</a> paragraph and character markers with the same definition.</p>
+<span class="target" id="usx-attributes-descriptive"></span><div class="section" id="word-level-descriptive-attributes">
+<span id="index-1"></span><h2>Word Level Descriptive Attributes<a class="headerlink" href="#word-level-descriptive-attributes" title="Permalink to this headline">¶</a></h2>
+<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
+<p>USX will formally provide additional descriptive attributes for a subset of <a class="reference internal" href="charstyles.html"><span class="doc">&lt;char&gt; &#64;style types</span></a>. Each &lt;char&gt; element in this set will have a defined list of additional attribute(s), which are relevant to the overall purpose of the element.</p>
+</div>
+<div class="section" id="default-attribute">
+<span id="usx-attributes-default"></span><h2>Default Attribute<a class="headerlink" href="#default-attribute" title="Permalink to this headline">¶</a></h2>
+<p>The concept of a “default attribute” is only valid in USFM text. It was designed to reduce the amoung of metadata visible in the text when working with USFM. In the case of the <a class="reference external" href="http://ubsicap.github.io/usfm/attributes/index.html">USFM specification</a>, a single default attribute may be defined for a given character marker, and does not require the attribute name to be written within the text. To be valid, the XML expression in USX must <em>always</em> contain the attribute name and its value.</p>
+<p>In the preceding example, <code class="docutils literal notranslate"><span class="pre">&lt;char</span> <span class="pre">&#64;style=&quot;w&quot;&gt;</span></code> accepts an additional attribute <code class="docutils literal notranslate"><span class="pre">lemma</span></code>, which is the <a class="reference external" href="http://ubsicap.github.io/usfm/characters/index.html#usfmc-w-attr">default attribute</a> found in the USFM expression for the same text.</p>
+</div>
+<div class="section" id="user-defined-attributes">
+<span id="usx-attributes-userdefined"></span><h2>User Defined Attributes<a class="headerlink" href="#user-defined-attributes" title="Permalink to this headline">¶</a></h2>
+<p>User defined attributes may be added to any USX <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> element, even if it is not within the list of &lt;char&gt; &#64;style type elements officially providing additional descriptive attributes. These will not be considered strictly USX compliant, and there is no assurance that they will be supported by compliant software tools or processes. Future versions of USX may formally define additional attributes.</p>
+<p>Any user defined attributes must begin with the prefix <code class="docutils literal notranslate"><span class="pre">x-</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">x-myattr=</span><span class="s">&quot;metadata&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+<span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;w&quot;</span> <span class="na">lemma=</span><span class="s">&quot;grace&quot;</span> <span class="na">x-myattr=</span><span class="s">&quot;metadata&quot;</span><span class="nt">&gt;</span>gracious<span class="nt">&lt;/char&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="char-style-types-providing-additional-attributes">
+<span id="usx-attributes-styletypesproviding"></span><h2>&lt;char&gt; &#64;style Types Providing Additional Attributes<a class="headerlink" href="#char-style-types-providing-additional-attributes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="charstyles.html#usx-charstyle-w-attr"><span class="std std-ref">&lt;char &#64;style=”w”&gt;</span></a> (<code class="docutils literal notranslate"><span class="pre">lemma</span></code>, <code class="docutils literal notranslate"><span class="pre">strong</span></code>, <code class="docutils literal notranslate"><span class="pre">scrloc</span></code>)</li>
+<li><a class="reference internal" href="charstyles.html#usx-charstyle-rb-attr"><span class="std std-ref">&lt;char &#64;style=”rb”&gt;</span></a> (<code class="docutils literal notranslate"><span class="pre">gloss</span></code>)</li>
+</ul>
+</div>
+<div class="section" id="ms-style-types-providing-additional-attributes">
+<h2>&lt;ms&gt; &#64;style Types Providing Additional Attributes<a class="headerlink" href="#ms-style-types-providing-additional-attributes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="msstyles.html#usx-msstyle-qt-attr"><span class="std std-ref">&lt;ms &#64;style=”qt#”&gt;</span></a> (who)</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parastyles.html" class="btn btn-neutral float-right" title="&lt;para&gt; @style Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="elements.html" class="btn btn-neutral" title="Elements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, United Bible Societies.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: usx3.0.1
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../v2.5/index.html">v2.5</a></dd>
+            <dd><a href="../v3.0.0/attributes.html">v3.0.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../master/attributes.html">master</a></dd>
+            <dd><a href="../usx2.5/index.html">usx2.5</a></dd>
+            <dd><a href="../usx3.0/attributes.html">usx3.0</a></dd>
+            <dd><a href="attributes.html">usx3.0.1</a></dd>
+            <dd><a href="../usx3.0.2/attributes.html">usx3.0.2</a></dd>
+            <dd><a href="../usx3.0.3/attributes.html">usx3.0.3</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'3.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

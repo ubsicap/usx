@@ -143,10 +143,10 @@ Code examples for chapter and verse are provided after the definition for elemen
 	xsd:string
 :@sid: |badge_3.0| Verse start identifier. |req| *(required at verse start milestone)* |br|
 	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
-	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-:]*``
 :@eid: |badge_3.0| Verse end identifier. |req| *(required at verse end milestone)* |br|
 	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
-	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-:]*``
 :Valid in: :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_para`, :ref:`usx-element_row`, :ref:`usx-element_cell`
 
@@ -324,7 +324,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :@vid: |badge_3.0| Verse identifier. |br|
 	Required to re-identify the current verse whenever the previous :ref:`para <usx-element_para>` or :ref:`table <usx-element_table>` closed prior the end of the current verse text. |br|
 	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
-	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-:]*``
 :Valid in: :ref:`usx-div_bookHeaders`, :ref:`usx-div_bookTitles`, :ref:`usx-div_bookIntroduction`, :ref:`usx-div_bookIntroductionEndTitles`, :ref:`usx-div_bookChapterLabel`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
@@ -377,7 +377,7 @@ An example from Psalms (modified French TOB) showing an alternate chapter and ve
 :@vid: |badge_3.0| Verse identifier. |br|
 	Required to re-identify the current verse when the previous :ref:`para <usx-element_para>` closed prior the end of the current verse text. |br|
 	A standard book + chapter + verse scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
-	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-:]*``
 :Valid in: :ref:`usx-div_bookIntroduction`, :ref:`usx-div_chapterContent`
 :Parents: :ref:`usx-element_root`
 
@@ -771,7 +771,7 @@ Galatians 3
 	When :ref:`usx-element_ref` is used with a USX encoded text, each segment of a scripture reference should be wrapped in a :ref:`usx-element_ref` element. |br|
 	xsd:string
 :@loc: A parsable (machine-readable) representation of the vernacular text for the scripture reference. Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon (:). |br|
-	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-,:]*``
+	xsd:string of pattern ``[A-Z1-4]{3} ?[a-z0-9\-:]*``
 :Valid in: 
 :Parents: 
 

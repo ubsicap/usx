@@ -332,11 +332,11 @@ xsd:string</td>
 </tr>
 <tr class="field-even field"><th class="field-name">&#64;sid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse start identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at verse start milestone)</em> <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-,:]*</span></code></td>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
 </tr>
 <tr class="field-odd field"><th class="field-name">&#64;eid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse end identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at verse end milestone)</em> <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-,:]*</span></code></td>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
 </tr>
 <tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
 </tr>
@@ -503,7 +503,7 @@ Permitted values vary for each document division. The <a class="reference intern
 <tr class="field-odd field"><th class="field-name">&#64;vid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse identifier. <br />
 Required to re-identify the current verse whenever the previous <a class="reference internal" href="#usx-element-para"><span class="std std-ref">para</span></a> or <a class="reference internal" href="#usx-element-table"><span class="std std-ref">table</span></a> closed prior the end of the current verse text. <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-,:]*</span></code></td>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
 </tr>
 <tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookheaders"><span class="std std-ref">Book Headers</span></a>, <a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
 </tr>
@@ -559,7 +559,7 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
 <tr class="field-even field"><th class="field-name">&#64;vid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse identifier. <br />
 Required to re-identify the current verse when the previous <a class="reference internal" href="#usx-element-para"><span class="std std-ref">para</span></a> closed prior the end of the current verse text. <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-,:]*</span></code></td>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
 </tr>
@@ -980,7 +980,7 @@ When <a class="reference internal" href="#usx-element-ref"><span class="std std-
 xsd:string</td>
 </tr>
 <tr class="field-even field"><th class="field-name">&#64;loc:</th><td class="field-body">A parsable (machine-readable) representation of the vernacular text for the scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-,:]*</span></code></td>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"></td>
 </tr>
@@ -1095,6 +1095,9 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
             <dd><a href="elements.html">master</a></dd>
             <dd><a href="../usx2.5/elements.html">usx2.5</a></dd>
             <dd><a href="../usx3.0/elements.html">usx3.0</a></dd>
+            <dd><a href="../usx3.0.1/elements.html">usx3.0.1</a></dd>
+            <dd><a href="../usx3.0.2/elements.html">usx3.0.2</a></dd>
+            <dd><a href="../usx3.0.3/elements.html">usx3.0.3</a></dd>
         </dl>
     </div>
 </div>
@@ -1116,6 +1119,7 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 
