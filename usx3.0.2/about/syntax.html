@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,44 +11,48 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Document Structure" href="../structure.html" />
     <link rel="prev" title="Release Notes" href="releasenotes.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Unified Scripture XML
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Unified Scripture XML
           
 
           
@@ -76,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -110,6 +114,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -148,7 +153,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">Introduction</a> &raquo;</li>
         
@@ -181,45 +186,35 @@
 <span id="usx-notes-docsyntax"></span><span id="index-2"></span><h2>Documentation Syntax Notes<a class="headerlink" href="#documentation-syntax-notes" title="Permalink to this headline">¶</a></h2>
 <p>Information about the individual elements and attributes for USX XML content is provided using the following features in this documentation. Not every feature is needed or supplied for each section of the documentation, or for every element.</p>
 <ul>
-<li><p class="first"><strong>An element / attribute description table:</strong></p>
+<li><p><strong>An element / attribute description table:</strong></p>
 <blockquote>
 <div><ul>
-<li><p class="first">The element or attribute name.</p>
+<li><p>The element or attribute name.</p>
 <blockquote>
 <div><ul class="simple">
-<li>In the <a class="reference internal" href="../parastyles.html"><span class="doc">&lt;para&gt;</span></a>, <a class="reference internal" href="../charstyles.html"><span class="doc">&lt;char&gt;</span></a>, and <a class="reference internal" href="../msstyles.html"><span class="doc">&lt;ms&gt;</span></a> &#64;style types sections, the tables are primarily providing descriptions for the values of the common attribute <code class="docutils literal notranslate"><span class="pre">&#64;style</span></code> which is required for <code class="docutils literal notranslate"><span class="pre">&lt;para&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;char&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;ms&gt;</span></code> elements.</li>
+<li><p>In the <a class="reference internal" href="../parastyles.html"><span class="doc">&lt;para&gt;</span></a>, <a class="reference internal" href="../charstyles.html"><span class="doc">&lt;char&gt;</span></a>, and <a class="reference internal" href="../msstyles.html"><span class="doc">&lt;ms&gt;</span></a> &#64;style types sections, the tables are primarily providing descriptions for the values of the common attribute <code class="docutils literal notranslate"><span class="pre">&#64;style</span></code> which is required for <code class="docutils literal notranslate"><span class="pre">&lt;para&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;char&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;ms&gt;</span></code> elements.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Version of USX when the element or attribute was added.</p>
-</li>
-<li><p class="first">Summary of use</p>
-</li>
-<li><p class="first"><a class="reference internal" href="../structure.html"><span class="doc">Document structure</span></a> sections within which the element is valid</p>
-</li>
-<li><p class="first">The parent element</p>
-</li>
-<li><p class="first">Required elements or attributes are indicated using a red asterisk (<span style="color:red; font-weight:bold">*</span>).</p>
-</li>
-<li><p class="first">A plus <strong>+</strong> sign indicates that multiple elements are allowed.</p>
-</li>
-<li><p class="first">Element attributes are indicated by prefixing them with an <strong>&#64;</strong> (at) symbol.</p>
-</li>
-<li><p class="first">Values for some USX elements are restricted by the USX schema to a pattern or a specific vocabulary. Named vocabularies are <a class="reference internal" href="../vocabularies.html"><span class="doc">listed</span></a>.</p>
-</li>
+<li><p>Version of USX when the element or attribute was added.</p></li>
+<li><p>Summary of use</p></li>
+<li><p><a class="reference internal" href="../structure.html"><span class="doc">Document structure</span></a> sections within which the element is valid</p></li>
+<li><p>The parent element</p></li>
+<li><p>Required elements or attributes are indicated using a red asterisk (<span style="color:red; font-weight:bold">*</span>).</p></li>
+<li><p>A plus <strong>+</strong> sign indicates that multiple elements are allowed.</p></li>
+<li><p>Element attributes are indicated by prefixing them with an <strong>&#64;</strong> (at) symbol.</p></li>
+<li><p>Values for some USX elements are restricted by the USX schema to a pattern or a specific vocabulary. Named vocabularies are <a class="reference internal" href="../vocabularies.html"><span class="doc">listed</span></a>.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Notes:</strong> Other relevant information not visible in the element description table.</p>
-</li>
-<li><p class="first"><strong>Text and Formatting Samples:</strong> An XML sample for the element together with a formatted scripture example.</p>
-</li>
+<li><p><strong>Notes:</strong> Other relevant information not visible in the element description table.</p></li>
+<li><p><strong>Text and Formatting Samples:</strong> An XML sample for the element together with a formatted scripture example.</p></li>
 </ul>
 <p>The <a class="reference internal" href="../structure.html"><span class="doc">document structure</span></a> presents a USX document as consisting of a sequence of document sections. In the <a class="reference internal" href="../structure.html"><span class="doc">Document structure</span></a> section you will also find:</p>
 <ul class="simple">
-<li><strong>Diagram:</strong> A schema diagram is supplied wherever it will promote clarity. These schema diagrams are usually not full expanded since that may present more complexity than needed in most cases – and since more details for a specific element or attribute can be found elsewhere in the documentation.</li>
-<li><strong>Child Elements:</strong> A list of the collection of required or optional child elements.</li>
-<li><strong>Valid &#64;style types:</strong> Document sections are often a collection of one or more para (and nested char elements). For a given section a summary list of valid style types within the section is given.</li>
+<li><p><strong>Diagram:</strong> A schema diagram is supplied wherever it will promote clarity. These schema diagrams are usually not full expanded since that may present more complexity than needed in most cases – and since more details for a specific element or attribute can be found elsewhere in the documentation.</p></li>
+<li><p><strong>Child Elements:</strong> A list of the collection of required or optional child elements.</p></li>
+<li><p><strong>Valid &#64;style types:</strong> Document sections are often a collection of one or more para (and nested char elements). For a given section a summary list of valid style types within the section is given.</p></li>
 </ul>
 </div>
 </div>
@@ -235,7 +230,7 @@
         <a href="../structure.html" class="btn btn-neutral float-right" title="Document Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="releasenotes.html" class="btn btn-neutral" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="releasenotes.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -244,7 +239,8 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, United Bible Societies.
+        
+        &copy; Copyright 2018, United Bible Societies
 
     </p>
   </div> 
@@ -283,33 +279,16 @@
 </div>
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'3.0.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  <script type="text/javascript">
     $(document).ready(function() {
         $(".toggle > *").hide();

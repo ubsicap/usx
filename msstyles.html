@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,44 +11,48 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="&lt;note&gt; Types" href="notes.html" />
     <link rel="prev" title="&lt;char&gt; @style Types" href="charstyles.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Unified Scripture XML
           
 
           
@@ -76,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -105,6 +109,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -143,7 +148,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>&lt;ms&gt; &#64;style Types</li>
     
@@ -167,39 +172,35 @@
   <div class="section" id="ms-style-types">
 <span id="usx-msstyles"></span><span id="index-0"></span><h1>&lt;ms&gt; &#64;style Types<a class="headerlink" href="#ms-style-types" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note" id="usx-notes-numberedstyles-ms">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p><strong>Numbered &lt;ms&gt; &#64;style Attributes</strong></p>
 <p>As with USX <a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> elements which include a numeric variable in the &#64;style attribute, a number may be added to a milestone &#64;style attribute to indicate a relative weighting or level.</p>
-<p class="last"><strong>style = style1</strong> — The unnumbered version of a style attribute may be used when only one level of this milestone style exists within the project text. Numbers should always be included when more than one level of the milestone style exists within the project text.</p>
+<p><strong>style = style1</strong> — The unnumbered version of a style attribute may be used when only one level of this milestone style exists within the project text. Numbers should always be included when more than one level of the milestone style exists within the project text.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="qt">
 <span id="usx-msstyle-qt"></span><span id="index-1"></span><h2>qt#<a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
 <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">qt#</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Quotation speaker. <br />
+<dl class="field-list simple">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>qt#</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Quotation speaker. <br />
 # denotes the level of nesting of the quotation being marked (i.e. a quote within a quote). <br />
-<strong>qt = qt1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles-ms"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<strong>qt = qt1</strong> (see <a class="reference internal" href="#usx-notes-numberedstyles-ms"><span class="std std-ref">notes</span></a> on numbered &#64;style attributes)</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any valid <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></p>
+</dd>
+</dl>
 <span class="target" id="usx-msstyle-qt-attr"></span><p class="rubric" id="index-2">Attributes <a class="reference internal" href="_images/icon-tag_alt.png"><img alt="ico_Tag" src="_images/icon-tag_alt.png" style="width: 16px; height: 16px;" /></a></p>
 <p><em>Additional</em> <a class="reference internal" href="attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a> which can be used in this context.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;who:</th><td class="field-body">The speaker of the current quotation.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">&#64;who</dt>
+<dd class="field-odd"><p>The speaker of the current quotation.</p>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;qt1-s&quot;</span> <span class="na">who=</span><span class="s">&quot;Paul&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -228,19 +229,18 @@
 <div class="section" id="ts">
 <span id="usx-msstyle-ts"></span><span id="index-3"></span><h2>ts<a class="headerlink" href="#ts" title="Permalink to this headline">¶</a></h2>
 <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ts</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Translator’s section. <br />
-For identifying a section (chunk) of text suitable for translating at one time.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>ts</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Translator’s section. <br />
+For identifying a section (chunk) of text suitable for translating at one time.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any valid <a class="reference internal" href="elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Text Samples</strong> - Jude 5-8, ULB - using standalone milestones</p>
 <div class="highlight-xml notranslate" id="usx-msstyle-ts-example"><div class="highlight"><pre><span></span><span class="hll"><span class="nt">&lt;ms</span> <span class="na">style=</span><span class="s">&quot;ts&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
@@ -298,7 +298,7 @@ For identifying a section (chunk) of text suitable for translating at one time.<
         <a href="notes.html" class="btn btn-neutral float-right" title="&lt;note&gt; Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="charstyles.html" class="btn btn-neutral" title="&lt;char&gt; @style Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="charstyles.html" class="btn btn-neutral float-left" title="&lt;char&gt; @style Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -307,7 +307,8 @@ For identifying a section (chunk) of text suitable for translating at one time.<
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, United Bible Societies.
+        
+        &copy; Copyright 2018, United Bible Societies
 
     </p>
   </div> 
@@ -346,33 +347,16 @@ For identifying a section (chunk) of text suitable for translating at one time.<
 </div>
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'3.0.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  <script type="text/javascript">
     $(document).ready(function() {
         $(".toggle > *").hide();

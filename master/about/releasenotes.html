@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,44 +11,48 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Syntax Notes" href="syntax.html" />
     <link rel="prev" title="Introduction" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Unified Scripture XML
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Unified Scripture XML
           
 
           
@@ -76,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -109,6 +113,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -147,7 +152,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">Introduction</a> &raquo;</li>
         
@@ -178,99 +183,74 @@
 <p><em>April 2018</em></p>
 <p><strong>Element / Attribute Additions</strong></p>
 <ul>
-<li><p class="first">Letter opening: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-po"><span class="std std-ref">po</span></a></p>
-</li>
-<li><p class="first">List header and footer elements: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-lh"><span class="std std-ref">lh</span></a> and <a class="reference internal" href="../parastyles.html#usx-parastyle-lf"><span class="std std-ref">lf</span></a></p>
-</li>
-<li><p class="first">Embedded list: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-lim"><span class="std std-ref">lim#</span></a></p>
-</li>
-<li><p class="first">Hebrew note: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-qd"><span class="std std-ref">qd</span></a></p>
-</li>
-<li><p class="first">Semantic division: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-sd"><span class="std std-ref">sd#</span></a></p>
-</li>
-<li><p class="first">Aramaic wordlist entry: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-wa"><span class="std std-ref">wa</span></a></p>
-</li>
-<li><p class="first">Geographic proper name (Chinese texts): <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-png"><span class="std std-ref">png</span></a></p>
-</li>
-<li><p class="first">Target references “added” text: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../notes.html#usx-note-crossreference-charstyle-xta"><span class="std std-ref">xta</span></a></p>
-</li>
-<li><p class="first">Published cross reference origin text: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../notes.html#usx-note-crossreference-charstyle-xop"><span class="std std-ref">xop</span></a></p>
-</li>
-<li><p class="first">Structured list items: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-lik"><span class="std std-ref">lik</span></a> and <a class="reference internal" href="../charstyles.html#usx-charstyle-liv"><span class="std std-ref">liv#</span></a></p>
-</li>
-<li><p class="first">List item total: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-litl"><span class="std std-ref">litl</span></a></p>
-</li>
-<li><p class="first">Link text: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-jmp"><span class="std std-ref">jmp</span></a></p>
-</li>
-<li><p class="first">Ruby glosses (CJK texts): <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-rb"><span class="std std-ref">rb</span></a></p>
-</li>
-<li><p class="first">Milestone element: <a class="reference internal" href="../elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></p>
+<li><p>Letter opening: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-po"><span class="std std-ref">po</span></a></p></li>
+<li><p>List header and footer elements: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-lh"><span class="std std-ref">lh</span></a> and <a class="reference internal" href="../parastyles.html#usx-parastyle-lf"><span class="std std-ref">lf</span></a></p></li>
+<li><p>Embedded list: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-lim"><span class="std std-ref">lim#</span></a></p></li>
+<li><p>Hebrew note: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-qd"><span class="std std-ref">qd</span></a></p></li>
+<li><p>Semantic division: <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style <a class="reference internal" href="../parastyles.html#usx-parastyle-sd"><span class="std std-ref">sd#</span></a></p></li>
+<li><p>Aramaic wordlist entry: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-wa"><span class="std std-ref">wa</span></a></p></li>
+<li><p>Geographic proper name (Chinese texts): <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-png"><span class="std std-ref">png</span></a></p></li>
+<li><p>Target references “added” text: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../notes.html#usx-note-crossreference-charstyle-xta"><span class="std std-ref">xta</span></a></p></li>
+<li><p>Published cross reference origin text: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../notes.html#usx-note-crossreference-charstyle-xop"><span class="std std-ref">xop</span></a></p></li>
+<li><p>Structured list items: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-lik"><span class="std std-ref">lik</span></a> and <a class="reference internal" href="../charstyles.html#usx-charstyle-liv"><span class="std std-ref">liv#</span></a></p></li>
+<li><p>List item total: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-litl"><span class="std std-ref">litl</span></a></p></li>
+<li><p>Link text: <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-jmp"><span class="std std-ref">jmp</span></a></p></li>
+<li><p>Ruby glosses (CJK texts): <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-rb"><span class="std std-ref">rb</span></a></p></li>
+<li><p>Milestone element: <a class="reference internal" href="../elements.html#usx-element-ms"><span class="std std-ref">&lt;ms&gt;</span></a></p>
 <blockquote>
 <div><ul>
-<li><p class="first"><a class="reference internal" href="../msstyles.html"><span class="doc">Milestone &#64;style types</span></a> for quotations: <a class="reference internal" href="../msstyles.html#usx-msstyle-qt"><span class="std std-ref">qt#-s and qt#-e</span></a></p>
+<li><p><a class="reference internal" href="../msstyles.html"><span class="doc">Milestone &#64;style types</span></a> for quotations: <a class="reference internal" href="../msstyles.html#usx-msstyle-qt"><span class="std std-ref">qt#-s and qt#-e</span></a></p>
 <blockquote>
 <div><ul class="simple">
-<li>Add <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> <code class="docutils literal notranslate"><span class="pre">who</span></code> for <a class="reference internal" href="../msstyles.html#usx-msstyle-qt-attr"><span class="std std-ref">qt#-s and qt#-e</span></a></li>
+<li><p>Add <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> <code class="docutils literal notranslate"><span class="pre">who</span></code> for <a class="reference internal" href="../msstyles.html#usx-msstyle-qt-attr"><span class="std std-ref">qt#-s and qt#-e</span></a></p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><a class="reference internal" href="../msstyles.html"><span class="doc">Milestone &#64;style types</span></a> for translators sections: <a class="reference internal" href="../msstyles.html#usx-msstyle-ts"><span class="std std-ref">ts-s and ts-e</span></a></p>
-</li>
+<li><p><a class="reference internal" href="../msstyles.html"><span class="doc">Milestone &#64;style types</span></a> for translators sections: <a class="reference internal" href="../msstyles.html#usx-msstyle-ts"><span class="std std-ref">ts-s and ts-e</span></a></p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style types providing additional attributes</p>
+<li><p><a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style types providing additional attributes</p>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-w-attr"><span class="std std-ref">w</span></a> (<code class="docutils literal notranslate"><span class="pre">lemma</span></code>, <code class="docutils literal notranslate"><span class="pre">strong</span></code>, <code class="docutils literal notranslate"><span class="pre">scrloc</span></code>)</li>
-<li><a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-rb-attr"><span class="std std-ref">rb</span></a> (<code class="docutils literal notranslate"><span class="pre">gloss</span></code>)</li>
+<li><p><a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-w-attr"><span class="std std-ref">w</span></a> (<code class="docutils literal notranslate"><span class="pre">lemma</span></code>, <code class="docutils literal notranslate"><span class="pre">strong</span></code>, <code class="docutils literal notranslate"><span class="pre">scrloc</span></code>)</p></li>
+<li><p><a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-rb-attr"><span class="std std-ref">rb</span></a> (<code class="docutils literal notranslate"><span class="pre">gloss</span></code>)</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Verse start <code class="docutils literal notranslate"><span class="pre">sid</span></code> and end <code class="docutils literal notranslate"><span class="pre">eid</span></code> identifier <a class="reference internal" href="../attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="../elements.html#usx-element-verse"><span class="std std-ref">&lt;verse&gt;</span></a>.</p>
-</li>
-<li><p class="first">Verse identifier <code class="docutils literal notranslate"><span class="pre">vid</span></code> <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> for <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>.</p>
-</li>
-<li><p class="first">Strategy for applying USX markup to project <a class="reference internal" href="../peripherals.html"><span class="doc">peripheral contents</span></a>.</p>
-</li>
-<li><p class="first">Standard <a class="reference internal" href="../peripherals.html#usx-vocab-peripheralids"><span class="std std-ref">peripheral identifiers</span></a>.</p>
-</li>
+<li><p>Verse start <code class="docutils literal notranslate"><span class="pre">sid</span></code> and end <code class="docutils literal notranslate"><span class="pre">eid</span></code> identifier <a class="reference internal" href="../attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="../elements.html#usx-element-verse"><span class="std std-ref">&lt;verse&gt;</span></a>.</p></li>
+<li><p>Verse identifier <code class="docutils literal notranslate"><span class="pre">vid</span></code> <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> for <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>.</p></li>
+<li><p>Strategy for applying USX markup to project <a class="reference internal" href="../peripherals.html"><span class="doc">peripheral contents</span></a>.</p></li>
+<li><p>Standard <a class="reference internal" href="../peripherals.html#usx-vocab-peripheralids"><span class="std std-ref">peripheral identifiers</span></a>.</p></li>
 </ul>
 <p><strong>Element / Attribute Revisions</strong></p>
 <ul>
-<li><p class="first">Require a <a class="reference internal" href="../elements.html#usx-element-chapter"><span class="std std-ref">&lt;chapter&gt;</span></a> milestone at start and end of chapter text.</p>
+<li><p>Require a <a class="reference internal" href="../elements.html#usx-element-chapter"><span class="std std-ref">&lt;chapter&gt;</span></a> milestone at start and end of chapter text.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Chapter start <code class="docutils literal notranslate"><span class="pre">sid</span></code> and end <code class="docutils literal notranslate"><span class="pre">eid</span></code> identifier <a class="reference internal" href="../attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="../elements.html#usx-element-chapter"><span class="std std-ref">&lt;chapter&gt;</span></a>.</li>
+<li><p>Chapter start <code class="docutils literal notranslate"><span class="pre">sid</span></code> and end <code class="docutils literal notranslate"><span class="pre">eid</span></code> identifier <a class="reference internal" href="../attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="../elements.html#usx-element-chapter"><span class="std std-ref">&lt;chapter&gt;</span></a>.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Require a <a class="reference internal" href="../elements.html#usx-element-verse"><span class="std std-ref">&lt;verse&gt;</span></a> milestone at start and end of verse text.</p>
+<li><p>Require a <a class="reference internal" href="../elements.html#usx-element-verse"><span class="std std-ref">&lt;verse&gt;</span></a> milestone at start and end of verse text.</p>
 <blockquote>
 <div><ul class="simple">
-<li>Verse start <code class="docutils literal notranslate"><span class="pre">sid</span></code> and end <code class="docutils literal notranslate"><span class="pre">eid</span></code> identifier <a class="reference internal" href="../attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="../elements.html#usx-element-verse"><span class="std std-ref">&lt;verse&gt;</span></a>.</li>
+<li><p>Verse start <code class="docutils literal notranslate"><span class="pre">sid</span></code> and end <code class="docutils literal notranslate"><span class="pre">eid</span></code> identifier <a class="reference internal" href="../attributes.html"><span class="doc">attributes</span></a> for <a class="reference internal" href="../elements.html#usx-element-verse"><span class="std std-ref">&lt;verse&gt;</span></a>.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Require a verse identifier <code class="docutils literal notranslate"><span class="pre">vid</span></code> <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> for <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> to re-identify the current verse whenever the previous <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">para</span></a> or <a class="reference internal" href="../elements.html#usx-element-table"><span class="std std-ref">table</span></a> closed prior the end of the current verse text.</p>
-</li>
-<li><p class="first">Support citation form for wordlist / glossary text (update <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-w"><span class="std std-ref">lik</span></a>).</p>
-</li>
-<li><p class="first">Support for explicit <a class="reference internal" href="../elements.html#usx-element-table"><span class="std std-ref">table</span></a> <a class="reference internal" href="../elements.html#usx-element-cell"><span class="std std-ref">cell</span></a> column spanning (add attribute <code class="docutils literal notranslate"><span class="pre">colspan</span></code> to <a class="reference internal" href="../elements.html#usx-element-cell"><span class="std std-ref">cell</span></a>).</p>
-</li>
-<li><p class="first">Change <a class="reference internal" href="../elements.html#usx-element-figure"><span class="std std-ref">&lt;figure&gt;</span></a> <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> <code class="docutils literal notranslate"><span class="pre">desc</span></code> to <code class="docutils literal notranslate"><span class="pre">alt</span></code> to align with companion USFM 3.0 updates to <a class="reference external" href="https://ubsicap.github.io/usfm/master/characters/index.html#fig-fig">\fig …\fig*</a>.</p>
-</li>
-<li><p class="first"><em>Deprecated</em> cross reference and footnote DC content <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style types: <a class="reference internal" href="../notes.html#usx-note-crossreference-charstyle-xdc"><span class="std std-ref">xdc</span></a> and <a class="reference internal" href="../notes.html#usx-note-footnote-charstyle-fdc"><span class="std std-ref">fdc</span></a></p>
-</li>
-<li><p class="first"><em>Deprecated</em> numbered running header <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style types: <a class="reference internal" href="../parastyles.html#usx-parastyle-h"><span class="std std-ref">h#</span></a></p>
-</li>
-<li><p class="first"><em>Deprecated</em> pronunciation info &lt;char&gt; &#64;style pro in favour of ruby glosses <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-rb"><span class="std std-ref">rb</span></a>.</p>
-</li>
+<li><p>Require a verse identifier <code class="docutils literal notranslate"><span class="pre">vid</span></code> <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> for <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> to re-identify the current verse whenever the previous <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">para</span></a> or <a class="reference internal" href="../elements.html#usx-element-table"><span class="std std-ref">table</span></a> closed prior the end of the current verse text.</p></li>
+<li><p>Support citation form for wordlist / glossary text (update <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-w"><span class="std std-ref">lik</span></a>).</p></li>
+<li><p>Support for explicit <a class="reference internal" href="../elements.html#usx-element-table"><span class="std std-ref">table</span></a> <a class="reference internal" href="../elements.html#usx-element-cell"><span class="std std-ref">cell</span></a> column spanning (add attribute <code class="docutils literal notranslate"><span class="pre">colspan</span></code> to <a class="reference internal" href="../elements.html#usx-element-cell"><span class="std std-ref">cell</span></a>).</p></li>
+<li><p>Change <a class="reference internal" href="../elements.html#usx-element-figure"><span class="std std-ref">&lt;figure&gt;</span></a> <a class="reference internal" href="../attributes.html"><span class="doc">attribute</span></a> <code class="docutils literal notranslate"><span class="pre">desc</span></code> to <code class="docutils literal notranslate"><span class="pre">alt</span></code> to align with companion USFM 3.0 updates to <a class="reference external" href="https://ubsicap.github.io/usfm/master/characters/index.html#fig-fig">\fig …\fig*</a>.</p></li>
+<li><p><em>Deprecated</em> cross reference and footnote DC content <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style types: <a class="reference internal" href="../notes.html#usx-note-crossreference-charstyle-xdc"><span class="std std-ref">xdc</span></a> and <a class="reference internal" href="../notes.html#usx-note-footnote-charstyle-fdc"><span class="std std-ref">fdc</span></a></p></li>
+<li><p><em>Deprecated</em> numbered running header <a class="reference internal" href="../elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> &#64;style types: <a class="reference internal" href="../parastyles.html#usx-parastyle-h"><span class="std std-ref">h#</span></a></p></li>
+<li><p><em>Deprecated</em> pronunciation info &lt;char&gt; &#64;style pro in favour of ruby glosses <a class="reference internal" href="../elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> &#64;style <a class="reference internal" href="../charstyles.html#usx-charstyle-rb"><span class="std std-ref">rb</span></a>.</p></li>
 </ul>
 <p><strong>Syntax and Features</strong></p>
 <ul class="simple">
-<li>Strategy for applying USX markup to project <a class="reference internal" href="../peripherals.html"><span class="doc">peripheral contents</span></a>.</li>
-<li>Standard <a class="reference internal" href="../peripherals.html#usx-vocab-peripheralids"><span class="std std-ref">peripheral identifiers</span></a>.</li>
+<li><p>Strategy for applying USX markup to project <a class="reference internal" href="../peripherals.html"><span class="doc">peripheral contents</span></a>.</p></li>
+<li><p>Standard <a class="reference internal" href="../peripherals.html#usx-vocab-peripheralids"><span class="std std-ref">peripheral identifiers</span></a>.</p></li>
 </ul>
 </div>
 </div>
@@ -286,7 +266,7 @@
         <a href="syntax.html" class="btn btn-neutral float-right" title="Syntax Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -295,7 +275,8 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, United Bible Societies.
+        
+        &copy; Copyright 2018, United Bible Societies
 
     </p>
   </div> 
@@ -334,33 +315,16 @@
 </div>
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'3.0.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  <script type="text/javascript">
     $(document).ready(function() {
         $(".toggle > *").hide();

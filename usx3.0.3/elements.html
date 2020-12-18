@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,44 +11,48 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Attributes" href="attributes.html" />
     <link rel="prev" title="Document Structure" href="structure.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Unified Scripture XML
           
 
           
@@ -76,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -119,6 +123,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -157,7 +162,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Elements</li>
     
@@ -182,25 +187,26 @@
 <span id="usx-elements-index"></span><span id="index-0"></span><h1>Elements<a class="headerlink" href="#elements" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usx">
 <span id="usx-element-root"></span><span id="index-1"></span><h2>&lt;usx&gt;<a class="headerlink" href="#usx" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">usx <span style="color:red; font-weight:bold">*</span> <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Root element for USX scripture file.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;version:</th><td class="field-body">USX version identifier. <span style="color:red; font-weight:bold">*</span> <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>usx <span style="color:red; font-weight:bold">*</span> <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Root element for USX scripture file.</p>
+</dd>
+<dt class="field-even">&#64;version</dt>
+<dd class="field-even"><p>USX version identifier. <span style="color:red; font-weight:bold">*</span> <br />
 xsd:decimal <br />
-Only the specific USX version number for scripture data contained in the file is allowed (1.0, 2.0, 2.5 etc.).</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parent:</th><td class="field-body"><strong>ROOT</strong></td>
-</tr>
-</tbody>
-</table>
+Only the specific USX version number for scripture data contained in the file is allowed (1.0, 2.0, 2.5 etc.).</p>
+</dd>
+<dt class="field-odd">Parent</dt>
+<dd class="field-odd"><p><strong>ROOT</strong></p>
+</dd>
+</dl>
 <p>The following schema diagram displays the document structure of a USX scripture file.</p>
 <p><strong>Diagram and Text Sample</strong></p>
 <img alt="_images/usx-element_usx.png" src="_images/usx-element_usx.png" />
@@ -211,29 +217,32 @@ Only the specific USX version number for scripture data contained in the file is
 </div>
 <div class="section" id="book">
 <span id="usx-element-book"></span><span id="index-2"></span><h2>&lt;book&gt;<a class="headerlink" href="#book" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">book <span style="color:red; font-weight:bold">*</span> <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Brief description of scripure translation.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;code:</th><td class="field-body">3-letter book code for the scripture or peripheral content in the USX document. <span style="color:red; font-weight:bold">*</span> <br />
-one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
-<code class="docutils literal notranslate"><span class="pre">id</span></code></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookidentification"><span class="std std-ref">Book Identification</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parent:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>book <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Brief description of scripure translation.</p>
+</dd>
+<dt class="field-even">&#64;code</dt>
+<dd class="field-even"><p>3-letter book code for the scripture or peripheral content in the USX document. <span style="color:red; font-weight:bold">*</span> <br />
+one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a></p>
+</dd>
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-bookidentification"><span class="std std-ref">Book Identification</span></a></p>
+</dd>
+<dt class="field-odd">Parent</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram and Text Sample</strong> - Matthew (GNT)</p>
 <img alt="_images/usx-element_book.png" src="_images/usx-element_book.png" />
 <div class="highlight-xml notranslate" id="usx-element-book-example"><div class="highlight"><pre><span></span><span class="nt">&lt;book</span> <span class="na">code=</span><span class="s">&quot;MAT&quot;</span> <span class="na">style=</span><span class="s">&quot;id&quot;</span><span class="nt">&gt;</span>English: Good News Translation 2nd Ed. 1992<span class="nt">&lt;/book&gt;</span>
@@ -244,54 +253,61 @@ one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"
 <div class="section" id="chapter">
 <span id="usx-element-chapter"></span><span id="index-3"></span><h2>&lt;chapter&gt;<a class="headerlink" href="#chapter" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note" id="usx-notes-cvmilestonesyntax">
-<span id="index-4"></span><p class="first admonition-title">Note</p>
+<span id="index-4"></span><p class="admonition-title">Note</p>
 <p><strong>Background on &lt;chapter&gt; and &lt;verse&gt; as ‘milestones’</strong></p>
-<p class="last">A milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as <em>overlapping</em> or <em>concurrent</em> markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in <a class="reference external" href="https://ubsicap.github.io/usfm/index.html">USFM</a>), the paragraph level markup forms the main structure of the document, while <a class="reference internal" href="#usx-element-chapter"><span class="std std-ref">chapter</span></a> and <a class="reference internal" href="#usx-element-verse"><span class="std std-ref">verse</span></a> elements are empty <em>milestones</em> which identify the location where the chapter or verse begins.</p>
+<p>A milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as <em>overlapping</em> or <em>concurrent</em> markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in <a class="reference external" href="https://ubsicap.github.io/usfm/index.html">USFM</a>), the paragraph level markup forms the main structure of the document, while <a class="reference internal" href="#usx-element-chapter"><span class="std std-ref">chapter</span></a> and <a class="reference internal" href="#usx-element-verse"><span class="std std-ref">verse</span></a> elements are empty <em>milestones</em> which identify the location where the chapter or verse begins.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p><strong>Accurately identifying chapter text within the scripture paragraph structure</strong></p>
 <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg>     USX 3.0 adds a pair of attributes to <code class="docutils literal notranslate"><span class="pre">&lt;chapter/&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">sid</span></code> and <code class="docutils literal notranslate"><span class="pre">eid</span></code>) which are used to unambiguously identify the start and end position for a specific chapter text within the scripture discourse structure.</p>
 <p><strong>IMPORTANT:</strong> In USX 3.0 a <code class="docutils literal notranslate"><span class="pre">&lt;chapter/&gt;</span></code> milestone is <em>required</em> at the <strong>start</strong> and at the <strong>end</strong> of the verse text, with corresponding <code class="docutils literal notranslate"><span class="pre">sid</span></code> and <code class="docutils literal notranslate"><span class="pre">eid</span></code> attributes. In previous versions of USX, only a <code class="docutils literal notranslate"><span class="pre">&lt;chapter/&gt;</span></code> start milestone was required.</p>
-<p class="last"><a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="#usx-notes-cvmilestonesyntax"><span class="std std-ref">Background on chapter and verse as milestones</span></a></p>
+<p><a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="#usx-notes-cvmilestonesyntax"><span class="std std-ref">Background on chapter and verse as milestones</span></a></p>
 </div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">chapter <span style="color:red; font-weight:bold">*</span> <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Initial element within each chapter text division. Marks the start of a new chapter.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
-<code class="docutils literal notranslate"><span class="pre">c</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;number:</th><td class="field-body">Current chapter number (sequential; according to versification definition for the scripture text). <span style="color:red; font-weight:bold">*</span> <br />
-xsd:integer</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;altnumber:</th><td class="field-body">Alternate chapter number. (Used to supply the chapter number for an alternate versification scheme. This is required when the numbering for an alternate versification tradition need to be maintained within the same translation text.) <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;pubnumber:</th><td class="field-body">Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) <span style="color:red; font-weight:bold">*</span> <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;sid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Chapter start identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at chapter start milestone)</em> <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>chapter <span style="color:red; font-weight:bold">*</span> <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Initial element within each chapter text division. Marks the start of a new chapter.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal notranslate"><span class="pre">c</span></code></p>
+</dd>
+<dt class="field-odd">&#64;number</dt>
+<dd class="field-odd"><p>Current chapter number (sequential; according to versification definition for the scripture text). <span style="color:red; font-weight:bold">*</span> <br />
+xsd:integer</p>
+</dd>
+<dt class="field-even">&#64;altnumber</dt>
+<dd class="field-even"><p>Alternate chapter number. (Used to supply the chapter number for an alternate versification scheme. This is required when the numbering for an alternate versification tradition need to be maintained within the same translation text.) <br />
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*</span></code></p>
+</dd>
+<dt class="field-odd">&#64;pubnumber</dt>
+<dd class="field-odd"><p>Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">&#64;sid</dt>
+<dd class="field-even"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Chapter start identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at chapter start milestone)</em> <br />
 A standard book + chapter scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[0-9]+</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;eid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Chapter end identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at chapter end milestone)</em> <br />
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[0-9]+</span></code></p>
+</dd>
+<dt class="field-odd">&#64;eid</dt>
+<dd class="field-odd"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Chapter end identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at chapter end milestone)</em> <br />
 A standard book + chapter scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[0-9]+</span></code></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parent:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[0-9]+</span></code></p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-odd">Parent</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram and Text Sample</strong></p>
 <img alt="_images/usx-element_chapterStart.png" src="_images/usx-element_chapterStart.png" />
 <img alt="_images/usx-element_chapterEnd.png" src="_images/usx-element_chapterEnd.png" />
@@ -301,49 +317,56 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
 <div class="section" id="verse">
 <span id="usx-element-verse"></span><span id="index-5"></span><h2>&lt;verse&gt;<a class="headerlink" href="#verse" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p><strong>Accurately identifying verse text within the scripture paragraph structure</strong></p>
 <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg>     USX 3.0 adds a pair of attributes to <code class="docutils literal notranslate"><span class="pre">&lt;verse/&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">sid</span></code> and <code class="docutils literal notranslate"><span class="pre">eid</span></code>) which are used to unambiguously identify the start and end position for a specific verse text within the scripture discourse structure. A companion attribute <code class="docutils literal notranslate"><span class="pre">vid</span></code> is added to <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> and <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a> in order to re-identify the current verse when the previous <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> or <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a> has closed prior the end of the verse text.</p>
 <p><strong>IMPORTANT:</strong> In USX 3.0 a <code class="docutils literal notranslate"><span class="pre">&lt;verse/&gt;</span></code> milestone is <em>required</em> at the <strong>start</strong> and at the <strong>end</strong> of the verse text, with corresponding <code class="docutils literal notranslate"><span class="pre">sid</span></code> and <code class="docutils literal notranslate"><span class="pre">eid</span></code> attributes. In previous versions of USX, only a <code class="docutils literal notranslate"><span class="pre">&lt;verse/&gt;</span></code> start milestone was required.</p>
-<p class="last"><a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="#usx-notes-cvmilestonesyntax"><span class="std std-ref">Background on chapter and verse as milestones</span></a></p>
+<p><a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="#usx-notes-cvmilestonesyntax"><span class="std std-ref">Background on chapter and verse as milestones</span></a></p>
 </div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">verse <span style="color:red; font-weight:bold">*</span> <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Marks the start of a new verse.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
-<code class="docutils literal notranslate"><span class="pre">v</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;number:</th><td class="field-body">Current verse number (sequential; according to versification definition for the scripture text). <span style="color:red; font-weight:bold">*</span> <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*</span></code></td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;altnumber:</th><td class="field-body">Alternate verse number. (Used to supply the verse number for an alternate versification scheme. This is required when the numbering for an alternate versification tradition need to be maintained within the same translation text.) <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;pubnumber:</th><td class="field-body">Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;sid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse start identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at verse start milestone)</em> <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>verse <span style="color:red; font-weight:bold">*</span> <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Marks the start of a new verse.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal notranslate"><span class="pre">v</span></code></p>
+</dd>
+<dt class="field-odd">&#64;number</dt>
+<dd class="field-odd"><p>Current verse number (sequential; according to versification definition for the scripture text). <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*</span></code></p>
+</dd>
+<dt class="field-even">&#64;altnumber</dt>
+<dd class="field-even"><p>Alternate verse number. (Used to supply the verse number for an alternate versification scheme. This is required when the numbering for an alternate versification tradition need to be maintained within the same translation text.) <br />
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[0-9]+\w?(\u200F?[\-,][0-9]+\w?)*</span></code></p>
+</dd>
+<dt class="field-odd">&#64;pubnumber</dt>
+<dd class="field-odd"><p>Published chapter character. (The chapter character(s) (a string - number, letter or both) which should be displayed in a published version of the scripture text, where the published chapter character is different than the sequential chapter number used within the translation editing environment, as defined by the project versification.) <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">&#64;sid</dt>
+<dd class="field-even"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse start identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at verse start milestone)</em> <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;eid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse end identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at verse end milestone)</em> <br />
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></p>
+</dd>
+<dt class="field-odd">&#64;eid</dt>
+<dd class="field-odd"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse end identifier. <span style="color:red; font-weight:bold">*</span> <em>(required at verse end milestone)</em> <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram and Text Samples</strong></p>
 <img alt="_images/usx-element_verseStart.png" src="_images/usx-element_verseStart.png" />
 <img alt="_images/usx-element_verseEnd.png" src="_images/usx-element_verseEnd.png" />
@@ -380,9 +403,9 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
 <p>An additional six chapters appear interspersed in Esther in the Septuagint. There are 3 common approaches to handling the Greek additions (and many additional variations!). Although Paratext requires sequential chapter and verse numbers to be used within the translation editing environment – as defined by the project versification – in numerous places this is not the string to be published for the chapter and/or verse identifiers at these locations. Examples from Esther Greek are shown below to highlight the application of the &#64;pubnumber attribute for <a class="reference internal" href="#usx-element-chapter"><span class="std std-ref">chapter</span></a> and <a class="reference internal" href="#usx-element-verse"><span class="std std-ref">verse</span></a>.</p>
 <p>The following example of the text for Esther Greek chapter 1 is taken from the English Good News Bible text. This text follows a versification scheme for Esther Greek which may be referred to as “modern scholars” configuration. Some versions following this scheme include English Good News, French La Bible en francais courant, and German Gute Nachricht Bible.</p>
 <ul class="simple">
-<li>In the first portion of this example, you can see a chapter element with the sequential &#64;number “1” which includes a &#64;pubnumber “A”. <em>The “A” should be presented to the reader</em>.</li>
-<li>In the second portion of this example, a para element with &#64;style “cp” is found. Although a sequential chapter element is not present at this location, <em>a chapter heading or other appropriate chapter style showing “1” should be presented to the reader</em>.</li>
-<li>In the second portion of this example you can also see verse elements with sequential &#64;number “18-19”, “20”, “21”, “22”. <em>The corresponding &#64;pubnumber “1-2”, “3”, “4”, and “5” should be presented to the reader</em>.</li>
+<li><p>In the first portion of this example, you can see a chapter element with the sequential &#64;number “1” which includes a &#64;pubnumber “A”. <em>The “A” should be presented to the reader</em>.</p></li>
+<li><p>In the second portion of this example, a para element with &#64;style “cp” is found. Although a sequential chapter element is not present at this location, <em>a chapter heading or other appropriate chapter style showing “1” should be presented to the reader</em>.</p></li>
+<li><p>In the second portion of this example you can also see verse elements with sequential &#64;number “18-19”, “20”, “21”, “22”. <em>The corresponding &#64;pubnumber “1-2”, “3”, “4”, and “5” should be presented to the reader</em>.</p></li>
 </ul>
 <p><strong>chapter and verse</strong> - ESG 1, showing chapter, &#64;pubnumber A, and cp 1; verse 18-19 &#64;pubnumber 1-2 etc.</p>
 <div class="highlight-xml notranslate" id="usx-element-verse-example2"><div class="highlight"><pre><span></span><span class="nt">&lt;chapter</span> <span class="na">number=</span><span class="s">&quot;1&quot;</span> <span class="na">style=</span><span class="s">&quot;c&quot;</span> <span class="na">pubnumber=</span><span class="s">&quot;A&quot;</span> <span class="na">sid=</span><span class="s">&quot;ESG 1&quot;</span> <span class="nt">/&gt;</span>
@@ -486,31 +509,34 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
 </div>
 <div class="section" id="para">
 <span id="usx-element-para"></span><span id="index-6"></span><h2>&lt;para&gt;<a class="headerlink" href="#para" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">para <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Paragraph content.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
-Permitted values vary for each document division. The <a class="reference internal" href="parastyles.html"><span class="doc">para &#64;style types</span></a> list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the <a class="reference internal" href="structure.html"><span class="doc">document divisions</span></a> in which each type is valid.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;vid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse identifier. <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>para <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Paragraph content.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Content type. <span style="color:red; font-weight:bold">*</span> <br />
+Permitted values vary for each document division. The <a class="reference internal" href="parastyles.html"><span class="doc">para &#64;style types</span></a> list presents an itemization of style values by category (paragraphs, poetry, titles etc.) and indicates the <a class="reference internal" href="structure.html"><span class="doc">document divisions</span></a> in which each type is valid.</p>
+</dd>
+<dt class="field-odd">&#64;vid</dt>
+<dd class="field-odd"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse identifier. <br />
 Required to re-identify the current verse whenever the previous <a class="reference internal" href="#usx-element-para"><span class="std std-ref">para</span></a> or <a class="reference internal" href="#usx-element-table"><span class="std std-ref">table</span></a> closed prior the end of the current verse text. <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookheaders"><span class="std std-ref">Book Headers</span></a>, <a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-bookheaders"><span class="std std-ref">Book Headers</span></a>, <a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram and Text Sample</strong> - Mark 1.1; Matthew 5.1,14-16 (GNT)</p>
 <img alt="_images/usx-element_para.png" src="_images/usx-element_para.png" />
 <div class="highlight-xml notranslate" id="usx-element-para-example"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;p&quot;</span><span class="nt">&gt;</span>
@@ -545,85 +571,92 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
 </div>
 <div class="section" id="table">
 <span id="usx-element-table"></span><span id="index-7"></span><h2>&lt;table&gt;<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">table <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a> and <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> child elements which compose the structure of a USX <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>. Tables are composed of a vertical sequence of one or more rows. Rows are composed of a horizontal sequence of one of more cells.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;vid:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse identifier. <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>table <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Contains <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a> and <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> child elements which compose the structure of a USX <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>. Tables are composed of a vertical sequence of one or more rows. Rows are composed of a horizontal sequence of one of more cells.</p>
+</dd>
+<dt class="field-even">&#64;vid</dt>
+<dd class="field-even"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Verse identifier. <br />
 Required to re-identify the current verse when the previous <a class="reference internal" href="#usx-element-para"><span class="std std-ref">para</span></a> closed prior the end of the current verse text. <br />
 A standard book + chapter + verse scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-:]*</span></code></p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-even">Parents</dt>
+<dd class="field-even"><p><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram</strong></p>
 <img alt="_images/usx-element_table.png" src="_images/usx-element_table.png" />
 </div>
 <div class="section" id="row">
 <span id="usx-element-row"></span><span id="index-8"></span><h2>&lt;row&gt;<a class="headerlink" href="#row" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">row (<span style="color:red; font-weight:bold">*</span> within <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>) <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains a horizontal sequence of table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> elements. The horizontal position of a table cell relates to its corresponding table column.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body">Any valid <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>row (<span style="color:red; font-weight:bold">*</span> within <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>) <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Contains a horizontal sequence of table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> elements. The horizontal position of a table cell relates to its corresponding table column.</p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p>Any valid <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram</strong></p>
 <img alt="_images/usx-element_row.png" src="_images/usx-element_row.png" />
 </div>
 <div class="section" id="cell">
 <span id="usx-element-cell"></span><span id="index-9"></span><h2>&lt;cell&gt;<a class="headerlink" href="#cell" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">cell (<span style="color:red; font-weight:bold">*</span> within <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a>) <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0 (updated 3.0 - column spanning)</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Table cell content. Contains the cell text and and child elements.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Cell column and alignment (legacy). <span style="color:red; font-weight:bold">*</span> <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>cell (<span style="color:red; font-weight:bold">*</span> within <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a>) <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0 (updated 3.0 - column spanning)</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Table cell content. Contains the cell text and and child elements.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Cell column and alignment (legacy). <span style="color:red; font-weight:bold">*</span> <br />
 <code class="docutils literal notranslate"><span class="pre">th#</span></code> | <code class="docutils literal notranslate"><span class="pre">thr#</span></code> | <code class="docutils literal notranslate"><span class="pre">tc#</span></code> | <code class="docutils literal notranslate"><span class="pre">tcr#</span></code> <br />
-The variable represents the table column number. <em>See “About cell &#64;style” note below.</em></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;align:</th><td class="field-body">Cell alignment. <span style="color:red; font-weight:bold">*</span> <br />
+The variable represents the table column number. <em>See “About cell &#64;style” note below.</em></p>
+</dd>
+<dt class="field-odd">&#64;align</dt>
+<dd class="field-odd"><p>Cell alignment. <span style="color:red; font-weight:bold">*</span> <br />
 <code class="docutils literal notranslate"><span class="pre">start</span></code> | <code class="docutils literal notranslate"><span class="pre">center</span></code> | <code class="docutils literal notranslate"><span class="pre">end</span></code> <br />
-Represents “left”, “center”, and “right” respectively in left-to-right direction texts, and “right”, “center”, “left” in right-to-left direction texts.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;colspan:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> An integer indicating how many columns the current cell should span in a rendered view.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body">Any valid <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+Represents “left”, “center”, and “right” respectively in left-to-right direction texts, and “right”, “center”, “left” in right-to-left direction texts.</p>
+</dd>
+<dt class="field-even">&#64;colspan</dt>
+<dd class="field-even"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> An integer indicating how many columns the current cell should span in a rendered view.</p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p>Any valid <a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a></p>
+</dd>
+<dt class="field-even">Parents</dt>
+<dd class="field-even"><p><a class="reference internal" href="#usx-element-row"><span class="std std-ref">&lt;row&gt;</span></a></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Like the &#64;style attribute applied to other USX elements, the cell &#64;style value is a reference to the source text USFM marker in Paratext, from which USX encoded text is often derived. In USFM text, the table cell markers define the column to which they belong. The variable # represents the table column number. Strictly speaking &#64;style is redundant information in USX. It is used by Paratext for round-tripping USX to USFM. In USX, the position of a <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> in its sequence defines its respective column, and the &#64;align attribute is the primary source of cell alignment information.</p>
+<p class="admonition-title">Note</p>
+<p>Like the &#64;style attribute applied to other USX elements, the cell &#64;style value is a reference to the source text USFM marker in Paratext, from which USX encoded text is often derived. In USFM text, the table cell markers define the column to which they belong. The variable # represents the table column number. Strictly speaking &#64;style is redundant information in USX. It is used by Paratext for round-tripping USX to USFM. In USX, the position of a <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> in its sequence defines its respective column, and the &#64;align attribute is the primary source of cell alignment information.</p>
 </div>
 <p><strong>Diagram and Text Sample</strong> - NUM 2:3-9</p>
 <img alt="_images/usx-element_cell.png" src="_images/usx-element_cell.png" />
@@ -659,39 +692,47 @@ Represents “left”, “center”, and “right” respectively in left-to-rig
 </div>
 <div class="section" id="char">
 <span id="usx-element-char"></span><span id="index-10"></span><h2>&lt;char&gt;<a class="headerlink" href="#char" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">char <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">An element for marking character level content types within <a class="reference internal" href="#usx-element-para"><span class="std std-ref">para</span></a>, table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">cell</span></a> and <a class="reference internal" href="#usx-element-note"><span class="std std-ref">note</span></a> elements.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
-Permitted values vary for each document division. The <a class="reference internal" href="charstyles.html"><span class="doc">char &#64;style types</span></a> list presents an itemization of style values by category and indicates the <a class="reference internal" href="structure.html"><span class="doc">document divisions</span></a> in which each type is valid.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;lemma:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Valid when used together with selected &#64;style types. <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-w"><span class="std std-ref">w</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;strong:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Valid when used together with selected &#64;style types. <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-w"><span class="std std-ref">w</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;srcloc:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Valid when used together with selected &#64;style types. <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-w"><span class="std std-ref">w</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;link-href:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="linking.html"><span class="doc">Linking Attributes</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;link-title:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="linking.html"><span class="doc">Linking Attributes</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;link-id:</th><td class="field-body"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="linking.html"><span class="doc">Linking Attributes</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a> <br />
-A limited subset of &#64;style types are valid within <a class="reference internal" href="#usx-element-note"><span class="std std-ref">note</span></a> (Footnote, CrossReference)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a>, <a class="reference internal" href="#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>char <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>An element for marking character level content types within <a class="reference internal" href="#usx-element-para"><span class="std std-ref">para</span></a>, table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">cell</span></a> and <a class="reference internal" href="#usx-element-note"><span class="std std-ref">note</span></a> elements.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Content type. <span style="color:red; font-weight:bold">*</span> <br />
+Permitted values vary for each document division. The <a class="reference internal" href="charstyles.html"><span class="doc">char &#64;style types</span></a> list presents an itemization of style values by category and indicates the <a class="reference internal" href="structure.html"><span class="doc">document divisions</span></a> in which each type is valid.</p>
+</dd>
+<dt class="field-odd">&#64;lemma</dt>
+<dd class="field-odd"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Valid when used together with selected &#64;style types. <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-w"><span class="std std-ref">w</span></a></p>
+</dd>
+<dt class="field-even">&#64;strong</dt>
+<dd class="field-even"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Valid when used together with selected &#64;style types. <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-w"><span class="std std-ref">w</span></a></p>
+</dd>
+<dt class="field-odd">&#64;srcloc</dt>
+<dd class="field-odd"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> Valid when used together with selected &#64;style types. <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: &#64;style <a class="reference internal" href="charstyles.html#usx-charstyle-w"><span class="std std-ref">w</span></a></p>
+</dd>
+<dt class="field-even">&#64;link-href</dt>
+<dd class="field-even"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="linking.html"><span class="doc">Linking Attributes</span></a></p>
+</dd>
+<dt class="field-odd">&#64;link-title</dt>
+<dd class="field-odd"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="linking.html"><span class="doc">Linking Attributes</span></a></p>
+</dd>
+<dt class="field-even">&#64;link-id</dt>
+<dd class="field-even"><p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg> <a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="linking.html"><span class="doc">Linking Attributes</span></a></p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a> <br />
+A limited subset of &#64;style types are valid within <a class="reference internal" href="#usx-element-note"><span class="std std-ref">note</span></a> (Footnote, CrossReference)</p>
+</dd>
+<dt class="field-even">Parents</dt>
+<dd class="field-even"><p><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a>, <a class="reference internal" href="#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram and Text Sample</strong> - Genesis Introduction; 2.7; Mark 1.1 (GNT)</p>
 <img alt="_images/usx-element_char.png" src="_images/usx-element_char.png" />
 <div class="highlight-xml notranslate" id="usx-element-char-example"><div class="highlight"><pre><span></span><span class="hll"><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;ip&quot;</span><span class="nt">&gt;</span>The name <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;bk&quot;</span><span class="nt">&gt;</span>Genesis<span class="nt">&lt;/char&gt;</span> means “origin.”
@@ -717,38 +758,42 @@ A limited subset of &#64;style types are valid within <a class="reference intern
 <p>USX 3.0 provides the <code class="docutils literal notranslate"><span class="pre">&lt;ms/&gt;</span></code> element for indicating the start and ending milestones for a span of text, where the boundaries of the content being marked may cross the boundary of a curently open paragraph (usually a <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> element).</p>
 <p>An milestone type markup is required when a document has two or more structures that interact in a non-hierarchical manner. This is also referred to as <em>overlapping</em> or <em>concurrent</em> markup. A principle example of this type of overlapping structure in scripture text is the contrast between 1) the paragraph structures used to express the discourse / narrative of the text and 2) the division of the text into books, chapters and verses. In scripture texts encoded using USX (and similarly also in <a class="reference external" href="https://ubsicap.github.io/usfm/index.html">USFM</a>), the paragraph level markup forms the main structure of the document, while <a class="reference internal" href="#usx-element-chapter"><span class="std std-ref">chapter</span></a> and <a class="reference internal" href="#usx-element-verse"><span class="std std-ref">verse</span></a> markers are empty <em>milestones</em> which identify the location where the chapter or verse begins.</p>
 <p>Another example of an overlapping structure exists when there is a need to indicate the start and end of the quotations of the “actors” who are speaking within the text. These spans of text will commonly cross paragraph boundaries.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">ms <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>ms <br />
 <em>empty</em> <br />
-A milestone is always an empty element and should be written using the self-closing syntax, like <code class="docutils literal notranslate"><span class="pre">&lt;ms/&gt;</span></code>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">For indicating a specific milestone position within the text, or the start and ending milestones for a span of text, and where the boundaries of the content being marked may cross one or more paragraph boundaries.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Milestone type. <span style="color:red; font-weight:bold">*</span> <br />
-The <a class="reference internal" href="msstyles.html"><span class="doc">ms &#64;style types</span></a> list presents an itemization of milestone styles in the current version of USX.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;sid:</th><td class="field-body">A unique identifier which can be used to unambiguously identify the starting milestone, and to clearly associate the starting milestone with the ending milestone (eid). <br />
-The <cite>sid</cite> can be composed of any mixture of numbers, letters, and underscores, and should be a unique <cite>sid</cite> throughout the scripture text.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;eid:</th><td class="field-body">A unique identifier which can be used to unambiguously identify the ending milestone, and to clearly associate the ending milestone with the starting milestone (<cite>sid</cite>). <br />
-If a <cite>sid</cite> attribute is used for the starting milestone in a milestone pair, the ending milestone must include <cite>eid</cite>.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a>, <a class="reference internal" href="#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+A milestone is always an empty element and should be written using the self-closing syntax, like <code class="docutils literal notranslate"><span class="pre">&lt;ms/&gt;</span></code>.</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>3.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>For indicating a specific milestone position within the text, or the start and ending milestones for a span of text, and where the boundaries of the content being marked may cross one or more paragraph boundaries.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Milestone type. <span style="color:red; font-weight:bold">*</span> <br />
+The <a class="reference internal" href="msstyles.html"><span class="doc">ms &#64;style types</span></a> list presents an itemization of milestone styles in the current version of USX.</p>
+</dd>
+<dt class="field-odd">&#64;sid</dt>
+<dd class="field-odd"><p>A unique identifier which can be used to unambiguously identify the starting milestone, and to clearly associate the starting milestone with the ending milestone (eid). <br />
+The <cite>sid</cite> can be composed of any mixture of numbers, letters, and underscores, and should be a unique <cite>sid</cite> throughout the scripture text.</p>
+</dd>
+<dt class="field-even">&#64;eid</dt>
+<dd class="field-even"><p>A unique identifier which can be used to unambiguously identify the ending milestone, and to clearly associate the ending milestone with the starting milestone (<cite>sid</cite>). <br />
+If a <cite>sid</cite> attribute is used for the starting milestone in a milestone pair, the ending milestone must include <cite>eid</cite>.</p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-even">Parents</dt>
+<dd class="field-even"><p><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a>, <a class="reference internal" href="#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Indicating Start and End Milestones</strong></p>
 <p>The style attribute for a milestone marker may end with either <code class="docutils literal notranslate"><span class="pre">-s</span></code> or <code class="docutils literal notranslate"><span class="pre">-e</span></code>.</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">-s</span></code> indicates that the milestone is for marking the start of a span of text.</li>
-<li><code class="docutils literal notranslate"><span class="pre">-e</span></code> indicates that the milestone is an end milestone.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-s</span></code> indicates that the milestone is for marking the start of a span of text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-e</span></code> indicates that the milestone is an end milestone.</p></li>
 </ul>
 <p><strong>Standalone Milestones</strong></p>
 <p>Milestones do not need to occur in pairs or require the use of start <code class="docutils literal notranslate"><span class="pre">-s</span></code> and end <code class="docutils literal notranslate"><span class="pre">-e</span></code> &#64;style attribute suffixes. The <code class="docutils literal notranslate"><span class="pre">&lt;ms/&gt;</span></code> element can also be used for a standalone milestone.</p>
@@ -796,28 +841,31 @@ If a <cite>sid</cite> attribute is used for the starting milestone in a mileston
 </div>
 <div class="section" id="sidebar">
 <span id="usx-element-sidebar"></span><span id="index-13"></span><h2>&lt;sidebar&gt;<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">sidebar <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">2.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> (&#64;style types <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">Titles and Headings</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-paragraphs"><span class="std std-ref">Paragraphs</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">Poetry</span></a>), <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a> and <a class="reference internal" href="#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a sidebar. Sidebars are larger sections of topical content, or information for more in-depth study. This content is associated with a general area in the scripture reference text, but not necessarily a specific verse or word.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type <span style="color:red; font-weight:bold">*</span> <br />
-<code class="docutils literal notranslate"><span class="pre">esb</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;category:</th><td class="field-body">Optional attribute used to tag the <a class="reference internal" href="#usx-element-sidebar"><span class="std std-ref">&lt;sidebar&gt;</span></a> as belonging to a specific category of study content (e.g. Ideas, People, Places, Objects etc.).</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>sidebar <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>2.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Contains <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> (&#64;style types <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">Titles and Headings</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-paragraphs"><span class="std std-ref">Paragraphs</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">Poetry</span></a>), <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a> and <a class="reference internal" href="#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a sidebar. Sidebars are larger sections of topical content, or information for more in-depth study. This content is associated with a general area in the scripture reference text, but not necessarily a specific verse or word.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Content type <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal notranslate"><span class="pre">esb</span></code></p>
+</dd>
+<dt class="field-odd">&#64;category</dt>
+<dd class="field-odd"><p>Optional attribute used to tag the <a class="reference internal" href="#usx-element-sidebar"><span class="std std-ref">&lt;sidebar&gt;</span></a> as belonging to a specific category of study content (e.g. Ideas, People, Places, Objects etc.).</p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram and Text Sample</strong></p>
 <img alt="_images/usx-element_sidebar.png" src="_images/usx-element_sidebar.png" />
 <p>Matthew 2</p>
@@ -864,75 +912,86 @@ If a <cite>sid</cite> attribute is used for the starting milestone in a mileston
 <div class="section" id="periph">
 <span id="usx-element-periph"></span><span id="index-14"></span><h2>&lt;periph&gt;<a class="headerlink" href="#periph" title="Permalink to this headline">¶</a></h2>
 <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">periph <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> (&#64;style types <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">Titles and Headings</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-paragraphs"><span class="std std-ref">Paragraphs</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">Poetry</span></a>), <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>, <a class="reference internal" href="#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a>, and <a class="reference internal" href="#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a single peripheral content section.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;id:</th><td class="field-body">Used for identifying the specific peripheral division content found in the current file. <span style="color:red; font-weight:bold">*</span> <br />
-One of the standard <a class="reference internal" href="peripherals.html#usx-vocab-peripheralids"><span class="std std-ref">peripheral identifiers</span></a> or a <a class="reference internal" href="peripherals.html#usx-peripherals-div-user"><span class="std std-ref">user defined peripheral identifier</span></a>. <br /></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;alt:</th><td class="field-body">Provides an alternate title or identifier (possibly vernacular) for the peripheral content.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-type-peripheral"><span class="std std-ref">Peripheral</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>periph <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>3.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Contains <a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a> (&#64;style types <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">Titles and Headings</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-paragraphs"><span class="std std-ref">Paragraphs</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">Poetry</span></a>), <a class="reference internal" href="#usx-element-table"><span class="std std-ref">&lt;table&gt;</span></a>, <a class="reference internal" href="#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a>, and <a class="reference internal" href="#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a single peripheral content section.</p>
+</dd>
+<dt class="field-even">&#64;id</dt>
+<dd class="field-even"><p>Used for identifying the specific peripheral division content found in the current file. <span style="color:red; font-weight:bold">*</span> <br />
+One of the standard <a class="reference internal" href="peripherals.html#usx-vocab-peripheralids"><span class="std std-ref">peripheral identifiers</span></a> or a <a class="reference internal" href="peripherals.html#usx-peripherals-div-user"><span class="std std-ref">user defined peripheral identifier</span></a>. <br /></p>
+</dd>
+<dt class="field-odd">&#64;alt</dt>
+<dd class="field-odd"><p>Provides an alternate title or identifier (possibly vernacular) for the peripheral content.</p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-type-peripheral"><span class="std std-ref">Peripheral</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></p>
+</dd>
+</dl>
 <p><a class="reference internal" href="_images/icon-arrow_see.png"><img alt="ico_See" src="_images/icon-arrow_see.png" style="width: 24px; height: 24px;" /></a> See: <a class="reference internal" href="peripherals.html"><span class="doc">Peripherals</span></a> for detail.</p>
 <hr class="docutils" />
 </div>
 <div class="section" id="figure">
 <span id="usx-element-figure"></span><span id="index-15"></span><h2>&lt;figure&gt;<a class="headerlink" href="#figure" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">figure <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Definition for an illustration which could be formatted at or near to this location in a publication. <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>figure <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Definition for an illustration which could be formatted at or near to this location in a publication. <br />
 The element’s text content is the caption for the illustration. <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Content type. <span style="color:red; font-weight:bold">*</span> <br />
-<code class="docutils literal notranslate"><span class="pre">fig</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;alt:</th><td class="field-body">Illustration description. This text is not normally rendered within a publication. <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;file:</th><td class="field-body">Illustration filename or URI. <span style="color:red; font-weight:bold">*</span> <br />
-xsd:string | <em>empty</em></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;size:</th><td class="field-body">Illustration relative size. <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Content type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal notranslate"><span class="pre">fig</span></code></p>
+</dd>
+<dt class="field-odd">&#64;alt</dt>
+<dd class="field-odd"><p>Illustration description. This text is not normally rendered within a publication. <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">&#64;file</dt>
+<dd class="field-even"><p>Illustration filename or URI. <span style="color:red; font-weight:bold">*</span> <br />
+xsd:string | <em>empty</em></p>
+</dd>
+<dt class="field-odd">&#64;size</dt>
+<dd class="field-odd"><p>Illustration relative size. <span style="color:red; font-weight:bold">*</span> <br />
 <code class="docutils literal notranslate"><span class="pre">col</span></code> | <code class="docutils literal notranslate"><span class="pre">span</span></code> | &lt;user defined&gt; xsd:string | <em>empty</em> <br />
 <strong>col</strong> - Illustration should be inserted inline within the space for the current text column. <br />
-<strong>span</strong> - Illustration should be inserted across (spanning) all text columns (i.e. the maximum available page or screen width).</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;loc:</th><td class="field-body">Illustration location/range. <br />
-xsd:string</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;copy:</th><td class="field-body">Copyright information. <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;ref:</th><td class="field-body">Illustration reference. This text will commonly be rendered together with the illustration caption. <span style="color:red; font-weight:bold">*</span>
-xsd:string</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<strong>span</strong> - Illustration should be inserted across (spanning) all text columns (i.e. the maximum available page or screen width).</p>
+</dd>
+<dt class="field-even">&#64;loc</dt>
+<dd class="field-even"><p>Illustration location/range. <br />
+xsd:string</p>
+</dd>
+<dt class="field-odd">&#64;copy</dt>
+<dd class="field-odd"><p>Copyright information. <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">&#64;ref</dt>
+<dd class="field-even"><p>Illustration reference. This text will commonly be rendered together with the illustration caption. <span style="color:red; font-weight:bold">*</span>
+xsd:string</p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p><a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-even">Parents</dt>
+<dd class="field-even"><p><a class="reference internal" href="#usx-element-root"><span class="std std-ref">&lt;usx&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Diagram and Text Sample</strong> - Mark 1.18 (GNT)</p>
 <img alt="_images/usx-element_figure.png" src="_images/usx-element_figure.png" />
 <div class="highlight-xml notranslate" id="usx-element-figure-example"><div class="highlight"><pre><span></span><span class="nt">&lt;figure</span> <span class="na">style=</span><span class="s">&quot;fig&quot;</span> <span class="na">file=</span><span class="s">&quot;avnt016.jpg&quot;</span> <span class="na">size=</span><span class="s">&quot;span&quot;</span> <span class="na">ref=</span><span class="s">&quot;1.18&quot;</span><span class="nt">&gt;</span>
@@ -942,24 +1001,25 @@ xsd:string</td>
 </div>
 <div class="section" id="optbreak">
 <span id="usx-element-optbreak"></span><span id="index-16"></span><h2>&lt;optbreak&gt;<a class="headerlink" href="#optbreak" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">optbreak <br />
-<em>empty</em></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">2.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Discretionary (optional) line break location. <br />
-Primarily used in <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">poetic</span></a> text, but could also be used for marking optional breaks for <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">titles</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">headings</span></a>, or table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> content.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>optbreak <br />
+<em>empty</em></p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>2.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Discretionary (optional) line break location. <br />
+Primarily used in <a class="reference internal" href="parastyles.html#usx-parastyles-poetry"><span class="std std-ref">poetic</span></a> text, but could also be used for marking optional breaks for <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">titles</span></a>, <a class="reference internal" href="parastyles.html#usx-parastyles-titles-headings"><span class="std std-ref">headings</span></a>, or table <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a> content.</p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroductionendtitles"><span class="std std-ref">Book Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookchapterlabel"><span class="std std-ref">Book Chapter Label</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptercontent"><span class="std std-ref">Chapter Content</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></p>
+</dd>
+</dl>
 <p><strong>Text Sample</strong></p>
 <div class="highlight-xml notranslate" id="usx-element-optbreak-example"><div class="highlight"><pre><span></span><span class="nt">&lt;para</span> <span class="na">style=</span><span class="s">&quot;s1&quot;</span><span class="nt">&gt;</span>Jesus Heals a Man <span class="nt">&lt;optbreak</span> <span class="nt">/&gt;</span> Who Could Not Walk<span class="nt">&lt;/para&gt;</span>
 </pre></div>
@@ -967,27 +1027,27 @@ Primarily used in <a class="reference internal" href="parastyles.html#usx-parast
 </div>
 <div class="section" id="ref">
 <span id="usx-element-ref"></span><span id="index-17"></span><h2>&lt;ref&gt;<a class="headerlink" href="#ref" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">ref</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">2.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Scripture reference. <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>ref</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>2.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Scripture reference. <br />
 When <a class="reference internal" href="#usx-element-ref"><span class="std std-ref">&lt;ref&gt;</span></a> is used with a USX encoded text, each segment of a scripture reference should be wrapped in a <a class="reference internal" href="#usx-element-ref"><span class="std std-ref">&lt;ref&gt;</span></a> element. <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;loc:</th><td class="field-body">A parsable (machine-readable) representation of the vernacular text for the scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
-xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}(-[A-Z1-4]{3})?</span> <span class="pre">?[a-z0-9\-:]*</span></code></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parents:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
+xsd:string</p>
+</dd>
+<dt class="field-even">&#64;loc</dt>
+<dd class="field-even"><p>A parsable (machine-readable) representation of the vernacular text for the scripture reference. Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon (:). <br />
+xsd:string of pattern <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}(-[A-Z1-4]{3})?</span> <span class="pre">?[a-z0-9\-:]*</span></code></p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Parents</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
 <p><strong>Diagram and Text Sample</strong></p>
 <img alt="_images/usx-element_ref.png" src="_images/usx-element_ref.png" />
 <div class="highlight-xml notranslate" id="usx-element-ref-example"><div class="highlight"><pre><span></span><span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:1-4&quot;</span><span class="nt">&gt;</span>Mt 3.1-4<span class="nt">&lt;/ref&gt;</span>,<span class="nt">&lt;ref</span> <span class="na">loc=</span><span class="s">&quot;MAT 3:7-13&quot;</span><span class="nt">&gt;</span>7-13<span class="nt">&lt;/ref&gt;</span>
@@ -1055,7 +1115,7 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
         <a href="attributes.html" class="btn btn-neutral float-right" title="Attributes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="structure.html" class="btn btn-neutral" title="Document Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="structure.html" class="btn btn-neutral float-left" title="Document Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1064,7 +1124,8 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, United Bible Societies.
+        
+        &copy; Copyright 2018, United Bible Societies
 
     </p>
   </div> 
@@ -1103,33 +1164,16 @@ xsd:string of pattern <code class="docutils literal notranslate"><span class="pr
 </div>
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'3.0.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  <script type="text/javascript">
     $(document).ready(function() {
         $(".toggle > *").hide();

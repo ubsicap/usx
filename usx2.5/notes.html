@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,44 +11,48 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="List of Vocabularies" href="vocabularies.html" />
     <link rel="prev" title="&lt;char&gt; @style Types" href="charstyles.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Unified Scripture XML
           
 
           
@@ -76,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -116,6 +120,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -154,7 +159,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>&lt;note&gt; Types</li>
     
@@ -183,11 +188,12 @@
 <style> .green-bd {color:green;  font-weight: bold} </style><div class="section" id="note-types">
 <span id="usx-note"></span><h1><a class="toc-backref" href="#id4">&lt;note&gt; Types</a><a class="headerlink" href="#note-types" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#note-types" id="id4">&lt;note&gt; Types</a><ul>
-<li><a class="reference internal" href="#note-footnote" id="id5">&lt;note&gt; (Footnote)</a></li>
-<li><a class="reference internal" href="#note-crossreference" id="id6">&lt;note&gt; (CrossReference)</a></li>
+<li><p><a class="reference internal" href="#note-types" id="id4">&lt;note&gt; Types</a></p>
+<ul>
+<li><p><a class="reference internal" href="#note-footnote" id="id5">&lt;note&gt; (Footnote)</a></p></li>
+<li><p><a class="reference internal" href="#note-crossreference" id="id6">&lt;note&gt; (CrossReference)</a></p></li>
 </ul>
 </li>
 </ul>
@@ -196,54 +202,58 @@
 <span class="target" id="index-0"></span><span class="target" id="index-1"></span><div class="section" id="note-footnote">
 <span id="usx-note-footnote"></span><span id="index-2"></span><h2><a class="toc-backref" href="#id5">&lt;note&gt; (Footnote)</a><a class="headerlink" href="#note-footnote" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>Footnote</strong></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">note <br />
-<em>empty</em> (all content is contained within the note’s child char elements)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains child <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a footnote, endnote, or study note.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;caller:</th><td class="field-body">Note caller. <span style="color:red; font-weight:bold">*</span> <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>note <br />
+<em>empty</em> (all content is contained within the note’s child char elements)</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Contains child <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a footnote, endnote, or study note.</p>
+</dd>
+<dt class="field-even">&#64;caller</dt>
+<dd class="field-even"><p>Note caller. <span style="color:red; font-weight:bold">*</span> <br />
 <code class="docutils literal notranslate"><span class="pre">+</span></code> | <code class="docutils literal notranslate"><span class="pre">-</span></code> | &lt;user defined caller&gt; <br />
-<em>A &lt;user defined caller&gt; may be any single character or sequence of characters preferred as the caller for a note.</em></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">Content (footnote) type. <span style="color:red; font-weight:bold">*</span> <br />
-<code class="docutils literal notranslate"><span class="pre">f</span></code> (footnote) | <code class="docutils literal notranslate"><span class="pre">fe</span></code> (endnote) | <code class="docutils literal notranslate"><span class="pre">ef</span></code> (extended / study note)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<em>A &lt;user defined caller&gt; may be any single character or sequence of characters preferred as the caller for a note.</em></p>
+</dd>
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>Content (footnote) type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal notranslate"><span class="pre">f</span></code> (footnote) | <code class="docutils literal notranslate"><span class="pre">fe</span></code> (endnote) | <code class="docutils literal notranslate"><span class="pre">ef</span></code> (extended / study note)</p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></p>
+</dd>
+</dl>
 <div class="section" id="diagram">
 <h3>Diagram<a class="headerlink" href="#diagram" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/usx-pattern_Footnote.png" src="_images/usx-pattern_Footnote.png" />
 <div class="section" id="char-footnote">
 <span id="usx-note-footnote-char"></span><span id="index-3"></span><h4>&lt;char&gt; (Footnote)<a class="headerlink" href="#char-footnote" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>FootnoteChar</strong></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">char <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">An element for marking various footnote content types.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Footnote content type. <span style="color:red; font-weight:bold">*</span> <br />
-The <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> (Footnote) &#64;style types list (below) presents an itemization of &#64;style values valid within <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements which are children of <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”f”, <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”fe”, and <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”ef”.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="#usx-note-footnote"><span class="std std-ref">&lt;note&gt; (Footnote)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>char <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>An element for marking various footnote content types.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Footnote content type. <span style="color:red; font-weight:bold">*</span> <br />
+The <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> (Footnote) &#64;style types list (below) presents an itemization of &#64;style values valid within <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements which are children of <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”f”, <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”fe”, and <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”ef”.</p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-note-footnote"><span class="std std-ref">&lt;note&gt; (Footnote)</span></a></p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="section" id="id1">
@@ -253,30 +263,29 @@ The <a class="reference internal" href="elements.html#usx-element-char"><span cl
 <div class="section" id="char-footnote-style-types">
 <span id="usx-note-footnote-charstyles"></span><h3>&lt;char&gt; (Footnote) &#64;style Types<a class="headerlink" href="#char-footnote-style-types" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fr"><span class="std std-ref">fr</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-ft"><span class="std std-ref">ft</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fk"><span class="std std-ref">fk</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fq"><span class="std std-ref">fq</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fqa"><span class="std std-ref">fqa</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fl"><span class="std std-ref">fl</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fp"><span class="std std-ref">fp</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fv"><span class="std std-ref">fv</span></a></li>
-<li><a class="reference internal" href="#usx-note-footnote-charstyle-fdc"><span class="std std-ref">fdc</span></a></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fr"><span class="std std-ref">fr</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-ft"><span class="std std-ref">ft</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fk"><span class="std std-ref">fk</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fq"><span class="std std-ref">fq</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fqa"><span class="std std-ref">fqa</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fl"><span class="std std-ref">fl</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fp"><span class="std std-ref">fp</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fv"><span class="std std-ref">fv</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-footnote-charstyle-fdc"><span class="std std-ref">fdc</span></a></p></li>
 </ul>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fr" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">fr</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Footnote “origin” reference. <br />
-This is the chapter and verse(s) that note refers to.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-footnote-charstyle-fr">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>fr</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Footnote “origin” reference. <br />
+This is the chapter and verse(s) that note refers to.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;+&quot;</span> <span class="na">style=</span><span class="s">&quot;f&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fr&quot;</span><span class="nt">&gt;</span>1.1: <span class="nt">&lt;/char&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;ft&quot;</span><span class="nt">&gt;</span>Some manuscripts do not have <span class="nt">&lt;/char&gt;</span>
@@ -285,36 +294,31 @@ This is the chapter and verse(s) that note refers to.</td>
 </pre></div>
 </div>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-ft" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">ft</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Footnote text <br />
-The primary (explanatory) text of the footnote.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-footnote-charstyle-ft">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>ft</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Footnote text <br />
+The primary (explanatory) text of the footnote.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fk" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">fk</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">A specific keyword/term from the text for which the footnote is being provided.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
-<a class="last reference internal image-reference" href="_images/usx-notechar-style_fk.jpg"><img alt="_images/usx-notechar-style_fk.jpg" src="_images/usx-notechar-style_fk.jpg" style="width: 450px;" /></a>
-</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list" id="usx-note-footnote-charstyle-fk">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>fk</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>A specific keyword/term from the text for which the footnote is being provided.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-notechar-style_fk.jpg"><img alt="_images/usx-notechar-style_fk.jpg" src="_images/usx-notechar-style_fk.jpg" style="width: 450px;" /></a>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;+&quot;</span> <span class="na">style=</span><span class="s">&quot;f&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fr&quot;</span><span class="nt">&gt;</span>3.20: <span class="nt">&lt;/char&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fk&quot;</span><span class="nt">&gt;</span>Adam <span class="nt">&lt;/char&gt;</span>
@@ -323,23 +327,19 @@ The primary (explanatory) text of the footnote.</td>
 </pre></div>
 </div>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fq" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">Footnote translation quotation.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">A quotation from the current scripture text translation for which the note is being provided. <br />
+<dl class="field-list" id="usx-note-footnote-charstyle-fq">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>Footnote translation quotation.</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>A quotation from the current scripture text translation for which the note is being provided. <br />
 Longer quotations are sometimes shortened using an ellipsis (i.e. suspension dots “…”).</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
-<a class="last reference internal image-reference" href="_images/usx-notechar-style_fq.jpg"><img alt="_images/usx-notechar-style_fq.jpg" src="_images/usx-notechar-style_fq.jpg" style="width: 450px;" /></a>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-notechar-style_fq.jpg"><img alt="_images/usx-notechar-style_fq.jpg" src="_images/usx-notechar-style_fq.jpg" style="width: 450px;" /></a>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;+&quot;</span> <span class="na">style=</span><span class="s">&quot;f&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fr&quot;</span><span class="nt">&gt;</span>1.1: <span class="nt">&lt;/char&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;ft&quot;</span><span class="nt">&gt;</span>Some manuscripts do not have <span class="nt">&lt;/char&gt;</span>
@@ -348,23 +348,19 @@ Longer quotations are sometimes shortened using an ellipsis (i.e. suspension dot
 </pre></div>
 </div>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fqa" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">fqa</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Footnote alternate translation. <br />
+<dl class="field-list" id="usx-note-footnote-charstyle-fqa">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>fqa</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Footnote alternate translation. <br />
 Used to distinguish between a quotation of the current scripture text translation, and an alternate translation.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
-<a class="last reference internal image-reference" href="_images/usx-notechar-style_fqa.jpg"><img alt="_images/usx-notechar-style_fqa.jpg" src="_images/usx-notechar-style_fqa.jpg" style="width: 450px;" /></a>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-notechar-style_fqa.jpg"><img alt="_images/usx-notechar-style_fqa.jpg" src="_images/usx-notechar-style_fqa.jpg" style="width: 450px;" /></a>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;+&quot;</span> <span class="na">style=</span><span class="s">&quot;f&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fr&quot;</span><span class="nt">&gt;</span>1.4: <span class="nt">&lt;/char&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fq&quot;</span><span class="nt">&gt;</span>John appeared in the desert, baptizing and preaching; <span class="nt">&lt;/char&gt;</span>
@@ -374,51 +370,45 @@ Used to distinguish between a quotation of the current scripture text translatio
 </pre></div>
 </div>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fl" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">fl</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Footnote “label” text. <br />
-Can be used for marking or “labeling” a word or words which are used consistently across certain types of translation notes (such as the words “Or” in an alternative translation style note, “Others”, “Heb.”, “LXX” etc.).</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-footnote-charstyle-fl">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>fl</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Footnote “label” text. <br />
+Can be used for marking or “labeling” a word or words which are used consistently across certain types of translation notes (such as the words “Or” in an alternative translation style note, “Others”, “Heb.”, “LXX” etc.).</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fp" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">fp</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Footnote additional paragraph. <br />
-Use this marker to if you need to indicate the start of a new paragraph within a footnote (uncommon).</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-footnote-charstyle-fp">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>fp</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Footnote additional paragraph. <br />
+Use this marker to if you need to indicate the start of a new paragraph within a footnote (uncommon).</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fv" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">fv</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Footnote verse number. <br />
+<dl class="field-list" id="usx-note-footnote-charstyle-fv">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>fv</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Footnote verse number. <br />
 A verse number in the the text quotation or alternative translation.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
-<a class="last reference internal image-reference" href="_images/usx-notechar-style_fv.jpg"><img alt="_images/usx-notechar-style_fv.jpg" src="_images/usx-notechar-style_fv.jpg" style="width: 500px;" /></a>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-notechar-style_fv.jpg"><img alt="_images/usx-notechar-style_fv.jpg" src="_images/usx-notechar-style_fv.jpg" style="width: 500px;" /></a>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;+&quot;</span> <span class="na">style=</span><span class="s">&quot;f&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;fr&quot;</span><span class="nt">&gt;</span>7.38: <span class="nt">&lt;/char&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;ft&quot;</span><span class="nt">&gt;</span>Jesus&#39; words in verses 37-38 may be translated: <span class="nt">&lt;/char&gt;</span>
@@ -429,76 +419,79 @@ A verse number in the the text quotation or alternative translation.</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-footnote-charstyle-fdc" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">fdc</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Material to be included only in publications that contain the Deuterocanonical/Apocrypha books.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-footnote-charstyle-fdc">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>fdc</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Material to be included only in publications that contain the Deuterocanonical/Apocrypha books.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-footnote-char"><span class="std std-ref">&lt;char&gt; (Footnote)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Other <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> <a class="reference internal" href="charstyles.html"><span class="doc">&#64;style types</span></a> may be nested within any of the standard footnote <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> <a class="reference internal" href="#usx-note-footnote-charstyles"><span class="std std-ref">&#64;style types</span></a> shown in the list above.</p>
+<p class="admonition-title">Note</p>
+<p>Other <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> <a class="reference internal" href="charstyles.html"><span class="doc">&#64;style types</span></a> may be nested within any of the standard footnote <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> <a class="reference internal" href="#usx-note-footnote-charstyles"><span class="std std-ref">&#64;style types</span></a> shown in the list above.</p>
 </div>
 <span class="target" id="index-4"></span></div>
 </div>
 <div class="section" id="note-crossreference">
 <span id="usx-note-crossreference"></span><span id="index-5"></span><h2><a class="toc-backref" href="#id6">&lt;note&gt; (CrossReference)</a><a class="headerlink" href="#note-crossreference" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>CrossReference</strong></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">note <br />
-<em>empty</em> (all content is contained within the note’s child char elements)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">Contains child <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a cross reference or study cross reference.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;caller:</th><td class="field-body">Cross reference caller. <span style="color:red; font-weight:bold">*</span> <br />
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>note <br />
+<em>empty</em> (all content is contained within the note’s child char elements)</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>Contains child <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements to contain the content for a cross reference or study cross reference.</p>
+</dd>
+<dt class="field-even">&#64;caller</dt>
+<dd class="field-even"><p>Cross reference caller. <span style="color:red; font-weight:bold">*</span> <br />
 <code class="docutils literal notranslate"><span class="pre">+</span></code> | <code class="docutils literal notranslate"><span class="pre">-</span></code> | &lt;user defined caller&gt; <br />
-<em>A &lt;user defined caller&gt; may be any single character or sequence of characters preferred as the caller for a note.</em></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">Content (cross reference) type. <span style="color:red; font-weight:bold">*</span> <br />
-<code class="docutils literal notranslate"><span class="pre">x</span></code> (cross reference) | <code class="docutils literal notranslate"><span class="pre">ex</span></code> (extended / study cross reference)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Parents:</th><td class="field-body"><a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<em>A &lt;user defined caller&gt; may be any single character or sequence of characters preferred as the caller for a note.</em></p>
+</dd>
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>Content (cross reference) type. <span style="color:red; font-weight:bold">*</span> <br />
+<code class="docutils literal notranslate"><span class="pre">x</span></code> (cross reference) | <code class="docutils literal notranslate"><span class="pre">ex</span></code> (extended / study cross reference)</p>
+</dd>
+<dt class="field-even">Valid in</dt>
+<dd class="field-even"><p><a class="reference internal" href="structure.html#usx-div-booktitles"><span class="std std-ref">Book Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-bookintroduction"><span class="std std-ref">Book Introduction</span></a>, <a class="reference internal" href="structure.html#usx-div-introductionendtitles"><span class="std std-ref">Introduction End Titles</span></a>, <a class="reference internal" href="structure.html#usx-div-chaptertext"><span class="std std-ref">Chapter Text</span></a></p>
+</dd>
+<dt class="field-odd">Parents</dt>
+<dd class="field-odd"><p><a class="reference internal" href="elements.html#usx-element-para"><span class="std std-ref">&lt;para&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a>, <a class="reference internal" href="elements.html#usx-element-cell"><span class="std std-ref">&lt;cell&gt;</span></a></p>
+</dd>
+</dl>
 <div class="section" id="id2">
 <h3>Diagram<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/usx-pattern_CrossReference.png" src="_images/usx-pattern_CrossReference.png" />
 <div class="section" id="char-crossreference">
 <span id="usx-note-crossreference-char"></span><span id="index-6"></span><h4>&lt;char&gt; (CrossReference)<a class="headerlink" href="#char-crossreference" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference internal" href="_images/icon-rnc.png"><img alt="ico_R" src="_images/icon-rnc.png" style="width: 16px; height: 16px;" /></a> Schema pattern name: <strong>CrossReferenceChar</strong></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Element:</th><td class="field-body">char <br />
-xsd:string</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">1.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">An element for marking various cross reference content types.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">&#64;style:</th><td class="field-body">Cross reference content type. <span style="color:red; font-weight:bold">*</span> <br />
-The <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> (Cross Reference) &#64;style types list (below) presents an itemization of &#64;style values valid within <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements which are children of <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”x”.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid in:</th><td class="field-body"><a class="reference internal" href="#usx-note-crossreference"><span class="std std-ref">&lt;note&gt; (CrossReference)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Element</dt>
+<dd class="field-odd"><p>char <br />
+xsd:string</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>1.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>An element for marking various cross reference content types.</p>
+</dd>
+<dt class="field-even">&#64;style</dt>
+<dd class="field-even"><p>Cross reference content type. <span style="color:red; font-weight:bold">*</span> <br />
+The <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> (Cross Reference) &#64;style types list (below) presents an itemization of &#64;style values valid within <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> elements which are children of <a class="reference internal" href="elements.html#usx-element-note"><span class="std std-ref">&lt;note&gt;</span></a> &#64;style=”x”.</p>
+</dd>
+<dt class="field-odd">Valid in</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#usx-note-crossreference"><span class="std std-ref">&lt;note&gt; (CrossReference)</span></a></p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="section" id="id3">
@@ -508,32 +501,28 @@ The <a class="reference internal" href="elements.html#usx-element-char"><span cl
 <div class="section" id="char-cross-reference-style-types">
 <span id="usx-note-crossreference-charstyles"></span><h3>&lt;char&gt; (Cross Reference) &#64;style Types<a class="headerlink" href="#char-cross-reference-style-types" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference internal" href="#usx-note-crossreference-charstyle-xo"><span class="std std-ref">xo</span></a></li>
-<li><a class="reference internal" href="#usx-note-crossreference-charstyle-xt"><span class="std std-ref">xt</span></a></li>
-<li><a class="reference internal" href="#usx-note-crossreference-charstyle-xk"><span class="std std-ref">xk</span></a></li>
-<li><a class="reference internal" href="#usx-note-crossreference-charstyle-xq"><span class="std std-ref">xq</span></a></li>
-<li><a class="reference internal" href="#usx-note-crossreference-charstyle-xot"><span class="std std-ref">xot</span></a></li>
-<li><a class="reference internal" href="#usx-note-crossreference-charstyle-xnt"><span class="std std-ref">xnt</span></a></li>
-<li><a class="reference internal" href="#usx-note-crossreference-charstyle-xdc"><span class="std std-ref">xdc</span></a></li>
+<li><p><a class="reference internal" href="#usx-note-crossreference-charstyle-xo"><span class="std std-ref">xo</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-crossreference-charstyle-xt"><span class="std std-ref">xt</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-crossreference-charstyle-xk"><span class="std std-ref">xk</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-crossreference-charstyle-xq"><span class="std std-ref">xq</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-crossreference-charstyle-xot"><span class="std std-ref">xot</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-crossreference-charstyle-xnt"><span class="std std-ref">xnt</span></a></p></li>
+<li><p><a class="reference internal" href="#usx-note-crossreference-charstyle-xdc"><span class="std std-ref">xdc</span></a></p></li>
 </ul>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-crossreference-charstyle-xo" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body"><p class="first">xo</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body"><p class="first">Cross reference origin reference. <br />
+<dl class="field-list" id="usx-note-crossreference-charstyle-xo">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>xo</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Cross reference origin reference. <br />
 This is the chapter and verse(s) that target (&#64;style=”xt”) reference(s) are being provided for.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body"><p class="first">Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
-<a class="last reference internal image-reference" href="_images/usx-notechar-style_xo.jpg"><img alt="_images/usx-notechar-style_xo.jpg" src="_images/usx-notechar-style_xo.jpg" style="width: 500px;" /></a>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
+<a class="reference internal image-reference" href="_images/usx-notechar-style_xo.jpg"><img alt="_images/usx-notechar-style_xo.jpg" src="_images/usx-notechar-style_xo.jpg" style="width: 500px;" /></a>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;-&quot;</span> <span class="na">style=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xo&quot;</span><span class="nt">&gt;</span>2.23: <span class="nt">&lt;/char&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xt&quot;</span><span class="nt">&gt;</span>Mk 1.24; Lk 2.39; Jn 1.45.<span class="nt">&lt;/char&gt;</span>
@@ -541,86 +530,80 @@ This is the chapter and verse(s) that target (&#64;style=”xt”) reference(s) 
 </pre></div>
 </div>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-crossreference-charstyle-xt" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">xt</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">Cross reference target reference(s). <br />
+<dl class="field-list simple" id="usx-note-crossreference-charstyle-xt">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>xt</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>Cross reference target reference(s). <br />
 The list of target scripture passages being suggested as references for comparison/review with respect to the text (or concept) of the origin reference. <br />
-A list of book name abbreviations and chapter + verse references, separated by semicolons or other book list separator character.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></td>
-</tr>
-</tbody>
-</table>
+A list of book name abbreviations and chapter + verse references, separated by semicolons or other book list separator character.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-crossreference-charstyle-xk" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">xk</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">A keyword from the scripture translation text which the target reference(s) also refer to.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-crossreference-charstyle-xk">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>xk</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>A keyword from the scripture translation text which the target reference(s) also refer to.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-crossreference-charstyle-xq" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">xq</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">A quotation from the scripture text. <br />
-<em>Use of a quotation would be intended to help the reader to understand the portion of text (or concept) for which the target (xt) reference(s) are being supplied.</em></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-crossreference-charstyle-xq">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>xq</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>A quotation from the scripture text. <br />
+<em>Use of a quotation would be intended to help the reader to understand the portion of text (or concept) for which the target (xt) reference(s) are being supplied.</em></p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-crossreference-charstyle-xot" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">xot</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">References (or other text) which only to be included in publications that contain the Old Testament books.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-crossreference-charstyle-xot">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>xot</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>References (or other text) which only to be included in publications that contain the Old Testament books.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-crossreference-charstyle-xnt" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">xnt</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">References (or other text) which only to be included in publications that contain the New Testament books.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-crossreference-charstyle-xnt">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>xnt</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>References (or other text) which only to be included in publications that contain the New Testament books.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
+</dd>
+</dl>
 <hr class="docutils" />
-<table class="docutils field-list" frame="void" id="usx-note-crossreference-charstyle-xdc" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">xdc</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Use:</th><td class="field-body">References (or other text) which only to be included in publications that contain the Deuterocanonical/Apocrypha books.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Valid In:</th><td class="field-body">Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple" id="usx-note-crossreference-charstyle-xdc">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>xdc</p>
+</dd>
+<dt class="field-even">Use</dt>
+<dd class="field-even"><p>References (or other text) which only to be included in publications that contain the Deuterocanonical/Apocrypha books.</p>
+</dd>
+<dt class="field-odd">Valid In</dt>
+<dd class="field-odd"><p>Any <a class="reference internal" href="#usx-note-crossreference-char"><span class="std std-ref">&lt;char&gt; (CrossReference)</span></a></p>
+</dd>
+</dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;note</span> <span class="na">caller=</span><span class="s">&quot;-&quot;</span> <span class="na">style=</span><span class="s">&quot;x&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xo&quot;</span><span class="nt">&gt;</span>1.26: <span class="nt">&lt;/char&gt;</span>
   <span class="nt">&lt;char</span> <span class="na">style=</span><span class="s">&quot;xdc&quot;</span><span class="nt">&gt;</span>Ws 2.23; Si 17.3,4;<span class="nt">&lt;/char&gt;</span>
@@ -643,7 +626,7 @@ A list of book name abbreviations and chapter + verse references, separated by s
         <a href="vocabularies.html" class="btn btn-neutral float-right" title="List of Vocabularies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="charstyles.html" class="btn btn-neutral" title="&lt;char&gt; @style Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="charstyles.html" class="btn btn-neutral float-left" title="&lt;char&gt; @style Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -652,7 +635,8 @@ A list of book name abbreviations and chapter + verse references, separated by s
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, United Bible Societies.
+        
+        &copy; Copyright 2016, United Bible Societies
 
     </p>
   </div> 
@@ -691,33 +675,16 @@ A list of book name abbreviations and chapter + verse references, separated by s
 </div>
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.500',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  <script type="text/javascript">
     $(document).ready(function() {
         $(".toggle > *").hide();

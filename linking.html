@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,44 +11,48 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Peripherals" href="peripherals.html" />
     <link rel="prev" title="&lt;note&gt; Types" href="notes.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> Unified Scripture XML
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Unified Scripture XML
           
 
           
@@ -76,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -106,6 +110,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -144,7 +149,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Linking Attributes</li>
     
@@ -174,49 +179,39 @@
 <p>Linking <a class="reference internal" href="attributes.html"><span class="doc">attributes</span></a> are added using the standard XML syntax. Names given to linking attributes begin with <code class="docutils literal notranslate"><span class="pre">link-</span></code>, distinguishing them from any other descriptive attributes.</p>
 <p>Linking attributes are combined with any other <a class="reference internal" href="attributes.html#usx-attributes-descriptive"><span class="std std-ref">descriptive attributes</span></a> added to the same element. The order of attributes is not significant, although it would benefit readability to have descriptive and linking attributes grouped together.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>When a standard USX scripture reference is required, you must provide a string of pattern: <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-,:]*</span></code></p>
 <ul class="simple">
-<li>Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a></li>
-<li>Chapter verse separator is always a colon <code class="docutils literal notranslate"><span class="pre">:</span></code></li>
-<li>Verse ranges are indicated using a hyphen</li>
+<li><p>Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a></p></li>
+<li><p>Chapter verse separator is always a colon <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>Verse ranges are indicated using a hyphen</p></li>
 </ul>
-<p class="last">Example: <code class="docutils literal notranslate"><span class="pre">MAT</span> <span class="pre">3:1-4</span></code></p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">MAT</span> <span class="pre">3:1-4</span></code></p>
 </div>
 </div>
 <div class="section" id="attributes-ico-tag">
 <h2>Attributes <a class="reference internal" href="_images/icon-tag_alt.png"><img alt="ico_Tag" src="_images/icon-tag_alt.png" style="width: 16px; height: 16px;" /></a><a class="headerlink" href="#attributes-ico-tag" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="usx-charstyle-attr-link-href"></span><table class="docutils field-list" frame="void" id="index-1" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;link-href:</th><td class="field-body"><p class="first">Identifies the resource being linked to as a URI. <br /> <br />
+<span class="target" id="usx-charstyle-attr-link-href"></span><dl class="field-list" id="index-1">
+<dt class="field-odd">&#64;link-href</dt>
+<dd class="field-odd"><p>Identifies the resource being linked to as a URI. <br /> <br />
 Custom USFM provided URI prefixes are: <br />
 <code class="docutils literal notranslate"><span class="pre">prj:</span></code> + standard scripture reference. <br />
 Example: <code class="docutils literal notranslate"><span class="pre">prj:RSV52</span> <span class="pre">MAT</span> <span class="pre">3:1-4</span></code></p>
-<p class="last">A link reference within the same project text does not require a URI prefix. <br /> <br />
+<p>A link reference within the same project text does not require a URI prefix. <br /> <br />
 The resource may be identified by unique id. <br />
 Example: <code class="docutils literal notranslate"><span class="pre">#article-Ruth</span></code> or <code class="docutils literal notranslate"><span class="pre">prj:GNTSB</span> <span class="pre">#article-Ruth</span></code></p>
-</td>
-</tr>
-</tbody>
-</table>
-<span class="target" id="usx-charstyle-attr-link-title"></span><table class="docutils field-list" frame="void" id="index-2" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;link-title:</th><td class="field-body">Plain text describing the remote resource such as might be shown in a tooltip.</td>
-</tr>
-</tbody>
-</table>
-<span class="target" id="usx-charstyle-attr-link-id"></span><table class="docutils field-list" frame="void" id="index-3" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;link-id:</th><td class="field-body">A unique identifier for this content location (an anchor).</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
+<span class="target" id="usx-charstyle-attr-link-title"></span><dl class="field-list simple" id="index-2">
+<dt class="field-odd">&#64;link-title</dt>
+<dd class="field-odd"><p>Plain text describing the remote resource such as might be shown in a tooltip.</p>
+</dd>
+</dl>
+<span class="target" id="usx-charstyle-attr-link-id"></span><dl class="field-list simple" id="index-3">
+<dt class="field-odd">&#64;link-id</dt>
+<dd class="field-odd"><p>A unique identifier for this content location (an anchor).</p>
+</dd>
+</dl>
 <p>The set of URI prefixes used within a <code class="docutils literal notranslate"><span class="pre">link-href</span></code> attribute can be extended beyond the predefined set for USX 3.0. Any user defined URI prefixes must begin with the prefix <code class="docutils literal notranslate"><span class="pre">x-</span></code>.</p>
 <p><strong>Examples:</strong></p>
 <p>Link to other project text</p>
@@ -269,20 +264,20 @@ Example: <code class="docutils literal notranslate"><span class="pre">#article-R
 <div class="section" id="char-style-jmp">
 <span id="usx-charstyle-jmp-linking"></span><h2>char &#64;style jmp<a class="headerlink" href="#char-style-jmp" title="Permalink to this headline">¶</a></h2>
 <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h29v20H0z"/><path fill="#6ab0de" d="M29 0h27v20H29z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"><text x="155" y="140" transform="scale(.1)" textLength="190">usx</text><text x="415" y="140" transform="scale(.1)" textLength="170">3.0</text></g> </svg></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">&#64;style:</th><td class="field-body">jmp</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Added:</th><td class="field-body">3.0</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Use:</th><td class="field-body">A <a class="reference internal" href="charstyles.html"><span class="doc">&#64;style type</span></a> value for use with <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a>. Available for associating linking attributes to a span of text when no other <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> element is already applied to the text at this location.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Valid In:</th><td class="field-body">Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">&#64;style</dt>
+<dd class="field-odd"><p>jmp</p>
+</dd>
+<dt class="field-even">Added</dt>
+<dd class="field-even"><p>3.0</p>
+</dd>
+<dt class="field-odd">Use</dt>
+<dd class="field-odd"><p>A <a class="reference internal" href="charstyles.html"><span class="doc">&#64;style type</span></a> value for use with <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a>. Available for associating linking attributes to a span of text when no other <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a> element is already applied to the text at this location.</p>
+</dd>
+<dt class="field-even">Valid In</dt>
+<dd class="field-even"><p>Any valid <a class="reference internal" href="elements.html#usx-element-char"><span class="std std-ref">&lt;char&gt;</span></a></p>
+</dd>
+</dl>
 <p><em>Linking examples provided above</em></p>
 </div>
 </div>
@@ -298,7 +293,7 @@ Example: <code class="docutils literal notranslate"><span class="pre">#article-R
         <a href="peripherals.html" class="btn btn-neutral float-right" title="Peripherals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="notes.html" class="btn btn-neutral" title="&lt;note&gt; Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="notes.html" class="btn btn-neutral float-left" title="&lt;note&gt; Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -307,7 +302,8 @@ Example: <code class="docutils literal notranslate"><span class="pre">#article-R
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, United Bible Societies.
+        
+        &copy; Copyright 2018, United Bible Societies
 
     </p>
   </div> 
@@ -346,33 +342,16 @@ Example: <code class="docutils literal notranslate"><span class="pre">#article-R
 </div>
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'3.0.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+  
  <script type="text/javascript">
     $(document).ready(function() {
         $(".toggle > *").hide();
