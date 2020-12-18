@@ -652,7 +652,7 @@ A list of book name abbreviations and chapter + verse references, separated by s
 <tr class="field-odd field"><th class="field-name">&#64;link-href:</th><td class="field-body">Citation form for the term in the glossary</td>
 </tr>
 <tr class="field-even field"><th class="field-name">link-href:</th><td class="field-body">Unambiguously identifies the scripture target reference using a standard scripture reference format. <em>(default)</em> <br />
-Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. A string of pattern: <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}</span> <span class="pre">?[a-z0-9\-,:]*</span></code> <br /> <br />
+Book names must be one of <a class="reference internal" href="vocabularies.html#usx-vocab-bookcode"><span class="std std-ref">bookCode</span></a>. Chapter verse separator is always a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. A string of pattern: <code class="docutils literal notranslate"><span class="pre">[A-Z1-4]{3}(-[A-Z1-4]{3})?</span> <span class="pre">?[a-z0-9\-,:]*</span></code> <br /> <br />
 In some scenarios a target reference is written in a format which cannot be accurately parsed and identified. Providing the <code class="docutils literal notranslate"><span class="pre">link-href</span></code> attribute allows greater flexibility in the use of <a class="reference external" href="mailto:char&#37;&#52;&#48;style">char<span>&#64;</span>style</a> <a class="reference internal" href="#usx-note-crossreference-charstyle-xt"><span class="std std-ref">xt</span></a>. <br /> <br />
 In this context, <code class="docutils literal notranslate"><span class="pre">link-href</span></code> should only target scripture references for the current text (i.e. references to other project texts or non-scripture URIs are not allowed)</td>
 </tr>
@@ -838,7 +838,7 @@ Used for marking text which should be ignored when identifying or linking to cro
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Other Versions</span>
-        v: master
+        v: usx3.0.3
         <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -849,12 +849,12 @@ Used for marking text which should be ignored when identifying or linking to cro
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="notes.html">master</a></dd>
+            <dd><a href="../master/notes.html">master</a></dd>
             <dd><a href="../usx2.5/notes.html">usx2.5</a></dd>
             <dd><a href="../usx3.0/notes.html">usx3.0</a></dd>
             <dd><a href="../usx3.0.1/notes.html">usx3.0.1</a></dd>
             <dd><a href="../usx3.0.2/notes.html">usx3.0.2</a></dd>
-            <dd><a href="../usx3.0.3/notes.html">usx3.0.3</a></dd>
+            <dd><a href="notes.html">usx3.0.3</a></dd>
         </dl>
     </div>
 </div>
