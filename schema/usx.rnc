@@ -793,7 +793,7 @@ Figure =
 
 Reference =
     element ref {
-        attribute loc { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } },
+        attribute loc { xsd:string { pattern = "[A-Z1-4]{3}(-[A-Z1-4]{3})? ?[a-z0-9\-:]*" } },
         text?
     }
 
