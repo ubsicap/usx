@@ -459,7 +459,7 @@ An *additional* :ref:`link-href <usx-charstyle-attr_link-href>` :doc:`attribute 
 :@link-href: Citation form for the term in the glossary
 
 :link-href: Unambiguously identifies the scripture target reference using a standard scripture reference format. *(default)* |br|
-	Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon ``:``. A string of pattern: ``[A-Z1-4]{3} ?[a-z0-9\-,:]*`` |br| |br|
+	Book names must be one of :ref:`bookCode <usx-vocab-bookCode>`. Chapter verse separator is always a colon ``:``. A string of pattern: ``[A-Z1-4]{3}(-[A-Z1-4]{3})? ?[a-z0-9\-:]*`` |br| |br|
 	In some scenarios a target reference is written in a format which cannot be accurately parsed and identified. Providing the ``link-href`` attribute allows greater flexibility in the use of char@style :ref:`xt <usx-note_crossReference_charstyle_xt>`. |br| |br| 
 	In this context, ``link-href`` should only target scripture references for the current text (i.e. references to other project texts or non-scripture URIs are not allowed)
 
