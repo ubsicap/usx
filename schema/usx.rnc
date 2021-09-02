@@ -1,5 +1,5 @@
 # usx.rnc
-# A compact syntax Relax NG Schema for USX 3.0.3
+# A compact syntax Relax NG Schema for USX 3.0.5
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
@@ -416,18 +416,6 @@ Para.para.style.enum = (
     | "sd3" # Semantic division location (vertical space used to divide the text into sections), level 3
     | "sd4" # Semantic division location (vertical space used to divide the text into sections), level 4
     | "ts" # Translator�s chunk (to identify chunks of text suitable for translating at one time)
-    | "lh" # List header (introductory remark)
-    | "li" # A list entry, level 1 (if single level)
-    | "li1" # A list entry, level 1 (if multiple levels)
-    | "li2" # A list entry, level 2
-    | "li3" # A list entry, level 3
-    | "li4" # A list entry, level 4
-    | "lf" # List footer (introductory remark)
-    | "lim" # An embedded list entry, level 1 (if single level)
-    | "lim1" # An embedded list entry, level 1 (if multiple levels)
-    | "lim2" # An embedded list entry, level 2
-    | "lim3" # An embedded list entry, level 3
-    | "lim4" # An embedded list entry, level 4
     | "cp" # Published chapter number
     | "cl" # Chapter label used for translations that add a word such as "Chapter"
     | "cd" # Chapter Description (Publishing option D, e.g. in Russian Bibles)
@@ -445,6 +433,7 @@ Para.para.style.enum = (
 List =
     element para {
         attribute style { List.para.style.enum },
+        attribute vid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } }?,
         (Reference | Footnote | CrossReference | Char | ListChar | Milestone | Figure | Verse | Break | text)+
     }
 List.para.style.enum = (
@@ -474,40 +463,11 @@ Table =
     }
 TableContent =
     element cell {
-        attribute style { cell.style.enum },
+        attribute style { xsd:string { pattern = "t[hc][rc]?\d+" } },
         attribute align { cell.align.enum },
         attribute colspan { xsd:integer }?,
         (Footnote | CrossReference | Char | Milestone | Figure | Verse | Break | text)*
     }
-cell.style.enum = (
-      "th" # A table heading, any column
-    | "tc" # A table cell item, any column
-	| "thr" # A table heading, any column, right aligned
-    | "tcr" # A table cell item, any column, right aligned
-    | "thc" # A table heading, any column, center aligned
-    | "tcc" # A table cell item, any column, center aligned
-    | "th1" # A table heading, column 1
-    | "tc1" # A table cell item, column 1
-    | "thr1" # A table heading, column 1, right aligned
-    | "tcr1" # A table cell item, column 1, right aligned
-    | "th2" # A table heading, column 2
-    | "tc2" # A table cell item, column 2
-    | "thr2" # A table heading, column 2, right aligned
-    | "tcr2" # A table cell item, column 2, right aligned
-    | "th3" # A table heading, column 3
-    | "tc3" # A table cell item, column 3
-    | "thr3" # A table heading, column 3, right aligned
-    | "tcr3" # A table cell item, column 3, right aligned
-    | "th4" # A table heading, column 4
-    | "tc4" # A table cell item, column 4
-    | "thr4" # A table heading, column 4, right aligned
-    | "tcr4" # A table cell item, column 4, right aligned
-    | "th5" # A table heading, column 5
-    | "tc5" # A table cell item, column 5
-    | "thr5" # A table heading, column 5, right aligned
-    | "tcr5" # A table cell item, column 5, right aligned
-    | "rem" # Remark
-    )
            
 cell.align.enum = (
       "start" # left in LTR, right in RTL
@@ -627,7 +587,7 @@ char.link =
     attribute link-href { xsd:string 
         { pattern = "(.*///?(.*/?)+)|((prj:[A-Za-z\-0-9]{3,8} )?[A-Z1-4]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)" } }?, # The resource being linked to as a URI
     attribute link-title { xsd:string }?, # Plain text describing the remote resource such as might be shown in a tooltip
-    attribute link-id { xsd:string { pattern = "[\p{L}_\-\.:]+" } }? # Unique identifier for this location in the text
+    attribute link-id { xsd:string { pattern = "[\p{L}\d_\-\.:]+" } }? # Unique identifier for this location in the text
 
 char.closed =
     attribute closed { xsd:boolean } # Present to allow roundtripping to USFM, not needed for publishing
@@ -635,8 +595,8 @@ char.closed =
 Milestone = (
     element ms {
         attribute style { Milestone.ms.style.enum },
-        attribute sid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # optional milestone start id (digits, letters, underscore)
-        attribute eid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # milestone end id (digits, letters, underscore) - required with sid
+        attribute sid { xsd:string { pattern="[\p{L}\d_\-\.:]+" } }?, # optional milestone start id (digits, letters, underscore)
+        attribute eid { xsd:string { pattern="[\p{L}\d_\-\.:]+" } }?, # milestone end id (digits, letters, underscore) - required with sid
         empty
     }
     | MilestoneWithAttrib.enum
@@ -653,8 +613,8 @@ MilestoneWithAttrib.enum = (
 MilestoneWithAttrib.ms.style.qt = 
     element ms {
         attribute style { xsd:string { pattern="qt[1-5]?(\-[se])?" } }, # Quotation speaker
-        attribute sid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # Milestone start id for locating start and end pairs
-        attribute eid { xsd:string { pattern="[\p{L}_\-\.:]+" } }?, # Milestone end id for locating start and end pairs
+        attribute sid { xsd:string { pattern="[\p{L}\d_\-\.:]+" } }?, # Milestone start id for locating start and end pairs
+        attribute eid { xsd:string { pattern="[\p{L}\d_\-\.:]+" } }?, # Milestone end id for locating start and end pairs
         attribute who { xsd:string { minLength = "2" } }?, # Name / identity of quote speaker
         empty
     }
