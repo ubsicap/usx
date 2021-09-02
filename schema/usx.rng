@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   usx.rnc
-  A compact syntax Relax NG Schema for USX 3.0.3
+  A compact syntax Relax NG Schema for USX 3.0.5
 -->
 <grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
@@ -783,6 +783,14 @@
       <!-- Embedded text closing -->
       <value>pmr</value>
       <!-- Embedded text refrain -->
+      <value>ph</value>
+      <!-- Paragraph text, with level 1 hanging indent (if single level) (DEPRECATED - use para@style li#) -->
+      <value>ph1</value>
+      <!-- Paragraph text, with level 1 hanging indent (if multiple levels) -->
+      <value>ph2</value>
+      <!-- Paragraph text, with level 2 hanging indent -->
+      <value>ph3</value>
+      <!-- Paragraph text, with level 3 hanging indent -->
       <value>q</value>
       <!-- Poetry text, level 1 indent (if single level) -->
       <value>q1</value>
@@ -850,31 +858,7 @@
       <value>sd4</value>
       <!-- Semantic division location (vertical space used to divide the text into sections), level 4 -->
       <value>ts</value>
-      <!-- Translator�s chunk (to identify chunks of text suitable for translating at one time) -->
-      <value>lh</value>
-      <!-- List header (introductory remark) -->
-      <value>li</value>
-      <!-- A list entry, level 1 (if single level) -->
-      <value>li1</value>
-      <!-- A list entry, level 1 (if multiple levels) -->
-      <value>li2</value>
-      <!-- A list entry, level 2 -->
-      <value>li3</value>
-      <!-- A list entry, level 3 -->
-      <value>li4</value>
-      <!-- A list entry, level 4 -->
-      <value>lf</value>
-      <!-- List footer (introductory remark) -->
-      <value>lim</value>
-      <!-- An embedded list entry, level 1 (if single level) -->
-      <value>lim1</value>
-      <!-- An embedded list entry, level 1 (if multiple levels) -->
-      <value>lim2</value>
-      <!-- An embedded list entry, level 2 -->
-      <value>lim3</value>
-      <!-- An embedded list entry, level 3 -->
-      <value>lim4</value>
-      <!-- An embedded list entry, level 4 -->
+      <!-- Translator's chunk (to identify chunks of text suitable for translating at one time) -->
       <value>cp</value>
       <!-- Published chapter number -->
       <value>cl</value>
@@ -906,6 +890,13 @@
       <attribute name="style">
         <ref name="List.para.style.enum"/>
       </attribute>
+      <optional>
+        <attribute name="vid">
+          <data type="string">
+            <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:]*</param>
+          </data>
+        </attribute>
+      </optional>
       <oneOrMore>
         <choice>
           <ref name="Reference"/>
@@ -978,7 +969,9 @@
   <define name="TableContent">
     <element name="cell">
       <attribute name="style">
-        <ref name="cell.style.enum"/>
+        <data type="string">
+          <param name="pattern">t[hc][rc]?\d+</param>
+        </data>
       </attribute>
       <attribute name="align">
         <ref name="cell.align.enum"/>
@@ -1001,64 +994,6 @@
         </choice>
       </zeroOrMore>
     </element>
-  </define>
-  <define name="cell.style.enum">
-    <choice>
-      <value>th</value>
-      <!-- A table heading, any column -->
-      <value>tc</value>
-      <!-- A table cell item, any column -->
-      <value>thr</value>
-      <!-- A table heading, any column, right aligned -->
-      <value>tcr</value>
-      <!-- A table cell item, any column, right aligned -->
-      <value>thc</value>
-      <!-- A table heading, any column, center aligned -->
-      <value>tcc</value>
-      <!-- A table cell item, any column, center aligned -->
-      <value>th1</value>
-      <!-- A table heading, column 1 -->
-      <value>tc1</value>
-      <!-- A table cell item, column 1 -->
-      <value>thr1</value>
-      <!-- A table heading, column 1, right aligned -->
-      <value>tcr1</value>
-      <!-- A table cell item, column 1, right aligned -->
-      <value>th2</value>
-      <!-- A table heading, column 2 -->
-      <value>tc2</value>
-      <!-- A table cell item, column 2 -->
-      <value>thr2</value>
-      <!-- A table heading, column 2, right aligned -->
-      <value>tcr2</value>
-      <!-- A table cell item, column 2, right aligned -->
-      <value>th3</value>
-      <!-- A table heading, column 3 -->
-      <value>tc3</value>
-      <!-- A table cell item, column 3 -->
-      <value>thr3</value>
-      <!-- A table heading, column 3, right aligned -->
-      <value>tcr3</value>
-      <!-- A table cell item, column 3, right aligned -->
-      <value>th4</value>
-      <!-- A table heading, column 4 -->
-      <value>tc4</value>
-      <!-- A table cell item, column 4 -->
-      <value>thr4</value>
-      <!-- A table heading, column 4, right aligned -->
-      <value>tcr4</value>
-      <!-- A table cell item, column 4, right aligned -->
-      <value>th5</value>
-      <!-- A table heading, column 5 -->
-      <value>tc5</value>
-      <!-- A table cell item, column 5 -->
-      <value>thr5</value>
-      <!-- A table heading, column 5, right aligned -->
-      <value>tcr5</value>
-      <!-- A table cell item, column 5, right aligned -->
-      <value>rem</value>
-    </choice>
-    <!-- Remark -->
   </define>
   <define name="cell.align.enum">
     <choice>
@@ -1368,7 +1303,7 @@
       <!-- Plain text describing the remote resource such as might be shown in a tooltip -->
       <attribute name="link-id">
         <data type="string">
-          <param name="pattern">[\p{L}_\-\.:]+</param>
+          <param name="pattern">[\p{L}\d_\-\.:]+</param>
         </data>
       </attribute>
     </optional>
@@ -1389,7 +1324,7 @@
         <optional>
           <attribute name="sid">
             <data type="string">
-              <param name="pattern">[\p{L}_\-\.:]+</param>
+              <param name="pattern">[\p{L}\d_\-\.:]+</param>
             </data>
           </attribute>
         </optional>
@@ -1397,7 +1332,7 @@
           <!-- optional milestone start id (digits, letters, underscore) -->
           <attribute name="eid">
             <data type="string">
-              <param name="pattern">[\p{L}_\-\.:]+</param>
+              <param name="pattern">[\p{L}\d_\-\.:]+</param>
             </data>
           </attribute>
         </optional>
@@ -1435,7 +1370,7 @@
         <!-- Quotation speaker -->
         <attribute name="sid">
           <data type="string">
-            <param name="pattern">[\p{L}_\-\.:]+</param>
+            <param name="pattern">[\p{L}\d_\-\.:]+</param>
           </data>
         </attribute>
       </optional>
@@ -1443,7 +1378,7 @@
         <!-- Milestone start id for locating start and end pairs -->
         <attribute name="eid">
           <data type="string">
-            <param name="pattern">[\p{L}_\-\.:]+</param>
+            <param name="pattern">[\p{L}\d_\-\.:]+</param>
           </data>
         </attribute>
       </optional>
@@ -1776,7 +1711,7 @@
     <element name="ref">
       <attribute name="loc">
         <data type="string">
-          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:]*</param>
+          <param name="pattern">[A-Z1-4]{3}(-[A-Z1-4]{3})? ?[a-z0-9\-:]*</param>
         </data>
       </attribute>
       <optional>
