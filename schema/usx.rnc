@@ -382,6 +382,10 @@ Para.para.style.enum = (
     | "pm" # Embedded text paragraph
     | "pmc" # Embedded text closing
     | "pmr" # Embedded text refrain
+    | "ph" # Paragraph text, with level 1 hanging indent (if single level) (DEPRECATED - use para@style li#)
+    | "ph1" # Paragraph text, with level 1 hanging indent (if multiple levels)
+    | "ph2" # Paragraph text, with level 2 hanging indent
+    | "ph3" # Paragraph text, with level 3 hanging indent
     | "q" # Poetry text, level 1 indent (if single level)
     | "q1" # Poetry text, level 1 indent (if multiple levels)
     | "q2" # Poetry text, level 2 indent
@@ -415,7 +419,7 @@ Para.para.style.enum = (
     | "sd2" # Semantic division location (vertical space used to divide the text into sections), level 2
     | "sd3" # Semantic division location (vertical space used to divide the text into sections), level 3
     | "sd4" # Semantic division location (vertical space used to divide the text into sections), level 4
-    | "ts" # Translator�s chunk (to identify chunks of text suitable for translating at one time)
+    | "ts" # Translator's chunk (to identify chunks of text suitable for translating at one time)
     | "cp" # Published chapter number
     | "cl" # Chapter label used for translations that add a word such as "Chapter"
     | "cd" # Chapter Description (Publishing option D, e.g. in Russian Bibles)
