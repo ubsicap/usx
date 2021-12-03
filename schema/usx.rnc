@@ -654,9 +654,9 @@ Verse = ( VerseStart | VerseEnd )
 
 VerseStart =
     element verse {
-        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+(\p{L}|\p{Mn})*(\x{200F}?[\-,][0-9]+(\p{L}|\p{Mn})*)*" } },
+        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+[\p{L}\p{Mn}]*(\x{200F}?[\-,][0-9]+[\p{L}\p{Mn}]*)*" } },
         attribute style { "v" },
-        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+(\p{L}|\p{Mn})*(\x{200F}?[\-,:][0-9]+(\p{L}|\p{Mn})*)*" } }?,
+        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+[\p{L}\p{Mn}]*(\x{200F}?[\-,:][0-9]+[\p{L}\p{Mn}]*)*" } }?,
         attribute pubnumber { xsd:string { minLength = "1" } }?,
         attribute sid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*" } },
         empty

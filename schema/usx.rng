@@ -1472,7 +1472,7 @@
       <attribute name="number">
         <data type="string">
           <param name="minLength">1</param>
-          <param name="pattern">[0-9]+(\p{L}|\p{Mn})*(‏?[\-,][0-9]+(\p{L}|\p{Mn})*)*</param>
+          <param name="pattern">[0-9]+[\p{L}\p{Mn}]*(‏?[\-,][0-9]+[\p{L}\p{Mn}]*)*</param>
         </data>
       </attribute>
       <attribute name="style">
@@ -1482,7 +1482,7 @@
         <attribute name="altnumber">
           <data type="string">
             <param name="minLength">1</param>
-            <param name="pattern">[0-9]+(\p{L}|\p{Mn})*(‏?[\-,:][0-9]+(\p{L}|\p{Mn})*)*</param>
+            <param name="pattern">[0-9]+[\p{L}\p{Mn}]*(‏?[\-,:][0-9]+[\p{L}\p{Mn}]*)*</param>
           </data>
         </attribute>
       </optional>
