@@ -1472,7 +1472,7 @@
       <attribute name="number">
         <data type="string">
           <param name="minLength">1</param>
-          <param name="pattern">[0-9]+\p{L}?(‏?[\-,][0-9]+\p{L}?)*</param>
+          <param name="pattern">[0-9]+(\p{L}|\p{Mn})*(‏?[\-,][0-9]+(\p{L}|\p{Mn})*)*</param>
         </data>
       </attribute>
       <attribute name="style">
@@ -1482,7 +1482,7 @@
         <attribute name="altnumber">
           <data type="string">
             <param name="minLength">1</param>
-            <param name="pattern">[0-9]+\p{L}?(‏?[\-,:][0-9]+\p{L}?)*</param>
+            <param name="pattern">[0-9]+(\p{L}|\p{Mn})*(‏?[\-,:][0-9]+(\p{L}|\p{Mn})*)*</param>
           </data>
         </attribute>
       </optional>
@@ -1495,7 +1495,7 @@
       </optional>
       <attribute name="sid">
         <data type="string">
-          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:]*</param>
+          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*</param>
         </data>
       </attribute>
       <empty/>
@@ -1506,7 +1506,7 @@
     <element name="verse">
       <attribute name="eid">
         <data type="string">
-          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:]*</param>
+          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*</param>
         </data>
       </attribute>
       <empty/>

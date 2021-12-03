@@ -654,18 +654,18 @@ Verse = ( VerseStart | VerseEnd )
 
 VerseStart =
     element verse {
-        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+\p{L}?(\x{200F}?[\-,][0-9]+\p{L}?)*" } },
+        attribute number { xsd:string { minLength = "1" pattern = "[0-9]+(\p{L}|\p{Mn})*(\x{200F}?[\-,][0-9]+(\p{L}|\p{Mn})*)*" } },
         attribute style { "v" },
-        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+\p{L}?(\x{200F}?[\-,:][0-9]+\p{L}?)*" } }?,
+        attribute altnumber { xsd:string { minLength = "1" pattern = "[0-9]+(\p{L}|\p{Mn})*(\x{200F}?[\-,:][0-9]+(\p{L}|\p{Mn})*)*" } }?,
         attribute pubnumber { xsd:string { minLength = "1" } }?,
-        attribute sid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } },
+        attribute sid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*" } },
         empty
     }
     # E.g. <verse number="1" style="v" altnumber="2" pubnumber="B" sid="GEN 1:22" />
 
 VerseEnd =
     element verse {
-        attribute eid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:]*" } },
+        attribute eid { xsd:string { pattern = "[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*" } },
         empty
     }
 
