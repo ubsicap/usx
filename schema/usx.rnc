@@ -1,5 +1,5 @@
 # usx.rnc
-# A compact syntax Relax NG Schema for USX 3.0.5
+# A compact syntax Relax NG Schema for USX 3.0.6
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
