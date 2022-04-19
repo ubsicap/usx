@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   usx.rnc
-  A compact syntax Relax NG Schema for USX 3.0.6
+  A compact syntax Relax NG Schema for USX 3.0.7
 -->
 <grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
@@ -1495,7 +1495,7 @@
       </optional>
       <attribute name="sid">
         <data type="string">
-          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*</param>
+          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9,\-:\p{L}\p{Mn}]*</param>
         </data>
       </attribute>
       <empty/>
@@ -1506,7 +1506,7 @@
     <element name="verse">
       <attribute name="eid">
         <data type="string">
-          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*</param>
+          <param name="pattern">[A-Z1-4]{3} ?[a-z0-9,\-:\p{L}\p{Mn}]*</param>
         </data>
       </attribute>
       <empty/>
