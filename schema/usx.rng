@@ -720,7 +720,7 @@
       <optional>
         <attribute name="vid">
           <data type="string">
-            <param name="pattern">[A-Z1-4]{3} ?[a-z0-9\-:\p{L}\p{Mn}]*</param>
+            <param name="pattern">[A-Z1-4]{3} ?[a-z0-9,\-:\p{L}\p{Mn}]*</param>
           </data>
         </attribute>
       </optional>
