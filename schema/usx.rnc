@@ -1,5 +1,5 @@
 # usx.rnc
-# A compact syntax Relax NG Schema for USX 3.0.7
+# A compact syntax Relax NG Schema for USX 3.0.8
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
@@ -479,10 +479,15 @@ cell.align.enum = (
     | "end" # right in LTR, left in RTL
     )
 
+OtherAttributes = (
+        attribute * - (style | closed | link-href | link-title | link-id | lemma | strong | srcloc | gloss) {xsd:string}+
+    )
+
 IntroChar =
     element char {
         attribute style { IntroChar.char.style.enum },
         char.closed?,
+        OtherAttributes?,
         text,
         (Reference | Char | IntroChar | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }
@@ -494,8 +499,7 @@ IntroChar.char.style.enum = (
 Char = (
     element char {
         attribute style { Char.char.style.enum },
-        char.link?,
-        char.closed?,
+        OtherAttributes?,
         text,
         (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }
@@ -573,6 +577,7 @@ CharWithAttrib.char.style.w =
         attribute lemma { xsd:string { minLength = "1" } }?, # Lemma/citation form found in glossary
         attribute strong { xsd:string { pattern = "([HG]\d{4,5}(:[a-z])?,?)+"} }?, # Strong�s ID in the form H##### (Hebrew) or G##### (Greek)
         attribute srcloc { xsd:string { pattern = "[a-z]{3,5}\d?:\d+\.\d+\.\d+\.\d+" } }?, # Location of the word in the source text
+        OtherAttributes?,
         text,
         (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }
@@ -583,6 +588,7 @@ CharWithAttrib.char.style.rb =
         char.link?,
         char.closed?,
         attribute gloss { xsd:string { minLength = "1" } }?, # Ruby glosses
+        OtherAttributes?,
         text,
         (Reference | Char | Milestone | Footnote | Break | text)* # Nested character <char> markup
     }

@@ -5,6 +5,12 @@
 docs/_build/doctrees/
 docs/_build/html/_sources/
 
+# Test schemas
+/schema/usx_3.0.7.rnc
+/schema/usx_3.0.7.rng
+/schema/usx_allowXAttrib.rnc
+/schema/usx_allowXAttrib-2.rnc
+
 # Offline issues
 offline-issues/
 

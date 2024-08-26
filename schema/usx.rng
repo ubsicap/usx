@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   usx.rnc
-  A compact syntax Relax NG Schema for USX 3.0.7
+  A compact syntax Relax NG Schema for USX 3.0.8
 -->
 <grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <start>
@@ -1005,6 +1005,26 @@
     </choice>
     <!-- right in LTR, left in RTL -->
   </define>
+  <define name="OtherAttributes">
+    <oneOrMore>
+      <attribute>
+        <anyName>
+          <except>
+            <name ns="">style</name>
+            <name ns="">closed</name>
+            <name ns="">link-href</name>
+            <name ns="">link-title</name>
+            <name ns="">link-id</name>
+            <name ns="">lemma</name>
+            <name ns="">strong</name>
+            <name ns="">srcloc</name>
+            <name ns="">gloss</name>
+          </except>
+        </anyName>
+        <data type="string"/>
+      </attribute>
+    </oneOrMore>
+  </define>
   <define name="IntroChar">
     <element name="char">
       <group>
@@ -1013,6 +1033,9 @@
         </attribute>
         <optional>
           <ref name="char.closed"/>
+        </optional>
+        <optional>
+          <ref name="OtherAttributes"/>
         </optional>
         <text/>
         <zeroOrMore>
@@ -1046,10 +1069,7 @@
             <ref name="Char.char.style.enum"/>
           </attribute>
           <optional>
-            <ref name="char.link"/>
-          </optional>
-          <optional>
-            <ref name="char.closed"/>
+            <ref name="OtherAttributes"/>
           </optional>
           <text/>
           <zeroOrMore>
@@ -1233,7 +1253,10 @@
             </data>
           </attribute>
         </optional>
-        <!-- Location of the word in the source text -->
+        <optional>
+          <!-- Location of the word in the source text -->
+          <ref name="OtherAttributes"/>
+        </optional>
         <text/>
         <zeroOrMore>
           <choice>
@@ -1269,7 +1292,10 @@
             </data>
           </attribute>
         </optional>
-        <!-- Ruby glosses -->
+        <optional>
+          <!-- Ruby glosses -->
+          <ref name="OtherAttributes"/>
+        </optional>
         <text/>
         <zeroOrMore>
           <choice>
