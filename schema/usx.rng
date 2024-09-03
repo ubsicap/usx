@@ -1069,6 +1069,12 @@
             <ref name="Char.char.style.enum"/>
           </attribute>
           <optional>
+            <ref name="char.link"/>
+          </optional>
+          <optional>
+            <ref name="char.closed"/>
+          </optional>
+          <optional>
             <ref name="OtherAttributes"/>
           </optional>
           <text/>
@@ -1175,6 +1181,9 @@
         </optional>
         <optional>
           <ref name="char.closed"/>
+        </optional>
+        <optional>
+          <ref name="OtherAttributes"/>
         </optional>
         <text/>
         <zeroOrMore>
