@@ -1,10 +1,7 @@
 # USX
 
-This is the reference documentation for Unified Scripture XML (USX). USX is an XML format used for encoding the digital text for scripture translations. The largest collection of USX encoded scripture is currently found within the Digital Bible Library.
+Development and maintenance of USFM / USX / USJ specifications has moved to [https://github.com/usfm-bible](https://github.com/usfm-bible) ([http://usfm.bible](http://usfm.bible)).
 
-* [Latest published documentation](http://ubsicap.github.io/usx/) (3.0.0)
-  * [Current Release Notes](http://ubsicap.github.io/usx/about/releasenotes.html)
-
-## 3.0.0 Issues
-* [Full Git Changelog](https://github.com/ubsicap/usx/compare/v2.5...v3.0.0) (2.5 > 3.0.0)
-* [Issues closed for 3.0.0](https://github.com/ubsicap/usx/issues?q=is%3Aclosed+milestone%3A3.0.0)
+* Technical committee documentation is found in the [https://github.com/usfm-bible/tcdocs](tcdocs) repository, including the most [RNC/RNG schemas](https://github.com/usfm-bible/tcdocs/tree/main/grammar).
+* The [usfmtc](https://github.com/usfm-bible/usfmtc) module is a module for reading and writing USFM scripture files in all their formats: USFM, USX and USJ. It is designed to be a reference implementation of the standard. It also has support for Scripture References. It can also be installed via [pip](https://pypi.org/project/usfmtc/).
+* The latest specification documentation is found at [https://docs.usfm.bible](https://docs.usfm.bible), including release notes.
